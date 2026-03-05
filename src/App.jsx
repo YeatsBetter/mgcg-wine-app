@@ -6,7 +6,7 @@ import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, L
 
 // Firebase imports
 import { auth, googleProvider, db } from './firebase';
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { signInWithRedirect, signOut, onAuthStateChanged, getRedirectResult } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 function App() {
@@ -17,33 +17,39 @@ function App() {
   // Fallback to hovered if no region is selected
   const activeRegion = selectedRegion || hoveredRegion;
 
-  // Listen to Auth State
+  // Listen to Auth State and handle Redirect Result
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
+    // Process login redirect result
+    getRedirectResult(auth).then(async (result) => {
+      if (result && result.user) {
         // Automatically create or verify user profile document in Firestore
-        const userRef = doc(db, 'users', currentUser.uid);
+        const userRef = doc(db, 'users', result.user.uid);
         const docSnap = await getDoc(userRef);
         if (!docSnap.exists()) {
           await setDoc(userRef, {
-            email: currentUser.email,
-            displayName: currentUser.displayName,
+            email: result.user.email,
+            displayName: result.user.displayName,
             createdAt: new Date(),
             favorites: [],
             notes: {}
           });
         }
       }
+    }).catch(error => {
+      console.error("Redirect login error:", error);
+    });
+
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
     });
     return () => unsubscribe();
   }, []);
 
   const handleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      await signInWithRedirect(auth, googleProvider);
     } catch (error) {
-      console.error("Login failed", error);
+      console.error("Login redirect failed", error);
     }
   };
 
@@ -259,12 +265,18 @@ function App() {
         )}
       </div>
 
-      {/* Map Layer */}
-      <WineMap
-        regions={wineRegionsData}
-        onRegionHover={setHoveredRegion}
-        onRegionClick={setSelectedRegion}
-      />
+      {/* Map Background Wrapper */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        {/* The map itself. Region selection handled inside WineMap */}
+        <WineMap
+          regions={wineRegionsData}
+          onRegionHover={setHoveredRegion}
+          onRegionClick={(region) => {
+            setSelectedRegion(region);
+          }}
+          onEmptyClick={() => setSelectedRegion(null)}
+        />
+      </div>
     </div>
   );
 }

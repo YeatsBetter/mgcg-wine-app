@@ -1,10 +1,26 @@
-import React from 'react';
-import { MapContainer, TileLayer, GeoJSON, Tooltip } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
-export default function WineMap({ regions, onRegionHover, onRegionClick }) {
-    // Center map on Europe roughly to show France/Italy, but zoom far out enough to pan to US.
-    const center = [40.0, -10.0];
-    const zoom = 3;
+// Utility component to handle clicks on the empty map areas
+function MapEvents({ onEmptyClick }) {
+    const map = useMap();
+    useEffect(() => {
+        const handleClick = (e) => {
+            // Only fire if the click was directly on the map container
+            if (e.originalEvent && !e.originalEvent.defaultPrevented) {
+                onEmptyClick();
+            }
+        };
+        map.on('click', handleClick);
+        return () => map.off('click', handleClick);
+    }, [map, onEmptyClick]);
+    return null;
+}
+
+export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick }) {
+    // Center map on Europe roughly to show France/Italy, but zoom far out
+    const center = [35.0, 10.0];
+    const zoom = 2.5;
 
     const getStyle = (feature) => {
         return {
@@ -37,15 +53,20 @@ export default function WineMap({ regions, onRegionHover, onRegionClick }) {
                     color: 'var(--accent-gold)'
                 });
                 trgt.bringToFront();
+                // Pass event back to App so hover information triggers
                 if (onRegionHover) onRegionHover(feature.properties);
             },
             mouseout: (e) => {
                 const trgt = e.target;
-                // Check if tooltip is being closed (to not override click selections)
                 trgt.setStyle(getStyle(feature));
+                // Clear hover so App fallback drops to null (or keeps selectedRegion)
                 if (onRegionHover) onRegionHover(null);
             },
             click: (e) => {
+                // Prevent bubbling which causes App.jsx background clicks to fire and clear Selection
+                if (e.originalEvent && e.originalEvent.stopPropagation) {
+                    e.originalEvent.stopPropagation();
+                }
                 if (onRegionClick) onRegionClick(feature.properties);
             }
         });
@@ -61,6 +82,8 @@ export default function WineMap({ regions, onRegionHover, onRegionClick }) {
                 style={{ height: '100%', width: '100%' }}
                 zoomControl={false}
             >
+                {onEmptyClick && <MapEvents onEmptyClick={onEmptyClick} />}
+
                 {/* Bright/Clean Base Map */}
                 <TileLayer
                     attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
