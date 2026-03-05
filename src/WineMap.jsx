@@ -6,8 +6,8 @@ function MapEvents({ onEmptyClick }) {
     const map = useMap();
     useEffect(() => {
         const handleClick = (e) => {
-            // Only fire if the click was directly on the map container
-            if (e.originalEvent && !e.originalEvent.defaultPrevented) {
+            // If the user clicked on an SVG path (a GeoJSON region), ignore the empty click
+            if (e.originalEvent && e.originalEvent.target && e.originalEvent.target.tagName !== 'path') {
                 onEmptyClick();
             }
         };

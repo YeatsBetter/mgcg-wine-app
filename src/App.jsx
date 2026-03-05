@@ -6,7 +6,7 @@ import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, L
 
 // Firebase imports
 import { auth, googleProvider, db } from './firebase';
-import { signInWithRedirect, signOut, onAuthStateChanged, getRedirectResult } from "firebase/auth";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 function App() {
@@ -17,39 +17,34 @@ function App() {
   // Fallback to hovered if no region is selected
   const activeRegion = selectedRegion || hoveredRegion;
 
-  // Listen to Auth State and handle Redirect Result
+  // Listen to Auth State
   useEffect(() => {
-    // Process login redirect result
-    getRedirectResult(auth).then(async (result) => {
-      if (result && result.user) {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) {
         // Automatically create or verify user profile document in Firestore
-        const userRef = doc(db, 'users', result.user.uid);
+        const userRef = doc(db, 'users', currentUser.uid);
         const docSnap = await getDoc(userRef);
         if (!docSnap.exists()) {
           await setDoc(userRef, {
-            email: result.user.email,
-            displayName: result.user.displayName,
+            email: currentUser.email,
+            displayName: currentUser.displayName,
             createdAt: new Date(),
             favorites: [],
             notes: {}
           });
         }
       }
-    }).catch(error => {
-      console.error("Redirect login error:", error);
-    });
-
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
     });
     return () => unsubscribe();
   }, []);
 
   const handleLogin = async () => {
     try {
-      await signInWithRedirect(auth, googleProvider);
+      await signInWithPopup(auth, googleProvider);
     } catch (error) {
-      console.error("Login redirect failed", error);
+      console.error("Login popup failed", error);
+      alert("Login Error: " + error.message + "\n\n(If this is an 'unauthorized domain' error, please add your current URL to Firebase Auth Authorized Domains).");
     }
   };
 
