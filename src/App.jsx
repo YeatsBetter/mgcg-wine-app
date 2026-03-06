@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -97,8 +97,18 @@ function App() {
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [user, setUser] = useState(null);
+  const [filterGrape, setFilterGrape] = useState('All');
 
-  const activeData = wineRegionsData;
+  const filteredFeatures = filterGrape === 'All'
+    ? wineRegionsData.features
+    : wineRegionsData.features.filter(f =>
+      f.properties.grapes.some(g => g.name.toLowerCase().includes(filterGrape.toLowerCase()))
+    );
+
+  const activeData = {
+    ...wineRegionsData,
+    features: filteredFeatures
+  };
 
   const currentHovered = hoveredRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === hoveredRegion.name.split(' ')[0])?.properties : null;
   const currentSelected = selectedRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === selectedRegion.name.split(' ')[0])?.properties : null;
@@ -244,6 +254,39 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           Welcome to the definitive digital cartography of the world's most prestigious wine regions.
           Explore the depths of history, terroir, and geography through an interactive viticultural lens.
         </p>
+
+        {/* Advanced Filters */}
+        <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--glass-border)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+            <Filter size={16} color="var(--accent-gold)" />
+            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Filter by Grape</span>
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {['All', 'Cabernet Sauvignon', 'Pinot Noir', 'Chardonnay', 'Syrah', 'Riesling', 'Sauvignon Blanc', 'Sangiovese', 'Tempranillo', 'Merlot'].map(grape => (
+              <button
+                key={grape}
+                onClick={() => {
+                  setFilterGrape(grape);
+                  setSelectedRegion(null); // Clear selection when filter changes
+                }}
+                style={{
+                  background: filterGrape === grape ? 'var(--accent-ruby)' : 'rgba(255,255,255,0.4)',
+                  color: filterGrape === grape ? '#fff' : 'var(--text-secondary)',
+                  border: filterGrape === grape ? '1px solid var(--accent-ruby)' : '1px solid var(--glass-border)',
+                  borderRadius: '16px',
+                  padding: '6px 12px',
+                  fontSize: '0.75rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  fontWeight: filterGrape === grape ? 600 : 500,
+                  boxShadow: filterGrape === grape ? '0 2px 8px rgba(121,31,56,0.3)' : 'none'
+                }}
+              >
+                {grape}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Top Right Floating User Profile */}
