@@ -734,7 +734,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         className="btn-filter"
         onClick={() => setIsGrapeFilterOpen(!isGrapeFilterOpen)}
         style={{
-          position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
+          position: 'fixed', bottom: '240px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
           background: isGrapeFilterOpen || filterGrape !== 'All' ? 'var(--accent-ruby)' : 'var(--glass-bg)',
           color: isGrapeFilterOpen || filterGrape !== 'All' ? '#fff' : 'var(--accent-ruby)',
           border: '1px solid var(--accent-ruby)', cursor: 'pointer', zIndex: 1001,
@@ -750,7 +750,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       </button>
 
       {isGrapeFilterOpen && (
-        <div className="glass-panel grape-filter-popup" style={{ position: 'fixed', bottom: '168px', left: '96px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.2s ease' }}>
+        <div className="glass-panel grape-filter-popup" style={{ position: 'fixed', bottom: '240px', left: '96px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.2s ease' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
             <h3 style={{ color: 'var(--accent-gold)', fontSize: '1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               <Filter size={18} /> Filter by Grape
