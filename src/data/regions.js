@@ -1995,6 +1995,383 @@ export const wineRegionsData = {
           { "name": "Naoussa PDO", "description": "Northern Greece's finest red wine appellation, producing age-worthy, structured Xinomavro.", "geography": "Mountain slopes of Mt. Vermion (200-450m) with limestone and clay. Cool continental climate.", "grapes": "100% Xinomavro." }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-76.8, 42.6] },
+      "properties": {
+        "id": "finger-lakes",
+        "name": "Finger Lakes",
+        "country": "USA (New York)",
+        "history": "New York State's premier wine region, centered around a series of deep, narrow glacial lakes in the western part of the state. Despite being at a northerly, challenging latitude, the Finger Lakes has become America's most important Riesling region, drawing comparisons to the Mosel and Alsace. The deep lakes moderate the harsh continental climate, making viticulture possible.",
+        "geography": "Cold continental climate with severe winters (-20°C). The deep glacial lakes (Seneca, Cayuga, Keuka) act as thermal buffers: they absorb summer heat and slowly release it through autumn, extending the growing season and preventing deadly early frosts. Without the lakes, grapes simply could not ripen here.",
+        "terroir": "The best vineyards are planted on the steep slopes directly above the lakes, benefiting from superior cold-air drainage and reflected warmth. Soils are predominantly shale and limestone, providing excellent drainage and adding mineral complexity. The slate retains heat during the day.",
+        "grapes": [
+          { "name": "Riesling", "description": "The star variety, producing dry to sweet styles with piercing acidity, green apple, lime, and petrol notes. Often compared favorably to German and Alsatian Rieslings.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Cabernet Franc", "description": "The most successful red variety, producing lighter, aromatic reds with raspberry, bell pepper, and herbaceous notes.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Dr. Konstantin Frank", "description": "The visionary who proved vinifera grapes could survive New York winters.", "wines": [{ "name": "Dry Riesling", "url": "https://www.vivino.com/search/wines?q=Dr+Konstantin+Frank+Riesling" }] },
+          { "name": "Hermann J. Wiemer", "description": "Benchmark producer of world-class Finger Lakes Riesling.", "wines": [{ "name": "Dry Riesling", "url": "https://www.vivino.com/search/wines?q=Hermann+Wiemer+Riesling" }] }
+        ],
+        "subRegions": [
+          { "name": "Seneca Lake", "description": "The deepest lake (188m), providing the most effective thermal moderation. Produces the region's most powerful, concentrated Rieslings.", "geography": "Steep shale slopes above the deepest Finger Lake.", "grapes": "Riesling, Cabernet Franc." },
+          { "name": "Keuka Lake", "description": "The historic heart of Finger Lakes winemaking, site of the earliest commercial vineyards.", "geography": "Y-shaped lake with multiple slope exposures.", "grapes": "Riesling, Vignoles." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.2, 34.7] },
+      "properties": {
+        "id": "santa-barbara",
+        "name": "Santa Barbara County",
+        "country": "USA",
+        "history": "Made famous by the film 'Sideways', Santa Barbara is unique in California because its valleys run east-west rather than north-south. This transverse orientation funnels cold Pacific air and fog deep inland, creating remarkably cool growing conditions in an otherwise warm state. It is now recognized as one of California's finest Pinot Noir and Chardonnay regions.",
+        "geography": "Cool maritime climate due to the unique east-west oriented valleys that channel ocean influence far inland. The Santa Ynez and Santa Maria Valleys act as corridors for Pacific fog and wind. Temperatures can be 15°C cooler than regions just over the mountains.",
+        "terroir": "Soils include marine sedimentary (diatomaceous earth in Sta. Rita Hills), sandy loam, and clay. The diatomaceous earth—ancient compressed marine organisms—provides exceptional drainage and adds a chalky, mineral quality.",
+        "grapes": [
+          { "name": "Pinot Noir", "description": "Produces elegant, Burgundy-inspired wines with bright red fruit, earth, and fine tannins. The Sta. Rita Hills AVA is particularly acclaimed.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Chardonnay", "description": "Crisp, mineral-driven styles from cooler sites, ranging to richer, tropical expressions in warmer pockets.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Syrah", "description": "Increasingly important, producing peppery, cool-climate styles reminiscent of the Northern Rhône.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Au Bon Climat", "description": "Jim Clendenen's iconic estate, pioneering Burgundian winemaking in Santa Barbara.", "wines": [{ "name": "Pinot Noir", "url": "https://www.vivino.com/search/wines?q=Au+Bon+Climat+Pinot+Noir" }] }
+        ],
+        "subRegions": [
+          { "name": "Sta. Rita Hills", "description": "The coolest, most fog-influenced AVA producing Santa Barbara's most acclaimed Pinot Noirs.", "geography": "Western end of the Santa Ynez Valley, fully exposed to Pacific fog. Diatomaceous earth and clay.", "grapes": "Pinot Noir, Chardonnay." },
+          { "name": "Santa Maria Valley", "description": "A broad, cool valley producing excellent Chardonnay and Pinot Noir, home to legendary vineyards like Bien Nacido.", "geography": "East-west valley open to persistent ocean winds. Sandy loam soils.", "grapes": "Chardonnay, Pinot Noir, Syrah." },
+          { "name": "Happy Canyon", "description": "The warmest, most inland AVA, sheltered from ocean influence, excelling with Bordeaux varieties.", "geography": "Eastern end of the Santa Ynez Valley. Sandy soils with gravel.", "grapes": "Cabernet Sauvignon, Sauvignon Blanc." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [11.3, 46.7] },
+      "properties": {
+        "id": "alto-adige",
+        "name": "Alto Adige (Südtirol)",
+        "country": "Italy",
+        "history": "A bilingual, bicultural region at the foot of the Dolomites, historically part of Austria until 1919. German-speaking winemakers dominate, producing precise, aromatic white wines that blend Italian winemaking traditions with Germanic grape varieties and rigorous quality standards. It is Italy's northernmost and arguably most quality-consistent wine region.",
+        "geography": "Alpine climate with warm, dry summers and cold winters. The key feature is extreme altitude—vineyards range from 200m on the valley floor to over 1,000m on mountain slopes. The Ora wind blows warm air up from Lake Garda daily, moderating temperatures. High diurnal variation is essential for aroma development.",
+        "terroir": "Incredibly varied: porphyry (volcanic rock) in the lower Adige valley, limestone and dolomite on higher slopes, sandy-gravelly alluvium on the valley floor. The steep, terraced mountainside vineyards receive maximum sun exposure while benefiting from cool alpine nights.",
+        "grapes": [
+          { "name": "Pinot Grigio", "description": "Unlike the dilute, mass-produced Veneto style, Alto Adige Pinot Grigio is medium to full-bodied with pear, apple, and almond notes, often showing a subtle coppery hue.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Gewürztraminer", "description": "Named after the village of Tramin in Alto Adige. Intensely aromatic with lychee, rose, and Turkish delight. The local versions are among the world's finest.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Lagrein & Schiava", "description": "Indigenous red grapes. Lagrein produces deeply colored, full-bodied wines with dark berry and chocolate; Schiava is light, and cherry-scented for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Elena Walch", "description": "Pioneer of premium single-vineyard Alto Adige whites.", "wines": [{ "name": "Kastelaz Gewürztraminer", "url": "https://www.vivino.com/search/wines?q=Elena+Walch+Gewurztraminer" }] }
+        ],
+        "subRegions": [
+          { "name": "Termeno/Tramin", "description": "The birthplace of Gewürztraminer, producing the region's most aromatic and concentrated examples.", "geography": "Warm, south-facing slopes with porphyry and clay soils.", "grapes": "Gewürztraminer, Pinot Grigio." },
+          { "name": "Bolzano/Bozen", "description": "The warmest zone, producing the best Lagrein reds and full-bodied whites.", "geography": "Low-altitude valley floor with porphyry and sandy gravel.", "grapes": "Lagrein, Schiava." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [14.8, 41] },
+      "properties": {
+        "id": "campania",
+        "name": "Campania",
+        "country": "Italy",
+        "history": "Home to some of Italy's most ancient and prized grape varieties, cultivated since Greek colonization (8th century BC). The Greeks called southern Italy 'Oenotria' (land of wine). Campania was long overshadowed by northern Italy but is now recognized for producing some of Italy's most age-worthy, distinctive whites (Fiano, Greco) and its towering red, Taurasi from Aglianico.",
+        "geography": "A diverse landscape dominated by Mount Vesuvius (active volcano) and the Apennine Mountains. The climate is Mediterranean on the coast, shifting to continental inland at higher altitudes where the best wines are produced. The volcanic soils of Vesuvius are phylloxera-free.",
+        "terroir": "Volcanic tufo (volcanic tuff) around Vesuvius and Avellino provides excellent drainage and mineral complexity. In the highlands of Irpinia (Taurasi, Fiano di Avellino), clay and limestone soils at 400-600m altitude create high acidity and structure in the wines.",
+        "grapes": [
+          { "name": "Aglianico", "description": "The 'Barolo of the South'. Extremely late-ripening with massive tannins, high acidity, and dark fruit, tar, leather, and chocolate notes. Requires decades of aging to show its best.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Fiano", "description": "An aromatic white producing complex, age-worthy wines with hazelnut, honey, pear, and exotic spice notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Greco", "description": "High-acid, full-bodied white with almond, citrus, and mineral notes. Greco di Tufo is the finest expression.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Mastroberardino", "description": "Historic family estate that preserved Campania's indigenous varieties through the 20th century.", "wines": [{ "name": "Taurasi Radici", "url": "https://www.vivino.com/search/wines?q=Mastroberardino+Taurasi+Radici" }] }
+        ],
+        "subRegions": [
+          { "name": "Taurasi DOCG", "description": "The flagship red appellation, producing powerful, age-worthy Aglianico requiring 3 years minimum aging.", "geography": "High-altitude (400-600m) inland hills of Irpinia. Clay and volcanic soils.", "grapes": "Aglianico." },
+          { "name": "Fiano di Avellino DOCG", "description": "Produces Italy's most complex, age-worthy indigenous white wines.", "geography": "High-altitude hills near Avellino with limestone and volcanic soils.", "grapes": "Fiano." },
+          { "name": "Greco di Tufo DOCG", "description": "Named for the volcanic tufo rock, producing structured, mineral whites.", "geography": "Sulfur-rich volcanic tufo soils near Tufo village.", "grapes": "Greco." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-8.6, 41.8] },
+      "properties": {
+        "id": "vinho-verde",
+        "name": "Vinho Verde",
+        "country": "Portugal",
+        "history": "Portugal's largest demarcated wine region, famous for its light, fresh, slightly effervescent white wines. 'Vinho Verde' means 'green wine', referring not to color but to youthfulness—these wines are meant to be consumed young. The region is experiencing a quality revolution, with premium single-varietal Alvarinho wines now commanding international respect.",
+        "geography": "Located in the cool, wet northwest of Portugal, between the Minho and Douro rivers. Atlantic-influenced maritime climate with high rainfall (1,200-1,500mm). Traditionally, vines were trained high on pergolas and trellises (vinha de enforcado) to combat humidity.",
+        "terroir": "Predominantly granite-based soils that provide excellent drainage in this wet climate and contribute to the wines' characteristic mineral, slightly saline quality. River valleys create warmer mesoclimates for better ripening.",
+        "grapes": [
+          { "name": "Alvarinho (Albariño)", "description": "The premium grape, especially in the Monção e Melgaço sub-region. Produces aromatic, full-bodied wines with peach, apricot, and citrus. Higher alcohol and complexity than standard Vinho Verde.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Loureiro", "description": "The most planted variety, producing lighter, floral wines with acacia, orange blossom, and citrus notes.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Anselmo Mendes", "description": "Leading producer elevating Alvarinho to world-class status.", "wines": [{ "name": "Contacto Alvarinho", "url": "https://www.vivino.com/search/wines?q=Anselmo+Mendes+Alvarinho" }] }
+        ],
+        "subRegions": [
+          { "name": "Monção e Melgaço", "description": "The northernmost, warmest sub-region on the Spanish border, producing the finest single-varietal Alvarinho.", "geography": "Sheltered river valley with granite soils. Warmer than the rest of the region.", "grapes": "Alvarinho." },
+          { "name": "Lima & Cávado", "description": "The cooler, wetter central zones producing the classic light, fresh, slightly fizzy Vinho Verde blends.", "geography": "Higher rainfall, granite soils, pergola-trained vines.", "grapes": "Loureiro, Arinto, Trajadura." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-16.9, 32.6] },
+      "properties": {
+        "id": "madeira",
+        "name": "Madeira",
+        "country": "Portugal",
+        "history": "A volcanic island in the Atlantic, 600km off the Moroccan coast. Madeira wine is one of the most unique and long-lived wines in the world—bottles from the 18th century remain drinkable. The fortified wine style was accidentally discovered when wines shipped through tropical heat improved rather than spoiled. The 'estufagem' process (heating) now deliberately replicates this.",
+        "geography": "Subtropical volcanic island with steep, terraced mountainsides. The northern coast is wet and cool while the southern coast is warmer and drier. Vineyards climb from sea level to over 700m. The Gulf Stream provides a warm, humid maritime climate year-round.",
+        "terroir": "Volcanic basalt soils provide excellent drainage on impossibly steep terrain. Vineyards are tiny, often terraced on 'poios' (narrow stone-walled ledges). The volcanic origin contributes to the wines' distinctive tangy, smoky character.",
+        "grapes": [
+          { "name": "Sercial", "description": "Produces the driest style of Madeira: high acidity, citrus, almond, and piercing minerality. Aged for years in heated 'estufas'.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Verdelho", "description": "Medium-dry style with smoky, honeyed character and high acidity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Bual & Malmsey (Malvasia)", "description": "The sweetest styles. Bual is medium-sweet with caramel and coffee. Malmsey is the richest, most luscious, with dark sugar, dried fruit, and chocolate.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Blandy's", "description": "The most famous Madeira house, family-owned since 1811.", "wines": [{ "name": "10 Year Old Malmsey", "url": "https://www.vivino.com/search/wines?q=Blandy+Malmsey+10" }] }
+        ],
+        "subRegions": [
+          { "name": "Câmara de Lobos", "description": "Traditional heartland of Madeira production on the warmer southern coast.", "geography": "South-facing terraced slopes above the fishing village.", "grapes": "Tinta Negra, Malmsey." },
+          { "name": "São Vicente", "description": "Cooler northern coast, producing the finest Sercial and Verdelho.", "geography": "North-facing, cooler, higher rainfall. Steep volcanic terraces.", "grapes": "Sercial, Verdelho." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [1.8, 41.4] },
+      "properties": {
+        "id": "penedes-cava",
+        "name": "Penedès (Cava)",
+        "country": "Spain",
+        "history": "Penedès is the heartland of Cava—Spain's traditional method sparkling wine. Cava production began in 1872 when Josep Raventós brought Champagne techniques to Catalonia. Today, Spain is one of the world's largest sparkling wine producers by volume. The region also produces excellent still wines, championed by the innovative Torres family.",
+        "geography": "Mediterranean climate with warm summers and mild winters. The region is divided into three altitude zones: Baix-Penedès near the coast (warm, ideal for reds), Mig-Penedès in the middle (balanced, main Cava zone), and Alt-Penedès at higher elevations (cooler, producing the freshest base wines).",
+        "terroir": "Limestone and clay soils dominate, providing good drainage and contributing to the mineral quality of the sparkling wines. Higher altitude zones have chalky, limestone-rich soils that preserve acidity essential for Cava production.",
+        "grapes": [
+          { "name": "Macabeo, Xarel·lo & Parellada", "description": "The classic Cava trio: Macabeo (freshness, floral), Xarel·lo (body, earthy structure, the backbone), and Parellada (elegance, citrus, high altitude). Xarel·lo is increasingly bottled as a still wine.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Chardonnay & Pinot Noir", "description": "Now permitted in Cava production, adding richness and complexity. Premium Cavas increasingly use these international varieties.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Codorníu", "description": "One of the original Cava houses, founded in 1551 (oldest recorded family business in Spain).", "wines": [{ "name": "Anna de Codorníu Brut", "url": "https://www.vivino.com/search/wines?q=Codorniu+Anna" }] },
+          { "name": "Torres", "description": "Family-owned icon producing world-class still wines alongside Cava.", "wines": [{ "name": "Mas La Plana Cabernet", "url": "https://www.vivino.com/search/wines?q=Torres+Mas+La+Plana" }] }
+        ],
+        "subRegions": [
+          { "name": "Alt-Penedès", "description": "The highest, coolest zone producing the most elegant, citrus-driven Cava base wines.", "geography": "500-800m elevation with limestone soils and significant diurnal variation.", "grapes": "Parellada, Macabeo." },
+          { "name": "Mig-Penedès", "description": "The main Cava production zone with ideal balance of warmth and acidity.", "geography": "200-500m elevation. Clay-limestone soils.", "grapes": "Xarel·lo, Macabeo, Parellada." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-4.7, 41.4] },
+      "properties": {
+        "id": "rueda",
+        "name": "Rueda",
+        "country": "Spain",
+        "history": "Spain's most acclaimed white wine DO, located on the Castilian Meseta plateau. Historically known for oxidized, fortified wines, Rueda was transformed in the 1970s when Marqués de Riscal (from Rioja) brought temperature-controlled fermentation and modern winemaking, revealing Verdejo's stunning aromatic potential when vinified fresh.",
+        "geography": "High-altitude continental plateau (600-800m) with extreme temperature variation: scorching summers and freezing winters. Very low rainfall makes drought a constant challenge. The altitude ensures cool nights that preserve acidity.",
+        "terroir": "Sandy and gravelly soils over limestone and clay bedrock. The stony, free-draining soils concentrate flavors and the high calcium content contributes to Verdejo's distinctive bitter-almond mineral finish.",
+        "grapes": [
+          { "name": "Verdejo", "description": "Spain's finest indigenous white grape. Aromatic, full-bodied, with fennel, grass, stone fruit, and a distinctive bitter-almond finish. Higher body and lower acidity than Sauvignon Blanc.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Sauvignon Blanc", "description": "Increasingly planted alongside Verdejo, producing crisp, herbaceous wines that complement the local style.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Marqués de Riscal", "description": "The Rioja giant that revolutionized Rueda's white winemaking in the 1970s.", "wines": [{ "name": "Verdejo", "url": "https://www.vivino.com/search/wines?q=Marques+de+Riscal+Verdejo" }] }
+        ],
+        "subRegions": [
+          { "name": "Rueda Central", "description": "The heart of the DO around the town of Rueda, producing the most concentrated Verdejo from old bush vines.", "geography": "High plateau (700-800m) with sandy soils over limestone.", "grapes": "Verdejo." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [8.2, 49.3] },
+      "properties": {
+        "id": "pfalz",
+        "name": "Pfalz",
+        "country": "Germany",
+        "history": "Germany's second-largest wine region and its warmest, benefiting from the shelter of the Haardt Mountains (northern extension of the Vosges). Once known primarily for bulk production, the Pfalz has undergone a dramatic quality revolution, producing outstanding dry Rieslings and increasingly world-class Spätburgunder (Pinot Noir).",
+        "geography": "The warmest and sunniest of Germany's wine regions. The Haardt Mountains to the west block Atlantic rain, creating Germany's driest microclimate. Almond and fig trees grow here—evidence of the near-Mediterranean conditions. Vineyards stretch along the 'Deutsche Weinstraße' (German Wine Route).",
+        "terroir": "Diverse soils including sandstone, limestone, basalt (volcanic), loess, and clay. The Mittelhaardt zone features the finest terroirs: limestone and basalt at mid-slope elevations producing powerful, complex Rieslings.",
+        "grapes": [
+          { "name": "Riesling", "description": "Produces a richer, more generous style than nearly any other German region. Ripe stone fruit, exotic spice, and power define the Pfalz style. Often fermented bone-dry.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Spätburgunder (Pinot Noir)", "description": "The Pfalz is increasingly challenging Burgundy for Pinot Noir quality, producing concentrated, oak-aged reds with cherry, earth, and spice.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Bürklin-Wolf", "description": "One of Germany's greatest estates, biodynamic pioneer with Grand Cru vineyards.", "wines": [{ "name": "Kirchenstück Riesling GG", "url": "https://www.vivino.com/search/wines?q=Burklin+Wolf+Kirchenstuck" }] }
+        ],
+        "subRegions": [
+          { "name": "Mittelhaardt", "description": "The premium northern section, home to the great villages of Forst, Deidesheim, and Ruppertsberg.", "geography": "Mid-slope limestone and basalt soils. Germany's warmest vineyards.", "grapes": "Riesling." },
+          { "name": "Südliche Weinstraße", "description": "The larger southern section, increasingly producing excellent Spätburgunder and value Riesling.", "geography": "Gentle slopes with loess, limestone, and sandstone.", "grapes": "Riesling, Spätburgunder, Grauburgunder." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [145.5, -37.7] },
+      "properties": {
+        "id": "yarra-valley",
+        "name": "Yarra Valley",
+        "country": "Australia",
+        "history": "Victoria's premier wine region, first planted in 1838. After phylloxera devastation in the early 20th century, it was abandoned until the 1960s revival. Now recognized as Australia's finest cool-climate region, producing benchmark Pinot Noir and Chardonnay that rival Burgundy, alongside exceptional traditional method sparkling wines.",
+        "geography": "Located just east of Melbourne, the Yarra Valley enjoys a cool maritime-influenced climate. The Great Dividing Range provides shelter while elevation varies from 50m to 400m. This altitude variation creates a wide range of mesoclimates within a compact area.",
+        "terroir": "Red volcanic basalt (deep, fertile) on the valley floor suits Cabernet and Shiraz, while grey clay and sandy soils on the cooler upper slopes are ideal for Pinot Noir and Chardonnay. The diversity of terroirs is the Yarra's greatest asset.",
+        "grapes": [
+          { "name": "Pinot Noir", "description": "The Yarra's finest achievement: elegant, perfumed, with dark cherry, spice, and forest floor notes. Among Australia's most Burgundian expressions.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Chardonnay", "description": "Ranges from tight, citrus-driven to generous, nutty styles. Cool climate ensures natural acid retention.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Cabernet Sauvignon", "description": "From warmer, lower sites produces structured, elegant Bordeaux-style reds with cassis and mint.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "De Bortoli", "description": "Family estate producing wines across all tiers, from Noble One (botrytis Semillon) to premium Yarra Pinot.", "wines": [{ "name": "Yarra Valley Pinot Noir", "url": "https://www.vivino.com/search/wines?q=De+Bortoli+Yarra+Pinot+Noir" }] }
+        ],
+        "subRegions": [
+          { "name": "Upper Yarra", "description": "Cooler, higher altitude (200-400m) producing the region's most elegant Pinot Noir and Chardonnay.", "geography": "Grey clay and sandy soils. Significantly cooler temperatures.", "grapes": "Pinot Noir, Chardonnay." },
+          { "name": "Lower Yarra", "description": "Warmer valley floor suited to Cabernet, Shiraz, and richer Chardonnay styles.", "geography": "Red volcanic basalt soils. Warmer mesoclimate.", "grapes": "Cabernet Sauvignon, Shiraz." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [138.6, -33.8] },
+      "properties": {
+        "id": "clare-valley",
+        "name": "Clare Valley",
+        "country": "Australia",
+        "history": "A small, historic region north of Adelaide, first planted by Jesuit settlers in the 1840s. Clare Valley is internationally renowned for producing Australia's greatest dry Rieslings—bone-dry, brilliantly acidic wines that rival the finest from Germany and Alsace. The region pioneered the screw-cap revolution in 2000.",
+        "geography": "A series of narrow valleys and ridges at 400-500m elevation in the Mount Lofty Ranges. Despite being further north than Barossa, the altitude provides significantly cooler temperatures, especially at night. Low humidity and cooling afternoon breezes from the Gulf further moderate the climate.",
+        "terroir": "Varied soils including red-brown earth, slate (particularly in the Polish Hill River sub-region), and limestone (in Watervale). Slate soils produce the most mineral, tightly structured Rieslings, while limestone yields richer, more generous styles.",
+        "grapes": [
+          { "name": "Riesling", "description": "Clare Valley Riesling is fermented bone-dry with electric lime, lemon, and mineral acidity in youth, developing classic toast and kerosene notes with age. A world benchmark.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Shiraz & Cabernet Sauvignon", "description": "From warmer sites, produces structured, age-worthy reds with dark fruit, eucalyptus, and firm tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Grosset", "description": "Jeffrey Grosset's iconic estate producing Australia's most acclaimed Rieslings.", "wines": [{ "name": "Polish Hill Riesling", "url": "https://www.vivino.com/search/wines?q=Grosset+Polish+Hill+Riesling" }] }
+        ],
+        "subRegions": [
+          { "name": "Polish Hill River", "description": "The cooler, more austere sub-region producing the most mineral, tightly wound Rieslings.", "geography": "Higher altitude with slate and shale soils.", "grapes": "Riesling." },
+          { "name": "Watervale", "description": "Slightly lower and warmer, producing more generous, lime-juicy Rieslings from limestone soils.", "geography": "Terra rossa over limestone. Warmer daytime temperatures.", "grapes": "Riesling, Shiraz." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [175.5, -41.2] },
+      "properties": {
+        "id": "martinborough",
+        "name": "Martinborough (Wairarapa)",
+        "country": "New Zealand",
+        "history": "A tiny but prestigious region at the southern tip of the North Island, established in 1978 after soil scientist Dr. Derek Milne identified its climate and terroir similarities to Burgundy. Martinborough quickly became New Zealand's first acclaimed Pinot Noir region, paving the way before Central Otago.",
+        "geography": "Dry, cool climate in the rain shadow of the Tararua Ranges. Much drier than the rest of the North Island's wine regions. Low rainfall, high sunshine hours, and persistent winds create ideal conditions for Pinot Noir. Small-scale production with an artisanal focus.",
+        "terroir": "Free-draining alluvial gravel terraces over ancient river deposits. The gravels are similar in structure to Burgundy's Côte d'Or, providing excellent drainage, heat retention, and natural vine stress that concentrates flavors.",
+        "grapes": [
+          { "name": "Pinot Noir", "description": "Martinborough's Pinot Noirs are among New Zealand's most complex: dark cherry, plum, earth, game, and silky tannins with significant aging potential.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Sauvignon Blanc", "description": "More restrained and mineral than Marlborough, with herbaceous, stony, and subtle tropical notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Ata Rangi", "description": "Founding estate and New Zealand Pinot Noir icon.", "wines": [{ "name": "Pinot Noir", "url": "https://www.vivino.com/search/wines?q=Ata+Rangi+Pinot+Noir" }] }
+        ],
+        "subRegions": [
+          { "name": "Martinborough Terrace", "description": "The original, best-drained gravel terrace producing the region's most acclaimed Pinot Noirs.", "geography": "Ancient alluvial gravel deposits. Free-draining, low vigor.", "grapes": "Pinot Noir." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [18.7, -33.4] },
+      "properties": {
+        "id": "swartland",
+        "name": "Swartland",
+        "country": "South Africa",
+        "history": "Once a bulk-wine wheat-farming region, Swartland has undergone South Africa's most dramatic quality revolution since the mid-2000s. A group of young, iconoclastic winemakers (the 'Swartland Revolution') championed old bush vine Chenin Blanc, Syrah, and Mediterranean blends, positioning Swartland as South Africa's most exciting and innovative wine region.",
+        "geography": "Warm Mediterranean climate with hot, dry summers. Lower rainfall than Stellenbosch means many vineyards are dryland-farmed (unirrigated), naturally restricting yields and concentrating flavors. Cooling afternoon breezes from the Atlantic moderate temperatures.",
+        "terroir": "Diverse soils: granite, shale, schist, and clay. The Paardeberg (granite mountain) is the quality epicenter, with decomposed granite soils that produce Swartland's most mineral, expressive Chenin Blancs. Ancient bush vines (50-80+ years old) are treasured.",
+        "grapes": [
+          { "name": "Chenin Blanc", "description": "Old bush vine Chenin is Swartland's crown jewel: complex, textured, with baked apple, quince, honey, and waxy notes. Often fermented in old oak for added complexity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Syrah", "description": "Produces peppery, medium to full-bodied reds with dark fruit, olive tapenade, and smoked meat. Increasingly compared to the Northern Rhône.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Grenache & GSM Blends", "description": "Mediterranean varieties thrive in the heat, producing aromatic, spicy blends.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Mullineux", "description": "The leading light of the Swartland Revolution, producing terroir-driven wines.", "wines": [{ "name": "Old Vines White", "url": "https://www.vivino.com/search/wines?q=Mullineux+Old+Vines+White" }] }
+        ],
+        "subRegions": [
+          { "name": "Paardeberg", "description": "The quality epicenter, a granite mountain producing South Africa's most celebrated old-vine Chenin Blanc.", "geography": "Decomposed granite soils at various elevations. Dryland-farmed.", "grapes": "Chenin Blanc, Grenache." },
+          { "name": "Malmesbury", "description": "The broader valley producing excellent Syrah and GSM blends from shale soils.", "geography": "Shale and clay soils in the warmer valley floor.", "grapes": "Syrah, Mourvèdre." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-71.4, -33.8] },
+      "properties": {
+        "id": "leyda-san-antonio",
+        "name": "Leyda / San Antonio Valley",
+        "country": "Chile",
+        "history": "One of Chile's most exciting new-wave regions, proving the country can produce world-class cool-climate wines. Planted only since the late 1990s, Leyda is just 14km from the Pacific Ocean, making it one of Chile's coolest and most maritime-influenced wine regions. It has quickly earned acclaim for Sauvignon Blanc, Pinot Noir, and Chardonnay.",
+        "geography": "Cool coastal climate directly influenced by the cold Humboldt Current. Morning fogs roll in from the Pacific, clearing by midday. Afternoon sea breezes further cool the vineyards. The absence of the Coastal Range at this latitude allows unimpeded ocean influence.",
+        "terroir": "Decomposed granite over clay subsoils. The thin, well-draining soils restrict vigor and concentrate flavors. Salinity in the soils from ancient marine deposits contributes to the wines' distinctive mineral, saline character.",
+        "grapes": [
+          { "name": "Sauvignon Blanc", "description": "Produces Chile's most acclaimed examples: intensely aromatic with grapefruit, lime, green herbs, and a distinctive salty minerality.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Pinot Noir", "description": "Elegant, cool-climate examples with bright cherry, strawberry, and earthy complexity. Growing in reputation.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Chardonnay", "description": "Crisp, mineral-driven with citrus and subtle oak. Among Chile's most refined examples.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Casa Marin", "description": "The pioneer that first planted vines in the San Antonio Valley coastal zone.", "wines": [{ "name": "Cipreses Sauvignon Blanc", "url": "https://www.vivino.com/search/wines?q=Casa+Marin+Sauvignon+Blanc" }] }
+        ],
+        "subRegions": [
+          { "name": "Leyda", "description": "The most acclaimed sub-valley, just 14km from the ocean, producing Chile's most mineral white wines.", "geography": "Rolling coastal hills with decomposed granite soils. Persistent morning fog.", "grapes": "Sauvignon Blanc, Pinot Noir, Chardonnay." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [15.5, 48.2] },
+      "properties": {
+        "id": "kamptal-kremstal",
+        "name": "Kamptal & Kremstal",
+        "country": "Austria",
+        "history": "Two adjacent regions flanking the Wachau that produce Austria's finest value Grüner Veltliner and Riesling. While less dramatic than the Wachau's steep terraces, these regions benefit from similar terroir elements and have gained international recognition through the DAC (Districtus Austriae Controllatus) quality system.",
+        "geography": "Continental climate with warm Pannonian influence from the east. The Kamp and Krems rivers moderate temperatures. Slightly warmer and less extreme than the Wachau, allowing more consistent ripening and higher yields without sacrificing quality.",
+        "terroir": "Mix of primary rock (gneiss, granite) on the riverbanks and deep loess deposits on the plateaus. Loess produces more generous, fruit-forward wines, while primary rock yields tighter, more mineral expressions. The interplay defines each village's character.",
+        "grapes": [
+          { "name": "Grüner Veltliner", "description": "From light, peppery everyday wines to powerful, oak-aged reserve bottlings with white pepper, citrus, lentil, and remarkable aging potential.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "Produces excellent, mineral-driven wines, slightly less intense than the Wachau but with greater accessibility and value.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Bründlmayer", "description": "Kamptal's most famous estate, producing benchmark Grüner Veltliner and sparkling wine.", "wines": [{ "name": "Heiligenstein Riesling", "url": "https://www.vivino.com/search/wines?q=Brundlmayer+Heiligenstein+Riesling" }] }
+        ],
+        "subRegions": [
+          { "name": "Langenlois (Kamptal)", "description": "Austria's largest wine commune, home to the famous Heiligenstein vineyard—a warm, south-facing terroir of desert sandstone.", "geography": "Desert sandstone and volcanic soils on the Heiligenstein. Loess on surrounding plateaus.", "grapes": "Grüner Veltliner, Riesling." },
+          { "name": "Krems (Kremstal)", "description": "Centered around the medieval town of Krems, producing elegant wines from a mix of loess and primary rock.", "geography": "Loess terraces and gneiss slopes along the Danube.", "grapes": "Grüner Veltliner, Riesling." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [1.2, 44.5] },
+      "properties": {
+        "id": "south-west-france",
+        "name": "South West France",
+        "country": "France",
+        "history": "A collection of diverse appellations upstream from Bordeaux, historically oppressed by Bordeaux's trade monopoly that prevented their wines from reaching export markets. This forced the region to develop fiercely individual styles from unique indigenous grapes. Today, South West France is prized for authenticity and value, with Cahors, Madiran, and Bergerac leading the revival.",
+        "geography": "Inland continental climate with warm summers and cold winters. The rivers Lot, Tarn, and Dordogne provide crucial moderating effects. Higher altitude areas experience significant frost risk. Proximity to the Pyrenees provides cooling mountain influences in the south.",
+        "terroir": "Diverse: Cahors features iron-rich clay and limestone (causse) on high plateaus; Madiran has clay-limestone and galets; Bergerac mirrors Bordeaux with gravel and clay. The poor, well-drained soils on hillsides produce the most concentrated wines.",
+        "grapes": [
+          { "name": "Malbec (Côt)", "description": "In Cahors (its original home), Malbec produces the 'Black Wine'—deeply colored, tannic, with blackberry, violet, and dark spice.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Tannat", "description": "The brutally tannic grape of Madiran, producing massively structured reds with dark fruit, leather, and spice. Micro-oxygenation was invented here to tame the tannins.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Château Montus (Madiran)", "description": "Alain Brumont's iconic estate that proved Tannat could be world-class.", "wines": [{ "name": "Madiran Prestige", "url": "https://www.vivino.com/search/wines?q=Chateau+Montus+Madiran" }] }
+        ],
+        "subRegions": [
+          { "name": "Cahors", "description": "The original home of Malbec, producing dense, dark, tannic reds known as 'Black Wine of Cahors.'", "geography": "High limestone plateaus (causses) and river terraces. Iron-rich clay.", "grapes": "Malbec (≥70%)." },
+          { "name": "Madiran", "description": "Produces some of France's most tannic reds from Tannat at the foot of the Pyrenees.", "geography": "Clay and limestone on rolling hills near the Pyrenees.", "grapes": "Tannat (≥60%)." },
+          { "name": "Bergerac & Monbazillac", "description": "An eastward extension of Bordeaux producing excellent value reds and world-class botrytis sweet whites.", "geography": "Mirrors Bordeaux's geology with clay, limestone, and gravel.", "grapes": "Merlot, Cabernet Sauvignon, Sémillon." }
+        ]
+      }
     }
   ]
 };
