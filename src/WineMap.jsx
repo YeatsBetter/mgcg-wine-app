@@ -88,10 +88,6 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
         });
     };
 
-    const maxBounds = [
-        [-90, -180],
-        [90, 180]
-    ];
 
     return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
@@ -100,10 +96,9 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 zoom={zoom}
                 minZoom={2}
                 maxZoom={12}
-                maxBounds={maxBounds}
-                maxBoundsViscosity={1.0}
                 style={{ height: '100%', width: '100%' }}
                 zoomControl={false}
+                worldCopyJump={true}
             >
                 {onEmptyClick && <MapEvents onEmptyClick={onEmptyClick} />}
 
@@ -111,7 +106,6 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 <TileLayer
                     attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
                     url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-                    noWrap={true}
                 />
 
                 {regions && regions.features && (
