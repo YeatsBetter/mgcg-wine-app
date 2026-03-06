@@ -96,8 +96,8 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 zoom={zoom}
                 minZoom={2}
                 maxZoom={12}
-                maxBounds={[[-85, -220], [85, 220]]}
-                maxBoundsViscosity={0.7}
+                maxBounds={[[-85, -180], [85, 180]]}
+                maxBoundsViscosity={1.0}
                 style={{ height: '100%', width: '100%' }}
                 zoomControl={false}
             >
