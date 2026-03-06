@@ -350,6 +350,13 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       >
         {activeRegion && (
           <>
+            <button
+              onClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
+              style={{ position: 'absolute', top: '16px', right: '16px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', zIndex: 10, padding: '4px' }}
+              title="Close"
+            >
+              <X size={22} />
+            </button>
             <div style={{ borderBottom: '1px solid var(--glass-border)', paddingBottom: '16px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-gold)', marginBottom: '8px', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 <MapPin size={16} />
@@ -454,7 +461,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         regions={activeData}
         onRegionClick={setSelectedRegion}
         onRegionHover={setHoveredRegion}
-        onEmptyClick={() => setSelectedRegion(null)}
+        onEmptyClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
       />
 
       {isSATOpen && (
