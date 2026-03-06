@@ -54,6 +54,34 @@ const satData = {
   }
 };
 
+const aromaData = {
+  primary: [
+    { category: "Floral", examples: "Blossom, rose, violet" },
+    { category: "Green Fruit", examples: "Apple, pear, gooseberry, grape" },
+    { category: "Citrus Fruit", examples: "Lemon, lime, grapefruit" },
+    { category: "Stone Fruit", examples: "Peach, apricot, nectarine" },
+    { category: "Tropical Fruit", examples: "Banana, lychee, mango, melon, passion fruit, pineapple" },
+    { category: "Red Fruit", examples: "Redcurrant, cranberry, raspberry, strawberry, red cherry, red plum" },
+    { category: "Black Fruit", examples: "Blackcurrant, blackberry, bramble, blueberry, black cherry, black plum" },
+    { category: "Herbaceous", examples: "Bell pepper, grass, tomato leaf, asparagus" },
+    { category: "Herbal", examples: "Eucalyptus, mint, medicinal, lavender, fennel, dill" },
+    { category: "Spice", examples: "Black/white pepper, liquorice" },
+    { category: "Fruit Ripeness", examples: "Green fruit, ripe fruit, dried fruit, cooked fruit" }
+  ],
+  secondary: [
+    { category: "Yeast (Lees, Autolysis)", examples: "Biscuits, bread, toast, pastry, brioche, cheese, yogurt" },
+    { category: "MLF", examples: "Butter, cheese, cream" },
+    { category: "Oak", examples: "Vanilla, cloves, nutmeg, coconut, butterscotch, toast, cedar, charred wood, smoke, chocolate, coffee, resin" }
+  ],
+  tertiary: [
+    { category: "Deliberate Oxidation", examples: "Almond, marzipan, hazelnut, walnut, chocolate, coffee, caramel" },
+    { category: "Fruit Development (White)", examples: "Dried apricot, marmalade, dried apple, dried banana" },
+    { category: "Fruit Development (Red)", examples: "Fig, prune, tar, dried blackberry, dried plum" },
+    { category: "Bottle Age (White)", examples: "Petrol, kerosene, honey, wax, ginger, toast" },
+    { category: "Bottle Age (Red)", examples: "Leather, forest floor, earth, mushroom, game, tobacco, vegetal, savory, cedar, pencil shavings" }
+  ]
+};
+
 function App() {
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -67,6 +95,7 @@ function App() {
   const activeRegion = currentSelected || currentHovered;
 
   const [isSATOpen, setIsSATOpen] = useState(false);
+  const [activeSATTab, setActiveSATTab] = useState('methodology'); // 'methodology' or 'aroma'
   const [noteText, setNoteText] = useState("");
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
   const [isSavingNote, setIsSavingNote] = useState(false);
@@ -189,28 +218,51 @@ function App() {
           </div>
         </div>
 
-        <button
-          onClick={() => setIsSATOpen(true)}
-          style={{
-            marginTop: '16px',
-            background: 'rgba(255, 255, 255, 0.5)',
-            border: '1px solid var(--accent-gold)',
-            color: 'var(--text-primary)',
-            padding: '8px 16px',
-            borderRadius: '20px',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            fontWeight: 600,
-            fontSize: '0.9rem',
-            transition: 'all 0.2s'
-          }}
-          onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-gold)'; e.currentTarget.style.color = '#fff'; }}
-          onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
-        >
-          <ClipboardList size={18} /> WSET SAT Guide
-        </button>
+        <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+          <button
+            onClick={() => { setIsSATOpen(true); setActiveSATTab('methodology'); }}
+            style={{
+              background: 'rgba(255, 255, 255, 0.5)',
+              border: '1px solid var(--accent-gold)',
+              color: 'var(--text-primary)',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-gold)'; e.currentTarget.style.color = '#fff'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
+          >
+            <ClipboardList size={18} /> WSET SAT Guide
+          </button>
+
+          <button
+            onClick={() => { setIsSATOpen(true); setActiveSATTab('aroma'); }}
+            style={{
+              background: 'rgba(255, 255, 255, 0.5)',
+              border: '1px solid var(--accent-ruby)',
+              color: 'var(--text-primary)',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
+          >
+            <Wine size={18} /> Aroma Guide
+          </button>
+        </div>
 
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
           {user ? `Welcome back, ${user.displayName?.split(' ')[0] || 'Explorer'}.` : 'Discover the definitive guide to global wine regions.'}
@@ -354,44 +406,119 @@ function App() {
           display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}>
           <div className="glass-panel" style={{
-            width: '90%', maxWidth: '800px', maxHeight: '85vh', overflowY: 'auto', padding: '32px',
-            animation: 'fadeIn 0.3s ease', position: 'relative'
+            width: '95%', maxWidth: '1000px', maxHeight: '90vh', overflowY: 'auto', padding: '32px',
+            animation: 'fadeIn 0.3s ease', position: 'relative', display: 'flex', flexDirection: 'column'
           }}>
             <button
               onClick={() => setIsSATOpen(false)}
-              style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
+              style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', zIndex: 10 }}
             >
               <X size={24} />
             </button>
+
             <h2 style={{ fontSize: '1.8rem', color: 'var(--accent-ruby)', marginBottom: '24px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-              <ClipboardList size={28} /> {satData.en.title}
+              <ClipboardList size={28} /> WSET Tasting Resources
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.appearance.title}</h3>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  {satData.en.appearance.items.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.nose.title}</h3>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  {satData.en.nose.items.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.palate.title}</h3>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  {satData.en.palate.items.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.conclusion.title}</h3>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  {satData.en.conclusion.items.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
-              </div>
+
+            {/* Tab Switcher */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '32px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '16px' }}>
+              <button
+                onClick={() => setActiveSATTab('methodology')}
+                style={{
+                  background: 'none', border: 'none', padding: '8px 16px', cursor: 'pointer',
+                  color: activeSATTab === 'methodology' ? 'var(--accent-ruby)' : 'var(--text-secondary)',
+                  fontWeight: 600, fontSize: '1rem', borderBottom: activeSATTab === 'methodology' ? '2px solid var(--accent-ruby)' : 'none'
+                }}
+              >
+                SAT Methodology
+              </button>
+              <button
+                onClick={() => setActiveSATTab('aroma')}
+                style={{
+                  background: 'none', border: 'none', padding: '8px 16px', cursor: 'pointer',
+                  color: activeSATTab === 'aroma' ? 'var(--accent-ruby)' : 'var(--text-secondary)',
+                  fontWeight: 600, fontSize: '1rem', borderBottom: activeSATTab === 'aroma' ? '2px solid var(--accent-ruby)' : 'none'
+                }}
+              >
+                Aroma & Flavour Guide
+              </button>
             </div>
+
+            {activeSATTab === 'methodology' ? (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+                <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.appearance.title}</h3>
+                  <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                    {satData.en.appearance.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.nose.title}</h3>
+                  <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                    {satData.en.nose.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.palate.title}</h3>
+                  <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                    {satData.en.palate.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px' }}>{satData.en.conclusion.title}</h3>
+                  <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                    {satData.en.conclusion.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                <section>
+                  <h3 style={{ fontSize: '1.3rem', color: 'var(--accent-ruby)', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Sprout size={20} /> Primary Aromas & Flavours
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '12px', fontStyle: 'italic' }}>Arising from the grape variety and the environment (terroir).</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+                    {aromaData.primary.map((a, i) => (
+                      <div key={i} style={{ background: 'rgba(255,255,255,0.5)', padding: '12px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                        <strong style={{ display: 'block', color: 'var(--accent-gold)', marginBottom: '4px' }}>{a.category}</strong>
+                        <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{a.examples}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h3 style={{ fontSize: '1.3rem', color: 'var(--accent-ruby)', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Wine size={20} /> Secondary Aromas & Flavours
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '12px', fontStyle: 'italic' }}>Arising from winemaking processes (oak, malolactic fermentation, yeast contact).</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+                    {aromaData.secondary.map((a, i) => (
+                      <div key={i} style={{ background: 'rgba(255,255,255,0.5)', padding: '12px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                        <strong style={{ display: 'block', color: 'var(--accent-gold)', marginBottom: '4px' }}>{a.category}</strong>
+                        <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{a.examples}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h3 style={{ fontSize: '1.3rem', color: 'var(--accent-ruby)', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Clock size={20} /> Tertiary Aromas & Flavours
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '12px', fontStyle: 'italic' }}>Arising from the aging process (oxidation, development in bottle).</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+                    {aromaData.tertiary.map((a, i) => (
+                      <div key={i} style={{ background: 'rgba(255,255,255,0.5)', padding: '12px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                        <strong style={{ display: 'block', color: 'var(--accent-gold)', marginBottom: '4px' }}>{a.category}</strong>
+                        <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{a.examples}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            )}
           </div>
         </div>
       )}
