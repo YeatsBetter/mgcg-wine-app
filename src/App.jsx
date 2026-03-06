@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
+import { wineProducersData } from './data/producers';
 import './App.css';
 import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart, Camera, ScanLine, AlertCircle } from 'lucide-react';
 
@@ -667,6 +668,8 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
 
       <WineMap
         regions={activeData}
+        producers={wineProducersData}
+        selectedRegion={selectedRegion}
         onRegionClick={setSelectedRegion}
         onRegionHover={setHoveredRegion}
         onEmptyClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
@@ -799,47 +802,8 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
         </div>
       )}
 
-      {/* Bottom-Left Circular Buttons Stack */}
-      <button
-        className="btn-wset-guide"
-        onClick={() => togglePanel('sat')}
-        style={{
-          position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
-          background: isSATOpen ? 'var(--accent-ruby)' : 'var(--glass-bg)', color: isSATOpen ? '#fff' : 'var(--accent-ruby)',
-          border: '1px solid var(--accent-ruby)', cursor: 'pointer', zIndex: 1001,
-          boxShadow: isSATOpen ? '0 6px 16px rgba(121,31,56,0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
-          backdropFilter: 'blur(12px)'
-        }}
-        title="WSET Guide"
-        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isSATOpen) { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; } }}
-        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isSATOpen) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = 'var(--accent-ruby)'; } }}
-      >
-        <BookOpen size={24} />
-      </button>
-
-      {/* AI Wine Label Scanner */}
-      <button
-        className="btn-label-scanner"
-        onClick={() => togglePanel('scanner')}
-        style={{
-          position: 'fixed', bottom: '312px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
-          background: isLabelScanOpen || scannedRegionName ? '#7c3aed' : 'var(--glass-bg)',
-          color: isLabelScanOpen || scannedRegionName ? '#fff' : '#7c3aed',
-          border: '1px solid #7c3aed', cursor: 'pointer', zIndex: 1001,
-          boxShadow: isLabelScanOpen || scannedRegionName ? '0 6px 20px rgba(124,58,237,0.5)' : '0 4px 12px rgba(0,0,0,0.1)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
-          backdropFilter: 'blur(12px)'
-        }}
-        title="AI Wine Label Scanner"
-        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isLabelScanOpen && !scannedRegionName) { e.currentTarget.style.background = '#7c3aed'; e.currentTarget.style.color = '#fff'; } }}
-        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isLabelScanOpen && !scannedRegionName) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = '#7c3aed'; } }}
-      >
-        <Camera size={24} />
-      </button>
-
       {isLabelScanOpen && (
-        <div className="glass-panel label-scanner-popup" style={{ position: 'fixed', bottom: '312px', left: '96px', width: '360px', maxHeight: '72vh', overflowY: 'auto', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '14px', animation: 'fadeIn 0.2s ease' }}>
+        <div className="glass-panel label-scanner-popup" style={{ position: 'fixed', bottom: '100px', left: '50%', transform: 'translateX(-50%)', width: '360px', maxHeight: '72vh', overflowY: 'auto', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '14px', animation: 'fadeIn 0.2s ease' }}>
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <h3 style={{ color: '#7c3aed', fontSize: '1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -978,28 +942,8 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
         </div>
       )}
 
-      {/* Filter by Grape */}
-      <button
-        className="btn-filter"
-        onClick={() => togglePanel('grape')}
-        style={{
-          position: 'fixed', bottom: '240px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
-          background: isGrapeFilterOpen || filterGrape !== 'All' ? 'var(--accent-ruby)' : 'var(--glass-bg)',
-          color: isGrapeFilterOpen || filterGrape !== 'All' ? '#fff' : 'var(--accent-ruby)',
-          border: '1px solid var(--accent-ruby)', cursor: 'pointer', zIndex: 1001,
-          boxShadow: isGrapeFilterOpen || filterGrape !== 'All' ? '0 6px 16px rgba(121, 31, 56, 0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
-          backdropFilter: 'blur(12px)'
-        }}
-        title="Filter by Grape"
-        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isGrapeFilterOpen && filterGrape === 'All') { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; } }}
-        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isGrapeFilterOpen && filterGrape === 'All') { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = 'var(--accent-ruby)'; } }}
-      >
-        <Filter size={24} />
-      </button>
-
       {isGrapeFilterOpen && (
-        <div className="glass-panel grape-filter-popup" style={{ position: 'fixed', bottom: '240px', left: '96px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.2s ease' }}>
+        <div className="glass-panel grape-filter-popup" style={{ position: 'fixed', bottom: '100px', left: '50%', transform: 'translateX(-50%)', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.2s ease' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
             <h3 style={{ color: 'var(--accent-gold)', fontSize: '1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               <Filter size={18} /> Filter by Grape
@@ -1034,39 +978,8 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
         </div>
       )}
 
-      {/* Currents & Winds */}
-      <button
-        className="btn-currents"
-        onClick={() => togglePanel('currents')}
-        style={{
-          position: 'fixed', bottom: '96px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
-          background: showCurrents ? '#3d8bcc' : 'var(--glass-bg)', color: showCurrents ? '#fff' : '#3d8bcc',
-          border: '1px solid #3d8bcc', cursor: 'pointer', zIndex: 1001,
-          boxShadow: showCurrents ? '0 6px 16px rgba(61,139,204,0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
-          backdropFilter: 'blur(12px)'
-        }}
-        title={showCurrents ? 'Hide Currents & Winds' : 'Show Currents & Winds'}
-        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!showCurrents) { e.currentTarget.style.background = '#3d8bcc'; e.currentTarget.style.color = '#fff'; } }}
-        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!showCurrents) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = '#3d8bcc'; } }}
-      >
-        <Waves size={24} />
-      </button>
-
-      {/* Bottom-Left AI Food & Wine Pairing */}
-      <button
-        className="btn-pairing"
-        onClick={() => togglePanel('pairing')}
-        style={{ position: 'fixed', bottom: '24px', left: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-gold)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px rgba(180, 150, 80, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}
-        title="AI Food & Wine Pairing"
-        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
-        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
-      >
-        {isPairingOpen ? <X size={24} /> : <Utensils size={24} />}
-      </button>
-
       {isPairingOpen && (
-        <div className="glass-panel pairing-popup" style={{ position: 'fixed', bottom: '90px', left: '24px', width: '380px', maxHeight: '70vh', overflowY: 'auto', padding: '24px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="glass-panel pairing-popup" style={{ position: 'fixed', bottom: '100px', left: '50%', transform: 'translateX(-50%)', width: '380px', maxHeight: '70vh', overflowY: 'auto', padding: '24px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h3 style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Utensils size={20} /> AI Food & Wine Pairing
           </h3>
@@ -1146,6 +1059,94 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
           )}
         </div>
       )}
+
+      {/* Centralized Bottom Navigation Bar */}
+      <div
+        className="glass-panel bottom-nav-bar"
+        style={{
+          position: 'fixed',
+          bottom: '32px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px',
+          padding: '12px 24px',
+          borderRadius: '40px',
+          zIndex: 1001,
+          boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+          backdropFilter: 'blur(16px)',
+          border: '1px solid var(--glass-border)',
+        }}
+      >
+        <button
+          className={`nav-btn ${isSATOpen ? 'active' : ''}`}
+          onClick={() => togglePanel('sat')}
+          style={{
+            width: '48px', height: '48px', borderRadius: '50%',
+            background: isSATOpen ? 'var(--accent-ruby)' : 'transparent', color: isSATOpen ? '#fff' : 'var(--text-secondary)',
+            border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          }}
+          title="WSET Guide"
+        >
+          <BookOpen size={22} />
+        </button>
+
+        <button
+          className={`nav-btn ${isLabelScanOpen || scannedRegionName ? 'active' : ''}`}
+          onClick={() => togglePanel('scanner')}
+          style={{
+            width: '48px', height: '48px', borderRadius: '50%',
+            background: isLabelScanOpen || scannedRegionName ? '#7c3aed' : 'transparent',
+            color: isLabelScanOpen || scannedRegionName ? '#fff' : 'var(--text-secondary)',
+            border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          }}
+          title="AI Wine Label Scanner"
+        >
+          <Camera size={22} />
+        </button>
+
+        <button
+          className={`nav-btn ${isGrapeFilterOpen || filterGrape !== 'All' ? 'active' : ''}`}
+          onClick={() => togglePanel('grape')}
+          style={{
+            width: '48px', height: '48px', borderRadius: '50%',
+            background: isGrapeFilterOpen || filterGrape !== 'All' ? 'var(--accent-ruby)' : 'transparent',
+            color: isGrapeFilterOpen || filterGrape !== 'All' ? '#fff' : 'var(--text-secondary)',
+            border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          }}
+          title="Filter by Grape"
+        >
+          <Filter size={22} />
+        </button>
+
+        <button
+          className={`nav-btn ${showCurrents ? 'active' : ''}`}
+          onClick={() => togglePanel('currents')}
+          style={{
+            width: '48px', height: '48px', borderRadius: '50%',
+            background: showCurrents ? '#3d8bcc' : 'transparent', color: showCurrents ? '#fff' : 'var(--text-secondary)',
+            border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          }}
+          title="Ocean Currents"
+        >
+          <Waves size={22} />
+        </button>
+
+        <button
+          className={`nav-btn ${isPairingOpen ? 'active' : ''}`}
+          onClick={() => togglePanel('pairing')}
+          style={{
+            width: '48px', height: '48px', borderRadius: '50%',
+            background: isPairingOpen ? 'var(--accent-gold)' : 'transparent',
+            color: isPairingOpen ? '#fff' : 'var(--text-secondary)',
+            border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          }}
+          title="AI Food & Wine Pairing"
+        >
+          <Utensils size={22} />
+        </button>
+      </div>
 
       {/* Floating Notepad UI */}
       {user && (

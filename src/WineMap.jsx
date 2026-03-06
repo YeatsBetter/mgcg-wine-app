@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, GeoJSON, Polyline, Tooltip, useMap, LayersControl } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, Polyline, Tooltip, Popup, useMap, LayersControl, Marker } from 'react-leaflet';
 import L from 'leaflet';
 import { Wine } from 'lucide-react';
 import { oceanCurrents } from './data/oceanCurrents';
@@ -66,6 +66,19 @@ const hoverVisitedIcon = L.divIcon({ html: hoverVisitedGlassIconHtml, className:
 const wishlistIcon = L.divIcon({ html: wishlistGlassIconHtml, className: 'custom-wine-marker wishlist', iconSize: [30, 30], iconAnchor: [15, 15] });
 const hoverWishlistIcon = L.divIcon({ html: hoverWishlistGlassIconHtml, className: 'custom-wine-marker hover', iconSize: [36, 36], iconAnchor: [18, 18] });
 
+const producerIconHtml = `
+  <div style="background: rgba(255,255,255,0.9); color: var(--accent-ruby); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(121, 31, 56, 0.3); border: 2px solid var(--accent-ruby); transition: all 0.3s ease;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a7.5 7.5 0 0 0 7.5-7.5C19.5 4.5 16 2 12 2S4.5 4.5 4.5 7.5 12 15 12 15z"/><path d="M4.5 7.5h15"/></svg>
+  </div>
+`;
+
+const producerIcon = L.divIcon({
+    html: producerIconHtml,
+    className: 'custom-producer-marker',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12]
+});
+
 
 // Utility component to handle clicks on the empty map areas
 function MapEvents({ onEmptyClick }) {
@@ -80,6 +93,17 @@ function MapEvents({ onEmptyClick }) {
         map.on('click', handleClick);
         return () => map.off('click', handleClick);
     }, [map, onEmptyClick]);
+    return null;
+}
+
+// Map Controller for zooming out when deselected
+function MapController({ selectedRegion, center, zoom }) {
+    const map = useMap();
+    useEffect(() => {
+        if (!selectedRegion) {
+            map.flyTo(center, zoom, { duration: 1.2 });
+        }
+    }, [selectedRegion, center, zoom, map]);
     return null;
 }
 
@@ -130,7 +154,7 @@ const scannedIcon = L.divIcon({
     iconAnchor: [18, 18]
 });
 
-export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {}, scannedRegionName = '' }) {
+export default function WineMap({ regions, producers, selectedRegion, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {}, scannedRegionName = '' }) {
     const center = [35.0, 10.0];
     const zoom = 2.5;
 
@@ -172,6 +196,10 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 if (e.originalEvent && e.originalEvent.stopPropagation) {
                     e.originalEvent.stopPropagation();
                 }
+                const map = e.target._map;
+                if (map) {
+                    map.flyTo(e.latlng, 7, { duration: 1.2 });
+                }
                 if (onRegionClick) onRegionClick(feature.properties);
             }
         });
@@ -189,6 +217,7 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 style={{ height: '100%', width: '100%' }}
                 zoomControl={false}
             >
+                <MapController selectedRegion={selectedRegion} center={center} zoom={zoom} />
                 {onEmptyClick && <MapEvents onEmptyClick={onEmptyClick} />}
 
                 <LayersControl position="topright">
@@ -275,6 +304,44 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                         onEachFeature={onEachFeature}
                     />
                 )}
+
+                {/* Render Producers if a region is selected */}
+                {selectedRegion && producers && producers.features && producers.features
+                    .filter(p => p.properties.regionId === selectedRegion.id)
+                    .map((producer, index) => (
+                        <Marker
+                            key={`producer-${index}`}
+                            position={[producer.geometry.coordinates[1], producer.geometry.coordinates[0]]}
+                            icon={producerIcon}
+                        >
+                            <Tooltip direction="top" offset={[0, -12]} opacity={1}>
+                                <div style={{ textAlign: 'center' }}>
+                                    <strong style={{ color: 'var(--accent-ruby)', display: 'block' }}>{producer.properties.name}</strong>
+                                    <span style={{ fontSize: '0.8rem', color: '#666' }}>Producer</span>
+                                </div>
+                            </Tooltip>
+                            <Popup>
+                                <div style={{ minWidth: '200px', padding: '4px' }}>
+                                    <h3 style={{ color: 'var(--accent-ruby)', margin: '0 0 8px 0', fontSize: '1.1rem' }}>{producer.properties.name}</h3>
+                                    <p style={{ color: '#555', margin: '0 0 12px 0', lineHeight: 1.4, fontSize: '0.9rem' }}>{producer.properties.description}</p>
+
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                        {producer.properties.acceptsVisitors && (
+                                            <span style={{ background: 'rgba(74, 171, 106, 0.1)', color: '#4aab6a', fontSize: '0.75rem', padding: '4px 8px', borderRadius: '4px', border: '1px solid rgba(74, 171, 106, 0.3)', display: 'inline-block', width: 'fit-content' }}>
+                                                ✓ Visitors Welcome
+                                            </span>
+                                        )}
+                                        {producer.properties.url && (
+                                            <a href={producer.properties.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'var(--accent-ruby)', color: 'white', padding: '6px 12px', borderRadius: '4px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 600, textAlign: 'center', marginTop: '4px' }}>
+                                                View on Vivino
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </Popup>
+                        </Marker>
+                    ))
+                }
             </MapContainer>
         </div>
     );
