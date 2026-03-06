@@ -81,7 +81,7 @@ function App() {
                   <img src={user.photoURL} alt="User" style={{ width: 32, height: 32, borderRadius: '50%', border: '2px solid var(--accent-ruby)' }} />
                 ) : (
                   <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <User size={18} color="var(--accent-ruby)'" />
+                    <User size={18} color="var(--accent-ruby)" />
                   </div>
                 )}
                 <button
@@ -174,88 +174,98 @@ function App() {
               </div>
 
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Sprout size={18} color="var(--accent-ruby)" /> Terroir & Soil
-                </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.terroir}</p>
-              </div>
-
-              <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Grape size={18} color="var(--accent-ruby)" /> Key Grapes
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.grapes}</p>
-              </div>
-
-            </div>
-
-            {/* Notable Estates with Vivino Links */}
-            <div style={{ marginTop: '12px' }}>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Notable Estates</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {activeRegion.estates.map((estate, idx) => (
-                  <div key={idx} style={{ padding: '16px', background: 'rgba(255,255,255,0.6)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                    <h4 style={{ fontSize: '1.15rem', color: 'var(--accent-gold)', marginBottom: '6px' }}>{estate.name}</h4>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '12px' }}>{estate.description}</p>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      {estate.wines.map((wine, wIdx) => (
-                        <a
-                          key={wIdx}
-                          href={wine.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            padding: '8px 12px',
-                            background: 'rgba(190, 18, 60, 0.08)',
-                            borderRadius: '6px',
-                            color: 'var(--accent-ruby)',
-                            textDecoration: 'none',
-                            fontSize: '0.85rem',
-                            fontWeight: 500,
-                            transition: 'background 0.2s ease',
-                          }}
-                          onMouseOver={(e) => e.currentTarget.style.background = 'rgba(190, 18, 60, 0.15)'}
-                          onMouseOut={(e) => e.currentTarget.style.background = 'rgba(190, 18, 60, 0.08)'}
-                        >
-                          <span>🍷 {wine.name}</span>
-                          <ExternalLink size={14} />
-                        </a>
-                      ))}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {Array.isArray(activeRegion.grapes) ? activeRegion.grapes.map((grape, idx) => (
+                    <div key={idx} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', background: 'rgba(255,255,255,0.6)', padding: '12px', borderRadius: '8px', border: '1px solid rgba(190, 18, 60, 0.1)' }}>
+                      <img
+                        src={grape.image}
+                        alt={grape.name}
+                        style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '8px', flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
+                      />
+                      <div>
+                        <h4 style={{ fontSize: '1.05rem', color: 'var(--accent-ruby)', marginBottom: '4px', fontWeight: 600 }}>{grape.name}</h4>
+                        <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                          {/* Split the description by periods to create bullet points if we want, or just render it as a paragraph. The user asked for bullet points. */}
+                          {grape.description.split('. ').map((point, i) => {
+                            if (!point.trim()) return null;
+                            return <li key={i}>{point.trim() + (point.endsWith('.') ? '' : '.')}</li>
+                          })}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )) : (
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.grapes}</p>
+                  )}
+                </div>
               </div>
-            </div>
 
-            {selectedRegion && (
-              <button
-                onClick={() => setSelectedRegion(null)}
-                style={{
-                  marginTop: 'auto',
-                  padding: '12px 24px',
-                  background: 'transparent',
-                  border: '1px solid var(--accent-ruby)',
-                  color: 'var(--accent-ruby)',
-                  borderRadius: '30px',
-                  cursor: 'pointer',
-                  fontFamily: 'var(--font-sans)',
-                  fontWeight: 600,
-                  transition: 'var(--transition-smooth)',
-                  ':hover': {
-                    background: 'var(--accent-ruby)',
-                    color: '#fff'
-                  }
-                }}
-                onMouseOver={(e) => { e.target.style.background = 'var(--accent-ruby)'; e.target.style.color = '#fff'; }}
-                onMouseOut={(e) => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent-ruby)'; }}
-              >
-                Close Details
-              </button>
-            )}
+              {/* Notable Estates with Vivino Links */}
+              <div style={{ marginTop: '12px' }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Notable Estates</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {activeRegion.estates.map((estate, idx) => (
+                    <div key={idx} style={{ padding: '16px', background: 'rgba(255,255,255,0.6)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                      <h4 style={{ fontSize: '1.15rem', color: 'var(--accent-gold)', marginBottom: '6px' }}>{estate.name}</h4>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '12px' }}>{estate.description}</p>
+
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                        {estate.wines.map((wine, wIdx) => (
+                          <a
+                            key={wIdx}
+                            href={wine.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              padding: '8px 12px',
+                              background: 'rgba(190, 18, 60, 0.08)',
+                              borderRadius: '6px',
+                              color: 'var(--accent-ruby)',
+                              textDecoration: 'none',
+                              fontSize: '0.85rem',
+                              fontWeight: 500,
+                              transition: 'background 0.2s ease',
+                            }}
+                            onMouseOver={(e) => e.currentTarget.style.background = 'rgba(190, 18, 60, 0.15)'}
+                            onMouseOut={(e) => e.currentTarget.style.background = 'rgba(190, 18, 60, 0.08)'}
+                          >
+                            <span>🍷 {wine.name}</span>
+                            <ExternalLink size={14} />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {selectedRegion && (
+                <button
+                  onClick={() => setSelectedRegion(null)}
+                  style={{
+                    marginTop: 'auto',
+                    padding: '12px 24px',
+                    background: 'transparent',
+                    border: '1px solid var(--accent-ruby)',
+                    color: 'var(--accent-ruby)',
+                    borderRadius: '30px',
+                    cursor: 'pointer',
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: 600,
+                    transition: 'var(--transition-smooth)'
+                  }}
+                  onMouseOver={(e) => { e.target.style.background = 'var(--accent-ruby)'; e.target.style.color = '#fff'; }}
+                  onMouseOut={(e) => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent-ruby)'; }}
+                >
+                  Close Details
+                </button>
+              )}
+            </div>
           </>
         )}
       </div>

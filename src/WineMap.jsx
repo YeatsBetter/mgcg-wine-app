@@ -1,13 +1,44 @@
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
+import L from 'leaflet';
+import { Wine } from 'lucide-react';
+
+// Create a custom glass icon HTML
+const wineGlassIconHtml = `
+  <div style="background: var(--accent-ruby); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(121, 31, 56, 0.4); border: 2px solid white; transition: all 0.3s ease;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a7.5 7.5 0 0 0 7.5-7.5C19.5 4.5 16 2 12 2S4.5 4.5 4.5 7.5 12 15 12 15z"/><path d="M4.5 7.5h15"/></svg>
+  </div>
+`;
+
+const hoverGlassIconHtml = `
+  <div style="background: var(--accent-gold); color: var(--background); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(212, 175, 55, 0.5); border: 2px solid white; transform: scale(1.1); transition: all 0.3s ease; z-index: 1000;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M12 15a7.5 7.5 0 0 0 7.5-7.5C19.5 4.5 16 2 12 2S4.5 4.5 4.5 7.5 12 15 12 15z"/><path d="M4.5 7.5h15"/></svg>
+  </div>
+`;
+
+const defaultIcon = L.divIcon({
+    html: wineGlassIconHtml,
+    className: 'custom-wine-marker',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+});
+
+const hoverIcon = L.divIcon({
+    html: hoverGlassIconHtml,
+    className: 'custom-wine-marker hover',
+    iconSize: [36, 36],
+    iconAnchor: [18, 18]
+});
+
 
 // Utility component to handle clicks on the empty map areas
 function MapEvents({ onEmptyClick }) {
     const map = useMap();
     useEffect(() => {
         const handleClick = (e) => {
-            // If the user clicked on an SVG path (a GeoJSON region), ignore the empty click
-            if (e.originalEvent && e.originalEvent.target && e.originalEvent.target.tagName !== 'path') {
+            // We check if we clicked on the marker container instead of 'path'
+            const isClickOnMarker = e.originalEvent.target.closest('.custom-wine-marker');
+            if (!isClickOnMarker) {
                 onEmptyClick();
             }
         };
@@ -18,19 +49,11 @@ function MapEvents({ onEmptyClick }) {
 }
 
 export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick }) {
-    // Center map on Europe roughly to show France/Italy, but zoom far out
     const center = [35.0, 10.0];
     const zoom = 2.5;
 
-    const getStyle = (feature) => {
-        return {
-            color: 'var(--accent-ruby)',
-            weight: 2,
-            opacity: 0.6,
-            fillColor: 'var(--accent-ruby)',
-            fillOpacity: 0.15,
-            className: 'wine-region-polygon'
-        };
+    const pointToLayer = (feature, latlng) => {
+        return L.marker(latlng, { icon: defaultIcon });
     };
 
     const onEachFeature = (feature, layer) => {
@@ -38,27 +61,20 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
         layer.bindTooltip(`<div class="wine-map-tooltip">${feature.properties.name}</div>`, {
             sticky: true,
             direction: 'top',
-            offset: [0, -10],
+            offset: [0, -20],
             opacity: 1
         });
 
         layer.on({
             mouseover: (e) => {
                 const trgt = e.target;
-                trgt.setStyle({
-                    weight: 3,
-                    opacity: 1,
-                    fillOpacity: 0.4,
-                    fillColor: 'var(--accent-gold)',
-                    color: 'var(--accent-gold)'
-                });
-                trgt.bringToFront();
+                trgt.setIcon(hoverIcon);
                 // Pass event back to App so hover information triggers
                 if (onRegionHover) onRegionHover(feature.properties);
             },
             mouseout: (e) => {
                 const trgt = e.target;
-                trgt.setStyle(getStyle(feature));
+                trgt.setIcon(defaultIcon);
                 // Clear hover so App fallback drops to null (or keeps selectedRegion)
                 if (onRegionHover) onRegionHover(null);
             },
@@ -93,7 +109,7 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
                 {regions && regions.features && (
                     <GeoJSON
                         data={regions}
-                        style={getStyle}
+                        pointToLayer={pointToLayer}
                         onEachFeature={onEachFeature}
                     />
                 )}
