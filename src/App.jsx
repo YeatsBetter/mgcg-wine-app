@@ -198,7 +198,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       setPairingResults(parsed);
     } catch (err) {
       console.error('AI Pairing Error:', err);
-      setPairingError('Unable to generate pairing. Please try again.');
+      setPairingError(err.message || 'Unable to generate pairing. Please try again.');
     } finally {
       setIsPairingLoading(false);
     }

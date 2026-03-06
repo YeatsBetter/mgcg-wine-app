@@ -26,4 +26,4 @@ export const db = getFirestore(app);
 
 // Initialize Firebase AI Logic (Gemini)
 const ai = getAI(app, { backend: new GoogleAIBackend() });
-export const geminiModel = getGenerativeModel(ai, { model: "gemini-2.0-flash" });
+export const geminiModel = getGenerativeModel(ai, { model: "gemini-2.5-flash" });
