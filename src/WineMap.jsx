@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, GeoJSON, Polyline, Tooltip, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { Wine, Waves } from 'lucide-react';
+import { Wine } from 'lucide-react';
 import { oceanCurrents } from './data/oceanCurrents';
 
 // Create a custom glass icon HTML
@@ -48,36 +48,44 @@ function MapEvents({ onEmptyClick }) {
     return null;
 }
 
-// Arrow decorator for polylines
-function ArrowDecorator({ path, color }) {
+// Animated arrow markers along current paths
+function AnimatedArrows({ path, color, type }) {
     const map = useMap();
     useEffect(() => {
         if (!path || path.length < 2) return;
-        const arrows = [];
-        // Place arrows every few segments
-        const step = Math.max(1, Math.floor(path.length / 3));
+        const markers = [];
+        const step = Math.max(1, Math.floor(path.length / 4));
         for (let i = step; i < path.length; i += step) {
             const prev = path[i - 1];
             const curr = path[i];
-            const angle = Math.atan2(curr[0] - prev[0], curr[1] - prev[1]) * (180 / Math.PI);
+            const angle = Math.atan2(curr[1] - prev[1], curr[0] - prev[0]) * (180 / Math.PI);
+
+            const isWind = type === 'wind';
             const icon = L.divIcon({
-                html: `<div style="color:${color};font-size:16px;transform:rotate(${-angle + 90}deg);opacity:0.8;text-shadow:0 0 3px rgba(0,0,0,0.3);">➤</div>`,
-                className: 'arrow-decorator',
-                iconSize: [16, 16],
-                iconAnchor: [8, 8]
+                html: `<div class="current-arrow ${type}-arrow" style="
+                    transform: rotate(${angle}deg);
+                    color: ${color};
+                    font-size: ${isWind ? '14px' : '18px'};
+                    filter: drop-shadow(0 0 4px ${color}80);
+                    animation: arrowPulse 2s ease-in-out infinite;
+                    animation-delay: ${i * 0.3}s;
+                ">${isWind ? '→' : '▸'}</div>`,
+                className: 'arrow-decorator-icon',
+                iconSize: [18, 18],
+                iconAnchor: [9, 9]
             });
-            const marker = L.marker(curr, { icon, interactive: false }).addTo(map);
-            arrows.push(marker);
+            const marker = L.marker(curr, { icon, interactive: false, pane: 'overlayPane' }).addTo(map);
+            markers.push(marker);
         }
-        return () => arrows.forEach(m => map.removeLayer(m));
-    }, [map, path, color]);
+        return () => markers.forEach(m => map.removeLayer(m));
+    }, [map, path, color, type]);
     return null;
 }
 
-const currentColors = {
-    warm: '#e05555',
-    cold: '#4488cc',
-    wind: '#66aa66'
+const styleConfig = {
+    warm: { color: '#e84057', glow: 'rgba(232, 64, 87, 0.35)', label: 'Warm Current', emoji: '🔴' },
+    cold: { color: '#3d8bcc', glow: 'rgba(61, 139, 204, 0.35)', label: 'Cold Current', emoji: '🔵' },
+    wind: { color: '#4aab6a', glow: 'rgba(74, 171, 106, 0.3)', label: 'Wind Pattern', emoji: '🌬️' }
 };
 
 export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents }) {
@@ -138,34 +146,50 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
 
                 {/* Ocean Currents & Wind Overlays */}
                 {showCurrents && oceanCurrents.map((c, i) => {
-                    const color = currentColors[c.type];
-                    const dashArray = c.type === 'wind' ? '8, 8' : undefined;
+                    const cfg = styleConfig[c.type];
                     return (
                         <React.Fragment key={i}>
+                            {/* Glow layer behind */}
                             <Polyline
                                 positions={c.path}
                                 pathOptions={{
-                                    color: color,
-                                    weight: c.type === 'wind' ? 2.5 : 3.5,
-                                    opacity: 0.7,
-                                    dashArray: dashArray,
+                                    color: cfg.glow,
+                                    weight: c.type === 'wind' ? 8 : 12,
+                                    opacity: 0.5,
                                     lineCap: 'round',
-                                    lineJoin: 'round'
+                                    lineJoin: 'round',
+                                    dashArray: c.type === 'wind' ? '6, 10' : undefined,
+                                    interactive: false
+                                }}
+                            />
+                            {/* Main line */}
+                            <Polyline
+                                positions={c.path}
+                                pathOptions={{
+                                    color: cfg.color,
+                                    weight: c.type === 'wind' ? 2 : 3,
+                                    opacity: 0.85,
+                                    lineCap: 'round',
+                                    lineJoin: 'round',
+                                    dashArray: c.type === 'wind' ? '8, 6' : undefined,
+                                    className: 'animated-current-line'
                                 }}
                             >
-                                <Tooltip sticky>
-                                    <div style={{ maxWidth: '240px' }}>
-                                        <strong style={{ color: color }}>
-                                            {c.type === 'warm' ? '🔴' : c.type === 'cold' ? '🔵' : '🌬️'} {c.name}
-                                        </strong>
-                                        <span style={{ display: 'block', fontSize: '0.75rem', color: '#666', textTransform: 'uppercase', marginTop: 2 }}>
-                                            {c.type === 'wind' ? 'Wind Pattern' : c.type === 'warm' ? 'Warm Current' : 'Cold Current'}
-                                        </span>
-                                        <p style={{ margin: '6px 0 0', fontSize: '0.8rem', lineHeight: 1.4 }}>{c.desc}</p>
+                                <Tooltip sticky className="current-tooltip">
+                                    <div style={{ padding: '4px 2px', minWidth: '180px', maxWidth: '260px' }}>
+                                        <div style={{ fontWeight: 700, fontSize: '0.9rem', color: cfg.color, marginBottom: '2px' }}>
+                                            {cfg.emoji} {c.name}
+                                        </div>
+                                        <div style={{ fontSize: '0.7rem', color: '#888', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '6px' }}>
+                                            {cfg.label}
+                                        </div>
+                                        <div style={{ fontSize: '0.78rem', lineHeight: 1.5, color: '#444' }}>
+                                            {c.desc}
+                                        </div>
                                     </div>
                                 </Tooltip>
                             </Polyline>
-                            <ArrowDecorator path={c.path} color={color} />
+                            <AnimatedArrows path={c.path} color={cfg.color} type={c.type} />
                         </React.Fragment>
                     );
                 })}

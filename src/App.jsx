@@ -284,26 +284,6 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           >
             <Wine size={18} /> Aroma Guide
           </button>
-
-          <button
-            onClick={() => setShowCurrents(!showCurrents)}
-            style={{
-              background: showCurrents ? 'rgba(68, 136, 204, 0.2)' : 'rgba(255, 255, 255, 0.5)',
-              border: showCurrents ? '1px solid #4488cc' : '1px solid var(--glass-border)',
-              color: showCurrents ? '#4488cc' : 'var(--text-primary)',
-              padding: '8px 16px',
-              borderRadius: '20px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              transition: 'all 0.2s'
-            }}
-          >
-            <Waves size={18} /> Currents & Winds
-          </button>
         </div>
 
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '16px', lineHeight: 1.6, fontStyle: 'italic' }}>
@@ -608,6 +588,24 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           </div>
         </div>
       )}
+
+      {/* Bottom-Left Circular Buttons */}
+      <button
+        onClick={() => setShowCurrents(!showCurrents)}
+        style={{
+          position: 'fixed', bottom: '96px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
+          background: showCurrents ? '#3d8bcc' : 'var(--glass-bg)', color: showCurrents ? '#fff' : '#3d8bcc',
+          border: '1px solid #3d8bcc', cursor: 'pointer', zIndex: 1001,
+          boxShadow: showCurrents ? '0 6px 16px rgba(61,139,204,0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          backdropFilter: 'blur(12px)'
+        }}
+        title={showCurrents ? 'Hide Currents & Winds' : 'Show Currents & Winds'}
+        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!showCurrents) { e.currentTarget.style.background = '#3d8bcc'; e.currentTarget.style.color = '#fff'; } }}
+        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!showCurrents) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = '#3d8bcc'; } }}
+      >
+        <Waves size={24} />
+      </button>
 
       {/* Bottom-Left AI Food & Wine Pairing */}
       <button
