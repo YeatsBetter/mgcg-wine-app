@@ -19,7 +19,7 @@ export const wineRegionsData = {
                 "terroir": "Terroir in Bordeaux is strictly divided by the rivers. The Left Bank (Médoc, Graves) is dominated by gravelly soils deposited by river action; these soils drain rapidly and reflect heat, crucial for ripening Cabernet Sauvignon. The Right Bank (Saint-Émilion, Pomerol) features clay-limestone and sandier soils which are cooler, perfectly suited for Merlot and Cabernet Franc. Underlying limestone beds provide excellent drainage across the region.",
                 "climate": {
                     "rainfall": "950 mm",
-                    "gdd": "1,450 °C Days"
+                    "gdd": "1,450"
                 },
                 "soil": [
                     "Gravel (Left Bank)",
@@ -171,7 +171,7 @@ export const wineRegionsData = {
                 "terroir": "The soils are predominantly limestone and marl (calcareous clay) dating back to the Jurassic period. The exact ratio determines the grape planting: Chardonnay performs best on limestone-dominant soils (e.g., Côte de Beaune, Chablis), while Pinot Noir demands more marl (e.g., Côte de Nuits). The best vineyards (Grand Cru and Premier Cru) are located mid-slope (mi-coteau) where drainage is optimal and frost risk is minimized.",
                 "climate": {
                     "rainfall": "700 mm",
-                    "gdd": "1,350 °C Days"
+                    "gdd": "1,350"
                 },
                 "soil": [
                     "Jurassic Limestone",
@@ -297,7 +297,7 @@ export const wineRegionsData = {
                 "terroir": "The region features a patchwork of soils. The best inland zones (Chianti Classico, Montalcino) are characterized by 'Galestro' (a crumbly, rocky clay-marl) and 'Alberese' (hard limestone). These poor soils limit vigor and concentrate flavors. Towards the coastal Maremma (Bolgheri), soils are flat and sandy-clay, better suited to Bordeaux varieties.",
                 "climate": {
                     "rainfall": "800 mm",
-                    "gdd": "1,600 °C Days"
+                    "gdd": "1,600"
                 },
                 "soil": [
                     "Galestro (Marl)",
@@ -505,7 +505,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,700 °C Days"
+                    "gdd": "1,700"
                 },
                 "soil": [
                     "Volcanic Ash",
@@ -640,7 +640,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "850 mm",
-                    "gdd": "1,400 °C Days"
+                    "gdd": "1,400"
                 },
                 "soil": [
                     "Calcareous Marl",
@@ -772,7 +772,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "400 mm",
-                    "gdd": "1,600 °C Days"
+                    "gdd": "1,600"
                 },
                 "soil": [
                     "Limestone Clay",
@@ -904,7 +904,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "600 mm",
-                    "gdd": "1,800 °C Days"
+                    "gdd": "1,800"
                 },
                 "soil": [
                     "Galets Roulés",
@@ -1026,7 +1026,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "700 mm",
-                    "gdd": "1,000 °C Days"
+                    "gdd": "1,000"
                 },
                 "soil": [
                     "Blue Devonian Slate",
@@ -1157,7 +1157,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "655 mm",
-                    "gdd": "1,090 °C Days"
+                    "gdd": "1,090"
                 },
                 "soil": [
                     "Greywacke River Stones",
@@ -1288,7 +1288,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "600 mm",
-                    "gdd": "1,750 °C Days"
+                    "gdd": "1,750"
                 },
                 "soil": [
                     "Decomposed Granite",
@@ -1434,7 +1434,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "700 mm",
-                    "gdd": "1,050 °C Days"
+                    "gdd": "1,050"
                 },
                 "soil": [
                     "Belemnite Chalk",
@@ -1555,7 +1555,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "800 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Volcanic Tuff",
@@ -1687,7 +1687,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "220 mm",
-                    "gdd": "1,650 °C Days"
+                    "gdd": "1,650"
                 },
                 "soil": [
                     "Alluvial Sand",
@@ -1808,7 +1808,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "500 mm",
-                    "gdd": "1,900 °C Days"
+                    "gdd": "1,900"
                 },
                 "soil": [
                     "Schist",
@@ -1942,7 +1942,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "1000 mm",
-                    "gdd": "1,200 °C Days"
+                    "gdd": "1,200"
                 },
                 "soil": [
                     "Jory (Volcanic)",
@@ -2077,7 +2077,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2217,7 +2217,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "500 mm",
-                    "gdd": "1,850 °C Days"
+                    "gdd": "1,850"
                 },
                 "soil": [
                     "Red-Brown Earth",
@@ -2337,7 +2337,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2472,7 +2472,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2612,7 +2612,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2724,7 +2724,7 @@ export const wineRegionsData = {
                 "country": "France",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2826,7 +2826,7 @@ export const wineRegionsData = {
                 "country": "France",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -2928,7 +2928,7 @@ export const wineRegionsData = {
                 "country": "Spain",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3030,7 +3030,7 @@ export const wineRegionsData = {
                 "country": "Hungary",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3132,7 +3132,7 @@ export const wineRegionsData = {
                 "country": "Spain",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3234,7 +3234,7 @@ export const wineRegionsData = {
                 "country": "New Zealand",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3336,7 +3336,7 @@ export const wineRegionsData = {
                 "country": "Chile",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3438,7 +3438,7 @@ export const wineRegionsData = {
                 "country": "USA (Washington)",
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3565,7 +3565,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3686,7 +3686,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3818,7 +3818,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -3958,7 +3958,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4079,7 +4079,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4194,7 +4194,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4315,7 +4315,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4436,7 +4436,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4562,7 +4562,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4683,7 +4683,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4804,7 +4804,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -4939,7 +4939,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5055,7 +5055,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5190,7 +5190,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5325,7 +5325,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5460,7 +5460,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5592,7 +5592,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5718,7 +5718,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5850,7 +5850,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -5971,7 +5971,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6097,7 +6097,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6232,7 +6232,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6347,7 +6347,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6468,7 +6468,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6594,7 +6594,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6715,7 +6715,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6830,7 +6830,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -6956,7 +6956,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7076,7 +7076,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7197,7 +7197,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7324,7 +7324,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7450,7 +7450,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7576,7 +7576,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7722,7 +7722,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7843,7 +7843,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -7969,7 +7969,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8079,7 +8079,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8194,7 +8194,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8334,7 +8334,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8460,7 +8460,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8581,7 +8581,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8707,7 +8707,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
@@ -8828,7 +8828,7 @@ export const wineRegionsData = {
                 ],
                 "climate": {
                     "rainfall": "650 mm",
-                    "gdd": "1,500 °C Days"
+                    "gdd": "1,500"
                 },
                 "soil": [
                     "Mixed Clay",
