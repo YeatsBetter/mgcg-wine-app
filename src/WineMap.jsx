@@ -216,6 +216,7 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
 
                 {regions && regions.features && (
                     <GeoJSON
+                        key={regions.features.map(f => f.properties.name).join(',')}
                         data={regions}
                         pointToLayer={pointToLayer}
                         onEachFeature={onEachFeature}
