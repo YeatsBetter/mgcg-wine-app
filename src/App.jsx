@@ -432,6 +432,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
             animation: 'fadeIn 0.3s ease', position: 'relative', display: 'flex', flexDirection: 'column'
           }}>
             <button
+              className="sat-close-btn"
               onClick={() => setIsSATOpen(false)}
               style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', zIndex: 10 }}
             >
