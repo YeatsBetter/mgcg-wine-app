@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
+import { wineRegionsDataZh } from './data/regions_zh';
 import './App.css';
 import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X } from 'lucide-react';
 
@@ -10,12 +11,18 @@ import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 function App() {
+  const [language, setLanguage] = useState('zh');
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [user, setUser] = useState(null);
 
+  const activeData = language === 'zh' ? wineRegionsDataZh : wineRegionsData;
+
+  const currentHovered = hoveredRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === hoveredRegion.name.split(' ')[0])?.properties : null;
+  const currentSelected = selectedRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === selectedRegion.name.split(' ')[0])?.properties : null;
+  
   // Fallback to hovered if no region is selected
-  const activeRegion = selectedRegion || hoveredRegion;
+  const activeRegion = currentSelected || currentHovered;
 
   const [noteText, setNoteText] = useState("");
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
@@ -97,7 +104,31 @@ function App() {
               <Wine size={28} color="var(--accent-ruby)" />
               <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>Vino Atlas 3.0</h1>
             </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>A Monet Global Consulting Group product</span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>{language === 'zh' ? 'Monet Global Consulting Group 产品' : 'A Monet Global Consulting Group product'}</span>
+
+            {/* Language Toggle */}
+            <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.2)', borderRadius: '20px', padding: '4px', marginTop: '12px', width: 'fit-content', border: '1px solid rgba(0,0,0,0.05)' }}>
+              <button
+                onClick={() => setLanguage('en')}
+                style={{
+                  background: language === 'en' ? 'var(--accent-ruby)' : 'transparent',
+                  color: language === 'en' ? '#fff' : 'var(--text-secondary)',
+                  border: 'none', borderRadius: '16px', padding: '4px 12px', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', transition: 'all 0.3s'
+                }}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('zh')}
+                style={{
+                  background: language === 'zh' ? 'var(--accent-ruby)' : 'transparent',
+                  color: language === 'zh' ? '#fff' : 'var(--text-secondary)',
+                  border: 'none', borderRadius: '16px', padding: '4px 12px', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', transition: 'all 0.3s'
+                }}
+              >
+                中文
+              </button>
+            </div>
           </div>
 
           {/* Auth Section */}
@@ -115,7 +146,7 @@ function App() {
                   onClick={handleLogout}
                   style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.85rem' }}
                 >
-                  <LogOut size={16} /> Logout
+                  <LogOut size={16} /> {language === 'zh' ? '注销' : 'Logout'}
                 </button>
               </div>
             ) : (
@@ -136,14 +167,14 @@ function App() {
                   boxShadow: '0 4px 12px var(--accent-ruby-glow)'
                 }}
               >
-                <LogIn size={16} /> Login
+                <LogIn size={16} /> {language === 'zh' ? '登录' : 'Login'}
               </button>
             )}
           </div>
         </div>
 
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-          {user ? `Welcome back, ${user.displayName?.split(' ')[0] || 'Explorer'}.` : 'Discover the definitive guide to global wine regions.'} Hover to preview, click to dive into history, terroir, Geography, and direct Vivino links.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
+          {user ? (language === 'zh' ? `欢迎回来, ${user.displayName?.split(' ')[0] || '探险家'}。` : `Welcome back, ${user.displayName?.split(' ')[0] || 'Explorer'}.`) : (language === 'zh' ? '探索全球顶级葡萄酒产区的终极指南。' : 'Discover the definitive guide to global wine regions.')} {language === 'zh' ? '悬停预览，点击深入了解历史、风土、地理，以及直接跳转 Vivino 选购。' : 'Hover to preview, click to dive into history, terroir, Geography, and direct Vivino links.'}
         </p>
       </div>
 
@@ -188,14 +219,14 @@ function App() {
 
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Clock size={18} color="var(--accent-ruby)" /> History
+                  <Clock size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '历史' : 'History'}
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.history}</p>
               </div>
 
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Globe size={18} color="var(--accent-ruby)" /> Geography & Climate
+                  <Globe size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '地理与气候' : 'Geography & Climate'}
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.geography}</p>
               </div>
@@ -203,7 +234,7 @@ function App() {
               {activeRegion.terroir && (
                 <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Sprout size={18} color="var(--accent-ruby)" /> Terroir & Soil
+                    <Sprout size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '风土与土壤' : 'Terroir & Soil'}
                   </h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.terroir}</p>
                 </div>
@@ -211,7 +242,7 @@ function App() {
 
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Grape size={18} color="var(--accent-ruby)" /> Key Grapes
+                  <Grape size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '核心葡萄品种' : 'Key Grapes'}
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {Array.isArray(activeRegion.grapes) ? activeRegion.grapes.map((grape, idx) => (
@@ -240,7 +271,7 @@ function App() {
               {activeRegion.subRegions && activeRegion.subRegions.length > 0 && (
                 <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <MapPin size={18} color="var(--accent-ruby)" /> Key Sub-Regions
+                    <MapPin size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '核心子产区' : 'Key Sub-Regions'}
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {activeRegion.subRegions.map((sub, idx) => (
@@ -248,10 +279,10 @@ function App() {
                         <h4 style={{ fontSize: '1.05rem', color: 'var(--text-primary)', marginBottom: '6px' }}>{sub.name}</h4>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '6px' }}>{sub.description}</p>
                         <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                          <strong>Terroir:</strong> {sub.geography}
+                          <strong>{language === 'zh' ? '风土' : 'Terroir'}:</strong> {sub.geography}
                         </div>
                         <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
-                          <strong>Grapes:</strong> {sub.grapes}
+                          <strong>{language === 'zh' ? '葡萄' : 'Grapes'}:</strong> {sub.grapes}
                         </div>
                       </div>
                     ))}
@@ -261,7 +292,7 @@ function App() {
 
               {/* Notable Estates with Vivino Links */}
               <div style={{ marginTop: '12px' }}>
-                <h3 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Notable Estates</h3>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'var(--text-primary)' }}>{language === 'zh' ? '著名酒庄' : 'Notable Estates'}</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {activeRegion.estates.map((estate, idx) => (
                     <div key={idx} style={{ padding: '16px', background: 'rgba(255,255,255,0.6)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
@@ -319,7 +350,7 @@ function App() {
                   onMouseOver={(e) => { e.target.style.background = 'var(--accent-ruby)'; e.target.style.color = '#fff'; }}
                   onMouseOut={(e) => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent-ruby)'; }}
                 >
-                  Close Details
+                  {language === 'zh' ? '关闭详情' : 'Close Details'}
                 </button>
               )}
             </div>
@@ -331,7 +362,7 @@ function App() {
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         {/* The map itself. Region selection handled inside WineMap */}
         <WineMap
-          regions={wineRegionsData}
+          regions={activeData}
           onRegionHover={setHoveredRegion}
           onRegionClick={(region) => {
             setSelectedRegion(region);
@@ -347,7 +378,7 @@ function App() {
             <div className="glass-panel" style={{ width: '380px', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px', animation: 'fadeIn 0.3s ease' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-ruby)', margin: 0, fontSize: '1.1rem' }}>
-                  <BookOpen size={18} /> My Tasting Notes
+                  <BookOpen size={18} /> {language === 'zh' ? '我的品鉴笔记' : 'My Tasting Notes'}
                 </h3>
                 <button onClick={() => setIsNotepadOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', padding: '4px' }}>
                   <X size={18} />
@@ -356,7 +387,7 @@ function App() {
               <textarea
                 value={noteText}
                 onChange={(e) => setNoteText(e.target.value)}
-                placeholder="Write down your tasting notes, favorite regions, or wines to buy..."
+                placeholder={language === 'zh' ? "写下您的品鉴笔记，最爱的产区或想买的酒..." : "Write down your tasting notes, favorite regions, or wines to buy..."}
                 style={{
                   width: '100%',
                   height: '180px',
@@ -390,7 +421,7 @@ function App() {
                   opacity: isSavingNote ? 0.7 : 1
                 }}
               >
-                <Save size={16} /> {isSavingNote ? 'Saving...' : 'Save Notes'}
+                <Save size={16} /> {isSavingNote ? (language === 'zh' ? '保存中...' : 'Saving...') : (language === 'zh' ? '保存笔记' : 'Save Notes')}
               </button>
             </div>
           )}
@@ -412,7 +443,7 @@ function App() {
                 boxShadow: '0 4px 12px var(--accent-ruby-glow)'
               }}
             >
-              <BookOpen size={20} /> Open Notepad
+              <BookOpen size={20} /> {language === 'zh' ? '打开记事本' : 'Open Notepad'}
             </button>
           )}
         </div>
