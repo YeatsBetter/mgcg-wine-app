@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart, Camera, ScanLine, AlertCircle } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -133,6 +133,14 @@ function App() {
   const [showPrinciples, setShowPrinciples] = useState(false);
   const [showCurrents, setShowCurrents] = useState(false);
   const [isGrapeFilterOpen, setIsGrapeFilterOpen] = useState(false);
+
+  // AI Label Scanner states
+  const [isLabelScanOpen, setIsLabelScanOpen] = useState(false);
+  const [labelImageData, setLabelImageData] = useState(null);   // { base64, mimeType, preview }
+  const [labelAnalysis, setLabelAnalysis] = useState(null);
+  const [isLabelLoading, setIsLabelLoading] = useState(false);
+  const [labelError, setLabelError] = useState(null);
+  const [scannedRegionName, setScannedRegionName] = useState('');
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -269,6 +277,68 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
     } finally {
       setIsPairingLoading(false);
     }
+  };
+
+  const handleLabelScan = async () => {
+    if (!labelImageData) return;
+    setIsLabelLoading(true);
+    setLabelError(null);
+    setLabelAnalysis(null);
+    setScannedRegionName('');
+    try {
+      const prompt = `You are an expert sommelier and wine analyst with encyclopedic knowledge of global wine regions.
+Analyze this wine label image and provide a detailed JSON response with the following fields:
+- region: the wine-producing region (e.g. "Bordeaux", "Tuscany", "Napa Valley")
+- country: the country
+- winery: the winery/producer name if visible
+- vintage: the vintage year if visible, or null
+- grape: the primary grape variety or blend
+- rating: estimated quality score out of 100 (based on producer/region reputation)
+- drinking_window: drinking recommendation (e.g. "Ready now – 2030")
+- description: 2–3 sentences about this producer and region
+- food_pairing: array of 3 food pairing suggestions
+- confidence: your confidence in the identification ("High", "Medium", or "Low")
+
+Respond ONLY with a valid JSON object, no markdown, no explanation.`;
+
+      const result = await geminiModel.generateContent([
+        { text: prompt },
+        { inlineData: { mimeType: labelImageData.mimeType, data: labelImageData.base64 } }
+      ]);
+
+      const text = result.response.text().trim();
+      const cleanText = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const parsed = JSON.parse(cleanText);
+      setLabelAnalysis(parsed);
+      if (parsed.region) setScannedRegionName(parsed.region);
+    } catch (err) {
+      console.error('Label Scan Error:', err);
+      const rawError = (err.message || '').toLowerCase();
+      let friendlyError = 'Unable to analyze this label. Please try a clearer photo.';
+      if (rawError.includes('429') || rawError.includes('quota')) {
+        friendlyError = 'AI rate limit reached. Please wait a moment and try again. 🍷';
+      } else if (rawError.includes('500') || rawError.includes('503')) {
+        friendlyError = "Google's AI servers are busy right now. Try again in a few seconds! 🍇";
+      }
+      setLabelError(friendlyError);
+    } finally {
+      setIsLabelLoading(false);
+    }
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target.result;
+      const base64 = dataUrl.split(',')[1];
+      setLabelImageData({ base64, mimeType: file.type, preview: dataUrl });
+      setLabelAnalysis(null);
+      setLabelError(null);
+      setScannedRegionName('');
+    };
+    reader.readAsDataURL(file);
   };
 
   return (
@@ -584,6 +654,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         onEmptyClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
         showCurrents={showCurrents}
         userFootprints={userFootprints}
+        scannedRegionName={scannedRegionName}
       />
 
       {isSATOpen && (
@@ -728,6 +799,166 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       >
         <BookOpen size={24} />
       </button>
+
+      {/* AI Wine Label Scanner */}
+      <button
+        className="btn-label-scanner"
+        onClick={() => { setIsLabelScanOpen(!isLabelScanOpen); }}
+        style={{
+          position: 'fixed', bottom: '312px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
+          background: isLabelScanOpen || scannedRegionName ? '#7c3aed' : 'var(--glass-bg)',
+          color: isLabelScanOpen || scannedRegionName ? '#fff' : '#7c3aed',
+          border: '1px solid #7c3aed', cursor: 'pointer', zIndex: 1001,
+          boxShadow: isLabelScanOpen || scannedRegionName ? '0 6px 20px rgba(124,58,237,0.5)' : '0 4px 12px rgba(0,0,0,0.1)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          backdropFilter: 'blur(12px)'
+        }}
+        title="AI Wine Label Scanner"
+        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isLabelScanOpen && !scannedRegionName) { e.currentTarget.style.background = '#7c3aed'; e.currentTarget.style.color = '#fff'; } }}
+        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isLabelScanOpen && !scannedRegionName) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = '#7c3aed'; } }}
+      >
+        <Camera size={24} />
+      </button>
+
+      {isLabelScanOpen && (
+        <div className="glass-panel label-scanner-popup" style={{ position: 'fixed', bottom: '312px', left: '96px', width: '360px', maxHeight: '72vh', overflowY: 'auto', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '14px', animation: 'fadeIn 0.2s ease' }}>
+          {/* Header */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <h3 style={{ color: '#7c3aed', fontSize: '1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Camera size={18} /> AI Label Scanner
+            </h3>
+            <button onClick={() => setIsLabelScanOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}><X size={18} /></button>
+          </div>
+
+          {/* Upload Zone */}
+          <label htmlFor="wine-label-upload" style={{
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+            gap: '8px', padding: '16px', borderRadius: '12px', cursor: 'pointer',
+            border: '2px dashed #7c3aed44', background: 'rgba(124,58,237,0.05)',
+            transition: 'all 0.2s ease', minHeight: '90px'
+          }}>
+            {labelImageData ? (
+              <img src={labelImageData.preview} alt="Wine label preview" style={{ maxHeight: '130px', maxWidth: '100%', borderRadius: '8px', objectFit: 'contain', boxShadow: '0 4px 12px rgba(124,58,237,0.2)' }} />
+            ) : (
+              <>
+                <Camera size={28} color="#7c3aed" style={{ opacity: 0.6 }} />
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textAlign: 'center' }}>
+                  Tap to upload label photo<br />
+                  <span style={{ fontSize: '0.72rem', opacity: 0.7 }}>📱 Mobile: also supports live camera</span>
+                </span>
+              </>
+            )}
+          </label>
+          <input
+            id="wine-label-upload"
+            type="file"
+            accept="image/*"
+            style={{ display: 'none' }}
+            onChange={handleImageUpload}
+          />
+
+          {labelImageData && (
+            <button
+              onClick={handleLabelScan}
+              disabled={isLabelLoading}
+              style={{
+                background: isLabelLoading ? 'rgba(124,58,237,0.5)' : '#7c3aed',
+                color: '#fff', border: 'none', borderRadius: '10px', padding: '10px',
+                cursor: isLabelLoading ? 'not-allowed' : 'pointer', fontWeight: 700,
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                fontSize: '0.9rem', transition: 'all 0.2s', boxShadow: '0 4px 12px rgba(124,58,237,0.3)'
+              }}
+            >
+              {isLabelLoading
+                ? <><Sparkles size={16} style={{ animation: 'spin 1s linear infinite' }} /> Analyzing Label...</>
+                : <><ScanLine size={16} /> Scan This Label</>
+              }
+            </button>
+          )}
+
+          {/* Error */}
+          {labelError && (
+            <div style={{ background: 'rgba(200,50,50,0.1)', border: '1px solid rgba(200,50,50,0.3)', borderRadius: '8px', padding: '10px', fontSize: '0.82rem', color: '#c03', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+              <AlertCircle size={16} style={{ flexShrink: 0 }} />
+              {labelError}
+            </div>
+          )}
+
+          {/* Results */}
+          {labelAnalysis && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+
+              {/* Confidence Badge */}
+              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <span style={{
+                  fontSize: '0.7rem', fontWeight: 700, padding: '3px 10px', borderRadius: '20px', textTransform: 'uppercase',
+                  background: labelAnalysis.confidence === 'High' ? 'rgba(74,200,100,0.15)' : labelAnalysis.confidence === 'Medium' ? 'rgba(255,180,50,0.15)' : 'rgba(200,50,50,0.15)',
+                  color: labelAnalysis.confidence === 'High' ? '#2d9' : labelAnalysis.confidence === 'Medium' ? '#d90' : '#c03',
+                  border: `1px solid currentColor`
+                }}>
+                  {labelAnalysis.confidence} Confidence
+                </span>
+              </div>
+
+              {/* Region + Country */}
+              <div style={{ background: 'rgba(124,58,237,0.08)', border: '1px solid rgba(124,58,237,0.2)', borderRadius: '10px', padding: '12px' }}>
+                <div style={{ fontSize: '0.72rem', color: '#7c3aed', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>📍 Region Identified</div>
+                <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-primary)' }}>{labelAnalysis.region}</div>
+                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)' }}>{labelAnalysis.country} {labelAnalysis.winery && `• ${labelAnalysis.winery}`}</div>
+              </div>
+
+              {/* Grape + Vintage */}
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <div style={{ flex: 1, background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '10px' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase' }}>🍇 Grape</div>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--text-primary)', marginTop: '2px' }}>{labelAnalysis.grape || '—'}</div>
+                </div>
+                <div style={{ flex: 1, background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '10px' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase' }}>📅 Vintage</div>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--text-primary)', marginTop: '2px' }}>{labelAnalysis.vintage || '—'}</div>
+                </div>
+              </div>
+
+              {/* Rating + Drinking */}
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <div style={{ flex: 1, background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.3)', borderRadius: '8px', padding: '10px', textAlign: 'center' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase' }}>⭐ Score</div>
+                  <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--accent-gold)', marginTop: '2px' }}>{labelAnalysis.rating}<span style={{ fontSize: '0.7rem', opacity: 0.7 }}>/100</span></div>
+                </div>
+                <div style={{ flex: 2, background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '10px' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase' }}>🕐 Drink</div>
+                  <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-primary)', marginTop: '2px' }}>{labelAnalysis.drinking_window || '—'}</div>
+                </div>
+              </div>
+
+              {/* Description */}
+              {labelAnalysis.description && (
+                <div style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '12px' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '6px' }}>📝 About</div>
+                  <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0 }}>{labelAnalysis.description}</p>
+                </div>
+              )}
+
+              {/* Food Pairings */}
+              {labelAnalysis.food_pairing?.length > 0 && (
+                <div style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '12px' }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--accent-gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '8px' }}>🍴 Food Pairings</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    {labelAnalysis.food_pairing.map((food, i) => (
+                      <span key={i} style={{ background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)', borderRadius: '20px', padding: '4px 10px', fontSize: '0.78rem', color: '#7c3aed', fontWeight: 600 }}>{food}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <button onClick={() => { setLabelImageData(null); setLabelAnalysis(null); setLabelError(null); setScannedRegionName(''); }}
+                style={{ background: 'transparent', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '8px', cursor: 'pointer', color: 'var(--text-secondary)', fontSize: '0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                <X size={14} /> Clear & Scan Another
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Filter by Grape */}
       <button

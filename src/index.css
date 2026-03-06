@@ -214,6 +214,20 @@ h6 {
   }
 }
 
+@keyframes scanPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.3), 0 4px 16px rgba(124, 58, 237, 0.5);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(124, 58, 237, 0.1), 0 4px 24px rgba(124, 58, 237, 0.7);
+    transform: scale(1.1);
+  }
+}
+
 /* Current overlay tooltips */
 .current-tooltip {
   border-radius: 10px !important;

@@ -49,6 +49,12 @@ const wishlistGlassIconHtml = `
   </div>
 `;
 
+const scannedGlassIconHtml = `
+  <div style="background: #7c3aed; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px rgba(124,58,237,0.3), 0 4px 16px rgba(124,58,237,0.5); border: 2px solid white; animation: scanPulse 1.5s ease-in-out infinite; transition: all 0.3s ease; z-index: 9999;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+  </div>
+`;
+
 const hoverWishlistGlassIconHtml = `
   <div style="background: white; color: var(--accent-ruby); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(121, 31, 56, 0.6); border: 2px solid var(--accent-ruby); transform: scale(1.1); transition: all 0.3s ease; z-index: 1000;">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
@@ -117,11 +123,22 @@ const styleConfig = {
     wind: { color: '#4aab6a', glow: 'rgba(74, 171, 106, 0.3)', label: 'Wind Pattern', emoji: '🌬️' }
 };
 
-export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {} }) {
+const scannedIcon = L.divIcon({
+    html: scannedGlassIconHtml,
+    className: 'custom-wine-marker scanned',
+    iconSize: [36, 36],
+    iconAnchor: [18, 18]
+});
+
+export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {}, scannedRegionName = '' }) {
     const center = [35.0, 10.0];
     const zoom = 2.5;
 
-    const getIcon = (featureId, isHover) => {
+    const getIcon = (featureId, featureName, isHover) => {
+        // Check if this region matches the AI-scanned region
+        if (scannedRegionName && featureName && featureName.toLowerCase().includes(scannedRegionName.toLowerCase())) {
+            return scannedIcon;
+        }
         const fp = userFootprints[featureId] || {};
         if (fp.visited) return isHover ? hoverVisitedIcon : visitedIcon;
         if (fp.wishlist) return isHover ? hoverWishlistIcon : wishlistIcon;
@@ -129,7 +146,7 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
     };
 
     const pointToLayer = (feature, latlng) => {
-        return L.marker(latlng, { icon: getIcon(feature.properties.id, false) });
+        return L.marker(latlng, { icon: getIcon(feature.properties.id, feature.properties.name, false) });
     };
 
     const onEachFeature = (feature, layer) => {
@@ -143,12 +160,12 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
         layer.on({
             mouseover: (e) => {
                 const trgt = e.target;
-                trgt.setIcon(getIcon(feature.properties.id, true));
+                trgt.setIcon(getIcon(feature.properties.id, feature.properties.name, true));
                 if (onRegionHover) onRegionHover(feature.properties);
             },
             mouseout: (e) => {
                 const trgt = e.target;
-                trgt.setIcon(getIcon(feature.properties.id, false));
+                trgt.setIcon(getIcon(feature.properties.id, feature.properties.name, false));
                 if (onRegionHover) onRegionHover(null);
             },
             click: (e) => {
