@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db } from './firebase';
@@ -16,6 +16,10 @@ function App() {
 
   // Fallback to hovered if no region is selected
   const activeRegion = selectedRegion || hoveredRegion;
+
+  const [noteText, setNoteText] = useState("");
+  const [isNotepadOpen, setIsNotepadOpen] = useState(false);
+  const [isSavingNote, setIsSavingNote] = useState(false);
 
   // Listen to Auth State
   useEffect(() => {
@@ -31,13 +35,33 @@ function App() {
             displayName: currentUser.displayName,
             createdAt: new Date(),
             favorites: [],
-            notes: {}
+            notes: { general: "" }
           });
+        } else {
+          const data = docSnap.data();
+          if (data.notes && data.notes.general) {
+            setNoteText(data.notes.general);
+          }
         }
+      } else {
+        setNoteText("");
+        setIsNotepadOpen(false);
       }
     });
     return () => unsubscribe();
   }, []);
+
+  const handleSaveNote = async () => {
+    if (!user) return;
+    setIsSavingNote(true);
+    try {
+      const userRef = doc(db, 'users', user.uid);
+      await setDoc(userRef, { notes: { general: noteText } }, { merge: true });
+    } catch (e) {
+      console.error("Error saving note: ", e);
+    }
+    setIsSavingNote(false);
+  };
 
   const handleLogin = async () => {
     try {
@@ -68,9 +92,12 @@ function App() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Wine size={28} color="var(--accent-ruby)" />
-            <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>Vino Atlas 2.0</h1>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <Wine size={28} color="var(--accent-ruby)" />
+              <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>Vino Atlas 3.0</h1>
+            </div>
+            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>A Monet Global Consulting Group product</span>
           </div>
 
           {/* Auth Section */}
@@ -173,6 +200,15 @@ function App() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.geography}</p>
               </div>
 
+              {activeRegion.terroir && (
+                <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Sprout size={18} color="var(--accent-ruby)" /> Terroir & Soil
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.terroir}</p>
+                </div>
+              )}
+
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Grape size={18} color="var(--accent-ruby)" /> Key Grapes
@@ -188,7 +224,6 @@ function App() {
                       <div>
                         <h4 style={{ fontSize: '1.05rem', color: 'var(--accent-ruby)', marginBottom: '4px', fontWeight: 600 }}>{grape.name}</h4>
                         <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
-                          {/* Split the description by periods to create bullet points if we want, or just render it as a paragraph. The user asked for bullet points. */}
                           {grape.description.split('. ').map((point, i) => {
                             if (!point.trim()) return null;
                             return <li key={i}>{point.trim() + (point.endsWith('.') ? '' : '.')}</li>
@@ -201,6 +236,28 @@ function App() {
                   )}
                 </div>
               </div>
+
+              {activeRegion.subRegions && activeRegion.subRegions.length > 0 && (
+                <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <MapPin size={18} color="var(--accent-ruby)" /> Key Sub-Regions
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    {activeRegion.subRegions.map((sub, idx) => (
+                      <div key={idx} style={{ padding: '12px', background: 'rgba(255,255,255,0.6)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+                        <h4 style={{ fontSize: '1.05rem', color: 'var(--text-primary)', marginBottom: '6px' }}>{sub.name}</h4>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '6px' }}>{sub.description}</p>
+                        <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                          <strong>Terroir:</strong> {sub.geography}
+                        </div>
+                        <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                          <strong>Grapes:</strong> {sub.grapes}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Notable Estates with Vivino Links */}
               <div style={{ marginTop: '12px' }}>
@@ -282,6 +339,84 @@ function App() {
           onEmptyClick={() => setSelectedRegion(null)}
         />
       </div>
+
+      {/* Floating Notepad UI for Logged-In Users */}
+      {user && (
+        <div style={{ position: 'absolute', bottom: '24px', left: '24px', zIndex: 1000, display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-start' }}>
+          {isNotepadOpen && (
+            <div className="glass-panel" style={{ width: '380px', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px', animation: 'fadeIn 0.3s ease' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-ruby)', margin: 0, fontSize: '1.1rem' }}>
+                  <BookOpen size={18} /> My Tasting Notes
+                </h3>
+                <button onClick={() => setIsNotepadOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', padding: '4px' }}>
+                  <X size={18} />
+                </button>
+              </div>
+              <textarea
+                value={noteText}
+                onChange={(e) => setNoteText(e.target.value)}
+                placeholder="Write down your tasting notes, favorite regions, or wines to buy..."
+                style={{
+                  width: '100%',
+                  height: '180px',
+                  padding: '12px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--glass-border)',
+                  background: 'rgba(255, 255, 255, 0.5)',
+                  resize: 'none',
+                  fontSize: '0.95rem',
+                  fontFamily: 'inherit',
+                  color: 'var(--text-primary)',
+                  boxSizing: 'border-box'
+                }}
+              />
+              <button
+                onClick={handleSaveNote}
+                disabled={isSavingNote}
+                style={{
+                  alignSelf: 'flex-end',
+                  background: 'var(--accent-ruby)',
+                  color: '#fff',
+                  border: 'none',
+                  padding: '8px 16px',
+                  borderRadius: '20px',
+                  cursor: isSavingNote ? 'wait' : 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontWeight: 600,
+                  fontSize: '0.9rem',
+                  opacity: isSavingNote ? 0.7 : 1
+                }}
+              >
+                <Save size={16} /> {isSavingNote ? 'Saving...' : 'Save Notes'}
+              </button>
+            </div>
+          )}
+          {!isNotepadOpen && (
+            <button
+              onClick={() => setIsNotepadOpen(true)}
+              style={{
+                background: 'var(--accent-ruby)',
+                color: '#fff',
+                border: 'none',
+                padding: '12px 20px',
+                borderRadius: '30px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontWeight: 600,
+                fontSize: '1rem',
+                boxShadow: '0 4px 12px var(--accent-ruby-glow)'
+              }}
+            >
+              <BookOpen size={20} /> Open Notepad
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

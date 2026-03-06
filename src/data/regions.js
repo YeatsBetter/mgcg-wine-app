@@ -1,460 +1,1342 @@
 export const wineRegionsData = {
-    type: "FeatureCollection",
-    features: [
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-0.5, 44.8] }, // Bordeaux center
-            properties: {
-                id: "bordeaux", name: "Bordeaux", country: "France",
-                history: "Known as the Wall Street of Wine, Bordeaux's prestige was cemented by the legendary 1855 Classification, ordered by Napoleon III. It established a rigid hierarchy of châteaux that still exists today, transforming Bordeaux into the world's most fiercely traded and heavily sought-after fine wine.",
-                geography: "Situated in southwest France, the region is defined by the mighty Gironde estuary and its two rivers—the Garonne and Dordogne. The vast pine forests of Landes to the west protect the vines from brutal Atlantic storms, creating a temperate, maritime sanctuary.",
-                terroir: "The Left Bank is defined by deep, warm beds of Günzian gravel that force Cabernet Sauvignon roots to dig deep for water. The Right Bank is dominated by cool, water-retaining clay, the perfect incubator for plush, sensual, velvet-textured Merlot.",
-                grapes: [
-                    {
-                        name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Dominates the Left Bank. High acid, high tannin. Notes of blackcurrant, cedar, tobacco, and graphite. Needs decades to soften."
-                    },
-                    {
-                        name: "Merlot",
-                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Dominates the Right Bank (Pomerol, St. Émilion). Medium acid, medium tannin. Lush plum, chocolate, and velvety texture."
-                    }
-                ],
-                estates: [
-                    { name: "Château Lafite Rothschild", description: "First Growth. Known for elegance, perfumed aromatics, and extreme longevity.", wines: [{ name: "Château Lafite Rothschild", url: "https://www.vivino.com/search/wines?q=Chateau+Lafite+Rothschild" }] },
-                    { name: "Château Petrus", description: "The most famous wine from Pomerol. A near-pure expression of Merlot on blue clay.", wines: [{ name: "Petrus", url: "https://www.vivino.com/search/wines?q=Petrus+Pomerol" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [4.8, 47.0] }, // Burgundy center
-            properties: {
-                id: "burgundy", name: "Burgundy (Bourgogne)", country: "France",
-                history: "Famously described as 'a minefield and a treasure map,' Burgundy was meticulously mapped by Cistercian monks over centuries. They tasted the soil to identify minute differences, inventing the concept of 'climat' and forever linking wine to specific plots of land.",
-                geography: "A slender ribbon of land in eastern-central France with an agonizingly marginal, unpredictable continental climate. Frost, terrible hail, and rot constantly threaten the grapes, making great vintages rare miracles of nature.",
-                terroir: "A staggering patchwork of Jurassic limestone and marl. A vineyard separated by a mere dirt path can yield drastically different wines—one a humble village wine, the other an ethereal Grand Cru. It is the world's ultimate expression of terroir.",
-                grapes: [
-                    {
-                        name: "Pinot Noir",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "The Holy Grail of red grapes. Low-medium tannin, high acidity. Strawberry and pure cherry turning into forest floor (sous-bois) and game with age."
-                    },
-                    {
-                        name: "Chardonnay",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Originates here. Offers steely, high-acid lemon in Chablis to complex, buttery hazelnut in Montrachet."
-                    }
-                ],
-                estates: [
-                    { name: "Domaine de la Romanée-Conti (DRC)", description: "The most prestigious and expensive wine estate in the world.", wines: [{ name: "Romanée-Conti Grand Cru", url: "https://www.vivino.com/search/wines?q=Romanee+Conti" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [11.3, 43.4] }, // Tuscany center
-            properties: {
-                id: "tuscany", name: "Tuscany", country: "Italy",
-                history: "The soul of Italy, where wine has been made since the Etruscans in the 8th century BC. The region underwent a massive renaissance in the 1970s with the 'Super Tuscan' movement, when rogue winemakers ripped up the rigid DOC laws to blend French grapes.",
-                geography: "A breathtaking landscape of rolling hills bathed in brilliant Mediterranean sunlight. Vineyards are planted on slopes to escape the intense heat of the valley floors and catch cooling breezes blowing in from the Tyrrhenian Sea.",
-                terroir: "In Chianti Classico, vines struggle in rocky, friable marl called 'galestro' and poor limestone 'alberese', forcing highly concentrated grapes. In Montalcino, warmer, drier microclimates yield monstrously powerful, long-lived wines.",
-                grapes: [
-                    {
-                        name: "Sangiovese",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Italy's most planted grape. High acidity, high tannin. Sour cherry, dried herbs, sun-baked clay, and balsamic notes."
-                    },
-                    {
-                        name: "Super Tuscan Blends",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Cabernet, Merlot, and Syrah grown on the coastal Maremma areas yielding opulent, modern, heavily oaked wines."
-                    }
-                ],
-                estates: [
-                    { name: "Tenuta San Guido", description: "Birthplace of the Super Tuscan. Flagship wine 'Sassicaia'.", wines: [{ name: "Sassicaia", url: "https://www.vivino.com/search/wines?q=Sassicaia" }] },
-                    { name: "Biondi-Santi", description: "Inventor of Brunello di Montalcino. Traditional and long-lived.", wines: [{ name: "Brunello di Montalcino Riserva", url: "https://www.vivino.com/search/wines?q=Biondi+Santi" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-122.3, 38.4] }, // Napa
-            properties: {
-                id: "napa", name: "Napa Valley", country: "USA",
-                history: "The New World's most famous address. Napa exploded onto the global stage during the 1976 'Judgment of Paris', when its wines stunned French judges in a blind tasting, defeating top-growth Bordeaux and instantly proving great wine could be made outside Europe.",
-                geography: "A narrow 30-mile valley flanked by the Mayacamas and Vaca mountain ranges. The San Pablo Bay acts like a giant air conditioner, sucking freezing fog and wind up the valley every afternoon to cool the sun-baked vines.",
-                terroir: "Incredibly diverse, boasting over half the world's soil orders. Deep, alluvial valley floors produce opulent, fleshy wines, while the rocky, volcanic slopes of the mountains yield tiny, thick-skinned berries packed with brooding tannins.",
-                grapes: [
-                    {
-                        name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Huge body, high tannin, high alcohol. Ripe black cherry, cassis, vanilla, and mocha due to heavy new oak."
-                    },
-                    {
-                        name: "Chardonnay",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Full-bodied, malolactic-heavy (buttery), with prominent toasted oak and ripe tropical fruit."
-                    }
-                ],
-                estates: [
-                    { name: "Screaming Eagle", description: "The ultimate California 'Cult Wine'.", wines: [{ name: "Cabernet Sauvignon", url: "https://www.vivino.com/search/wines?q=Screaming+Eagle" }] },
-                    { name: "Opus One", description: "Historic joint venture between Mondavi and Rothschild.", wines: [{ name: "Opus One", url: "https://www.vivino.com/search/wines?q=Opus+One" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [8.0, 44.6] }, // Piedmont
-            properties: {
-                id: "piedmont", name: "Piedmont (Piemonte)", country: "Italy",
-                history: "The Kingdom of Nebbiolo. Barolo was once sweet until a French oenologist helped vinify it dry in the mid-19th century, creating the 'Wine of Kings'. In the 1980s, the rebellious 'Barolo Boys' modernized the entire region.",
-                geography: "Nestled spectacularly in the foothills of the snow-capped Alps. The region is famous for the thick, haunting autumn fogs (nebbia) that blanket the valleys, uniquely extending the growing season for the notoriously late-ripening Nebbiolo.",
-                terroir: "A complex matrix of calcareous marl and sandstone. The Tortonian soils of La Morra yield highly perfumed wines, while the older Helvetian soils of Serralunga yield fiercely tannic, iron-clad beasts that demand decades in the cellar.",
-                grapes: [
-                    {
-                        name: "Nebbiolo",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Paradoxically light orange-brick color but extremely brutal acid and tannins in youth. Notes of tar, dried roses, cherry, and truffle."
-                    },
-                    {
-                        name: "Barbera",
-                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "The everyday wine of Piedmont. High acid, low tannin. Juicy dark cherry and plum."
-                    }
-                ],
-                estates: [
-                    { name: "Gaja", description: "Visionary who modernized Barbaresco and Barolo.", wines: [{ name: "Barbaresco", url: "https://www.vivino.com/search/wines?q=Gaja+Barbaresco" }] },
-                    { name: "Giacomo Conterno", description: "The absolute pinnacle of traditional Barolo.", wines: [{ name: "Monfortino Barolo Riserva", url: "https://www.vivino.com/search/wines?q=Conterno+Monfortino" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-2.5, 42.4] }, // Rioja
-            properties: {
-                id: "rioja", name: "Rioja", country: "Spain",
-                history: "Spain's flagship region was catapulted into the modern era in the late 19th century when French negociants, fleeing the phylloxera blight in Bordeaux, crossed the Pyrenees. They brought the oak barrica, cementing Rioja's iconic oak-aged style.",
-                geography: "Following the winding Ebro River in northern Spain. The towering, majestic Cantabrian Mountains form a massive wall to the north, completely shielding the sun-drenched vineyards from the freezing, violently wet weather of the Atlantic Ocean.",
-                terroir: "Divided into three distinct zones. Rioja Alta and Alavesa feature chalky-clay and limestone at high altitudes for elegant wines. Rioja Oriental is hotter, flatter, and dominated by alluvial silt, producing fleshy, alcoholic Garnacha.",
-                grapes: [
-                    {
-                        name: "Tempranillo",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Medium+ acid, medium+ tannin. Baked strawberry and plum. Has a huge affinity for American oak, soaking up dill, coconut, and vanilla notes."
-                    }
-                ],
-                estates: [
-                    { name: "La Rioja Alta, S.A.", description: "Standard-bearer for traditional Rioja. Long American oak aging.", wines: [{ name: "Gran Reserva 890", url: "https://www.vivino.com/search/wines?q=La+Rioja+Alta+890" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [4.9, 44.5] }, // Rhone
-            properties: {
-                id: "rhone", name: "Rhône Valley", country: "France",
-                history: "Vines have clung to the brutal steep slopes of the north since Roman times. The region gained global fame when the Papacy moved to Avignon in the 14th century, leading to 'Châteauneuf-du-Pape' (The Pope's New Castle).",
-                geography: "A tale of two sharply contrasting regions following the Rhône River. The Northern Rhône is a narrow, brutally steep valley. The Southern Rhône is a broad, flat, Mediterranean expanse routinely battered by the fierce chilling Mistral wind.",
-                terroir: "In the North, Syrah vines are anchored to dizzyingly steep terraces of heat-retaining granite. In the South, vineyards are carpeted with 'galets roulés'—large river stones that bake in the day and radiate heat back onto the vines at night.",
-                grapes: [
-                    {
-                        name: "Syrah (North)",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "High tannin/acid. Intense blackberry, cracked black pepper, smoked meat, and olive."
-                    },
-                    {
-                        name: "GSM Blend (South)",
-                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Grenache, Syrah, Mourvèdre. High alcohol, low acid. Baked red fruit jam, sweet spice, and garrigue (wild scrubland herbs)."
-                    }
-                ],
-                estates: [
-                    { name: "E. Guigal", description: "Master of the Northern Rhône, famous for their 'La La's' in Côte-Rôtie.", wines: [{ name: "Côte-Rôtie 'La Mouline'", url: "https://www.vivino.com/search/wines?q=Guigal+La+Mouline" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [7.0, 50.0] }, // Mosel
-            properties: {
-                id: "mosel", name: "Mosel", country: "Germany",
-                history: "Cultivated by ancient Romans trying to supply their northern legions with wine. By the late 19th century, the ethereal, sweet Rieslings of the Mosel were the most expensive and celebrated wines in the world, surpassing First Growth Bordeaux in price.",
-                geography: "A dramatic, serpentine gorge cut by the Mosel River. It is home to some of the steepest vineyards on Earth with heart-stopping 70-degree gradients. Vines must be tied to single wooden stakes and worked entirely by hand.",
-                terroir: "The secret to ripening grapes in this freezing northern latitude is heat reflection. The steep, south-facing slopes composed of blue, red, and grey Devonian slate shatter underfoot, absorbing weak daytime sun and reflecting it perfectly back onto the vines.",
-                grapes: [
-                    {
-                        name: "Riesling",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "High acidity balanced by residual sugar. Notes of green apple, lime blossom, white peach, and distinctive 'petrol' (TDN) with bottle age. Very low alcohol."
-                    }
-                ],
-                estates: [
-                    { name: "Joh. Jos. Prüm", description: "Legendary for age-worthy, brilliantly precise sweet wines.", wines: [{ name: "Wehlener Sonnenuhr Spätlese", url: "https://www.vivino.com/search/wines?q=JJ+Prum+Wehlener" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [173.8, -41.5] }, // Marlborough
-            properties: {
-                id: "marlborough", name: "Marlborough", country: "New Zealand",
-                history: "The region that completely changed how the world thinks about Sauvignon Blanc. The modern industry began in 1973, exploding internationally in the 1980s when wineries like Cloudy Bay released profoundly aromatic wines the likes of which nobody had ever tasted.",
-                geography: "Located on the northeastern tip of New Zealand's South Island. Characterized by intense, blinding sunshine, massive cooling coastal winds from the Pacific, and huge diurnal temperature shifts that lock in bracing acidity.",
-                terroir: "Free-draining, stony, alluvial soils deposited by ancient glaciers and rivers. The Wairau Valley offers warmer gravel soils for tropical fruit expression, while the cooler, wind-battered Awatere Valley produces pungently herbaceous and mineral-driven styles.",
-                grapes: [
-                    {
-                        name: "Sauvignon Blanc",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Intensely, violently aromatic. Piercing notes of passionfruit, gooseberry, jalapeño, and fresh-cut grass."
-                    }
-                ],
-                estates: [
-                    { name: "Cloudy Bay", description: "The estate that defined the style in the 80s.", wines: [{ name: "Sauvignon Blanc", url: "https://www.vivino.com/search/wines?q=Cloudy+Bay+Sauvignon+Blanc" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [18.8, -33.9] }, // Stellenbosch
-            properties: {
-                id: "stellenbosch", name: "Stellenbosch", country: "South Africa",
-                history: "Boasts the longest continuous viticultural history outside of Europe, dating back to 1679 when Simon van der Stel founded the town. With the end of apartheid in 1994, Stellenbosch exploded with a renaissance of world-class winemaking.",
-                geography: "A warm, sun-baked Mediterranean climate nestled into dramatic, imposing mountain ranges just east of Cape Town. During the summer, vineyards are swept by the 'Cape Doctor', a fierce south-easterly wind that blasts away disease and cools the vines.",
-                terroir: "Some of the oldest, most weathered soils on the planet, dating back up to a billion years. The vastly decomposed granite and sandstone of the mountain slopes offer exceptional drainage and deep minerality, perfect for powerful, structured reds.",
-                grapes: [
-                    {
-                        name: "Pinotage",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "South Africa's signature cross (Pinot Noir x Cinsault). High tannin. Smoky, rooibos tea, blackberry, and sometimes roasted meat."
-                    },
-                    {
-                        name: "Chenin Blanc",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Known locally as Steen. High acid. Notes of bruised apple, wet wool, honey, and chamomile."
-                    }
-                ],
-                estates: [
-                    { name: "Kanonkop", description: "Masters of Pinotage and Bordeaux blends. The 'First Growth' of the Cape.", wines: [{ name: "Paul Sauer", url: "https://www.vivino.com/search/wines?q=Kanonkop+Paul+Sauer" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [4.0, 49.1] }, // Champagne
-            properties: {
-                id: "champagne", name: "Champagne", country: "France",
-                history: "The quintessential wine of celebration. Though famously credited to the blind monk Dom Pérignon (who actually tried to prevent bubbles), the sparkling 'Méthode Champenoise' was perfected over centuries, eventually becoming the favored drink of French kings and czars.",
-                geography: "The absolute northernmost limit of commercial winemaking in France. The climate is devastatingly cold, gloomy, and wet. Grapes struggle intensely to ripen, resulting in the violently high, searing base acidity required for legendary sparkling wine.",
-                terroir: "Sitting atop a massive prehistoric seabed of Belemnite chalk. The stark white, crumbly soil provides crucial drainage during wet winters, while holding onto exactly enough moisture to sustain the vines during dry summers. It also heavily reflects sunlight onto the canopy.",
-                grapes: [
-                    {
-                        name: "Pinot Noir / Meunier / Chardonnay",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Harvested early for maximum searing acidity. Autolytic notes (brioche, toast, biscuit) from dead yeast (lees) aging define the profile, alongside bruised apple and lemon."
-                    }
-                ],
-                estates: [
-                    { name: "Dom Pérignon", description: "Moët & Chandon's prestige cuvée. Only produced in exceptional vintage years.", wines: [{ name: "Dom Pérignon Vintage", url: "https://www.vivino.com/search/wines?q=Dom+Perignon" }] },
-                    { name: "Krug", description: "The ultimate expression of blended, barrel-fermented Champagne.", wines: [{ name: "Grande Cuvée", url: "https://www.vivino.com/search/wines?q=Krug+Grande+Cuvee" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [10.9, 45.4] }, // Veneto
-            properties: {
-                id: "veneto", name: "Veneto", country: "Italy",
-                history: "An ancient powerhouse whose winemaking roots completely pre-date the Roman Empire. The grueling process of drying grapes on mats (appassimento) to make Amarone was derived from the highly prized, concentrated, and legendary ancient Roman 'Retico' wines.",
-                geography: "Stretches vastly from the frosty, glacial shores of Lake Garda in the west, across the rolling Alpine foothills, all the way to the humid, marshy canals of Venice in the east. It is the single largest wine-producing region in all of Italy.",
-                terroir: "Incredibly diverse. The shores of Lake Garda offer glacial moraines; the towering Valpolicella and Soave Classico zones boast black, mineral-rich volcanic basalt and limestone; while the sprawling flat plains yield massive quantities of Prosecco and Pinot Grigio.",
-                grapes: [
-                    {
-                        name: "Corvina (Amarone)",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Base of Valpolicella. Dried on mats for months (Appassimento) to yield massive 15%+ alcohol, dark chocolate, and raisin flavors."
-                    },
-                    {
-                        name: "Glera",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Base of Prosecco. Made via tank (Charmat) method for light, frothy, fruity, and floral bubbles."
-                    }
-                ],
-                estates: [
-                    { name: "Quintarelli", description: "The mythical master of artisan Amarone.", wines: [{ name: "Amarone della Valpolicella Classico", url: "https://www.vivino.com/search/wines?q=Quintarelli+Amarone" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-68.8, -33.4] }, // Mendoza
-            properties: {
-                id: "mendoza", name: "Mendoza", country: "Argentina",
-                history: "Spanish conquistadores brought the first vines in the 1500s. However, it was the French grape Malbec, brought here in the 1850s immediately before phylloxera wiped it out in Bordeaux, that found its true spiritual home. It transformed Mendoza into a global giant.",
-                geography: "A vast, high-altitude desert sitting perfectly in the massive rain shadow of the snow-capped Andes Mountains. Vineyards dramatically extend into the thin, crisp air from 2,000 feet to well over 5,000 feet in altitude (Uco Valley), escaping the blazing heat of the valley floor.",
-                terroir: "Thirsty soils of alluvial sand, clay, and river stones, irrigated directly by pristine Andean snowmelt. The extreme altitude ensures brilliant, relentless UV radiation for incredibly thick grape skins, perfectly balanced by freezing nights that lock in the wine's acidity.",
-                grapes: [
-                    {
-                        name: "Malbec",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Deep opaque purple, full-bodied. Blackberry, plum, cocoa, and violet florals. Velvet, soft tannins compared to Cabernet."
-                    }
-                ],
-                estates: [
-                    { name: "Catena Zapata", description: "Pioneers of extreme high-altitude Malbec planting.", wines: [{ name: "Adrianna Vineyard Malbec", url: "https://www.vivino.com/search/wines?q=Catena+Zapata+Adrianna" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-7.5, 41.2] }, // Douro
-            properties: {
-                id: "douro", name: "Douro Valley", country: "Portugal",
-                history: "The world's absolute oldest demarcated and regulated wine region, established in 1756. It was carved out strictly by the British to satiate their massive thirst for Port wine. Until recently, the incredibly harsh terrain was entirely devoted to fortified sweet wine.",
-                geography: "A staggeringly deep, twisting, serpentine river valley winding through incredibly remote, unforgiving mountains in northern Portugal. The region is famously extreme, suffering from blistering, oven-like 40°C summers and brutally freezing winters.",
-                terroir: "Solid, impenetrable schist rock. To survive, vine roots are forced to physically shatter deep into the vertical fissures of the bedrock to seek out trace amounts of water trapped deep underground, resulting in insanely low yields and profound, dark concentration.",
-                grapes: [
-                    {
-                        name: "Touriga Nacional & Franca",
-                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Used for unctuous, fortified Port (sweet, high alcohol, black fruit, chocolate) and concentrated dark dry table wines."
-                    }
-                ],
-                estates: [
-                    { name: "Quinta do Noval", description: "Famous for 'Nacional', a vintage Port made from ungrafted, pre-phylloxera vines.", wines: [{ name: "Vintage Port Nacional", url: "https://www.vivino.com/search/wines?q=Quinta+do+Noval+Nacional" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-123.1, 45.1] }, // Willamette
-            properties: {
-                id: "willamette", name: "Willamette Valley", country: "USA",
-                history: "Pioneered in the 1960s by visionary UC Davis graduates who drove north in camper vans, desperately searching for the perfect cool-climate substitute to Burgundy. They were ridiculed at first, but have since turned Oregon into one of the planet's epicenters for world-class Pinot Noir.",
-                geography: "A lush, green, 150-mile-long valley perfectly shielded from raging Pacific Ocean storms by the immense Coast Range. Winters are relentlessly cool and wet, while summers are shockingly dry, providing the intensely long, cool growing season Pinot Noir desperately craves.",
-                terroir: "A fierce debate between two soils: ancient marine sedimentary soils (Willakenzie) that produce darker, heavily structured, brooding wines with black fruit notes, versus volcanic basalt soils (Jory) that yield bright, incredibly elegant, red-fruit-driven wines.",
-                grapes: [
-                    {
-                        name: "Pinot Noir",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Straddles Old World earthiness and New World fruit. Cranberry, bright cherry, damp earth, and tea leaf with high acidity."
-                    }
-                ],
-                estates: [
-                    { name: "Domaine Serene", description: "Massively critical acclaim, helping prove Oregon can rival Grand Cru Burgundy.", wines: [{ name: "Evenstad Reserve Pinot Noir", url: "https://www.vivino.com/search/wines?q=Domaine+Serene+Evenstad" }] },
-                    { name: "Ken Wright Cellars", description: "Pioneer in mapping the distinct terroir and AVAs of the valley.", wines: [{ name: "Shea Vineyard Pinot Noir", url: "https://www.vivino.com/search/wines?q=Ken+Wright+Shea" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-70.5, -33.6] }, // Maipo
-            properties: {
-                id: "maipo", name: "Maipo Valley", country: "Chile",
-                history: "Famously referred to as the 'Bordeaux of South America'. In the mid-19th century, incredibly wealthy Chilean mining barons showcased their fortunes by building spectacular French-style châteaux and importing pre-phylloxera vine cuttings directly from Bordeaux.",
-                geography: "Nestled just south of the capital, Santiago. The valley is perfectly enclosed by the towering, snowy Andes Mountains to the east and the Coastal Range to the west, creating a highly protected, warm, Mediterranean sun-trap basin.",
-                terroir: "Deep, completely free-draining alluvial gravel washed flawlessly down from the Andes over millennia. The intense daytime heat is completely mitigated by cool air cascading down from the snowy mountain peaks at night, providing the ideal diurnal shift for pristine Cabernet.",
-                grapes: [
-                    {
-                        name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Distinctively minty and eucalyptus-tinged, with a core of bright, elegant black fruit."
-                    },
-                    {
-                        name: "Carménère",
-                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Chile's signature. Mistaken for Merlot for 100 years. Exhibits intense green bell pepper (pyrazines), cocoa, and red berry."
-                    }
-                ],
-                estates: [
-                    { name: "Concha y Toro", description: "Their 'Don Melchor' defined high-end Chilean Cabernet worldwide.", wines: [{ name: "Don Melchor Cabernet Sauvignon", url: "https://www.vivino.com/search/wines?q=Don+Melchor" }] },
-                    { name: "Almaviva", description: "Another joint venture of Baron Philippe de Rothschild, this time in Chile.", wines: [{ name: "Almaviva", url: "https://www.vivino.com/search/wines?q=Almaviva+Chile" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [139.0, -34.4] }, // Barossa
-            properties: {
-                id: "barossa", name: "Barossa Valley", country: "Australia",
-                history: "Settled in 1842 by Silesian (German) immigrants fleeing religious persecution. Thanks to incredibly strict quarantine laws, the Barossa escaped the phylloxera plague entirely, and today boasts the absolute oldest, continuously producing, own-rooted Shiraz vines in the world.",
-                geography: "A warm, low-lying, continental valley located about 60 kilometers northeast of Adelaide. The climate is notoriously hot and dry, forcing vines to struggle mercilessly and concentrate their energy into producing minuscule amounts of intensely flavored grapes.",
-                terroir: "A fierce mix of ancient red-brown earths and sandy loams. The relentless summer heat literally bakes the fruit on the vine, producing the quintessential Australian style: massive, high-alcohol, blockbuster wines bursting with dark chocolate, eucalyptus, and blackberry jam.",
-                grapes: [
-                    {
-                        name: "Shiraz",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Opulent, massive body, high alcohol. Explosions of blackberry jam, dark chocolate, and eucalyptus."
-                    }
-                ],
-                estates: [
-                    { name: "Penfolds", description: "Creators of 'Grange', the most famous Australian wine.", wines: [{ name: "Grange", url: "https://www.vivino.com/search/wines?q=Penfolds+Grange" }] },
-                    { name: "Henschke", description: "Tends to the legendary 'Hill of Grace' single vineyard.", wines: [{ name: "Hill of Grace", url: "https://www.vivino.com/search/wines?q=Henschke+Hill+of+Grace" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [15.0, 37.7] }, // Sicily
-            properties: {
-                id: "sicily", name: "Sicily (Mt. Etna)", country: "Italy",
-                history: "While Sicily has produced wine for thousands of years, Mount Etna has entirely recently exploded as the 'Burgundy of the Mediterranean', captivating the global wine world with artisanal, single-vineyard (Contrada) bottlings of unimaginable finesse and subtlety.",
-                geography: "Breath-taking, high-elevation vineyards clinging precariously to the impossibly steep slopes of Mount Etna, an active and violently raging volcano. The vines reach dizzying altitudes to escape the ferocious, baking heat of the Mediterranean, creating a cool, almost continental climate.",
-                terroir: "Pure, jet-black, incredibly mineral-rich volcanic ash, pumice, and cooled lava flows (sciara). This extreme and violent soil completely starves the vines, but imparts a profoundly smoky, deeply savory, and iron-like minerality to the wines that cannot be replicated anywhere else on earth.",
-                grapes: [
-                    {
-                        name: "Nerello Mascalese",
-                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Often compared to Pinot Noir. High acid, fine tannin, pale color. Wild red cherry, rose petal, and volcanic smoke."
-                    }
-                ],
-                estates: [
-                    { name: "Tenuta delle Terre Nere", description: "Pioneers of single-vineyard (Contrada) bottling on Etna.", wines: [{ name: "Etna Rosso", url: "https://www.vivino.com/search/wines?q=Terre+Nere+Etna+Rosso" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [-4.0, 41.6] }, // Ribera
-            properties: {
-                id: "ribera", name: "Ribera del Duero", country: "Spain",
-                history: "Although the legendary Vega Sicilia estate shockingly arrived in 1864, the region was virtually completely unknown until 1982 when the DO was finally formed. In just a few decades, it exploded to definitively become Spain's most prestigious and expensive zone for massively powerful red wines.",
-                geography: "A harsh, high-altitude, dramatically flat central plateau brutally cut by the Duero river. The continental climate is notoriously punishing: famously described as 'nine months of winter, three months of hell.' The unbearably scorching summers are punctuated by near-freezing nights.",
-                terroir: "Crumbly chalky limestone and severe clay parched by the relentless sun. The unbelievably extreme diurnal temperature shifts (scorching hot days, freezing cold nights) dramatically slow the ripening of the grapes, resulting in thick skins, massive tannins, and surprisingly vibrant acidity.",
-                grapes: [
-                    {
-                        name: "Tinto Fino (Tempranillo)",
-                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Unlike Rioja, these are monolithic, inky, massive, black-fruit-driven, and highly concentrated wines typically aged in French oak."
-                    }
-                ],
-                estates: [
-                    { name: "Vega Sicilia", description: "The undisputed king of Spanish wine. Their 'Unico' ages for a decade before release.", wines: [{ name: "Unico", url: "https://www.vivino.com/search/wines?q=Vega+Sicilia+Unico" }] },
-                    { name: "Dominio de Pingus", description: "The original Spanish 'Cult Wine', created by Peter Sisseck. Minuscule production and vast prices.", wines: [{ name: "Pingus", url: "https://www.vivino.com/search/wines?q=Pingus" }] }
-                ]
-            }
-        },
-        {
-            type: "Feature",
-            geometry: { type: "Point", coordinates: [7.4, 48.3] }, // Alsace
-            properties: {
-                id: "alsace", name: "Alsace", country: "France",
-                history: "A deeply complex, severely fractured region that has bounced violently between French and German control for centuries. It beautifully blends the severe structural rigidity of Germany with the culinary richness of France, uniquely labeling its prestigious wines by grape variety rather than by geographic origin.",
-                geography: "A completely dry, sun-drenched corridor nestled tightly in the massive rain shadow of the plunging Vosges mountains in eastern France. Despite its very extreme northern latitude, it ironically stands as one of the driest and remarkably sunniest wine regions in all of France.",
-                terroir: "An unbelievably complex, heavily fractured mosaic of over 13 distinct soil types scattered wildly along a single fault line, ranging from pink sandstone to sheer granite, chalk, and volcanic rock. This blinding kaleidoscope of terroir forces winemakers to painstakingly bottle countless single-vineyard expressions.",
-                grapes: [
-                    {
-                        name: "Gewürztraminer",
-                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        description: "Insanely aromatic. Explosions of lychee, rose petal, ginger, and Turkish delight. Full-bodied, oily texture, moderate acid."
-                    }
-                ],
-                estates: [
-                    { name: "Trimbach", description: "Produces 'Clos Ste Hune', arguably the greatest dry Riesling on the planet.", wines: [{ name: "Clos Ste Hune Riesling", url: "https://www.vivino.com/search/wines?q=Trimbach+Clos+Ste+Hune" }] },
-                    { name: "Zind-Humbrecht", description: "Masters of biodynamics producing incredibly intense, rich, off-dry styles.", wines: [{ name: "Gewurztraminer Hengst Grand Cru", url: "https://www.vivino.com/search/wines?q=Zind+Humbrecht+Hengst" }] }
-                ]
-            }
-        }
-    ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5,
+          44.8
+        ]
+      },
+      "properties": {
+        "id": "bordeaux",
+        "name": "Bordeaux",
+        "country": "France",
+        "history": "Following the WSET Level 3 curriculum, Bordeaux's reputation is built upon centuries of trade facilitated by the Gironde Estuary, Rivers Garonne and Dordogne. It gained global prominence when Eleanor of Aquitaine married Henry Plantagenet (later King Henry II of England) in 1152, starting a monopoly on the English wine market. The 1855 Classification established a hierarchy of estates on the Left Bank that still influences global prices today. In the modern era, the emphasis has shifted towards precision viticulture and terroir expression, overcoming historic issues with bulk production.",
+        "geography": "Located in southwestern France on the 45th parallel, Bordeaux enjoys a moderate maritime climate. The Gulf Stream transports warm water from the Caribbean, warming the region and extending its growing season, which is essential for late-ripening varieties like Cabernet Sauvignon. The Landes forest to the west protects vineyards from the worst Atlantic storms. However, high rainfall throughout the year can disrupt flowering, cause rot, and dilute flavors during harvest. Frost is also a periodic hazard.",
+        "terroir": "Terroir in Bordeaux is strictly divided by the rivers. The Left Bank (Médoc, Graves) is dominated by gravelly soils deposited by river action; these soils drain rapidly and reflect heat, crucial for ripening Cabernet Sauvignon. The Right Bank (Saint-Émilion, Pomerol) features clay-limestone and sandier soils which are cooler, perfectly suited for Merlot and Cabernet Franc. Underlying limestone beds provide excellent drainage across the region.",
+        "grapes": [
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "Thick-skinned and late-ripening, thriving on the Left Bank gravels. Produces high-tannin, high-acidity wines with blackcurrant (cassis), green bell pepper, and cedar notes that age for decades.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Merlot",
+            "description": "Early ripening and the most widely planted grape. Grown primarily on the Right Bank's cooler clay soils. It offers soft tannins, medium to high alcohol, with plum, blackberry, and fruitcake flavors.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Sauvignon Blanc & Sémillon",
+            "description": "Sauvignon Blanc provides grassy, gooseberry aromas and high acidity for dry whites. Sémillon provides body and affinity for botrytis (noble rot), essential for the great sweet wines of Sauternes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Château Lafite Rothschild",
+            "description": "First Growth. Known for elegance, perfumed aromatics, and extreme longevity.",
+            "wines": [
+              {
+                "name": "Château Lafite Rothschild",
+                "url": "https://www.vivino.com/search/wines?q=Chateau+Lafite+Rothschild"
+              }
+            ]
+          },
+          {
+            "name": "Château Petrus",
+            "description": "The most famous wine from Pomerol. A near-pure expression of Merlot on blue clay.",
+            "wines": [
+              {
+                "name": "Petrus",
+                "url": "https://www.vivino.com/search/wines?q=Petrus+Pomerol"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Haut-Médoc (Left Bank)",
+            "description": "The pinnacle of Cabernet Sauvignon production, containing the famous communes of Pauillac, Margaux, Saint-Julien, and Saint-Estèphe.",
+            "geography": "Gravel mounds (croupes) parallel to the Gironde estuary.",
+            "grapes": "Cabernet Sauvignon dominant, blended with Merlot."
+          },
+          {
+            "name": "Saint-Émilion & Pomerol (Right Bank)",
+            "description": "Home to the original 'garagiste' movement and opulent, softer, earlier-drinking reds.",
+            "geography": "The plateau of Saint-Émilion (limestone) and the blue clay of Pomerol.",
+            "grapes": "Merlot dominant, with Cabernet Franc."
+          },
+          {
+            "name": "Graves & Pessac-Léognan",
+            "description": "Located south of the city of Bordeaux, excelling in both red and premium dry white wines.",
+            "geography": "Deep gravel soils similar to the Médoc but slightly warmer.",
+            "grapes": "Cabernet Sauvignon, Sauvignon Blanc, Sémillon."
+          },
+          {
+            "name": "Sauternes",
+            "description": "World-famous sweet wine appellation reliant on Botrytis cinerea (noble rot).",
+            "geography": "Morning autumn mists from the cool Ciron joining the warmer Garonne river promote noble rot.",
+            "grapes": "Sémillon (dominant), Sauvignon Blanc."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.8,
+          47
+        ]
+      },
+      "properties": {
+        "id": "burgundy",
+        "name": "Burgundy (Bourgogne)",
+        "country": "France",
+        "history": "Burgundy (Bourgogne) represents the global standard for terroir-driven Pinot Noir and Chardonnay. Its history is deeply intertwined with the Cistercian and Benedictine monks who meticulously mapped the soil variations (climats) over centuries in the Middle Ages. The French Revolution dismantled Church and aristocratic holdings, and the Napoleonic inheritance laws resulted in extreme fragmentation of vineyard ownership. Today, a single Grand Cru vineyard like Clos de Vougeot is divided among dozens of individual producers.",
+        "geography": "Burgundy stretches across eastern France with a moderate continental climate. The region experiences cold winters and warm summers. Weather hazards are severe: spring frosts can wipe out buds (Chablis is notoriously susceptible), and localized summer hailstorms can destroy crops. Rain during harvest is also a persistent threat, requiring careful canopy management and vintage variation acceptance.",
+        "terroir": "The soils are predominantly limestone and marl (calcareous clay) dating back to the Jurassic period. The exact ratio determines the grape planting: Chardonnay performs best on limestone-dominant soils (e.g., Côte de Beaune, Chablis), while Pinot Noir demands more marl (e.g., Côte de Nuits). The best vineyards (Grand Cru and Premier Cru) are located mid-slope (mi-coteau) where drainage is optimal and frost risk is minimized.",
+        "grapes": [
+          {
+            "name": "Pinot Noir",
+            "description": "A notoriously fickle, thin-skinned grape highly sensitive to terroir. Produces wines with low to medium tannins, high acidity, and flavors ranging from red cherry/strawberry in youth to earth, mushroom, and game with bottle age.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "A non-aromatic variety that acts as a blank canvas for terroir and winemaking techniques. Ranges from steely, high-acid, green-apple Chablis to rich, buttery, hazelnut-scented Meursault.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Domaine de la Romanée-Conti (DRC)",
+            "description": "The most prestigious and expensive wine estate in the world.",
+            "wines": [
+              {
+                "name": "Romanée-Conti Grand Cru",
+                "url": "https://www.vivino.com/search/wines?q=Romanee+Conti"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Chablis",
+            "description": "The northernmost part of Burgundy, producing exclusively white wines known for their steely, citrus, and flinty (pierres à fusil) character.",
+            "geography": "Cool continental climate with severe frost risks. Famous for upper Kimmeridgian clay-limestone soils containing fossilized oyster shells.",
+            "grapes": "100% Chardonnay."
+          },
+          {
+            "name": "Côte de Nuits",
+            "description": "The northern half of the Côte d'Or ('Slopes of Gold'), producing virtually all of Burgundy's Grand Cru red wines.",
+            "geography": "East-facing limestone and marl slopes. Famous villages include Gevrey-Chambertin, Vosne-Romanée, and Nuits-Saint-Georges.",
+            "grapes": "Pinot Noir."
+          },
+          {
+            "name": "Côte de Beaune",
+            "description": "The southern half of the Côte d'Or, famous for the world's greatest dry white wines and elegant reds.",
+            "geography": "Limestone-rich soils with famous communes like Meursault, Puligny-Montrachet, and Volnay.",
+            "grapes": "Chardonnay and Pinot Noir."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3,
+          43.4
+        ]
+      },
+      "properties": {
+        "id": "tuscany",
+        "name": "Tuscany",
+        "country": "Italy",
+        "history": "Tuscany's identity is inextricably linked to the Sangiovese grape and the sweeping hills of the Renaissance heartland. The Chianti region dates back to a 1716 edict by the Grand Duke of Tuscany. In the 1970s, frustration with archaic, restrictive DOC laws forcing producers to blend white grapes into Chianti led to the 'Super Tuscan' rebellion, where winemakers illegally blended Sangiovese with Bordeaux varieties or used 100% Cabernet, changing Italian wine laws forever.",
+        "geography": "Tuscany is characterized by a warm Mediterranean climate along the coast, shifting to a more moderate continental climate in the inland hills. Altitude is the most critical quality factor. High-altitude vineyards (up to 500m) experience high diurnal temperature ranges (warm days, cool nights), which is vital to retain Sangiovese's naturally high acidity and extend its ripening window.",
+        "terroir": "The region features a patchwork of soils. The best inland zones (Chianti Classico, Montalcino) are characterized by 'Galestro' (a crumbly, rocky clay-marl) and 'Alberese' (hard limestone). These poor soils limit vigor and concentrate flavors. Towards the coastal Maremma (Bolgheri), soils are flat and sandy-clay, better suited to Bordeaux varieties.",
+        "grapes": [
+          {
+            "name": "Sangiovese",
+            "description": "Late ripening with naturally high acidity and high tannins. Exhibits tart red cherry, plum, dried herbs, and earth. Requires careful canopy management to avoid uneven ripening.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Sauvignon & Merlot",
+            "description": "Introduced via the Super Tuscan movement. Often blended with Sangiovese to add dark fruit color, soften acidity, and introduce international appeal. Dominant on the coast.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Tenuta San Guido",
+            "description": "Birthplace of the Super Tuscan. Flagship wine 'Sassicaia'.",
+            "wines": [
+              {
+                "name": "Sassicaia",
+                "url": "https://www.vivino.com/search/wines?q=Sassicaia"
+              }
+            ]
+          },
+          {
+            "name": "Biondi-Santi",
+            "description": "Inventor of Brunello di Montalcino. Traditional and long-lived.",
+            "wines": [
+              {
+                "name": "Brunello di Montalcino Riserva",
+                "url": "https://www.vivino.com/search/wines?q=Biondi+Santi"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Chianti Classico",
+            "description": "The historic heartland of Chianti, producing the most concentrated, structured, and age-worthy Sangiovese blends (now requiring 80% minimum Sangiovese).",
+            "geography": "High altitude hills between Florence and Siena with Galestro soils.",
+            "grapes": "Sangiovese, Canaiolo, Cabernet Sauvignon."
+          },
+          {
+            "name": "Brunello di Montalcino",
+            "description": "The pinnacle of powerful, 100% Sangiovese. By law, it requires an immense 5 years of aging before release (6 for Riserva), resulting in garnet-colored, highly complex wines.",
+            "geography": "Warmer, drier microclimate in southern Tuscany, leading to fuller bodies.",
+            "grapes": "100% Sangiovese (local clone: Grosso)."
+          },
+          {
+            "name": "Bolgheri (Coastal Tuscany)",
+            "description": "The birthplace of the Super Tuscans (e.g., Sassicaia, Ornellaia), heavily influenced by the maritime climate of the Tyrrhenian Sea.",
+            "geography": "Lower-lying coastal plains with gravel and clay.",
+            "grapes": "Cabernet Sauvignon, Merlot, Cabernet Franc."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3,
+          38.4
+        ]
+      },
+      "properties": {
+        "id": "napa",
+        "name": "Napa Valley",
+        "country": "USA",
+        "history": "Napa Valley, though producing wine since the mid-19th century, was truly catapulted to global fame by the pivotal 1976 'Judgment of Paris', a blind tasting where Napa Valley Cabernet and Chardonnay dramatically defeated top-tier Bordeaux and Burgundy. The region operates on immense capital investment, producing ultra-premium, cult-status wines (e.g., Screaming Eagle, Harlan Estate) that redefine modern power and concentration. It is the driving force behind American AVA (American Viticultural Area) legislation and world-class wine tourism.",
+        "geography": "Geographically tiny, measuring just 30 miles long. Flanked by the Mayacamas Mountains to the west and the Vaca Range to the east. The overarching climate is defined by the San Pablo Bay in the south. In summer, the hot central valley pulls in cool, moist fog from the bay every evening. This fog funnels northwards, drastically chilling the southern AVA's (e.g., Carneros) while the northernmost reaches (Calistoga) remain scorching hot until late in the day. This creates massive diurnal temperature shifts essential to acid retention.",
+        "terroir": "Due to ancient seismic activity and volcanic eruptions, Napa's soils are uniquely complex containing half the world's soil orders. The valley floor comprises deep, fertile, alluvial deposits that produce luscious, massive-bodied Cabernets. Conversely, the mountain AVAs (Howell Mountain, Mount Veeder) consist of thin, well-draining volcanic and sedimentary rock. These nutrient-scarce slopes stress the vines, resulting in minute berries with incredibly dense, structural tannins and lower alcohol.",
+        "grapes": [
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "The undisputed king of Napa. Produces opulent, full-bodied wines with explosive aromas of crème de cassis, mint, baked blackberry, and heavy integration of new vanilla-scented American and French oak.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Historically vinified in a massive, buttery, heavily oaked style with full malolactic conversion. Modern trends are shifting toward more elegant, crisp interpretations, especially in cooler Carneros.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Merlot",
+            "description": "Widely planted to blend with Cabernet. Yields incredibly soft, plush, chocolate-and-plum driven wines with silky tannins.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Screaming Eagle",
+            "description": "The ultimate California 'Cult Wine'.",
+            "wines": [
+              {
+                "name": "Cabernet Sauvignon",
+                "url": "https://www.vivino.com/search/wines?q=Screaming+Eagle"
+              }
+            ]
+          },
+          {
+            "name": "Opus One",
+            "description": "Historic joint venture between Mondavi and Rothschild.",
+            "wines": [
+              {
+                "name": "Opus One",
+                "url": "https://www.vivino.com/search/wines?q=Opus+One"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Rutherford & Oakville (Valley Floor)",
+            "description": "The 'sweet spot' in the mid-valley producing the most famous cult Cabernets. Known for 'Rutherford Dust'—a unique textural tannin profile.",
+            "geography": "Warm daytime temperatures balanced by morning fog. Alluvial fan deposits.",
+            "grapes": "Cabernet Sauvignon."
+          },
+          {
+            "name": "Howell Mountain & Atlas Peak",
+            "description": "High-altitude AVAs producing massive, brooding, fiercely tannic wines requiring extensive cellaring.",
+            "geography": "Above the fog line facing west. Harsh, thin volcanic soils.",
+            "grapes": "Cabernet Sauvignon, Zinfandel."
+          },
+          {
+            "name": "Los Carneros",
+            "description": "The southernmost AVA stretching into Sonoma. Exclusively produces premium Pinot Noir and Chardonnay for still and traditional method sparkling wines.",
+            "geography": "The coolest region due to persistent, intense morning bay fogs and coastal breezes.",
+            "grapes": "Chardonnay, Pinot Noir."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8,
+          44.6
+        ]
+      },
+      "properties": {
+        "id": "piedmont",
+        "name": "Piedmont (Piemonte)",
+        "country": "Italy",
+        "history": "Piedmont, literally 'at the foot of the mountains,' is Italy's equivalent to Burgundy. It is culturally distinct, heavily influenced by its proximity to France and its history as the seat of the House of Savoy, Italy's royal family. The reputation of Piedmont relies entirely on small, fiercely independent estates producing highly aromatic, age-worthy single-varietal wines, particularly from the noble Nebbiolo grape.",
+        "geography": "Located in northwest Italy, surrounded on three sides by the Alps and Apennines. It has a moderate continental climate with long, cold winters and summers subject to severe thunderstorms and hail. A critical climatic feature is the autumn fog ('nebbia'), which gives the Nebbiolo grape its name and provides a slow, extended ripening period essential for tannin and flavor development.",
+        "terroir": "The finest vineyards of the Langhe hills (Barolo and Barbaresco) are situated on steep, south-facing slopes composed of calcareous marl and sandstone at altitudes between 300 to 500 meters. The exact composition dictates the style: Tortonian blue marl yields more approachable, perfumed Barolos, while Helvetian sandstone yields fiercely tannic wines requiring decades to soften.",
+        "grapes": [
+          {
+            "name": "Nebbiolo",
+            "description": "A profoundly challenging, late-ripening grape. In its youth, it has brutal tannins and searing acidity, masking pale color. With age, it reveals intoxicating aromas of 'tar and roses,' sour cherry, truffle, and leather.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Barbera",
+            "description": "The most widely planted grape. Naturally high in acidity and low in tannin, providing the everyday juicy, sour-cherry driven wine for locals while they wait for their Barolos to age.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Gaja",
+            "description": "Visionary who modernized Barbaresco and Barolo.",
+            "wines": [
+              {
+                "name": "Barbaresco",
+                "url": "https://www.vivino.com/search/wines?q=Gaja+Barbaresco"
+              }
+            ]
+          },
+          {
+            "name": "Giacomo Conterno",
+            "description": "The absolute pinnacle of traditional Barolo.",
+            "wines": [
+              {
+                "name": "Monfortino Barolo Riserva",
+                "url": "https://www.vivino.com/search/wines?q=Conterno+Monfortino"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Barolo DOCG",
+            "description": "The 'King of Wines and Wine of Kings.' Requires a minimum of 38 months aging before release (62 for Riserva). Highly tannic, majestic expressions of Nebbiolo.",
+            "geography": "A tight cluster of villages (e.g., La Morra, Serralunga) on calcareous marl hills.",
+            "grapes": "100% Nebbiolo."
+          },
+          {
+            "name": "Barbaresco DOCG",
+            "description": "Barolo's slightly lower-altitude, warmer neighbor. The wines ripen earlier, have slightly softer tannins, and require less cellaring (26 months minimum).",
+            "geography": "South-facing hillsides adjacent to the Tanaro River.",
+            "grapes": "100% Nebbiolo."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5,
+          42.4
+        ]
+      },
+      "properties": {
+        "id": "rioja",
+        "name": "Rioja",
+        "country": "Spain",
+        "history": "Rioja is Spain's most famous and historic wine region. Its modern identity was forged in the 19th century when phylloxera devastated Bordeaux; French merchants crossed the Pyrenees mountains seeking wine, bringing with them the 225-liter oak barrique. The traditional reliance on extended American oak aging (often for a decade before release) defined the classic style, though a modern wave now emphasizes French oak and primary fruit expression.",
+        "geography": "Located in northern Spain, Rioja is sheltered from the wet, cold Atlantic weather systems by the Cantabrian Mountains. The region is divided into three distinct zones flanking the Ebro River. The climate shifts from maritime-influenced in the northwest to hotter, drier, and more Mediterranean in the southeast. Vineyards are planted at altitudes up to nearly 800m.",
+        "terroir": "Soils vary distinctly by sub-zone. Rioja Alavesa and Alta have chalky clay-limestone and iron-rich clay soils, which promote freshness, structure, and elegance. Rioja Oriental (formerly Baja) in the southeast features heavier, alluvial silt and clay, resulting in higher yields of robust, high-alcohol grapes.",
+        "grapes": [
+          {
+            "name": "Tempranillo",
+            "description": "An early-ripening variety (temprano = early) yielding medium acid, medium tannin wines with strawberry, plum, and a strong affinity for vanilla/coconut flavors derived from American oak.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Garnacha (Grenache)",
+            "description": "Adds alcohol, body, and red fruit to the traditional Rioja blend. Dominant in the hotter Rioja Oriental zone.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Viura (Macabeo)",
+            "description": "The principal white grape, historically heavily oaked and oxidized, but modern versions are crisp, fresh, and stainless-steel fermented.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "La Rioja Alta, S.A.",
+            "description": "Standard-bearer for traditional Rioja. Long American oak aging.",
+            "wines": [
+              {
+                "name": "Gran Reserva 890",
+                "url": "https://www.vivino.com/search/wines?q=La+Rioja+Alta+890"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Rioja Alta",
+            "description": "The high-altitude zone producing the most elegant, age-worthy Tempranillos.",
+            "geography": "South of the Ebro river at high elevations. Clay and iron soils.",
+            "grapes": "Tempranillo."
+          },
+          {
+            "name": "Rioja Alavesa",
+            "description": "The smallest, coolest zone governed by the Basque country. Produces lighter, highly aromatic wines often consumed younger via semi-carbonic maceration.",
+            "geography": "North of the Ebro, highest elevations, pure chalky soils.",
+            "grapes": "Tempranillo."
+          },
+          {
+            "name": "Rioja Oriental (Baja)",
+            "description": "The warmest, flattest zone, acting as the structural blending backbone for Garnacha.",
+            "geography": "Mediterranean influence, alluvial soils.",
+            "grapes": "Garnacha."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.9,
+          44.5
+        ]
+      },
+      "properties": {
+        "id": "rhone",
+        "name": "Rhône Valley",
+        "country": "France",
+        "history": "The Rhône Valley follows the path of the Rhône River from central France toward the Mediterranean. It is viticulturally split into two distinct sectors (North and South) that share little besides the river. The region boasts deep historical ties to the Avignon Papacy in the 14th century, which established the fame of Châteauneuf-du-Pape ('New Castle of the Pope').",
+        "geography": "The Northern Rhône has a moderate continental climate. The valley is extremely narrow and steep, requiring vines to be planted on terraced slopes. The Southern Rhône expands into a broad, flat valley with a warm Mediterranean climate. Both regions are battered by the Mistral, a ferocious, cold, dry wind blowing down from the Alps that can strip leaves off vines but crucially prevents fungal diseases.",
+        "terroir": "In the North, soils are dominated by heat-retaining granite on steep slopes, crucial for ripening Syrah at its northern limit. In the South, soils are incredibly diverse, from sandy plots to the iconic galets roulés (large, smooth river stones) of Châteauneuf-du-Pape which absorb the sun's heat during the day and radiate it back to the vines at night.",
+        "grapes": [
+          {
+            "name": "Syrah",
+            "description": "The only permitted red grape in the Northern Rhône. Yields deeply colored, full-bodied wines with high tannin and distinctive aromas of black pepper, smoked meat, and black olive.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Grenache, Syrah, Mourvèdre (GSM)",
+            "description": "In the South, Grenache dominates (red fruit, high alcohol, low tannin), blended with Syrah (color, tannin) and Mourvèdre (gamey, dark fruit, structure).",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Viognier",
+            "description": "An aromatic white grape from the North (Condrieu) producing low-acid, high-alcohol wines with exotic aromas of apricot, peach, and blossom.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "E. Guigal",
+            "description": "Master of the Northern Rhône, famous for their 'La La's' in Côte-Rôtie.",
+            "wines": [
+              {
+                "name": "Côte-Rôtie 'La Mouline'",
+                "url": "https://www.vivino.com/search/wines?q=Guigal+La+Mouline"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Côte Rôtie (North)",
+            "description": "The 'Roasted Slope' produces the most elegant, perfumed Syrahs, historically co-fermented with a tiny percentage of white Viognier.",
+            "geography": "Extremely steep, south-facing granite terraces.",
+            "grapes": "Syrah, Viognier."
+          },
+          {
+            "name": "Hermitage (North)",
+            "description": "A single, massive south-facing hill that produces legendary, long-lived, powerful Syrah and full-bodied whites.",
+            "geography": "Granite hill commanding the river bend.",
+            "grapes": "Syrah, Marsanne, Roussanne."
+          },
+          {
+            "name": "Châteauneuf-du-Pape (South)",
+            "description": "The grandest appellation of the south, famous for permitting up to 13 different grape varieties in a single blend.",
+            "geography": "Vast flatter plain covered in 'galets' stones and heavily impacted by the Mistral.",
+            "grapes": "Grenache, Mourvèdre, Syrah, Cinsault."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7,
+          50
+        ]
+      },
+      "properties": {
+        "id": "mosel",
+        "name": "Mosel",
+        "country": "Germany",
+        "history": "The Mosel river valley represents the absolute pinnacle of global Riesling production. Cultivated since the Roman era, the steep slaty slopes were historically worked by monks. By the late 19th century, top German Rieslings from the Mosel and Rheingau commanded prices higher than First Growth Bordeaux. Despite enduring challenges with world wars and the 1970s sweet-wine reputation crisis, the 'Prädikatswein' system classifies these noble, ethereal wines purely on the un-chaptalized natural sugar weight (Oechsle) of the grape at harvest.",
+        "geography": "With latitudes around 50°N, the Mosel endures a cool continental climate pushing the extreme limits of viticulture. Maximizing solar radiation is an obsessive necessity. The Mosel river winds its way through extreme gorges, ensuring the best vineyards face directly south. The river itself acts as a massive thermal mirror, bouncing sunlight directly into the canopy to aid slow, steady ripening well into late autumn without losing acidity.",
+        "terroir": "The iconic terroir is composed of pure Devonian blue, red, and grey slate. This rock is virtually devoid of organic matter and incredibly heat-retentive. It fractures easily, storing heat during the day and radiating it back onto the vines at night, preventing frost. The slopes are impossibly steep—frequently 60 to 70 degrees—requiring all vineyard work (and harvest) to be painstakingly done by hand via winch lines.",
+        "grapes": [
+          {
+            "name": "Riesling",
+            "description": "The absolute king of the Mosel. Its natural resistance to frost and ability to hang on the vine for extended periods yield wines with searingly high, crystalline acidity, extremely low alcohol (often 7-9%), and unbelievable tension, residual sugar balance, and longevity.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Joh. Jos. Prüm",
+            "description": "Legendary for age-worthy, brilliantly precise sweet wines.",
+            "wines": [
+              {
+                "name": "Wehlener Sonnenuhr Spätlese",
+                "url": "https://www.vivino.com/search/wines?q=JJ+Prum+Wehlener"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Middle Mosel (Mittelmosel)",
+            "description": "The epicenter of quality encompassing incredibly famous villages like Bernkastel, Wehlen, and Piesport.",
+            "geography": "Dramatic river meanders where pure slate vineyards (e.g., Wehlener Sonnenuhr) perfectly face south/south-west.",
+            "grapes": "100% Riesling."
+          },
+          {
+            "name": "Lower Mosel (Terrassenmosel)",
+            "description": "The northern stretch toward the Rhine river. So narrow that the slopes are literally terraced with stone walls.",
+            "geography": "Steepest vineyards globally (like the Bremmer Calmont), exceptionally warm trapped microclimates.",
+            "grapes": "Riesling."
+          },
+          {
+            "name": "Saar & Ruwer",
+            "description": "Two small tributaries of the Mosel. Historically too cold to ripen grapes, but in a warming climate, they now produce some of Germany's most racy, austere, and electric Rieslings.",
+            "geography": "Higher altitude, cooler side-valleys.",
+            "grapes": "Riesling."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.8,
+          -41.5
+        ]
+      },
+      "properties": {
+        "id": "marlborough",
+        "name": "Marlborough",
+        "country": "New Zealand",
+        "history": "Unlike ancient European regions, Marlborough's fame is explosive and incredibly recent. Until 1973, it was primarily sheep grazing land. The planting of Sauvignon Blanc here entirely disrupted the global wine market by the 1980s, introducing an unprecedented, intensely aromatic style of wine that created an immediate, insatiable global demand. It transformed New Zealand into a world-leading exporter.",
+        "geography": "Located at the northeast tip of New Zealand’s South Island, Marlborough enjoys a remarkably sunny, cool maritime climate. The massive Southern Alps to the west completely block the torrential rains coming off the Tasman Sea (the rain shadow effect) making it one of NZ's sunniest and driest regions. The key feature is the massive diurnal shift: brilliant, high UV-index sunny days matched by freezing, crisp nights that completely halt ripening and lock in searing malic acidity.",
+        "terroir": "Situated along the Wairau River valley floor. Over millennia, glacial action deposited varying depths of free-draining gravelly soils. These stones limit vine vigor (vital for the hyper-vigorous Sauvignon Blanc grape) and absorb solar heat during the day, radiating it back at night. Soils closer to the coast become siltier and heavier, retaining more water.",
+        "grapes": [
+          {
+            "name": "Sauvignon Blanc",
+            "description": "The defining grape. Explosively aromatic, characterized by pungent passionfruit, gooseberry, jalapeño, and undeniably striking 'cat’s pee on a gooseberry bush' notes, backed by razor-sharp acidity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinot Noir",
+            "description": "Increasing in importance. Produces medium-bodied, fruit-forward wines packed with dark cherry, raspberry, and spicy oak notes. Crucial for both still and traditional method sparkling wines.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "A major component for Marlborough's massive sparkling wine industry, often exhibiting crisp citrus and stone fruit profiles with high natural acidity.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Cloudy Bay",
+            "description": "The estate that defined the style in the 80s.",
+            "wines": [
+              {
+                "name": "Sauvignon Blanc",
+                "url": "https://www.vivino.com/search/wines?q=Cloudy+Bay+Sauvignon+Blanc"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Wairau Valley",
+            "description": "The historic, sprawling heart of the region offering the classic, explosive passionfruit and tropical-leaning style of Sauvignon Blanc.",
+            "geography": "A wide, ancient riverbed with deep, highly-draining stony gravels. The warmest sub-region.",
+            "grapes": "Sauvignon Blanc."
+          },
+          {
+            "name": "Awatere Valley",
+            "description": "Located to the south, it produces a radically different style: searingly high acidity, lean, and dominated by intense herbaceous, tomato-leaf, and jalapeño notes.",
+            "geography": "Cooler, windier, and drier. Vines struggle in the loess and stony soils.",
+            "grapes": "Sauvignon Blanc, Pinot Noir."
+          },
+          {
+            "name": "Southern Valleys",
+            "description": "A series of tributary valleys jutting into the hillsides, highly prized for producing the region's best structured Pinot Noirs.",
+            "geography": "Heavy, water-retaining clay soils (loess) on hillside slopes that naturally restrict vigor.",
+            "grapes": "Pinot Noir."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8,
+          -33.9
+        ]
+      },
+      "properties": {
+        "id": "stellenbosch",
+        "name": "Stellenbosch",
+        "country": "South Africa",
+        "history": "Stellenbosch is the historic, academic, and qualitative heartland of South African wine, established in 1679 by the Dutch East India Company. It hosts the country’s leading viticultural university. In the post-Apartheid era, massive modernization of vineyards shifted the focus from high-yield bulk production towards premium, internationally recognized Bordeaux blends, premium Chenin Blanc, and the domestic crossing, Pinotage.",
+        "geography": "A moderate-to-warm Mediterranean climate set against spectacular mountainous backdrops. Sitting just inland from the coast, the region is saved from overwhelming heat by the 'Cape Doctor'—an infamous, fiercely powerful southeasterly wind. This wind relentlessly cools the vineyards, lowers humidity (eradicating fungal diseases), and batters the vines into submission, naturally reducing grape yields towards premium concentration.",
+        "terroir": "The topography is extremely rugged and folded with dramatic granite mountains dominating the landscape. Soils are impressively diverse: the valley floors boast deep, water-retaining alluvial soils, while the mountain slopes are marked by ancient decomposed granite and shale. These well-draining, infertile slopes are the holy grail for premium Cabernet Sauvignon.",
+        "grapes": [
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "The crown jewel. Produces exceptionally structured, muscular wines combining the massive blackcurrant/cassis power of Napa with the refined, herbal/cedar elegance of Bordeaux.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chenin Blanc (Steen)",
+            "description": "The historic white workhorse successfully elevated to premium status. Expect rich, full-bodied whites laden with bruised apple, peach, honey, and high natural acidity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinotage",
+            "description": "A distinctly South African crossing of Pinot Noir and Cinsault. Historically maligned for 'burnt rubber' aromas, modern premium examples are rich, dark-fruited, spicy, and deeply complex.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Kanonkop",
+            "description": "Masters of Pinotage and Bordeaux blends. The 'First Growth' of the Cape.",
+            "wines": [
+              {
+                "name": "Paul Sauer",
+                "url": "https://www.vivino.com/search/wines?q=Kanonkop+Paul+Sauer"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Simonsberg-Stellenbosch",
+            "description": "The preeminent 'First Growth' ward of South Africa, famous for profound, incredibly age-worthy Bordeaux blends and Cabernet Sauvignon.",
+            "geography": "High mountain slopes facing perfectly to capture the sun while avoiding the most brutal winds.",
+            "grapes": "Cabernet Sauvignon, Merlot."
+          },
+          {
+            "name": "Bottelary Hills",
+            "description": "An important undulating ward noted for its exceptional premium Chenin Blanc and Pinotage derived from old, low-yielding bush vines.",
+            "geography": "Rolling hills acting as a funnel for the cooling Cape Doctor wind.",
+            "grapes": "Chenin Blanc, Pinotage."
+          },
+          {
+            "name": "Helderberg",
+            "description": "Situated closer to the ocean (False Bay).",
+            "geography": "Strongest maritime influence, producing slightly cooler, more elegant expressions of Cabernet and premium Sauvignon Blanc.",
+            "grapes": "Cabernet Sauvignon, Sauvignon Blanc."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4,
+          49.1
+        ]
+      },
+      "properties": {
+        "id": "champagne",
+        "name": "Champagne",
+        "country": "France",
+        "history": "Champagne is synonymous with luxury and celebration, but historically it struggled with its cold climate, leading to wines that unintentionally refermented in the bottle during the spring thaw. Dom Pérignon did not 'invent' sparkling wine, but rather perfected blending techniques to balance harsh acidity. The region was the pioneer of the Traditional Method (Méthode Champenoise). Its landscape is scarred by history, notably the World War I trenches that ravaged the vineyards.",
+        "geography": "Located at 49°N latitude, Champagne pushes the extreme northern limit for reliable viticulture. It has a cool continental climate with maritime influences. The primary challenges are winter freeze, spring frosts, and rainy, cloudy weather that threatens ripening. Extreme blending across villages, varieties, and vintages (Non-Vintage) is a historical necessity to ensure consistency.",
+        "terroir": "The defining feature of Champagne is its deep, porous chalk soil (Belemnite and Micraster). This chalk serves two vital functions: it reflects sunlight back onto the vines to aid ripening, and it acts as a massive sponge, regulating water supply—draining efficiently in wet years and retaining moisture during dry spells.",
+        "grapes": [
+          {
+            "name": "Pinot Noir",
+            "description": "Provides structural backbone, red fruit aromas, and body to the blend. Planted heavily in the Montagne de Reims and Aube.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Provides high acidity, floral notes, and citrus elegance. Critical for the aging potential of the wine. Dominant in the Côte des Blancs.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Meunier",
+            "description": "A late-budding mutation of Pinot Noir that avoids spring frost. Provides fruity, accessible flavors in youth but ages rapidly. Planted in the frost-prone Vallée de la Marne.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Dom Pérignon",
+            "description": "Moët & Chandon's prestige cuvée. Only produced in exceptional vintage years.",
+            "wines": [
+              {
+                "name": "Dom Pérignon Vintage",
+                "url": "https://www.vivino.com/search/wines?q=Dom+Perignon"
+              }
+            ]
+          },
+          {
+            "name": "Krug",
+            "description": "The ultimate expression of blended, barrel-fermented Champagne.",
+            "wines": [
+              {
+                "name": "Grande Cuvée",
+                "url": "https://www.vivino.com/search/wines?q=Krug+Grande+Cuvee"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Montagne de Reims",
+            "description": "A broad, wooded plateau known for fuller-bodied blends.",
+            "geography": "Chalky slopes facing north, south, and east. Known for powerful Pinot Noir.",
+            "grapes": "Pinot Noir."
+          },
+          {
+            "name": "Vallée de la Marne",
+            "description": "The valley following the Marne river, prone to deep spring frosts.",
+            "geography": "Clay and sand soils where chalk is buried deep. Retreat for Meunier.",
+            "grapes": "Meunier."
+          },
+          {
+            "name": "Côte des Blancs",
+            "description": "A perfectly east-facing ridge south of Épernay that produces the purest, most long-lived Blanc de Blancs.",
+            "geography": "Outcroppings of the purest white chalk.",
+            "grapes": "100% Chardonnay."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9,
+          45.4
+        ]
+      },
+      "properties": {
+        "id": "veneto",
+        "name": "Veneto",
+        "country": "Italy",
+        "history": "Veneto is Italy's largest wine-producing region by volume, boasting global export giants like Prosecco and Pinot Grigio. However, its historical prestige is rooted entirely in the Valpolicella zone, where the ancient Roman technique of 'appassimento' (drying grapes before fermentation) was perfected to produce the legendary, massive, and powerful Amarone.",
+        "geography": "A broad, diverse region stretching from the cooling alpine foothills and Lake Garda in the west down to the hot, flat Po Valley plains and the Adriatic Sea in the east. It features a warm to moderate continental climate. Lake Garda provides a crucial moderating effect for nearby vineyards, preventing winter freeze and extending the growing season.",
+        "terroir": "The quality dichotomy is sharp: the flat, highly fertile alluvial plains yield massive quantities of simple, dilute wine. By contrast, the premium 'Classico' zones (e.g., Soave Classico, Valpolicella Classico) are situated squarely in the steep, well-draining limestone and volcanic hills. These poor soils restrict vine vigor, concentrating flavor.",
+        "grapes": [
+          {
+            "name": "Corvina",
+            "description": "The absolute backbone of Valpolicella and Amarone. A thick-skinned grape that excels in the drying process, offering sour cherry, bitter almond, and high acidity.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Garganega",
+            "description": "The star of Soave. A late-ripening white grape producing wines with piercing acidity, chamomile, lemon, and white almond aromas that age beautifully into immense honeyed complexity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Quintarelli",
+            "description": "The mythical master of artisan Amarone.",
+            "wines": [
+              {
+                "name": "Amarone della Valpolicella Classico",
+                "url": "https://www.vivino.com/search/wines?q=Quintarelli+Amarone"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Valpolicella Classico",
+            "description": "The historic, hilly heartland producing light, fresh reds up to the massively concentrated, 15%+ alcohol Amarone della Valpolicella DOCG.",
+            "geography": "Steep limestone terraces north of Verona. Cool breezes from the Lessini mountains.",
+            "grapes": "Corvina, Rondinella."
+          },
+          {
+            "name": "Soave Classico",
+            "description": "One of Italy's greatest white wines. The Classico zone represents the original, steep hillside plantings.",
+            "geography": "Dark, basaltic volcanic soils mixed with limestone.",
+            "grapes": "Garganega, Trebbiano di Soave."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8,
+          -33.4
+        ]
+      },
+      "properties": {
+        "id": "mendoza",
+        "name": "Mendoza",
+        "country": "Argentina",
+        "history": "Mendoza historically pumped out vast quantities of low-quality wine for domestic consumption until the incredible export-driven Malbec boom of the late 90s. The region is inextricably tied to the efforts of Nicolás Catena Zapata, who abandoned high-yielding valley floor vineyards and dared to plant vines at extreme altitudes in the Uco Valley, revolutionizing global perception by proving Argentina could produce world-class, age-worthy red wines.",
+        "geography": "A high-altitude desert situated in the foothills of the colossal Andes Mountains. The climate is starkly continental and incredibly arid (less than 200mm rain annually). Viticulture is only possible due to an ancient Inca canal system ('acequias') capturing crystal-clear glacial snowmelt from the Andes mountains. Summer hail—capable of instantly destroying entire vintages—is the greatest viticultural hazard, forcing producers to net their vines.",
+        "terroir": "Terroir here is dictated solely by altitude. Because it sits in a desert, higher altitude decreases the temperature significantly. The finest AVAs (Luján de Cuyo and the Uco Valley) are situated between 900m to 1,500m above sea level. This extreme elevation massively increases UV radiation, forcing the Malbec grape to develop incredibly thick skins for protection, resulting in profound color intensity and tannin.",
+        "grapes": [
+          {
+            "name": "Malbec",
+            "description": "The undisputed star, originally a minor blending grape from Bordeaux. In the Andean sun, it thrives, producing deeply pigmented, plush wines brimming with dark plum, violet, and blackberry with velvet tannins.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "Increasingly important. Cultivated at high altitudes, it ripens perfectly without the 'leafy' greenness of cooler climates, offering intense blackcurrant aromas and powerful structure.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Torrontés",
+            "description": "Argentina's signature white grape. Highly aromatic, exuding heady perfumes of jasmine, rose petal, and peach, yet fermenting completely bone-dry on the palate with refreshing acidity.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Catena Zapata",
+            "description": "Pioneers of extreme high-altitude Malbec planting.",
+            "wines": [
+              {
+                "name": "Adrianna Vineyard Malbec",
+                "url": "https://www.vivino.com/search/wines?q=Catena+Zapata+Adrianna"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Uco Valley (Valle de Uco)",
+            "description": "The undisputed premium frontier of Argentine wine, home to the most iconic, high-altitude estates globally (e.g., Gualtallary, Altamira).",
+            "geography": "Extreme altitudes (up to 1,500m+) with highly calcareous (limestone-rich) alluvial soils offering searing acidity.",
+            "grapes": "Malbec, Cabernet Franc, Chardonnay."
+          },
+          {
+            "name": "Luján de Cuyo",
+            "description": "The historic heart of premium Malbec, located closer to Mendoza city. Home to the first generation of grand estates.",
+            "geography": "Lower altitude (900m-1,000m) than the Uco Valley. Warmer days yield lusher, rounder, sweeter-fruited Malbecs.",
+            "grapes": "Malbec, Cabernet Sauvignon."
+          },
+          {
+            "name": "Maipú",
+            "description": "An older, lower-altitude sub-region containing some of the oldest pre-phylloxera vines in the world.",
+            "geography": "Situated lower down, producing robust, heavily fruited wines and old-vine Syrah.",
+            "grapes": "Malbec, Syrah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.5,
+          41.2
+        ]
+      },
+      "properties": {
+        "id": "douro",
+        "name": "Douro Valley",
+        "country": "Portugal",
+        "history": "Demarcated in 1756 by the Marquis of Pombal, the Douro in Portugal is the oldest strictly regulated, geographically mapped wine region in the world. Historically the exclusive source of Port wine, a booming market for premium, dry, unfortified red 'Douro DOC' table wines has exploded since the 1990s, using the same indigenous grape varieties but harvested to prioritize freshness and tannin balance.",
+        "geography": "Located deep inland following the Douro River, isolated from the Atlantic Ocean by the Marão mountains. The climate is harsh continental: brutally hot, arid summers and freezing winters. Rainfall is incredibly scarce, making water retention and drought management the absolute central tenets of Douro viticulture.",
+        "terroir": "The steepness of the slopes is extreme (often exceeding 60 degrees), requiring incredible feats of engineering. The entire valley is carved into narrow stone terraces ('socalcos') built by hand over centuries. The bedrock is exclusively vertical schist. The vines must force their roots up to 20 meters deep into the fractured vertical schist to find microscopic water reserves.",
+        "grapes": [
+          {
+            "name": "Touriga Nacional",
+            "description": "The most prized and lowest-yielding variety. Produces intensely colored, massive-tannin wines displaying concentrated flavors of black fruit, bergamot, and violet.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Touriga Franca",
+            "description": "The most widely planted variety. Needs less heat to ripen than Nacional. Essential for blending, providing intense floral aromatics and structural backbone.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Quinta do Noval",
+            "description": "Famous for 'Nacional', a vintage Port made from ungrafted, pre-phylloxera vines.",
+            "wines": [
+              {
+                "name": "Vintage Port Nacional",
+                "url": "https://www.vivino.com/search/wines?q=Quinta+do+Noval+Nacional"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Baixo Corgo",
+            "description": "The westernmost sub-region. The coolest and wettest part of the Douro, producing lighter wines generally intended for cheaper Ruby and Tawny Ports.",
+            "geography": "Lower altitude, highest rainfall, relatively fertile soils.",
+            "grapes": "Tinta Roriz, Touriga Franca."
+          },
+          {
+            "name": "Cima Corgo",
+            "description": "The heart of the region centered around Pinhão. The source of almost all the top Vintage Ports and premium dry red wines.",
+            "geography": "Warmer and significantly drier than Baixo Corgo, featuring the steepest slopes.",
+            "grapes": "Touriga Nacional, Touriga Franca."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1,
+          45.1
+        ]
+      },
+      "properties": {
+        "id": "willamette",
+        "name": "Willamette Valley",
+        "country": "USA",
+        "history": "In the 1960s, a group of visionary UC Davis graduates fled the heat of California searching for a climate capable of ripening Pinot Noir to Burgundian standards. They boldly planted in the Willamette Valley in Oregon. Today, it stands shoulder-to-shoulder with Burgundy, celebrated globally for its delicate, nuanced, and intensely terroir-transparent Pinot Noirs, leading a stringent sustainability movement.",
+        "geography": "Located south of Portland, Oregon. It enjoys a cool maritime climate. The Coastal Range mountains to the west block the savage Pacific Ocean storms but allow cool marine air to flow through breaks in the mountains (like the Van Duzer Corridor). Summers are dry and uniquely cool compared to California, extending the hang time deep into a risky, rainy autumn.",
+        "terroir": "The terroir is famous for two strictly distinct soil profiles. 'Jory' soils are ancient, iron-rich, bright red volcanic soils that yield highly aromatic, red-fruited elegant wines. 'Willakenzie' soils are marine sedimentary soils deposited by ancient oceans, yielding darker, denser, more tannic, and structurally brooding wines. Nearly all top AVAs are located on slopes (200ft-800ft) to avoid hazardous valley floor frost.",
+        "grapes": [
+          {
+            "name": "Pinot Noir",
+            "description": "The absolute king. Stylistically positioned precisely between the delicate, earthy austerity of Burgundy and the rich, plush, jammy fruit of California. Offers vibrant cranberry, earth, and silky tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Rapidly ascending alongside Pinot Noir, producing razor-sharp, flinty, high-acid white wines that strongly mimic modern Chablis.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Domaine Serene",
+            "description": "Massively critical acclaim, helping prove Oregon can rival Grand Cru Burgundy.",
+            "wines": [
+              {
+                "name": "Evenstad Reserve Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Domaine+Serene+Evenstad"
+              }
+            ]
+          },
+          {
+            "name": "Ken Wright Cellars",
+            "description": "Pioneer in mapping the distinct terroir and AVAs of the valley.",
+            "wines": [
+              {
+                "name": "Shea Vineyard Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Ken+Wright+Shea"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Dundee Hills",
+            "description": "The defining, original sub-AVA of the region. Famous for producing the most elegant, highly sought-after, red-fruited Pinot Noirs in the state.",
+            "geography": "Protected from the coastal winds. Dominated exclusively by the famous red volcanic Jory soils.",
+            "grapes": "Pinot Noir."
+          },
+          {
+            "name": "Eola-Amity Hills",
+            "description": "A significantly cooler AVA that produces darker, tenser, and highly age-worthy, structured Pinot Noir.",
+            "geography": "Directly exposed to the howling, chilling Pacific winds funneled through the Van Duzer Corridor. Shallow, rocky soils.",
+            "grapes": "Pinot Noir, Chardonnay."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5,
+          -33.6
+        ]
+      },
+      "properties": {
+        "id": "maipo",
+        "name": "Maipo Valley",
+        "country": "Chile",
+        "history": "Maipo Valley is the historic birthplace of the Chilean wine industry. Proximity to the capital city, Santiago, led wealthy 19th-century magnates (who made fortunes in mining) to import direct, pre-phylloxera cuttings of noble vines straight from Bordeaux, alongside hiring prominent French winemakers. This legacy cemented Maipo as the aristocratic home of South America's greatest Cabernet Sauvignon.",
+        "geography": "Maipo boasts an incredibly stable, warm Mediterranean climate. To the east lie the towering, snow-capped Andes Mountains, and to the west lies the Coastal Range. The climate is notoriously dry, with 300+ days of blazing sunshine annually. Crucially, as the sun sets, icy air plunges down from the Andes via the Maipo River gorge, plunging nighttime temperatures by 20°C. This extreme diurnal shift prevents over-ripening and locks in acidity.",
+        "terroir": "The supreme terroir is the 'Alto Maipo' (Upper Maipo), situated at the immediate foothills of the Andes (up to 800m elevation). The soils here are a complex alluvial mix of rocks, gravel, and sand washed down by ancient glaciers. These soils are extremely fast-draining, restricting vine growth and forcing deep root penetration, leading to smaller, highly concentrated Cabernet berries.",
+        "grapes": [
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "The undisputed flagship. Characterized by minty, eucalyptus, and intense blackcurrant flavors, paired with smooth, powdery tannins that offer immense aging potential.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Carménère",
+            "description": "Originally a Bordeaux blending grape thought entirely extinct due to phylloxera, it was rediscovered hiding among Merlot vines in Chile in 1994. Thrives in warmer pockets, yielding deep red fruit, roasted red pepper, and chocolate notes.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Concha y Toro",
+            "description": "Their 'Don Melchor' defined high-end Chilean Cabernet worldwide.",
+            "wines": [
+              {
+                "name": "Don Melchor Cabernet Sauvignon",
+                "url": "https://www.vivino.com/search/wines?q=Don+Melchor"
+              }
+            ]
+          },
+          {
+            "name": "Almaviva",
+            "description": "Another joint venture of Baron Philippe de Rothschild, this time in Chile.",
+            "wines": [
+              {
+                "name": "Almaviva",
+                "url": "https://www.vivino.com/search/wines?q=Almaviva+Chile"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Alto Maipo",
+            "description": "The highest altitude, coolest, and most prestigious sub-region, producing the country's most iconic and expensive Cabernet Sauvignons.",
+            "geography": "Eastern edge situated in the direct foothills of the Andes. Heavily subjected to the freezing nighttime mountain downdrafts.",
+            "grapes": "Cabernet Sauvignon."
+          },
+          {
+            "name": "Maipo Medio (Central Maipo)",
+            "description": "The warmer, flatter, traditional heartland producing softer, fleshier interpretations of Cabernet and excellent Carménère.",
+            "geography": "The central, lower-altitude plains. Warmer and less influenced by the Andes night air.",
+            "grapes": "Cabernet Sauvignon, Carménère."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139,
+          -34.4
+        ]
+      },
+      "properties": {
+        "id": "barossa",
+        "name": "Barossa Valley",
+        "country": "Australia",
+        "history": "German Lutheran immigrants fleeing persecution settled the Barossa Valley in the 1840s, bringing with them a strong work ethic and their beloved Shiraz cuttings. The region narrowly escaped the global phylloxera epidemic, making it an incredibly rare sanctuary containing some of the oldest continually producing, pre-phylloxera, ungrafted grapevines in the world (some dating confidently back to 1843).",
+        "geography": "Located in South Australia, fundamentally defined by a scorching-hot, dry Mediterranean climate. Summer temperatures frequently exceed 40°C (104°F). Bushfires and severe drought are constant, critical existential threats. Given the intense heat, viticulture hinges heavily on canopy management to shade the berries from sunburn and the availability of strictly monitored drip irrigation from the Murray River.",
+        "terroir": "The valley floor consists of deep, iron-rich, red-brown clay soils (Terra Rossa) which retain a modicum of moisture during dry spells, mixed with sandy loams. This deep soil, combined with immense heat, allows old-vine Shiraz to root deeply and naturally limit vigor, producing infinitesimal yields of microscopic, flavor-packed berries that form the core of legendary wines like Penfolds Grange.",
+        "grapes": [
+          {
+            "name": "Shiraz (Syrah)",
+            "description": "The undisputed hero. Unapologetically massive, full-bodied, high-alcohol wines dominated by cooked blackberry, eucalyptus/mint, heavy sweet American oak (vanilla, chocolate), and mouth-coating tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Grenache & Mourvèdre",
+            "description": "Often blended with Shiraz (the classic GSM blend). Grenache provides jammy raspberry fruit and high alcohol, while Mourvèdre adds gamey, earthy, structural tannin backbone.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Riesling",
+            "description": "While the valley floor is too hot, the neighboring high-altitude Eden Valley produces profound, bone-dry Rieslings with lime juice acidity and rapid aging into toasty/kerosene complexity.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Penfolds",
+            "description": "Creators of 'Grange', the most famous Australian wine.",
+            "wines": [
+              {
+                "name": "Grange",
+                "url": "https://www.vivino.com/search/wines?q=Penfolds+Grange"
+              }
+            ]
+          },
+          {
+            "name": "Henschke",
+            "description": "Tends to the legendary 'Hill of Grace' single vineyard.",
+            "wines": [
+              {
+                "name": "Hill of Grace",
+                "url": "https://www.vivino.com/search/wines?q=Henschke+Hill+of+Grace"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Barossa Valley Floor",
+            "description": "The scorching heart of the region responsible for massive, opulent, full-throttle old-vine Shiraz.",
+            "geography": "Hot, low-altitude flat plains composed of rich, iron-heavy red clays.",
+            "grapes": "Shiraz, Grenache, Mourvèdre."
+          },
+          {
+            "name": "Eden Valley (Often bundled with Barossa)",
+            "description": "A radically different neighboring high-altitude region famed globally for its world-class, searingly dry Rieslings.",
+            "geography": "High elevations (400m-500m) with exceptionally cool nights and rocky, acidic soils.",
+            "grapes": "Riesling, elegant Shiraz."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15,
+          37.7
+        ]
+      },
+      "properties": {
+        "id": "sicily",
+        "name": "Sicily (Mt. Etna)",
+        "country": "Italy",
+        "history": "Historically known for producing immense volumes of bulk wine and fortified Marsala for the British Navy, Sicily has undergone a remarkable renaissance over the past two decades. A new generation of viticulturists 'discovered' the potential of the high-altitude, volcanic soils of Mount Etna, abandoning high-yielding plain vineyards in favor of restoring ancient, bush-trained indigenous vines.",
+        "geography": "A Mediterranean island with a brutally hot, arid climate at sea level. However, Mount Etna in the east drastically alters the viticultural landscape. Vineyards are planted at incredible elevations—up to 1,000 meters above sea level. This high altitude ensures a severe diurnal temperature shift, preserving acidity and generating immense elegance.",
+        "terroir": "The defining terroir is the active stratovolcano, Mount Etna. The 'Contrade' (single vineyards / ancient lava flows) are composed of dark, porous, mineral-rich pumice, ash, and basalt. These incredibly well-draining, infertile soils force deep root penetration and naturally restrict yields.",
+        "grapes": [
+          {
+            "name": "Nerello Mascalese",
+            "description": "Often compared to Pinot Noir and Nebbiolo. Produces pale, highly tannic, high-acid wines with haunting aromas of red cherry, dried herbs, and an undeniable smoky/volcanic minerality.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Carricante",
+            "description": "The primary white grape of Etna. Retains searingly high acidity even in the Sicilian sun, producing highly age-worthy, linear, citrus-driven whites with saline notes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Tenuta delle Terre Nere",
+            "description": "Pioneers of single-vineyard (Contrada) bottling on Etna.",
+            "wines": [
+              {
+                "name": "Etna Rosso",
+                "url": "https://www.vivino.com/search/wines?q=Terre+Nere+Etna+Rosso"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Northern Slopes (Etna DOC)",
+            "description": "The premier cru zone of Etna, characterized by a string of ancient lava flows (Contrade).",
+            "geography": "North-facing vineyards with extreme high altitude. Perfect for elegant, slow-ripening Nerello Mascalese.",
+            "grapes": "Nerello Mascalese, Nerello Cappuccio."
+          },
+          {
+            "name": "Eastern Slopes (Etna DOC)",
+            "description": "Facing the Ionian Sea, experiencing significantly higher rainfall and humidity.",
+            "geography": "Cooler eastern exposure overlooking the sea, deeply specialized in world-class, searingly acidic Carricante whites.",
+            "grapes": "Carricante."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4,
+          41.6
+        ]
+      },
+      "properties": {
+        "id": "ribera",
+        "name": "Ribera del Duero",
+        "country": "Spain",
+        "history": "While Vega Sicilia was producing legendary wines here in the mid-19th century, Ribera del Duero was largely a rural, cooperative-dominated region until its official DO status was granted in 1982. A massive influx of modern winemaking technology and investment transformed it into Rioja's younger, bolder, and significantly more powerful rival, prioritizing dark, muscular Tinto Fino (Tempranillo).",
+        "geography": "Located on the vast, elevated northern plateau of Spain (the Meseta Central) following the Duero River. It endures an extreme continental climate: brutally hot, arid summers completely devoid of rain, offset by bitter, freezing winters. The exceptionally high elevation (up to 850m) ensures massive diurnal temperature swings, slowing the ripening process in the autumn and retaining crucial acidity in the thick-skinned grapes.",
+        "terroir": "The terrain is rugged and punishing. The best vineyards are situated on the sun-baked, terraced slopes above the riverbed. The soils are a complex mixture of chalky limestone atop layers of clay and silt. The limestone reflects heat and restricts vine vigor, while the deeper clay provides just enough moisture retention to allow the vines to survive the rainless summer desert conditions.",
+        "grapes": [
+          {
+            "name": "Tinto Fino (Tempranillo variant)",
+            "description": "A strictly local clone of Tempranillo uniquely adapted to the harsh climate. It has significantly thicker skins than its Rioja counterpart, resulting in nearly opaque color, massive tannins, and concentrated flavors of black plum, blackberry, and dark chocolate.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Sauvignon / Merlot",
+            "description": "Historically permitted and championed by Vega Sicilia, providing backbone, acidity, and longevity to the predominantly Tempranillo blends.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Vega Sicilia",
+            "description": "The undisputed king of Spanish wine. Their 'Unico' ages for a decade before release.",
+            "wines": [
+              {
+                "name": "Unico",
+                "url": "https://www.vivino.com/search/wines?q=Vega+Sicilia+Unico"
+              }
+            ]
+          },
+          {
+            "name": "Dominio de Pingus",
+            "description": "The original Spanish 'Cult Wine', created by Peter Sisseck. Minuscule production and vast prices.",
+            "wines": [
+              {
+                "name": "Pingus",
+                "url": "https://www.vivino.com/search/wines?q=Pingus"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "The 'Golden Mile'",
+            "description": "Not officially a sub-region, but this illustrious stretch of road connecting Peñafiel and Valladolid is home to the region's most iconic estates.",
+            "geography": "High chalky plateaus overlooking the Duero river with optimal sun exposure.",
+            "grapes": "Tinto Fino."
+          },
+          {
+            "name": "Roa & Burgos",
+            "description": "Situated at the absolute highest, coldest elevations in the eastern part of the DO, producing some of the most powerfully structured old-vine wines.",
+            "geography": "Highest altitude terraces where frost is an extreme hazard.",
+            "grapes": "Tinto Fino."
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4,
+          48.3
+        ]
+      },
+      "properties": {
+        "id": "alsace",
+        "name": "Alsace",
+        "country": "France",
+        "history": "Alsace has a tumultuous history, having passed between France and Germany multiple times. This dual heritage profoundly influences its wine culture: it uses Germanic grape varieties but ferments them in the traditional French dry style. It is uniquely organized not by village appellations like Burgundy, but by 51 distinct Alsace Grand Cru Vineyards, emphasizing single-varietal purity rather than blends.",
+        "geography": "Located in northeast France on the German border. It has a cool to moderate continental climate, but crucially, it is one of the driest regions in France. This is entirely due to the 'rain shadow' effect of the Vosges Mountains to the west, which block rain-bearing Atlantic winds. This results in long, dry, sunny autumns, perfect for achieving extremely high ripeness and extended hang-time without rot.",
+        "terroir": "Alsace boasts the most complex geology in France due to the collapse of the Rhine graben. Soils include granite, limestone, schist, volcanic, and clay-marl. The Grand Cru vineyards are located exclusively on the steepest, most optimally exposed (south/southeast) slopes of the Vosges foothills to maximize sunlight interception.",
+        "grapes": [
+          {
+            "name": "Riesling",
+            "description": "The most planted 'noble' grape in Alsace. Ranges from dry to sweet, featuring high acidity, medium/full body, and intense aromas of citrus, stone fruit, and an iconic petrol/kerosene note with age.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Gewurztraminer",
+            "description": "An incredibly pungent, thick-skinned grape. Low acidity, high alcohol, full-bodied, with explosive aromas of lychee, rose petal, baking spices, and Turkish delight.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinot Gris",
+            "description": "Unlike the light, neutral Italian style, Alsatian Pinot Gris is rich, full-bodied, high in alcohol, with flavors of fresh and dried fruits, honey, and ginger.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Trimbach",
+            "description": "Produces 'Clos Ste Hune', arguably the greatest dry Riesling on the planet.",
+            "wines": [
+              {
+                "name": "Clos Ste Hune Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Trimbach+Clos+Ste+Hune"
+              }
+            ]
+          },
+          {
+            "name": "Zind-Humbrecht",
+            "description": "Masters of biodynamics producing incredibly intense, rich, off-dry styles.",
+            "wines": [
+              {
+                "name": "Gewurztraminer Hengst Grand Cru",
+                "url": "https://www.vivino.com/search/wines?q=Zind+Humbrecht+Hengst"
+              }
+            ]
+          }
+        ],
+        "subRegions": [
+          {
+            "name": "Haut-Rhin",
+            "description": "The southern half of the region, housing the steepest slopes and the vast majority of the 51 Grand Cru vineyards.",
+            "geography": "Protected maximally by the highest peaks of the Vosges mountains. Warmer and drier.",
+            "grapes": "Riesling, Gewurztraminer, Pinot Gris."
+          },
+          {
+            "name": "Bas-Rhin",
+            "description": "The northern half of the region, generally producing lighter, earlier-drinking styles.",
+            "geography": "Lower elevation Vosges peaks provide less rain shadow effect. Cooler soils.",
+            "grapes": "Sylvaner, Pinot Blanc."
+          }
+        ]
+      }
+    }
+  ]
 };
