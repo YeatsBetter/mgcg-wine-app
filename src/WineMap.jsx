@@ -31,6 +31,35 @@ const hoverIcon = L.divIcon({
     iconAnchor: [18, 18]
 });
 
+const visitedGlassIconHtml = `
+  <div style="background: var(--accent-gold); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); border: 2px solid white; transition: all 0.3s ease;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+`;
+
+const hoverVisitedGlassIconHtml = `
+  <div style="background: white; color: var(--accent-gold); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(212, 175, 55, 0.6); border: 2px solid var(--accent-gold); transform: scale(1.1); transition: all 0.3s ease; z-index: 1000;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+`;
+
+const wishlistGlassIconHtml = `
+  <div style="background: var(--accent-ruby); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(121, 31, 56, 0.4); border: 2px solid white; transition: all 0.3s ease;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+  </div>
+`;
+
+const hoverWishlistGlassIconHtml = `
+  <div style="background: white; color: var(--accent-ruby); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(121, 31, 56, 0.6); border: 2px solid var(--accent-ruby); transform: scale(1.1); transition: all 0.3s ease; z-index: 1000;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+  </div>
+`;
+
+const visitedIcon = L.divIcon({ html: visitedGlassIconHtml, className: 'custom-wine-marker visited', iconSize: [30, 30], iconAnchor: [15, 15] });
+const hoverVisitedIcon = L.divIcon({ html: hoverVisitedGlassIconHtml, className: 'custom-wine-marker hover', iconSize: [36, 36], iconAnchor: [18, 18] });
+const wishlistIcon = L.divIcon({ html: wishlistGlassIconHtml, className: 'custom-wine-marker wishlist', iconSize: [30, 30], iconAnchor: [15, 15] });
+const hoverWishlistIcon = L.divIcon({ html: hoverWishlistGlassIconHtml, className: 'custom-wine-marker hover', iconSize: [36, 36], iconAnchor: [18, 18] });
+
 
 // Utility component to handle clicks on the empty map areas
 function MapEvents({ onEmptyClick }) {
@@ -88,12 +117,19 @@ const styleConfig = {
     wind: { color: '#4aab6a', glow: 'rgba(74, 171, 106, 0.3)', label: 'Wind Pattern', emoji: '🌬️' }
 };
 
-export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents }) {
+export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {} }) {
     const center = [35.0, 10.0];
     const zoom = 2.5;
 
+    const getIcon = (featureId, isHover) => {
+        const fp = userFootprints[featureId] || {};
+        if (fp.visited) return isHover ? hoverVisitedIcon : visitedIcon;
+        if (fp.wishlist) return isHover ? hoverWishlistIcon : wishlistIcon;
+        return isHover ? hoverIcon : defaultIcon;
+    };
+
     const pointToLayer = (feature, latlng) => {
-        return L.marker(latlng, { icon: defaultIcon });
+        return L.marker(latlng, { icon: getIcon(feature.properties.id, false) });
     };
 
     const onEachFeature = (feature, layer) => {
@@ -107,12 +143,12 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
         layer.on({
             mouseover: (e) => {
                 const trgt = e.target;
-                trgt.setIcon(hoverIcon);
+                trgt.setIcon(getIcon(feature.properties.id, true));
                 if (onRegionHover) onRegionHover(feature.properties);
             },
             mouseout: (e) => {
                 const trgt = e.target;
-                trgt.setIcon(defaultIcon);
+                trgt.setIcon(getIcon(feature.properties.id, false));
                 if (onRegionHover) onRegionHover(null);
             },
             click: (e) => {
@@ -216,7 +252,7 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
 
                 {regions && regions.features && (
                     <GeoJSON
-                        key={regions.features.map(f => f.properties.name).join(',')}
+                        key={regions.features.map(f => f.properties.name).join(',') + JSON.stringify(userFootprints)}
                         data={regions}
                         pointToLayer={pointToLayer}
                         onEachFeature={onEachFeature}

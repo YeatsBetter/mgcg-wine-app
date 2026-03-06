@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -120,6 +120,7 @@ function App() {
   const [noteText, setNoteText] = useState("");
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
   const [isSavingNote, setIsSavingNote] = useState(false);
+  const [userFootprints, setUserFootprints] = useState({});
 
   // AI Food & Wine Pairing states
   const [isPairingOpen, setIsPairingOpen] = useState(false);
@@ -142,17 +143,25 @@ function App() {
             displayName: currentUser.displayName,
             createdAt: new Date(),
             favorites: [],
-            notes: { general: "" }
+            notes: { general: "" },
+            footprints: {}
           });
+          setUserFootprints({});
         } else {
           const data = docSnap.data();
           if (data.notes && data.notes.general) {
             setNoteText(data.notes.general);
           }
+          if (data.footprints) {
+            setUserFootprints(data.footprints);
+          } else {
+            setUserFootprints({});
+          }
         }
       } else {
         setNoteText("");
         setIsNotepadOpen(false);
+        setUserFootprints({});
       }
     });
     return () => unsubscribe();
@@ -168,6 +177,29 @@ function App() {
       console.error("Error saving note: ", e);
     }
     setIsSavingNote(false);
+  };
+
+  const handleToggleFootprint = async (regionId, type) => {
+    if (!user) {
+      alert("Please sign in first to mark your wine trail!");
+      return;
+    }
+    const currentStatus = userFootprints[regionId]?.[type] || false;
+    const newFootprints = {
+      ...userFootprints,
+      [regionId]: {
+        ...userFootprints[regionId],
+        [type]: !currentStatus
+      }
+    };
+    setUserFootprints(newFootprints);
+
+    try {
+      const userRef = doc(db, 'users', user.uid);
+      await setDoc(userRef, { footprints: newFootprints }, { merge: true });
+    } catch (e) {
+      console.error("Error saving footprint: ", e);
+    }
   };
 
   const handleLogin = async () => {
@@ -371,6 +403,41 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
                   <span>{activeRegion.country}</span>
                 </div>
               </div>
+
+              <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+                <button
+                  onClick={() => handleToggleFootprint(activeRegion.id, 'visited')}
+                  style={{
+                    flex: 1,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                    padding: '8px 16px', borderRadius: '24px',
+                    background: userFootprints[activeRegion.id]?.visited ? 'var(--accent-gold)' : 'rgba(255,255,255,0.1)',
+                    color: userFootprints[activeRegion.id]?.visited ? '#fff' : 'var(--text-primary)',
+                    border: `1px solid ${userFootprints[activeRegion.id]?.visited ? 'var(--accent-gold)' : 'var(--glass-border)'}`,
+                    boxShadow: userFootprints[activeRegion.id]?.visited ? '0 4px 12px rgba(212, 175, 55, 0.4)' : 'none',
+                    fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.3s ease'
+                  }}
+                >
+                  <MapPin size={16} fill={userFootprints[activeRegion.id]?.visited ? 'currentColor' : 'none'} color="currentColor" />
+                  {userFootprints[activeRegion.id]?.visited ? 'Visited' : 'Mark as Visited'}
+                </button>
+                <button
+                  onClick={() => handleToggleFootprint(activeRegion.id, 'wishlist')}
+                  style={{
+                    flex: 1,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                    padding: '8px 16px', borderRadius: '24px',
+                    background: userFootprints[activeRegion.id]?.wishlist ? 'var(--accent-ruby)' : 'rgba(255,255,255,0.1)',
+                    color: userFootprints[activeRegion.id]?.wishlist ? '#fff' : 'var(--text-primary)',
+                    border: `1px solid ${userFootprints[activeRegion.id]?.wishlist ? 'var(--accent-ruby)' : 'var(--glass-border)'}`,
+                    boxShadow: userFootprints[activeRegion.id]?.wishlist ? '0 4px 12px rgba(121, 31, 56, 0.4)' : 'none',
+                    fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.3s ease'
+                  }}
+                >
+                  <Heart size={16} fill={userFootprints[activeRegion.id]?.wishlist ? 'currentColor' : 'none'} color="currentColor" />
+                  {userFootprints[activeRegion.id]?.wishlist ? 'Wishlisted' : 'Add to Wishlist'}
+                </button>
+              </div>
             </div>
 
             <section>
@@ -523,6 +590,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         onRegionHover={setHoveredRegion}
         onEmptyClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
         showCurrents={showCurrents}
+        userFootprints={userFootprints}
       />
 
       {isSATOpen && (
