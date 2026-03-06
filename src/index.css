@@ -186,3 +186,218 @@ h6 {
   background: transparent !important;
   border: none !important;
 }
+
+/* =============================================
+   MOBILE RESPONSIVE DESIGN
+   ============================================= */
+
+/* Viewport meta is set in index.html by Vite */
+
+@media (max-width: 768px) {
+
+  /* ---- Header Panel ---- */
+  .header-panel {
+    top: 12px !important;
+    left: 12px !important;
+    right: 60px !important;
+    width: auto !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .header-panel .header-title {
+    font-size: 1.3rem !important;
+  }
+
+  .header-panel .header-subtitle {
+    font-size: 0.55rem !important;
+  }
+
+  .header-panel .header-desc {
+    display: none !important;
+  }
+
+  /* ---- User Profile (top right) ---- */
+  .user-profile-area {
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  .user-profile-area .user-pill {
+    padding: 4px 10px 4px 4px !important;
+  }
+
+  .user-profile-area .user-pill img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .user-profile-area .login-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* ---- Detail Panel → Bottom Sheet ---- */
+  .detail-panel {
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: 65vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 20px 16px 24px !important;
+    transform: translateY(0) !important;
+  }
+
+  .detail-panel .region-title {
+    font-size: 1.6rem !important;
+  }
+
+  .detail-panel .grape-card {
+    flex-direction: row !important;
+  }
+
+  .detail-panel .grape-card img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .detail-panel .close-btn {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  /* Bottom sheet drag handle indicator */
+  .detail-panel::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    margin: 0 auto 12px;
+    flex-shrink: 0;
+  }
+
+  /* ---- Bottom Button Stack ---- */
+  .btn-wset-guide {
+    bottom: 132px !important;
+    left: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-currents {
+    bottom: 76px !important;
+    left: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-pairing {
+    bottom: 20px !important;
+    left: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-notepad {
+    bottom: 20px !important;
+    right: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-wset-guide svg,
+  .btn-currents svg,
+  .btn-pairing svg,
+  .btn-notepad svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* ---- SAT Modal ---- */
+  .sat-modal-overlay {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
+
+  .sat-modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 20px 16px !important;
+  }
+
+  .sat-modal-content h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .sat-modal-content .tab-switcher {
+    gap: 12px !important;
+  }
+
+  .sat-modal-content .tab-switcher button {
+    font-size: 0.85rem !important;
+    padding: 6px 10px !important;
+  }
+
+  /* ---- AI Pairing Popup → Bottom anchored ---- */
+  .pairing-popup {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 72px !important;
+    width: auto !important;
+    max-height: 60vh !important;
+    border-radius: 16px !important;
+    padding: 16px !important;
+  }
+
+  /* ---- Notepad Popup ---- */
+  .notepad-popup {
+    right: 12px !important;
+    left: 12px !important;
+    bottom: 72px !important;
+    width: auto !important;
+    border-radius: 16px !important;
+    padding: 16px !important;
+  }
+
+  /* ---- Map tooltips ---- */
+  .wine-map-tooltip {
+    font-size: 0.9rem !important;
+    padding: 4px 10px !important;
+  }
+
+  /* ---- Leaflet zoom controls ---- */
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+  .header-panel {
+    padding: 10px 12px !important;
+  }
+
+  .header-panel .header-title {
+    font-size: 1.1rem !important;
+  }
+
+  .detail-panel {
+    max-height: 55vh !important;
+    padding: 16px 12px 20px !important;
+  }
+
+  .detail-panel .region-title {
+    font-size: 1.3rem !important;
+  }
+
+  .pairing-popup,
+  .notepad-popup {
+    max-height: 50vh !important;
+  }
+}

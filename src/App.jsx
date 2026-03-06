@@ -209,7 +209,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
     <div className="app-container">
       {/* Top Left Floating Header */}
       <div
-        className="glass-panel"
+        className="glass-panel header-panel"
         style={{
           position: 'absolute',
           top: '24px',
@@ -224,9 +224,9 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Wine size={28} color="var(--accent-ruby)" />
-              <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)', margin: 0 }}>Vino Atlas</h1>
+              <h1 className="header-title" style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)', margin: 0 }}>Vino Atlas</h1>
             </div>
-            <span style={{
+            <span className="header-subtitle" style={{
               fontSize: '0.65rem',
               color: 'var(--accent-gold)',
               textTransform: 'uppercase',
@@ -240,16 +240,16 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           </div>
         </div>
 
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '16px', lineHeight: 1.6, fontStyle: 'italic' }}>
+        <p className="header-desc" style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '16px', lineHeight: 1.6, fontStyle: 'italic' }}>
           Welcome to the definitive digital cartography of the world's most prestigious wine regions.
           Explore the depths of history, terroir, and geography through an interactive viticultural lens.
         </p>
       </div>
 
       {/* Top Right Floating User Profile */}
-      <div style={{ position: 'absolute', top: '24px', right: '24px', zIndex: 1000 }}>
+      <div className="user-profile-area" style={{ position: 'absolute', top: '24px', right: '24px', zIndex: 1000 }}>
         {user ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'var(--glass-bg)', padding: '6px 16px 6px 6px', borderRadius: '30px', border: '1px solid var(--glass-border)', backdropFilter: 'blur(12px)', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+          <div className="user-pill" style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'var(--glass-bg)', padding: '6px 16px 6px 6px', borderRadius: '30px', border: '1px solid var(--glass-border)', backdropFilter: 'blur(12px)', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
             <img
               src={user.photoURL || 'https://via.placeholder.com/40'}
               alt="User"
@@ -268,6 +268,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         ) : (
           <button
             onClick={handleLogin}
+            className="login-btn"
             style={{
               width: '48px', height: '48px', borderRadius: '50%', background: 'var(--glass-bg)', border: '1px solid var(--accent-ruby)',
               display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', backdropFilter: 'blur(12px)',
@@ -306,6 +307,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         {activeRegion && (
           <>
             <button
+              className="close-btn"
               onClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
               style={{ position: 'absolute', top: '16px', right: '16px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', zIndex: 10, padding: '4px' }}
               title="Close"
@@ -317,7 +319,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
                 <MapPin size={16} />
                 <span>{activeRegion.country}</span>
               </div>
-              <h2 style={{ fontSize: '2.4rem', color: 'var(--accent-ruby)', marginBottom: '12px' }}>
+              <h2 className="region-title" style={{ fontSize: '2.4rem', color: 'var(--accent-ruby)', marginBottom: '12px' }}>
                 {activeRegion.name}
               </h2>
               <div style={{ display: 'flex', gap: '16px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
@@ -421,11 +423,11 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       />
 
       {isSATOpen && (
-        <div style={{
+        <div className="sat-modal-overlay" style={{
           position: 'fixed', inset: 0, zIndex: 9999, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)',
           display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}>
-          <div className="glass-panel" style={{
+          <div className="glass-panel sat-modal-content" style={{
             width: '95%', maxWidth: '1000px', maxHeight: '90vh', overflowY: 'auto', padding: '32px',
             animation: 'fadeIn 0.3s ease', position: 'relative', display: 'flex', flexDirection: 'column'
           }}>
@@ -441,7 +443,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
             </h2>
 
             {/* Tab Switcher */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '32px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '16px' }}>
+            <div className="tab-switcher" style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '32px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '16px' }}>
               <button
                 onClick={() => setActiveSATTab('methodology')}
                 style={{
@@ -545,6 +547,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
 
       {/* Bottom-Left Circular Buttons Stack */}
       <button
+        className="btn-wset-guide"
         onClick={() => setIsSATOpen(true)}
         style={{
           position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
@@ -563,6 +566,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
 
       {/* Currents & Winds */}
       <button
+        className="btn-currents"
         onClick={() => setShowCurrents(!showCurrents)}
         style={{
           position: 'fixed', bottom: '96px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
@@ -581,6 +585,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
 
       {/* Bottom-Left AI Food & Wine Pairing */}
       <button
+        className="btn-pairing"
         onClick={() => setIsPairingOpen(!isPairingOpen)}
         style={{ position: 'fixed', bottom: '24px', left: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-gold)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px rgba(180, 150, 80, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}
         title="AI Food & Wine Pairing"
@@ -591,7 +596,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       </button>
 
       {isPairingOpen && (
-        <div className="glass-panel" style={{ position: 'fixed', bottom: '90px', left: '24px', width: '380px', maxHeight: '70vh', overflowY: 'auto', padding: '24px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="glass-panel pairing-popup" style={{ position: 'fixed', bottom: '90px', left: '24px', width: '380px', maxHeight: '70vh', overflowY: 'auto', padding: '24px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <h3 style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Utensils size={20} /> AI Food & Wine Pairing
           </h3>
@@ -676,14 +681,15 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       {user && (
         <>
           <button
+            className="btn-notepad"
             onClick={() => setIsNotepadOpen(!isNotepadOpen)}
-            style={{ position: 'fixed', bottom: '24px', right: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-ruby)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px var(--accent-ruby-glow)', display: 'flex', alignItems: 'center', justifyCenter: 'center' }}
+            style={{ position: 'fixed', bottom: '24px', right: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-ruby)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px var(--accent-ruby-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             {isNotepadOpen ? <X size={24} /> : <BookOpen size={24} />}
           </button>
 
           {isNotepadOpen && (
-            <div className="glass-panel" style={{ position: 'fixed', bottom: '90px', right: '24px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="glass-panel notepad-popup" style={{ position: 'fixed', bottom: '90px', right: '24px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <h3 style={{ color: 'var(--accent-ruby)', fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <BookOpen size={18} /> My Tasting Notes
               </h3>
