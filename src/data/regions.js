@@ -2372,6 +2372,289 @@ export const wineRegionsData = {
           { "name": "Bergerac & Monbazillac", "description": "An eastward extension of Bordeaux producing excellent value reds and world-class botrytis sweet whites.", "geography": "Mirrors Bordeaux's geology with clay, limestone, and gravel.", "grapes": "Merlot, Cabernet Sauvignon, Sémillon." }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.7, 35.6] },
+      "properties": {
+        "id": "paso-robles",
+        "name": "Paso Robles",
+        "country": "USA",
+        "history": "California's fastest-growing wine region and the state's Rhône Ranger capital. Originally planted in the 1790s by Franciscan missionaries, Paso Robles remained obscure until a boom in the 2000s. Today it is California's third-largest AVA, now divided into 11 distinct sub-AVAs, known for bold, full-throttle reds and outstanding value compared to Napa.",
+        "geography": "Located halfway between Los Angeles and San Francisco on the Central Coast. Extreme diurnal temperature swings—up to 25°C between day and night—are the defining characteristic. The Templeton Gap channels cool Pacific air through the Santa Lucia Range, creating cooler western zones versus the hotter, drier east.",
+        "terroir": "The west side features calcareous (limestone-rich) soils with significant marine influence; the east side has hotter, drier conditions with sandy and clay soils. This east-west divide creates dramatically different wine styles within the same appellation.",
+        "grapes": [
+          { "name": "Cabernet Sauvignon", "description": "Bold, ripe, and full-bodied with blackberry, chocolate, and sweet oak. Paso's warmth produces generous, fruit-forward Cabernets at a fraction of Napa prices.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Zinfandel", "description": "Historic plantings produce jammy, high-alcohol, spicy reds. Some of California's oldest Zinfandel vines are found here.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Rhône Varieties (Grenache, Syrah, Mourvèdre)", "description": "Paso Robles is the epicenter of California's Rhône movement, producing peppery Syrah, perfumed Grenache, and complex GSM blends.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Tablas Creek", "description": "Co-founded by the Perrin family (Châteauneuf-du-Pape), importing genuine Rhône clones.", "wines": [{ "name": "Esprit de Tablas", "url": "https://www.vivino.com/search/wines?q=Tablas+Creek+Esprit" }] }
+        ],
+        "subRegions": [
+          { "name": "Adelaida District", "description": "The coolest, most mountainous western sub-AVA with limestone soils and marine influence.", "geography": "Steep, elevated terrain with calcareous soils. Cool Pacific breezes through the Templeton Gap.", "grapes": "Syrah, Grenache, Mourvèdre." },
+          { "name": "Paso Robles Estrella District", "description": "The warmer, drier eastern side producing bold, ripe Cabernet and Zinfandel.", "geography": "Flat to rolling terrain with sandy-clay soils. Hot days and cold nights.", "grapes": "Cabernet Sauvignon, Zinfandel." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-123.3, 39.1] },
+      "properties": {
+        "id": "mendocino",
+        "name": "Mendocino County",
+        "country": "USA",
+        "history": "California's northernmost major wine region, known for its pioneering organic and biodynamic viticulture—it has the highest concentration of organic vineyards in the US. The county offers dramatic contrasts: the foggy, redwood-forested Anderson Valley near the coast, and the warm, sheltered inland valleys. Mendocino has always attracted iconoclasts and independent spirits.",
+        "geography": "Extremely diverse climate. Anderson Valley near the coast is one of California's coldest wine regions, ideal for sparkling wine and Pinot Noir. Inland valleys (Redwood Valley, Ukiah) are warm and sheltered, suited to Zinfandel and Cabernet. The Pacific fog is the dominant climate factor.",
+        "terroir": "Coastal zones have thin, acidic, well-draining soils on steep hillsides. Inland valleys feature deeper alluvial soils with more warmth. Anderson Valley's marine-influenced soils produce wines of remarkable finesse and acidity.",
+        "grapes": [
+          { "name": "Pinot Noir", "description": "Anderson Valley produces elegant, cool-climate Pinot Noir with bright red fruit, mushroom, and spice—among California's most refined.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Sparkling Wine", "description": "The cold Anderson Valley attracted Champagne houses (Roederer, Scharffenberger) to establish sparkling wine operations. Among the finest in the New World.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Zinfandel", "description": "From warm inland valleys, old-vine Zinfandel produces powerful, brambly, spicy reds.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Roederer Estate", "description": "The California outpost of Champagne Louis Roederer, producing outstanding sparkling wine.", "wines": [{ "name": "L'Ermitage Brut", "url": "https://www.vivino.com/search/wines?q=Roederer+Estate+L+Ermitage" }] }
+        ],
+        "subRegions": [
+          { "name": "Anderson Valley", "description": "A narrow, fog-filled valley producing California's finest sparkling wine and exceptional cool-climate Pinot Noir.", "geography": "Open to Pacific fog and wind. Thin, acidic soils on steep slopes.", "grapes": "Pinot Noir, Chardonnay, sparkling." },
+          { "name": "Redwood Valley", "description": "A warm, inland valley producing rich, full-bodied reds from organic vineyards.", "geography": "Sheltered from coastal influence. Deep alluvial soils.", "grapes": "Zinfandel, Cabernet Sauvignon, Petite Sirah." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.5, 46] },
+      "properties": {
+        "id": "friuli",
+        "name": "Friuli-Venezia Giulia",
+        "country": "Italy",
+        "history": "Italy's premier white wine region, located in the northeast bordering Slovenia and Austria. Friuli revolutionized Italian white winemaking in the 1960s-70s when Mario Schiopetto introduced temperature-controlled fermentation, producing Italy's first crisp, aromatic, modern whites. The region is also historically significant for its ancient 'orange wines' (skin-contact whites) made in large clay amphorae.",
+        "geography": "Cool continental climate moderated by the Adriatic Sea and sheltered by the Alps. The Julian Alps block cold northern winds. Two main zones: the hillside 'Colli' areas (Collio and Colli Orientali) and the flat Grave del Friuli plains.",
+        "terroir": "The Collio hills feature 'ponca'—compressed layers of marl and sandstone from ancient seabeds, providing excellent drainage and intense mineral character. The Grave plains have gravelly, alluvial soils that produce lighter, fresher wines.",
+        "grapes": [
+          { "name": "Pinot Grigio", "description": "Friuli's Pinot Grigio is Italy's finest: fuller-bodied, textured, with pear, almond, and mineral notes—completely different from the bland industrial versions.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Friulano (Tocai)", "description": "The signature local grape, producing round, almondy, medium-bodied whites with herbs and white flowers.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Ribolla Gialla", "description": "An ancient variety now famous for 'orange wine' (extended maceration). Conventional versions are crisp and citrusy; skin-contact versions are deep gold with dried fruit, tea, and tannic grip.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Gravner", "description": "The godfather of orange wine, aging Ribolla Gialla in buried Georgian clay amphorae.", "wines": [{ "name": "Ribolla Anfora", "url": "https://www.vivino.com/search/wines?q=Gravner+Ribolla" }] },
+          { "name": "Jermann", "description": "Benchmark estate for pristine, aromatic Friulian whites.", "wines": [{ "name": "Vintage Tunina", "url": "https://www.vivino.com/search/wines?q=Jermann+Vintage+Tunina" }] }
+        ],
+        "subRegions": [
+          { "name": "Collio", "description": "The most prestigious hillside zone on the Slovenian border, producing Italy's most complex, mineral whites.", "geography": "Steep ponca (marl and sandstone) hills. Cool, sheltered microclimate.", "grapes": "Pinot Grigio, Friulano, Sauvignon Blanc." },
+          { "name": "Colli Orientali del Friuli", "description": "Eastern hills producing excellent whites and the unique sweet Picolit and red Schioppettino.", "geography": "Ponca soils with slightly warmer exposure than Collio.", "grapes": "Friulano, Ribolla Gialla, Picolit." },
+          { "name": "Grave del Friuli", "description": "The largest zone on the alluvial plains, producing fresh, value-driven whites and reds.", "geography": "Flat, gravelly alluvial soils from ancient rivers.", "grapes": "Pinot Grigio, Merlot, Refosco." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [12.7, 43] },
+      "properties": {
+        "id": "umbria",
+        "name": "Umbria",
+        "country": "Italy",
+        "history": "Known as the 'green heart of Italy', Umbria is a landlocked region that produces some of Italy's most distinctive wines. Orvieto has been produced since the Etruscans, while Sagrantino di Montefalco DOCG is one of Italy's most tannic and powerful reds. Long overshadowed by neighboring Tuscany, Umbria is now gaining recognition for its unique indigenous varieties.",
+        "geography": "Hilly, landlocked region with a continental climate moderated by Lake Trasimeno. Cooler and wetter than Tuscany, with higher altitudes and more dramatic terrain. The town of Orvieto sits atop a volcanic plateau.",
+        "terroir": "Volcanic tuff around Orvieto provides excellent drainage. Montefalco has clay and limestone hills that stress vines and concentrate Sagrantino's already massive tannins. The varied altitude creates diverse microclimates.",
+        "grapes": [
+          { "name": "Sagrantino", "description": "Endemic to Montefalco, producing one of the world's most tannic red wines: inky, powerful, with blackberry, leather, tar, and dark chocolate. Requires significant aging.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Grechetto & Trebbiano (Orvieto)", "description": "Orvieto Classico is a blend of these grapes, producing fresh, almond-scented whites. The 'Amabile' (off-dry) and late-harvest versions are historically important.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Arnaldo Caprai", "description": "The estate that single-handedly elevated Sagrantino di Montefalco to world-class status.", "wines": [{ "name": "Sagrantino 25 Anni", "url": "https://www.vivino.com/search/wines?q=Arnaldo+Caprai+Sagrantino" }] }
+        ],
+        "subRegions": [
+          { "name": "Montefalco DOCG", "description": "A tiny zone producing Italy's most tannic red from the endemic Sagrantino grape.", "geography": "Clay and limestone hills at 300-400m altitude.", "grapes": "Sagrantino." },
+          { "name": "Orvieto Classico", "description": "Ancient appellation at the heart of Umbria, producing fresh, everyday whites from a volcanic plateau.", "geography": "Volcanic tuff soils atop a dramatic mesa.", "grapes": "Grechetto, Trebbiano, Procanico." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [9.1, 39.2] },
+      "properties": {
+        "id": "sardinia",
+        "name": "Sardinia (Sardegna)",
+        "country": "Italy",
+        "history": "The second-largest Mediterranean island, with a winemaking culture deeply influenced by Spanish rule (1323-1720). Its key grapes—Cannonau (Grenache) and Vermentino—reveal this Iberian connection. Sardinia is increasingly recognized for its ancient, ungrafted bush vines, unique terroir, and distinctive wines that taste unlike anything else in Italy.",
+        "geography": "Mediterranean island climate with hot, dry summers and mild winters. The dominant 'Mistral' (Maestrale) wind blows from the northwest, cooling the island and preventing humidity-related disease. The interior is mountainous and rugged, with vineyards at various altitudes.",
+        "terroir": "Dramatically varied: ancient granite in the north (Gallura, ideal for Vermentino), limestone and volcanic soils in the center, and sandy/clay soils in the south (Sulcis, home to old-vine Carignano/Carignan). Many vines are own-rooted, ungrafted, and over 100 years old.",
+        "grapes": [
+          { "name": "Cannonau (Grenache)", "description": "Sardinia claims Cannonau originated here before spreading to Spain. Produces warm, earthy, herb-scented reds with dried cherry, Mediterranean scrub, and rustic charm.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Vermentino", "description": "At its finest in Gallura DOCG (northeast Sardinia). Produces aromatic, saline whites with citrus, herbs, almond, and a distinctive sea-breeze minerality.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Carignano (Carignan)", "description": "Old, ungrafted bush vines in the sandy soils of Sulcis produce deeply concentrated, age-worthy reds with dark fruit and licorice.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Argiolas", "description": "Sardinia's most acclaimed estate, producing Turriga from old-vine Cannonau.", "wines": [{ "name": "Turriga", "url": "https://www.vivino.com/search/wines?q=Argiolas+Turriga" }] }
+        ],
+        "subRegions": [
+          { "name": "Gallura DOCG", "description": "Northeast Sardinia, the only DOCG, producing Italy's finest Vermentino from granite soils.", "geography": "Granite hills swept by the Mistral. Windswept, arid terrain.", "grapes": "Vermentino." },
+          { "name": "Sulcis (Carignano del Sulcis)", "description": "Southwest Sardinia, home to ancient, ungrafted Carignano bush vines on sandy soils.", "geography": "Sandy coastal soils that repel phylloxera. Hot, dry Mediterranean climate.", "grapes": "Carignano." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-5.7, 41.5] },
+      "properties": {
+        "id": "toro",
+        "name": "Toro",
+        "country": "Spain",
+        "history": "One of Spain's most powerful wine regions, named after the ancient town of Toro on the Duero River in Castilla y León. The wines were historically called 'black wines' for their extreme concentration—they were so robust they survived the long sea voyages of Spanish conquistadors. Toro's Tinta de Toro (a local Tempranillo clone) has adapted to extreme conditions over centuries.",
+        "geography": "Located on Spain's high central plateau (Meseta) at 600-800m altitude. Extreme continental climate: burning hot summers (40°C+) and freezing winters (-10°C). Very low rainfall (<400mm), making it essentially semi-arid. The Duero River provides the only reliable water source.",
+        "terroir": "Sandy soils over bedrock of limestone and clay. The deep sand protected many vines from phylloxera, so Toro has a significant stock of ungrafted, pre-phylloxera vines over 100 years old. These ancient vines produce tiny yields of extraordinarily concentrated fruit.",
+        "grapes": [
+          { "name": "Tinta de Toro (Tempranillo)", "description": "A uniquely thick-skinned Tempranillo clone adapted to extreme heat and drought. Produces massively concentrated, nearly opaque wines with blackberry, fig, dark chocolate, and formidable tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Numanthia", "description": "Renowned for powerfully concentrated wines from pre-phylloxera Tinta de Toro vines.", "wines": [{ "name": "Numanthia", "url": "https://www.vivino.com/search/wines?q=Numanthia+Toro" }] }
+        ],
+        "subRegions": [
+          { "name": "Toro Central (Old Vines)", "description": "The core zone with the highest concentration of ungrafted, centenarian bush vines.", "geography": "Sandy soils over limestone. Very old, low-yielding vines.", "grapes": "Tinta de Toro." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-6.6, 42.6] },
+      "properties": {
+        "id": "bierzo",
+        "name": "Bierzo",
+        "country": "Spain",
+        "history": "A remote, mountainous DO in northwest Spain that has emerged as one of the country's most exciting regions. The indigenous Mencía grape was long dismissed as a minor variety until a new generation of producers (led by Álvaro Palacios and his nephew Ricardo Pérez) proved it could produce hauntingly beautiful, terroir-expressive wines rivaling fine Burgundy.",
+        "geography": "A natural amphitheater surrounded by mountains, creating a unique microclimate that is warmer and drier than surrounding Galicia but cooler than the central Meseta. Atlantic and Mediterranean influences mix. Altitude ranges from 450m to over 800m.",
+        "terroir": "Steep, slate and quartzite hillsides (similar to the Mosel or Priorat) with patches of clay and alluvial soils. The mineral-rich slate reflects heat and drains water rapidly, stressing the vines and producing wines of remarkable minerality and elegance.",
+        "grapes": [
+          { "name": "Mencía", "description": "A hauntingly aromatic, medium-bodied red with violet, dark cherry, smoky mineral, and graphite notes. Often compared to Pinot Noir for its elegance and transparency, with the structure of a Rhône Syrah.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Godello", "description": "A fine white grape producing textured, mineral whites with stone fruit, citrus, and almond notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Descendientes de J. Palacios", "description": "Álvaro Palacios and nephew Ricardo Pérez, elevating Mencía to world-class status.", "wines": [{ "name": "Pétalos del Bierzo", "url": "https://www.vivino.com/search/wines?q=Petalos+del+Bierzo" }] }
+        ],
+        "subRegions": [
+          { "name": "Corullón", "description": "The rugged mountain village producing Bierzo's most acclaimed single-vineyard Mencías from ancient slate terraces.", "geography": "Steep slate and quartzite slopes at 600-800m. Old bush vines.", "grapes": "Mencía." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [16.8, 47.8] },
+      "properties": {
+        "id": "burgenland",
+        "name": "Burgenland",
+        "country": "Austria",
+        "history": "Austria's warmest wine region, located on the Hungarian border and deeply influenced by Lake Neusiedl (Neusiedlersee)—one of Europe's largest steppe lakes. Burgenland produces Austria's finest red wines and its most famous sweet wines (Beerenauslese and Trockenbeerenauslese), rivaling Sauternes and Tokaj. The region has undergone a dramatic quality revolution since the 1985 wine scandal.",
+        "geography": "Warm Pannonian continental climate with hot summers and cold winters. Lake Neusiedl acts as a massive temperature moderator and humidity generator. Autumn mists and fogs from the lake create ideal conditions for noble rot (botrytis). The Leithaberg hills provide cooler, elevated vineyard sites.",
+        "terroir": "Flat to gently rolling terrain around the lake with sandy, gravelly, and clay soils. The Leithaberg hills feature limestone and schist at higher elevations, producing Austria's most structured, mineral reds. The lake's humidity is essential for the world-class botrytized sweet wines.",
+        "grapes": [
+          { "name": "Blaufränkisch", "description": "Austria's most important red grape: medium to full-bodied with sour cherry, blackberry, pepper, and a distinctive savory, spicy character. Age-worthy from the best sites.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Zweigelt", "description": "Austria's most-planted red grape (a cross of Blaufränkisch and St. Laurent), producing juicy, cherry-fruited, medium-bodied reds for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Sweet Wine Grapes (Welschriesling, Chardonnay)", "description": "The humid lakeside conditions produce some of Europe's greatest botrytized sweet wines, golden and luscious with apricot, honey, and citrus.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Kracher", "description": "The undisputed king of Austrian sweet wine, producing ethereal TBAs.", "wines": [{ "name": "Trockenbeerenauslese No. 7", "url": "https://www.vivino.com/search/wines?q=Kracher+Trockenbeerenauslese" }] },
+          { "name": "Moric", "description": "Roland Velich's project producing Austria's most profound, terroir-driven Blaufränkisch.", "wines": [{ "name": "Blaufränkisch Reserve", "url": "https://www.vivino.com/search/wines?q=Moric+Blaufrankisch" }] }
+        ],
+        "subRegions": [
+          { "name": "Neusiedlersee", "description": "The eastern lakeside, flat and warm, famous for sweet botrytized wines and red blends.", "geography": "Flat, sandy-gravelly soils around Lake Neusiedl. Humid autumn fogs.", "grapes": "Welschriesling, Zweigelt, sweet wine." },
+          { "name": "Leithaberg / Mittelburgenland", "description": "The hilly western zone producing Austria's most structured, age-worthy Blaufränkisch.", "geography": "Limestone and schist hills at higher elevation. Cooler, drier.", "grapes": "Blaufränkisch." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [44.8, 41.7] },
+      "properties": {
+        "id": "georgia",
+        "name": "Republic of Georgia",
+        "country": "Georgia",
+        "history": "Georgia is widely considered the birthplace of wine—archaeological evidence dates winemaking here to approximately 6000 BC (8,000 years ago). The traditional Georgian winemaking method involves fermenting and aging wine in large, egg-shaped clay vessels called 'qvevri', buried underground. This method is now a UNESCO Intangible Cultural Heritage. Georgia boasts over 500 indigenous grape varieties.",
+        "geography": "Located at the crossroads of Europe and Asia, between the Greater and Lesser Caucasus mountains. The eastern region (Kakheti) has a continental climate, while western Georgia is humid and subtropical. The Caucasus Mountains protect vineyards from cold northern air masses.",
+        "terroir": "Kakheti features rich alluvial soils in the Alazani Valley between two mountain ranges. The qvevri vessels, buried underground, maintain a constant temperature during fermentation and aging. The diversity of soils and over 500 grape varieties creates wine styles found nowhere else.",
+        "grapes": [
+          { "name": "Saperavi", "description": "One of few 'teinturier' grapes (red flesh as well as skin). Produces deeply colored, tannic, age-worthy reds with blackberry, plum, and dark chocolate. Often fermented in qvevri.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Rkatsiteli", "description": "Georgia's most planted white grape. Conventionally produces crisp, appley whites. In qvevri with extended skin contact, it becomes deep amber 'orange wine' with dried fruit, tea, walnut, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Mtsvane", "description": "A delicately aromatic white often blended with Rkatsiteli, adding floral elegance and freshness.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Pheasant's Tears", "description": "Founded by American painter John Wurdeman, producing benchmark qvevri wines.", "wines": [{ "name": "Saperavi", "url": "https://www.vivino.com/search/wines?q=Pheasant+Tears+Saperavi" }] }
+        ],
+        "subRegions": [
+          { "name": "Kakheti", "description": "The ancient heartland of Georgian wine, producing 70% of the country's output. Home to the most traditional qvevri winemaking.", "geography": "Alazani Valley between the Caucasus and Tsiv-Gombori ranges. Rich alluvial soils.", "grapes": "Saperavi, Rkatsiteli, Mtsvane." },
+          { "name": "Kartli", "description": "Central Georgia around the capital Tbilisi, producing lighter, fresher wines.", "geography": "Higher altitude, cooler. Mix of clay and limestone.", "grapes": "Chinuri, Goruli Mtsvane." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [13.8, 46.1] },
+      "properties": {
+        "id": "slovenia",
+        "name": "Slovenia",
+        "country": "Slovenia",
+        "history": "A tiny but ancient wine-producing country tucked between Italy, Austria, Hungary, and Croatia. Slovenia has been making wine for over 2,400 years. Its Goriška Brda (Brda) region is essentially a continuation of Italy's Collio across the border, producing comparable quality. Slovenia is also a hotbed of the natural wine and orange wine movement.",
+        "geography": "Three distinct wine regions: Primorska (west, Mediterranean/Italian influence), Podravje (northeast, continental/Austrian influence), and Posavje (southeast, Croatian influence). The Adriatic moderates the west while the Pannonian plain warms the east. Overall cool to moderate climate.",
+        "terroir": "Primorska features the same 'ponca' (flysch) marl-sandstone soils as Italian Collio. The northeast has volcanic and clay soils suited to aromatic whites. The diversity of terroir in such a small country is remarkable.",
+        "grapes": [
+          { "name": "Rebula (Ribolla Gialla)", "description": "The signature white of Brda/Goriška Brda, producing both crisp conventional whites and deep orange wines with amber color, dried fruit, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Welschriesling & Furmint", "description": "In the northeast (Štajerska), producing aromatic, crisp whites reflecting the Austrian/Hungarian influence.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Movia", "description": "A pioneering natural wine estate producing unfiltered, biodynamic wines since 1820.", "wines": [{ "name": "Lunar Chardonnay", "url": "https://www.vivino.com/search/wines?q=Movia+Lunar" }] }
+        ],
+        "subRegions": [
+          { "name": "Goriška Brda (Brda)", "description": "The Slovenian extension of Italy's Collio, producing Italy-rivaling whites and acclaimed orange wines.", "geography": "Ponca (flysch) marl-sandstone hills. Mediterranean-influenced climate.", "grapes": "Rebula, Malvazija, Chardonnay." },
+          { "name": "Štajerska (Styria)", "description": "Northeastern Slovenia, producing aromatic, crisp whites with Austrian influence.", "geography": "Continental climate with volcanic and clay soils.", "grapes": "Welschriesling, Sauvignon Blanc, Furmint." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-119.5, 49.5] },
+      "properties": {
+        "id": "canada",
+        "name": "Canada (Okanagan & Niagara)",
+        "country": "Canada",
+        "history": "Canada has two distinct wine regions of international importance: the Okanagan Valley in British Columbia (west) and the Niagara Peninsula in Ontario (east). Canada is the world's largest producer of Icewine (Eiswein)—a lusciously sweet wine made from grapes naturally frozen on the vine at -8°C. The VQA (Vintners Quality Alliance) system guarantees origin and quality.",
+        "geography": "The Okanagan is a dramatic, semi-arid, rain-shadow valley at 49°N latitude with a large lake moderating temperatures. Niagara benefits from the thermal influence of Lake Ontario and the Niagara Escarpment. Both regions have extreme continental climates with severe winter freeze risk.",
+        "terroir": "Okanagan soils are glacial till, sandy loam, and gravel over ancient lake beds—extremely varied along the 200km valley. Niagara features clay and limestone over the Niagara Escarpment, with the Beamsville Bench as the premium sub-zone.",
+        "grapes": [
+          { "name": "Riesling & Vidal (Icewine)", "description": "Canada's most famous contribution to world wine. Grapes freeze naturally on the vine in December/January, concentrating sugars to extraordinary levels. The result is a viscous, golden nectar of honey, apricot, mango, and electric acidity.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Pinot Noir", "description": "Okanagan Pinot Noir (from cooler southern sites) is gaining acclaim: elegant, cherry-fruited, with earthy complexity.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Merlot & Syrah", "description": "The warm central Okanagan produces surprisingly ripe, full-bodied reds rivaling Washington State.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Inniskillin", "description": "The pioneer that put Canadian Icewine on the world map, winning the Grand Prix d'Honneur at Vinexpo 1991.", "wines": [{ "name": "Vidal Icewine", "url": "https://www.vivino.com/search/wines?q=Inniskillin+Icewine" }] }
+        ],
+        "subRegions": [
+          { "name": "Okanagan Valley (BC)", "description": "British Columbia's premier region with dramatic north-south climate variation along a glacial lake.", "geography": "Semi-arid rain shadow valley with glacial soils. Lake Okanagan moderates temperature.", "grapes": "Pinot Noir, Merlot, Riesling, Syrah." },
+          { "name": "Niagara Peninsula (Ontario)", "description": "Canada's largest wine region and Icewine capital, benefiting from Lake Ontario's thermal influence.", "geography": "Clay and limestone over the Niagara Escarpment. Lake-moderated cold climate.", "grapes": "Riesling, Vidal (Icewine), Chardonnay, Pinot Noir." }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-99, 30.5] },
+      "properties": {
+        "id": "texas",
+        "name": "Texas",
+        "country": "USA",
+        "history": "The fifth-largest wine-producing US state and one of the fastest-growing. Spanish missionaries planted the first vinifera grapes in Texas in the 1660s—making it older than California wine. The Texas High Plains AVA (near Lubbock) at 1,000m altitude produces 85% of the state's premium grapes, thriving in conditions remarkably similar to Spain and southern France.",
+        "geography": "The Texas High Plains features a semi-arid continental climate at high altitude with intense sunshine, very low rainfall, and massive diurnal temperature variation (often 20°C+). The Hill Country (near Austin/San Antonio) has a more humid, warmer climate influenced by the Gulf of Mexico.",
+        "terroir": "High Plains soils are deep, sandy loam over caliche (calcium carbonate hardpan). The alkaline, well-draining soils and extreme UV produce thick-skinned, concentrated grapes. Hill Country has a mix of limestone, granite, and clay.",
+        "grapes": [
+          { "name": "Tempranillo", "description": "Thrives in the Iberian-like conditions of the High Plains. Produces concentrated, structured reds with dark cherry, leather, and spice.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Mourvèdre & Viognier", "description": "Mediterranean/Rhône varieties increasingly showing exceptional promise in the Texas heat.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+        ],
+        "estates": [
+          { "name": "Becker Vineyards", "description": "One of the Hill Country's most acclaimed estates.", "wines": [{ "name": "Reserve Tempranillo", "url": "https://www.vivino.com/search/wines?q=Becker+Vineyards+Tempranillo" }] }
+        ],
+        "subRegions": [
+          { "name": "Texas High Plains", "description": "The quality engine, at 1,000m altitude near Lubbock, supplying most premium Texas grapes.", "geography": "High-altitude semi-arid plateau. Sandy loam over caliche. Extreme diurnal shift.", "grapes": "Tempranillo, Cabernet Sauvignon, Mourvèdre." },
+          { "name": "Texas Hill Country", "description": "America's second-most-visited wine region (after Napa), centered between Austin and Fredericksburg.", "geography": "Rolling limestone and granite hills. Warmer, more humid Gulf influence.", "grapes": "Tempranillo, Viognier, Sangiovese." }
+        ]
+      }
     }
   ]
 };
