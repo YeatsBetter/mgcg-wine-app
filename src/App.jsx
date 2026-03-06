@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send } from 'lucide-react';
 
 // Firebase imports
-import { auth, googleProvider, db } from './firebase';
+import { auth, googleProvider, db, geminiModel } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -82,6 +82,17 @@ const aromaData = {
   ]
 };
 
+const foodWinePrinciples = [
+  { title: "Weight & Body Matching", desc: "Match the weight of the food with the body of the wine. Light dishes pair with light-bodied wines; rich, heavy dishes pair with full-bodied wines." },
+  { title: "Acidity Interaction", desc: "High-acid wines work well with fatty or oily foods (cuts through richness) and with dishes containing acidity (e.g. tomato-based sauces)." },
+  { title: "Sweetness Balance", desc: "Wine should be at least as sweet as the food. Sweet food makes dry wine taste harsh and bitter." },
+  { title: "Tannin & Protein", desc: "Tannic red wines pair excellently with high-protein red meats. The protein softens the tannins, making the wine feel smoother." },
+  { title: "Salt & Bitterness", desc: "Salt increases the perception of body and reduces bitterness. Avoid pairing very tannic or oaky wines with salty dishes." },
+  { title: "Umami Caution", desc: "Umami-rich foods (aged cheese, mushrooms, soy) can make wines taste more bitter and astringent. Counter with sweeter or fruit-forward wines." },
+  { title: "Flavour Bridges", desc: "Create harmony by matching flavours: oaky Chardonnay with butter-based sauces, herbal Sauvignon Blanc with herb-crusted dishes." },
+  { title: "Regional Pairing", desc: "Classic local pairings have evolved over centuries for a reason — 'What grows together, goes together.'" }
+];
+
 function App() {
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -99,6 +110,14 @@ function App() {
   const [noteText, setNoteText] = useState("");
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
   const [isSavingNote, setIsSavingNote] = useState(false);
+
+  // AI Food & Wine Pairing states
+  const [isPairingOpen, setIsPairingOpen] = useState(false);
+  const [foodInput, setFoodInput] = useState('');
+  const [pairingResults, setPairingResults] = useState(null);
+  const [isPairingLoading, setIsPairingLoading] = useState(false);
+  const [pairingError, setPairingError] = useState(null);
+  const [showPrinciples, setShowPrinciples] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -151,6 +170,38 @@ function App() {
 
   const handleLogout = () => {
     signOut(auth);
+  };
+
+  const handlePairingRequest = async () => {
+    if (!foodInput.trim()) return;
+    setIsPairingLoading(true);
+    setPairingError(null);
+    setPairingResults(null);
+    try {
+      const prompt = `You are a WSET Level 3 certified sommelier and food-wine pairing expert. A user wants to pair wine with the following food: "${foodInput.trim()}"
+
+Analyze the food's key flavour characteristics (weight, fat, acidity, sweetness, umami, protein, dominant flavours) and recommend exactly 3 wines, ranked from most recommended to least.
+
+For each wine, provide:
+- Wine name (grape variety or style)
+- Region of origin
+- A brief 1-2 sentence reason explaining why it pairs well
+
+Respond ONLY in this exact JSON format, no markdown, no code fences:
+[{"rank":1,"wine":"...","region":"...","reason":"..."},{"rank":2,"wine":"...","region":"...","reason":"..."},{"rank":3,"wine":"...","region":"...","reason":"..."}]`;
+
+      const result = await geminiModel.generateContent(prompt);
+      const text = result.response.text().trim();
+      // Clean potential markdown fences
+      const cleanText = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const parsed = JSON.parse(cleanText);
+      setPairingResults(parsed);
+    } catch (err) {
+      console.error('AI Pairing Error:', err);
+      setPairingError('Unable to generate pairing. Please try again.');
+    } finally {
+      setIsPairingLoading(false);
+    }
   };
 
   return (
@@ -526,6 +577,99 @@ function App() {
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Bottom-Left AI Food & Wine Pairing */}
+      <button
+        onClick={() => setIsPairingOpen(!isPairingOpen)}
+        style={{ position: 'fixed', bottom: '24px', left: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-gold)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px rgba(180, 150, 80, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}
+        title="AI Food & Wine Pairing"
+        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
+        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
+      >
+        {isPairingOpen ? <X size={24} /> : <Utensils size={24} />}
+      </button>
+
+      {isPairingOpen && (
+        <div className="glass-panel" style={{ position: 'fixed', bottom: '90px', left: '24px', width: '380px', maxHeight: '70vh', overflowY: 'auto', padding: '24px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <h3 style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Utensils size={20} /> AI Food & Wine Pairing
+          </h3>
+
+          {/* WSET Principles Accordion */}
+          <button
+            onClick={() => setShowPrinciples(!showPrinciples)}
+            style={{ background: 'rgba(255,255,255,0.4)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '10px 14px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.85rem' }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><BookOpen size={14} /> WSET Pairing Principles</span>
+            {showPrinciples ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          </button>
+
+          {showPrinciples && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', animation: 'fadeIn 0.3s ease' }}>
+              {foodWinePrinciples.map((p, i) => (
+                <div key={i} style={{ background: 'rgba(255,255,255,0.5)', padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                  <strong style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', display: 'block', marginBottom: '3px' }}>{p.title}</strong>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>{p.desc}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Food Input */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>What are you eating?</label>
+            <textarea
+              value={foodInput}
+              onChange={(e) => setFoodInput(e.target.value)}
+              placeholder="e.g. Grilled lamb chops with rosemary, roasted vegetables..."
+              style={{ width: '100%', height: '70px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '10px', outline: 'none', resize: 'none', fontSize: '0.85rem', fontFamily: 'inherit' }}
+              onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handlePairingRequest(); } }}
+            />
+            <button
+              onClick={handlePairingRequest}
+              disabled={isPairingLoading || !foodInput.trim()}
+              style={{ background: 'var(--accent-gold)', color: '#fff', border: 'none', borderRadius: '8px', padding: '10px', cursor: isPairingLoading || !foodInput.trim() ? 'not-allowed' : 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', opacity: isPairingLoading || !foodInput.trim() ? 0.6 : 1, transition: 'all 0.2s' }}
+            >
+              {isPairingLoading ? (
+                <><Sparkles size={16} style={{ animation: 'spin 1s linear infinite' }} /> Analyzing...</>
+              ) : (
+                <><Send size={16} /> Find Perfect Pairing</>
+              )}
+            </button>
+          </div>
+
+          {/* Error */}
+          {pairingError && (
+            <div style={{ background: 'rgba(200,50,50,0.1)', border: '1px solid rgba(200,50,50,0.3)', borderRadius: '8px', padding: '10px', fontSize: '0.85rem', color: '#c03' }}>
+              {pairingError}
+            </div>
+          )}
+
+          {/* Results */}
+          {pairingResults && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <h4 style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <Sparkles size={14} style={{ verticalAlign: 'middle', marginRight: '6px', color: 'var(--accent-gold)' }} />
+                Top Recommendations
+              </h4>
+              {pairingResults.map((r, i) => (
+                <div key={i} style={{ background: 'rgba(255,255,255,0.5)', padding: '14px', borderRadius: '10px', border: '1px solid var(--glass-border)', display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: i === 0 ? 'var(--accent-gold)' : i === 1 ? 'var(--accent-ruby)' : 'var(--text-secondary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8rem', flexShrink: 0 }}>
+                    {r.rank}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem', display: 'block' }}>{r.wine}</strong>
+                    <span style={{ color: 'var(--accent-gold)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      <MapPin size={11} style={{ verticalAlign: 'middle', marginRight: '3px' }} />{r.region}
+                    </span>
+                    <p style={{ margin: '6px 0 0', fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{r.reason}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

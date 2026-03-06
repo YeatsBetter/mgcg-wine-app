@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getAI, getGenerativeModel, GoogleAIBackend } from "firebase/ai";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,3 +23,7 @@ export const googleProvider = new GoogleAuthProvider();
 
 // Initialize Firestore
 export const db = getFirestore(app);
+
+// Initialize Firebase AI Logic (Gemini)
+const ai = getAI(app, { backend: new GoogleAIBackend() });
+export const geminiModel = getGenerativeModel(ai, { model: "gemini-2.0-flash" });
