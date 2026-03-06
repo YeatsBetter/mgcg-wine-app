@@ -93,6 +93,8 @@ const foodWinePrinciples = [
   { title: "Regional Pairing", desc: "Classic local pairings have evolved over centuries for a reason — 'What grows together, goes together.'" }
 ];
 
+const localPairingCache = {};
+
 function App() {
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -217,6 +219,13 @@ function App() {
 
   const handlePairingRequest = async () => {
     if (!foodInput.trim()) return;
+
+    const query = foodInput.trim().toLowerCase();
+    if (localPairingCache[query]) {
+      setPairingResults(localPairingCache[query]);
+      return;
+    }
+
     setIsPairingLoading(true);
     setPairingError(null);
     setPairingResults(null);
@@ -238,10 +247,16 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       // Clean potential markdown fences
       const cleanText = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       const parsed = JSON.parse(cleanText);
+
+      localPairingCache[query] = parsed;
       setPairingResults(parsed);
     } catch (err) {
       console.error('AI Pairing Error:', err);
-      setPairingError(err.message || 'Unable to generate pairing. Please try again.');
+      let errorMsg = err.message || 'Unable to generate pairing. Please try again.';
+      if (errorMsg.includes('429') || errorMsg.includes('quota') || errorMsg.includes('exceeded')) {
+        errorMsg = "Whoa! So many pairing requests right now. The AI Sommelier is catching its breath (API Rate Limit). Please wait 1 minute and try again! 🍷";
+      }
+      setPairingError(errorMsg);
     } finally {
       setIsPairingLoading(false);
     }
