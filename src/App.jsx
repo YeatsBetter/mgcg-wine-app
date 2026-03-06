@@ -240,52 +240,6 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-          <button
-            onClick={() => { setIsSATOpen(true); setActiveSATTab('methodology'); }}
-            style={{
-              background: 'rgba(255, 255, 255, 0.5)',
-              border: '1px solid var(--accent-gold)',
-              color: 'var(--text-primary)',
-              padding: '8px 16px',
-              borderRadius: '20px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              transition: 'all 0.2s'
-            }}
-            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-gold)'; e.currentTarget.style.color = '#fff'; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
-          >
-            <ClipboardList size={18} /> WSET SAT Guide
-          </button>
-
-          <button
-            onClick={() => { setIsSATOpen(true); setActiveSATTab('aroma'); }}
-            style={{
-              background: 'rgba(255, 255, 255, 0.5)',
-              border: '1px solid var(--accent-ruby)',
-              color: 'var(--text-primary)',
-              padding: '8px 16px',
-              borderRadius: '20px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              transition: 'all 0.2s'
-            }}
-            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
-          >
-            <Wine size={18} /> Aroma Guide
-          </button>
-        </div>
-
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '16px', lineHeight: 1.6, fontStyle: 'italic' }}>
           Welcome to the definitive digital cartography of the world's most prestigious wine regions.
           Explore the depths of history, terroir, and geography through an interactive viticultural lens.
@@ -589,7 +543,25 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         </div>
       )}
 
-      {/* Bottom-Left Circular Buttons */}
+      {/* Bottom-Left Circular Buttons Stack */}
+      <button
+        onClick={() => setIsSATOpen(true)}
+        style={{
+          position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
+          background: isSATOpen ? 'var(--accent-ruby)' : 'var(--glass-bg)', color: isSATOpen ? '#fff' : 'var(--accent-ruby)',
+          border: '1px solid var(--accent-ruby)', cursor: 'pointer', zIndex: 1001,
+          boxShadow: isSATOpen ? '0 6px 16px rgba(121,31,56,0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          backdropFilter: 'blur(12px)'
+        }}
+        title="WSET Guide"
+        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isSATOpen) { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; } }}
+        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isSATOpen) { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = 'var(--accent-ruby)'; } }}
+      >
+        <BookOpen size={24} />
+      </button>
+
+      {/* Currents & Winds */}
       <button
         onClick={() => setShowCurrents(!showCurrents)}
         style={{
