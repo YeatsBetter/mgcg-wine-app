@@ -17,10 +17,66 @@ export const wineRegionsData = {
         "history": "Following the WSET Level 3 curriculum, Bordeaux's reputation is built upon centuries of trade facilitated by the Gironde Estuary, Rivers Garonne and Dordogne. It gained global prominence when Eleanor of Aquitaine married Henry Plantagenet (later King Henry II of England) in 1152, starting a monopoly on the English wine market. The 1855 Classification established a hierarchy of estates on the Left Bank that still influences global prices today. In the modern era, the emphasis has shifted towards precision viticulture and terroir expression, overcoming historic issues with bulk production.",
         "geography": "Located in southwestern France on the 45th parallel, Bordeaux enjoys a moderate maritime climate. The Gulf Stream transports warm water from the Caribbean, warming the region and extending its growing season, which is essential for late-ripening varieties like Cabernet Sauvignon. The Landes forest to the west protects vineyards from the worst Atlantic storms. However, high rainfall throughout the year can disrupt flowering, cause rot, and dilute flavors during harvest. Frost is also a periodic hazard.",
         "terroir": "Terroir in Bordeaux is strictly divided by the rivers. The Left Bank (Médoc, Graves) is dominated by gravelly soils deposited by river action; these soils drain rapidly and reflect heat, crucial for ripening Cabernet Sauvignon. The Right Bank (Saint-Émilion, Pomerol) features clay-limestone and sandier soils which are cooler, perfectly suited for Merlot and Cabernet Franc. Underlying limestone beds provide excellent drainage across the region.",
-        "climate": { "rainfall": "950 mm", "gdd": "1,450 °C Days" },
-        "soil": ["Gravel (Left Bank)", "Clay (Right Bank)", "Limestone Bedrock"],
+        "climate": {
+          "rainfall": "950 mm",
+          "gdd": "1,450 °C Days"
+        },
+        "soil": [
+          "Gravel (Left Bank)",
+          "Clay (Right Bank)",
+          "Limestone Bedrock"
+        ],
         "vintages": [
-          { "year": 2023, "score": 93, "readiness": "Hold" }, { "year": 2022, "score": 97, "readiness": "Hold" }, { "year": 2021, "score": 90, "readiness": "Drink/Hold" }, { "year": 2020, "score": 98, "readiness": "Hold" }, { "year": 2019, "score": 97, "readiness": "Drink/Hold" }, { "year": 2018, "score": 96, "readiness": "Drink/Hold" }, { "year": 2017, "score": 92, "readiness": "Drink" }, { "year": 2016, "score": 98, "readiness": "Hold" }, { "year": 2015, "score": 97, "readiness": "Drink/Hold" }, { "year": 2014, "score": 93, "readiness": "Drink" }
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2020,
+            "score": 98,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 98,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ],
         "grapes": [
           {
@@ -113,10 +169,65 @@ export const wineRegionsData = {
         "history": "Burgundy (Bourgogne) represents the global standard for terroir-driven Pinot Noir and Chardonnay. Its history is deeply intertwined with the Cistercian and Benedictine monks who meticulously mapped the soil variations (climats) over centuries in the Middle Ages. The French Revolution dismantled Church and aristocratic holdings, and the Napoleonic inheritance laws resulted in extreme fragmentation of vineyard ownership. Today, a single Grand Cru vineyard like Clos de Vougeot is divided among dozens of individual producers.",
         "geography": "Burgundy stretches across eastern France with a moderate continental climate. The region experiences cold winters and warm summers. Weather hazards are severe: spring frosts can wipe out buds (Chablis is notoriously susceptible), and localized summer hailstorms can destroy crops. Rain during harvest is also a persistent threat, requiring careful canopy management and vintage variation acceptance.",
         "terroir": "The soils are predominantly limestone and marl (calcareous clay) dating back to the Jurassic period. The exact ratio determines the grape planting: Chardonnay performs best on limestone-dominant soils (e.g., Côte de Beaune, Chablis), while Pinot Noir demands more marl (e.g., Côte de Nuits). The best vineyards (Grand Cru and Premier Cru) are located mid-slope (mi-coteau) where drainage is optimal and frost risk is minimized.",
-        "climate": { "rainfall": "700 mm", "gdd": "1,350 °C Days" },
-        "soil": ["Jurassic Limestone", "Marl (Calcareous Clay)"],
+        "climate": {
+          "rainfall": "700 mm",
+          "gdd": "1,350 °C Days"
+        },
+        "soil": [
+          "Jurassic Limestone",
+          "Marl (Calcareous Clay)"
+        ],
         "vintages": [
-          { "year": 2023, "score": 94, "readiness": "Hold" }, { "year": 2022, "score": 96, "readiness": "Hold" }, { "year": 2021, "score": 89, "readiness": "Drink/Hold" }, { "year": 2020, "score": 95, "readiness": "Hold" }, { "year": 2019, "score": 98, "readiness": "Hold" }, { "year": 2018, "score": 94, "readiness": "Drink/Hold" }, { "year": 2017, "score": 92, "readiness": "Drink" }, { "year": 2016, "score": 93, "readiness": "Drink/Hold" }, { "year": 2015, "score": 98, "readiness": "Hold" }, { "year": 2014, "score": 90, "readiness": "Drink" }
+          {
+            "year": 2023,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2020,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2019,
+            "score": 98,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2018,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2015,
+            "score": 98,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ],
         "grapes": [
           {
@@ -184,10 +295,66 @@ export const wineRegionsData = {
         "history": "Tuscany's identity is inextricably linked to the Sangiovese grape and the sweeping hills of the Renaissance heartland. The Chianti region dates back to a 1716 edict by the Grand Duke of Tuscany. In the 1970s, frustration with archaic, restrictive DOC laws forcing producers to blend white grapes into Chianti led to the 'Super Tuscan' rebellion, where winemakers illegally blended Sangiovese with Bordeaux varieties or used 100% Cabernet, changing Italian wine laws forever.",
         "geography": "Tuscany is characterized by a warm Mediterranean climate along the coast, shifting to a more moderate continental climate in the inland hills. Altitude is the most critical quality factor. High-altitude vineyards (up to 500m) experience high diurnal temperature ranges (warm days, cool nights), which is vital to retain Sangiovese's naturally high acidity and extend its ripening window.",
         "terroir": "The region features a patchwork of soils. The best inland zones (Chianti Classico, Montalcino) are characterized by 'Galestro' (a crumbly, rocky clay-marl) and 'Alberese' (hard limestone). These poor soils limit vigor and concentrate flavors. Towards the coastal Maremma (Bolgheri), soils are flat and sandy-clay, better suited to Bordeaux varieties.",
-        "climate": { "rainfall": "800 mm", "gdd": "1,600 °C Days" },
-        "soil": ["Galestro (Marl)", "Alberese (Limestone)", "Sand/Clay (Coast)"],
+        "climate": {
+          "rainfall": "800 mm",
+          "gdd": "1,600 °C Days"
+        },
+        "soil": [
+          "Galestro (Marl)",
+          "Alberese (Limestone)",
+          "Sand/Clay (Coast)"
+        ],
         "vintages": [
-          { "year": 2023, "score": 91, "readiness": "Hold" }, { "year": 2022, "score": 95, "readiness": "Hold" }, { "year": 2021, "score": 96, "readiness": "Hold" }, { "year": 2020, "score": 93, "readiness": "Drink/Hold" }, { "year": 2019, "score": 97, "readiness": "Hold" }, { "year": 2018, "score": 92, "readiness": "Drink/Hold" }, { "year": 2017, "score": 90, "readiness": "Drink" }, { "year": 2016, "score": 98, "readiness": "Hold" }, { "year": 2015, "score": 97, "readiness": "Drink/Hold" }, { "year": 2014, "score": 89, "readiness": "Drink" }
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 98,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ],
         "grapes": [
           {
@@ -295,7 +462,11 @@ export const wineRegionsData = {
                 "name": "Cabernet Sauvignon",
                 "url": "https://www.vivino.com/search/wines?q=Screaming+Eagle"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Opus One",
@@ -305,7 +476,11 @@ export const wineRegionsData = {
                 "name": "Opus One",
                 "url": "https://www.vivino.com/search/wines?q=Opus+One"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -326,6 +501,67 @@ export const wineRegionsData = {
             "description": "The southernmost AVA stretching into Sonoma. Exclusively produces premium Pinot Noir and Chardonnay for still and traditional method sparkling wines.",
             "geography": "The coolest region due to persistent, intense morning bay fogs and coastal breezes.",
             "grapes": "Chardonnay, Pinot Noir."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,700 °C Days"
+        },
+        "soil": [
+          "Volcanic Ash",
+          "Alluvial Fan",
+          "Clay"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 94,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 96,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
           }
         ]
       }
@@ -367,7 +603,11 @@ export const wineRegionsData = {
                 "name": "Barbaresco",
                 "url": "https://www.vivino.com/search/wines?q=Gaja+Barbaresco"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Giacomo Conterno",
@@ -377,7 +617,11 @@ export const wineRegionsData = {
                 "name": "Monfortino Barolo Riserva",
                 "url": "https://www.vivino.com/search/wines?q=Conterno+Monfortino"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -392,6 +636,67 @@ export const wineRegionsData = {
             "description": "Barolo's slightly lower-altitude, warmer neighbor. The wines ripen earlier, have slightly softer tannins, and require less cellaring (26 months minimum).",
             "geography": "South-facing hillsides adjacent to the Tanaro River.",
             "grapes": "100% Nebbiolo."
+          }
+        ],
+        "climate": {
+          "rainfall": "850 mm",
+          "gdd": "1,400 °C Days"
+        },
+        "soil": [
+          "Calcareous Marl",
+          "Sandstone",
+          "Limestone"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 96,
+            "readiness": "Drink"
           }
         ]
       }
@@ -438,7 +743,11 @@ export const wineRegionsData = {
                 "name": "Gran Reserva 890",
                 "url": "https://www.vivino.com/search/wines?q=La+Rioja+Alta+890"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -459,6 +768,67 @@ export const wineRegionsData = {
             "description": "The warmest, flattest zone, acting as the structural blending backbone for Garnacha.",
             "geography": "Mediterranean influence, alluvial soils.",
             "grapes": "Garnacha."
+          }
+        ],
+        "climate": {
+          "rainfall": "400 mm",
+          "gdd": "1,600 °C Days"
+        },
+        "soil": [
+          "Limestone Clay",
+          "Ferrous Clay",
+          "Alluvial"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 94,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 97,
+            "readiness": "Drink"
           }
         ]
       }
@@ -505,7 +875,11 @@ export const wineRegionsData = {
                 "name": "Côte-Rôtie 'La Mouline'",
                 "url": "https://www.vivino.com/search/wines?q=Guigal+La+Mouline"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -526,6 +900,67 @@ export const wineRegionsData = {
             "description": "The grandest appellation of the south, famous for permitting up to 13 different grape varieties in a single blend.",
             "geography": "Vast flatter plain covered in 'galets' stones and heavily impacted by the Mistral.",
             "grapes": "Grenache, Mourvèdre, Syrah, Cinsault."
+          }
+        ],
+        "climate": {
+          "rainfall": "600 mm",
+          "gdd": "1,800 °C Days"
+        },
+        "soil": [
+          "Galets Roulés",
+          "Granite",
+          "Schist"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 94,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 94,
+            "readiness": "Drink"
           }
         ]
       }
@@ -562,7 +997,11 @@ export const wineRegionsData = {
                 "name": "Wehlener Sonnenuhr Spätlese",
                 "url": "https://www.vivino.com/search/wines?q=JJ+Prum+Wehlener"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -583,6 +1022,66 @@ export const wineRegionsData = {
             "description": "Two small tributaries of the Mosel. Historically too cold to ripen grapes, but in a warming climate, they now produce some of Germany's most racy, austere, and electric Rieslings.",
             "geography": "Higher altitude, cooler side-valleys.",
             "grapes": "Riesling."
+          }
+        ],
+        "climate": {
+          "rainfall": "700 mm",
+          "gdd": "1,000 °C Days"
+        },
+        "soil": [
+          "Blue Devonian Slate",
+          "Red Slate"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 96,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 96,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
           }
         ]
       }
@@ -629,7 +1128,11 @@ export const wineRegionsData = {
                 "name": "Sauvignon Blanc",
                 "url": "https://www.vivino.com/search/wines?q=Cloudy+Bay+Sauvignon+Blanc"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -650,6 +1153,66 @@ export const wineRegionsData = {
             "description": "A series of tributary valleys jutting into the hillsides, highly prized for producing the region's best structured Pinot Noirs.",
             "geography": "Heavy, water-retaining clay soils (loess) on hillside slopes that naturally restrict vigor.",
             "grapes": "Pinot Noir."
+          }
+        ],
+        "climate": {
+          "rainfall": "655 mm",
+          "gdd": "1,090 °C Days"
+        },
+        "soil": [
+          "Greywacke River Stones",
+          "Alluvial Loam"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
           }
         ]
       }
@@ -696,7 +1259,11 @@ export const wineRegionsData = {
                 "name": "Paul Sauer",
                 "url": "https://www.vivino.com/search/wines?q=Kanonkop+Paul+Sauer"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -717,6 +1284,67 @@ export const wineRegionsData = {
             "description": "Situated closer to the ocean (False Bay).",
             "geography": "Strongest maritime influence, producing slightly cooler, more elegant expressions of Cabernet and premium Sauvignon Blanc.",
             "grapes": "Cabernet Sauvignon, Sauvignon Blanc."
+          }
+        ],
+        "climate": {
+          "rainfall": "600 mm",
+          "gdd": "1,750 °C Days"
+        },
+        "soil": [
+          "Decomposed Granite",
+          "Table Mountain Sandstone",
+          "Shale"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 94,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 97,
+            "readiness": "Drink"
           }
         ]
       }
@@ -763,7 +1391,11 @@ export const wineRegionsData = {
                 "name": "Dom Pérignon Vintage",
                 "url": "https://www.vivino.com/search/wines?q=Dom+Perignon"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Krug",
@@ -773,7 +1405,11 @@ export const wineRegionsData = {
                 "name": "Grande Cuvée",
                 "url": "https://www.vivino.com/search/wines?q=Krug+Grande+Cuvee"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
           }
         ],
         "subRegions": [
@@ -794,6 +1430,67 @@ export const wineRegionsData = {
             "description": "A perfectly east-facing ridge south of Épernay that produces the purest, most long-lived Blanc de Blancs.",
             "geography": "Outcroppings of the purest white chalk.",
             "grapes": "100% Chardonnay."
+          }
+        ],
+        "climate": {
+          "rainfall": "700 mm",
+          "gdd": "1,050 °C Days"
+        },
+        "soil": [
+          "Belemnite Chalk",
+          "Micraster Chalk",
+          "Limestone"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 96,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
           }
         ]
       }
@@ -835,7 +1532,11 @@ export const wineRegionsData = {
                 "name": "Amarone della Valpolicella Classico",
                 "url": "https://www.vivino.com/search/wines?q=Quintarelli+Amarone"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -850,6 +1551,67 @@ export const wineRegionsData = {
             "description": "One of Italy's greatest white wines. The Classico zone represents the original, steep hillside plantings.",
             "geography": "Dark, basaltic volcanic soils mixed with limestone.",
             "grapes": "Garganega, Trebbiano di Soave."
+          }
+        ],
+        "climate": {
+          "rainfall": "800 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Volcanic Tuff",
+          "Limestone",
+          "Gravel"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 94,
+            "readiness": "Drink"
           }
         ]
       }
@@ -896,7 +1658,11 @@ export const wineRegionsData = {
                 "name": "Adrianna Vineyard Malbec",
                 "url": "https://www.vivino.com/search/wines?q=Catena+Zapata+Adrianna"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -917,6 +1683,67 @@ export const wineRegionsData = {
             "description": "An older, lower-altitude sub-region containing some of the oldest pre-phylloxera vines in the world.",
             "geography": "Situated lower down, producing robust, heavily fruited wines and old-vine Syrah.",
             "grapes": "Malbec, Syrah."
+          }
+        ],
+        "climate": {
+          "rainfall": "220 mm",
+          "gdd": "1,650 °C Days"
+        },
+        "soil": [
+          "Alluvial Sand",
+          "River Stones",
+          "Calcareous"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
           }
         ]
       }
@@ -958,7 +1785,11 @@ export const wineRegionsData = {
                 "name": "Vintage Port Nacional",
                 "url": "https://www.vivino.com/search/wines?q=Quinta+do+Noval+Nacional"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -973,6 +1804,66 @@ export const wineRegionsData = {
             "description": "The heart of the region centered around Pinhão. The source of almost all the top Vintage Ports and premium dry red wines.",
             "geography": "Warmer and significantly drier than Baixo Corgo, featuring the steepest slopes.",
             "grapes": "Touriga Nacional, Touriga Franca."
+          }
+        ],
+        "climate": {
+          "rainfall": "500 mm",
+          "gdd": "1,900 °C Days"
+        },
+        "soil": [
+          "Schist",
+          "Granite"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 97,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 94,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 94,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1014,7 +1905,11 @@ export const wineRegionsData = {
                 "name": "Evenstad Reserve Pinot Noir",
                 "url": "https://www.vivino.com/search/wines?q=Domaine+Serene+Evenstad"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Ken Wright Cellars",
@@ -1024,7 +1919,11 @@ export const wineRegionsData = {
                 "name": "Shea Vineyard Pinot Noir",
                 "url": "https://www.vivino.com/search/wines?q=Ken+Wright+Shea"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -1039,6 +1938,67 @@ export const wineRegionsData = {
             "description": "A significantly cooler AVA that produces darker, tenser, and highly age-worthy, structured Pinot Noir.",
             "geography": "Directly exposed to the howling, chilling Pacific winds funneled through the Van Duzer Corridor. Shallow, rocky soils.",
             "grapes": "Pinot Noir, Chardonnay."
+          }
+        ],
+        "climate": {
+          "rainfall": "1000 mm",
+          "gdd": "1,200 °C Days"
+        },
+        "soil": [
+          "Jory (Volcanic)",
+          "Willakenzie (Sedimentary)",
+          "Loess"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 95,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 97,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 97,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1080,7 +2040,11 @@ export const wineRegionsData = {
                 "name": "Don Melchor Cabernet Sauvignon",
                 "url": "https://www.vivino.com/search/wines?q=Don+Melchor"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Almaviva",
@@ -1090,7 +2054,11 @@ export const wineRegionsData = {
                 "name": "Almaviva",
                 "url": "https://www.vivino.com/search/wines?q=Almaviva+Chile"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -1105,6 +2073,67 @@ export const wineRegionsData = {
             "description": "The warmer, flatter, traditional heartland producing softer, fleshier interpretations of Cabernet and excellent Carménère.",
             "geography": "The central, lower-altitude plains. Warmer and less influenced by the Andes night air.",
             "grapes": "Cabernet Sauvignon, Carménère."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1151,7 +2180,11 @@ export const wineRegionsData = {
                 "name": "Grange",
                 "url": "https://www.vivino.com/search/wines?q=Penfolds+Grange"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Henschke",
@@ -1161,7 +2194,11 @@ export const wineRegionsData = {
                 "name": "Hill of Grace",
                 "url": "https://www.vivino.com/search/wines?q=Henschke+Hill+of+Grace"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -1176,6 +2213,66 @@ export const wineRegionsData = {
             "description": "A radically different neighboring high-altitude region famed globally for its world-class, searingly dry Rieslings.",
             "geography": "High elevations (400m-500m) with exceptionally cool nights and rocky, acidic soils.",
             "grapes": "Riesling, elegant Shiraz."
+          }
+        ],
+        "climate": {
+          "rainfall": "500 mm",
+          "gdd": "1,850 °C Days"
+        },
+        "soil": [
+          "Red-Brown Earth",
+          "Sandy Loam"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 96,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 94,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 95,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 95,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 94,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 97,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1217,7 +2314,11 @@ export const wineRegionsData = {
                 "name": "Etna Rosso",
                 "url": "https://www.vivino.com/search/wines?q=Terre+Nere+Etna+Rosso"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
           }
         ],
         "subRegions": [
@@ -1232,6 +2333,67 @@ export const wineRegionsData = {
             "description": "Facing the Ionian Sea, experiencing significantly higher rainfall and humidity.",
             "geography": "Cooler eastern exposure overlooking the sea, deeply specialized in world-class, searingly acidic Carricante whites.",
             "grapes": "Carricante."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1273,7 +2435,11 @@ export const wineRegionsData = {
                 "name": "Unico",
                 "url": "https://www.vivino.com/search/wines?q=Vega+Sicilia+Unico"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Dominio de Pingus",
@@ -1283,7 +2449,11 @@ export const wineRegionsData = {
                 "name": "Pingus",
                 "url": "https://www.vivino.com/search/wines?q=Pingus"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -1298,6 +2468,67 @@ export const wineRegionsData = {
             "description": "Situated at the absolute highest, coldest elevations in the eastern part of the DO, producing some of the most powerfully structured old-vine wines.",
             "geography": "Highest altitude terraces where frost is an extreme hazard.",
             "grapes": "Tinto Fino."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1344,7 +2575,11 @@ export const wineRegionsData = {
                 "name": "Clos Ste Hune Riesling",
                 "url": "https://www.vivino.com/search/wines?q=Trimbach+Clos+Ste+Hune"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           },
           {
             "name": "Zind-Humbrecht",
@@ -1354,7 +2589,11 @@ export const wineRegionsData = {
                 "name": "Gewurztraminer Hengst Grand Cru",
                 "url": "https://www.vivino.com/search/wines?q=Zind+Humbrecht+Hengst"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "subRegions": [
@@ -1369,6 +2608,67 @@ export const wineRegionsData = {
             "description": "The northern half of the region, generally producing lighter, earlier-drinking styles.",
             "geography": "Lower elevation Vosges peaks provide less rain shadow effect. Cooler soils.",
             "grapes": "Sylvaner, Pinot Blanc."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
           }
         ]
       }
@@ -1412,12 +2712,77 @@ export const wineRegionsData = {
                 "name": "Silex Blanc",
                 "url": "https://www.vivino.com/search/wines?q=Didier+Dagueneau+Silex"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
           }
         ],
         "id": "loire-valley",
         "name": "Loire Valley",
-        "country": "France"
+        "country": "France",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1449,12 +2814,77 @@ export const wineRegionsData = {
                 "name": "Morgon",
                 "url": "https://www.vivino.com/search/wines?q=Marcel+Lapierre+Morgon"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "id": "beaujolais",
         "name": "Beaujolais",
-        "country": "France"
+        "country": "France",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1486,12 +2916,77 @@ export const wineRegionsData = {
                 "name": "L'Ermita",
                 "url": "https://www.vivino.com/search/wines?q=Alvaro+Palacios+L+Ermita"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": true
           }
         ],
         "id": "priorat",
         "name": "Priorat",
-        "country": "Spain"
+        "country": "Spain",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1523,12 +3018,77 @@ export const wineRegionsData = {
                 "name": "Aszú 5 Puttonyos",
                 "url": "https://www.vivino.com/search/wines?q=Royal+Tokaji+Aszu"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "id": "tokaj",
         "name": "Tokaj",
-        "country": "Hungary"
+        "country": "Hungary",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1560,12 +3120,77 @@ export const wineRegionsData = {
                 "name": "Tio Pepe Fino",
                 "url": "https://www.vivino.com/search/wines?q=Tio+Pepe+Sherry"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "id": "jerez",
         "name": "Jerez (Sherry)",
-        "country": "Spain"
+        "country": "Spain",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1597,12 +3222,77 @@ export const wineRegionsData = {
                 "name": "Block 3 Pinot Noir",
                 "url": "https://www.vivino.com/search/wines?q=Felton+Road+Pinot+Noir"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
           }
         ],
         "id": "central-otago",
         "name": "Central Otago",
-        "country": "New Zealand"
+        "country": "New Zealand",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1634,12 +3324,77 @@ export const wineRegionsData = {
                 "name": "Cuvee Alexandre Chardonnay",
                 "url": "https://www.vivino.com/search/wines?q=Lapostolle+Casablanca+Chardonnay"
               }
-            ]
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "id": "casablanca-valley",
         "name": "Casablanca Valley",
-        "country": "Chile"
+        "country": "Chile",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
@@ -1671,17 +3426,88 @@ export const wineRegionsData = {
                 "name": "Eroica Riesling",
                 "url": "https://www.vivino.com/search/wines?q=Chateau+Ste+Michelle+Eroica"
               }
-            ]
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
           }
         ],
         "id": "columbia-valley",
         "name": "Columbia Valley",
-        "country": "USA (Washington)"
+        "country": "USA (Washington)",
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
+        ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [3.8, 43.3] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.8,
+          43.3
+        ]
+      },
       "properties": {
         "id": "languedoc-roussillon",
         "name": "Languedoc-Roussillon",
@@ -1690,22 +3516,125 @@ export const wineRegionsData = {
         "geography": "Stretches along the Mediterranean coast from the Spanish border to the Rhône delta. Hot, dry Mediterranean climate with over 300 days of sunshine. The Tramontane and Mistral winds help prevent fungal disease. Inland areas toward the Massif Central are cooler and higher in altitude.",
         "terroir": "Incredibly diverse soils: schist in the Cru zones (Faugères, Saint-Chinian), garrigue-covered limestone plateaus, alluvial river plains, and coastal sandy soils. The best wines come from the hillside schist and limestone terroirs that restrict yields.",
         "grapes": [
-          { "name": "Grenache, Syrah, Mourvèdre, Carignan", "description": "The GSM blend dominates, with old-vine Carignan adding structure and depth in the Cru appellations. Wines range from fresh rosé to powerful, structured reds.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Viognier, Roussanne, Marsanne", "description": "White varieties from the Rhône perform well here, producing aromatic, full-bodied whites with stone fruit and floral notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Grenache, Syrah, Mourvèdre, Carignan",
+            "description": "The GSM blend dominates, with old-vine Carignan adding structure and depth in the Cru appellations. Wines range from fresh rosé to powerful, structured reds.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Viognier, Roussanne, Marsanne",
+            "description": "White varieties from the Rhône perform well here, producing aromatic, full-bodied whites with stone fruit and floral notes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Mas de Daumas Gassac", "description": "The 'Grand Cru of the Languedoc', pioneering premium wines since the 1970s.", "wines": [{ "name": "Rouge", "url": "https://www.vivino.com/search/wines?q=Daumas+Gassac" }] }
+          {
+            "name": "Mas de Daumas Gassac",
+            "description": "The 'Grand Cru of the Languedoc', pioneering premium wines since the 1970s.",
+            "wines": [
+              {
+                "name": "Rouge",
+                "url": "https://www.vivino.com/search/wines?q=Daumas+Gassac"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Corbières & Minervois", "description": "Rugged, hilly appellations producing structured, garrigue-scented reds from old vines.", "geography": "Limestone and schist hills with Mediterranean scrubland.", "grapes": "Carignan, Grenache, Syrah." },
-          { "name": "Pic Saint-Loup", "description": "A rising star appellation north of Montpellier, producing elegant, higher-altitude reds.", "geography": "Cooler elevations with limestone soils at the foot of the Cévennes.", "grapes": "Syrah, Grenache, Mourvèdre." },
-          { "name": "Roussillon (Banyuls, Maury)", "description": "Home to France's finest Vins Doux Naturels (fortified sweet wines) from Grenache Noir and Muscat.", "geography": "Steep terraced hillsides on schist, close to the Spanish border.", "grapes": "Grenache Noir, Muscat." }
+          {
+            "name": "Corbières & Minervois",
+            "description": "Rugged, hilly appellations producing structured, garrigue-scented reds from old vines.",
+            "geography": "Limestone and schist hills with Mediterranean scrubland.",
+            "grapes": "Carignan, Grenache, Syrah."
+          },
+          {
+            "name": "Pic Saint-Loup",
+            "description": "A rising star appellation north of Montpellier, producing elegant, higher-altitude reds.",
+            "geography": "Cooler elevations with limestone soils at the foot of the Cévennes.",
+            "grapes": "Syrah, Grenache, Mourvèdre."
+          },
+          {
+            "name": "Roussillon (Banyuls, Maury)",
+            "description": "Home to France's finest Vins Doux Naturels (fortified sweet wines) from Grenache Noir and Muscat.",
+            "geography": "Steep terraced hillsides on schist, close to the Spanish border.",
+            "grapes": "Grenache Noir, Muscat."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [6.2, 43.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.2,
+          43.5
+        ]
+      },
       "properties": {
         "id": "provence",
         "name": "Provence",
@@ -1714,21 +3643,119 @@ export const wineRegionsData = {
         "geography": "Mediterranean climate with hot, dry summers and over 2,800 hours of sunshine annually. The Mistral wind is a constant presence, keeping vineyards dry and healthy. Mountain ranges to the north provide shelter from cold continental air.",
         "terroir": "Extremely diverse geology including limestone, schist, granite, volcanic, and sandstone soils. The best rosé vineyards occupy well-drained limestone and clay hillsides. Bandol, on the coast, benefits from unique terraced limestone slopes.",
         "grapes": [
-          { "name": "Grenache, Cinsault, Mourvèdre", "description": "The rosé blend trio. Grenache provides body and red fruit, Cinsault adds delicate floral notes and pale color, and Mourvèdre contributes structure.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Mourvèdre (Bandol)", "description": "In Bandol, Mourvèdre must comprise at least 50% of the red blend, producing deeply structured, gamey, age-worthy reds with leather, blackberry, and herbal complexity.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Grenache, Cinsault, Mourvèdre",
+            "description": "The rosé blend trio. Grenache provides body and red fruit, Cinsault adds delicate floral notes and pale color, and Mourvèdre contributes structure.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Mourvèdre (Bandol)",
+            "description": "In Bandol, Mourvèdre must comprise at least 50% of the red blend, producing deeply structured, gamey, age-worthy reds with leather, blackberry, and herbal complexity.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Domaine Tempier", "description": "The legendary Bandol estate that proved Mourvèdre's greatness.", "wines": [{ "name": "Bandol Rouge", "url": "https://www.vivino.com/search/wines?q=Domaine+Tempier+Bandol" }] }
+          {
+            "name": "Domaine Tempier",
+            "description": "The legendary Bandol estate that proved Mourvèdre's greatness.",
+            "wines": [
+              {
+                "name": "Bandol Rouge",
+                "url": "https://www.vivino.com/search/wines?q=Domaine+Tempier+Bandol"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Bandol", "description": "The most prestigious appellation, producing France's finest Mourvèdre-based reds requiring 18 months minimum aging.", "geography": "South-facing limestone terraces receiving maximal sun exposure.", "grapes": "Mourvèdre (≥50%), Grenache, Cinsault." },
-          { "name": "Côtes de Provence", "description": "The largest appellation and source of the world's most famous pale rosés.", "geography": "Rolling hills from the coast to inland limestone plateaus.", "grapes": "Grenache, Cinsault, Syrah." }
+          {
+            "name": "Bandol",
+            "description": "The most prestigious appellation, producing France's finest Mourvèdre-based reds requiring 18 months minimum aging.",
+            "geography": "South-facing limestone terraces receiving maximal sun exposure.",
+            "grapes": "Mourvèdre (≥50%), Grenache, Cinsault."
+          },
+          {
+            "name": "Côtes de Provence",
+            "description": "The largest appellation and source of the world's most famous pale rosés.",
+            "geography": "Rolling hills from the coast to inland limestone plateaus.",
+            "grapes": "Grenache, Cinsault, Syrah."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-122.8, 38.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8,
+          38.5
+        ]
+      },
       "properties": {
         "id": "sonoma",
         "name": "Sonoma County",
@@ -1737,23 +3764,130 @@ export const wineRegionsData = {
         "geography": "Far more topographically diverse than Napa, stretching from the cold, foggy Pacific coastline to warm, sheltered inland valleys. The Petaluma Gap channels ocean air and fog deep into the county, creating dramatically different microclimates within short distances.",
         "terroir": "Soils range from volcanic (Sonoma Mountain) to marine sedimentary (Sonoma Coast) to Gold Ridge sandy loam (Russian River Valley). This geological diversity allows an exceptionally wide range of grape varieties to thrive.",
         "grapes": [
-          { "name": "Pinot Noir", "description": "The star of the cool Russian River Valley and Sonoma Coast. Produces silky, perfumed wines with red cherry, cola, and baking spice notes, bridging Burgundy and New World styles.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Ranges from lean, mineral coastal styles to rich, buttery Russian River interpretations. Among California's finest.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Zinfandel", "description": "Old-vine Zinfandel from Dry Creek Valley produces jammy, spicy, high-alcohol reds with raspberry, black pepper, and licorice notes.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Noir",
+            "description": "The star of the cool Russian River Valley and Sonoma Coast. Produces silky, perfumed wines with red cherry, cola, and baking spice notes, bridging Burgundy and New World styles.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Ranges from lean, mineral coastal styles to rich, buttery Russian River interpretations. Among California's finest.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Zinfandel",
+            "description": "Old-vine Zinfandel from Dry Creek Valley produces jammy, spicy, high-alcohol reds with raspberry, black pepper, and licorice notes.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Williams Selyem", "description": "Iconic producer that defined luxury Russian River Pinot Noir.", "wines": [{ "name": "Pinot Noir", "url": "https://www.vivino.com/search/wines?q=Williams+Selyem+Pinot+Noir" }] }
+          {
+            "name": "Williams Selyem",
+            "description": "Iconic producer that defined luxury Russian River Pinot Noir.",
+            "wines": [
+              {
+                "name": "Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Williams+Selyem+Pinot+Noir"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Russian River Valley", "description": "The premier cool-climate AVA for Pinot Noir and Chardonnay, defined by morning fog from the Pacific.", "geography": "Low-lying valley floor with fog channeling from the coast. Gold Ridge sandy loam soils.", "grapes": "Pinot Noir, Chardonnay." },
-          { "name": "Dry Creek Valley", "description": "A warm, narrow valley famous for heritage old-vine Zinfandel dating back to the 1880s.", "geography": "Benchland terraces with well-draining gravelly loam.", "grapes": "Zinfandel, Cabernet Sauvignon." },
-          { "name": "Sonoma Coast", "description": "A vast, cool AVA stretching along the Pacific, producing some of California's most elegant, Burgundian-style wines.", "geography": "Steep, windswept ridges with thin, rocky soils and persistent fog and wind.", "grapes": "Pinot Noir, Chardonnay." }
+          {
+            "name": "Russian River Valley",
+            "description": "The premier cool-climate AVA for Pinot Noir and Chardonnay, defined by morning fog from the Pacific.",
+            "geography": "Low-lying valley floor with fog channeling from the coast. Gold Ridge sandy loam soils.",
+            "grapes": "Pinot Noir, Chardonnay."
+          },
+          {
+            "name": "Dry Creek Valley",
+            "description": "A warm, narrow valley famous for heritage old-vine Zinfandel dating back to the 1880s.",
+            "geography": "Benchland terraces with well-draining gravelly loam.",
+            "grapes": "Zinfandel, Cabernet Sauvignon."
+          },
+          {
+            "name": "Sonoma Coast",
+            "description": "A vast, cool AVA stretching along the Pacific, producing some of California's most elegant, Burgundian-style wines.",
+            "geography": "Steep, windswept ridges with thin, rocky soils and persistent fog and wind.",
+            "grapes": "Pinot Noir, Chardonnay."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [115, -33.9] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115,
+          -33.9
+        ]
+      },
       "properties": {
         "id": "margaret-river",
         "name": "Margaret River",
@@ -1762,23 +3896,138 @@ export const wineRegionsData = {
         "geography": "A narrow peninsula in Western Australia bounded by the Indian Ocean on two sides. The strong maritime influence creates an incredibly stable, moderate Mediterranean climate with minimal vintage variation. Warm, dry summers are tempered by constant sea breezes (the 'Fremantle Doctor').",
         "terroir": "Predominately ancient, nutrient-poor, well-draining gravelly loam over granite and gneiss bedrock. The infertile soils naturally restrict vine vigor, concentrating flavors. The dual-ocean influence moderates temperatures year-round.",
         "grapes": [
-          { "name": "Cabernet Sauvignon & Bordeaux Blends", "description": "Margaret River's Cabernets are Australia's most elegant: firm tannins, blackcurrant, bay leaf, and cedar, with a distinctive eucalyptus note. Often blended with Merlot.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Produces world-class, full-bodied Chardonnay rivaling white Burgundy, with citrus, stone fruit, cashew, and integrated oak.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Semillon-Sauvignon Blanc (SSB)", "description": "A classic regional blend inspired by white Bordeaux. Semillon provides weight and texture, while Sauvignon Blanc adds herbaceous lift.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Cabernet Sauvignon & Bordeaux Blends",
+            "description": "Margaret River's Cabernets are Australia's most elegant: firm tannins, blackcurrant, bay leaf, and cedar, with a distinctive eucalyptus note. Often blended with Merlot.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Produces world-class, full-bodied Chardonnay rivaling white Burgundy, with citrus, stone fruit, cashew, and integrated oak.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Semillon-Sauvignon Blanc (SSB)",
+            "description": "A classic regional blend inspired by white Bordeaux. Semillon provides weight and texture, while Sauvignon Blanc adds herbaceous lift.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Leeuwin Estate", "description": "Their 'Art Series' Chardonnay is consistently ranked among the world's greatest.", "wines": [{ "name": "Art Series Chardonnay", "url": "https://www.vivino.com/search/wines?q=Leeuwin+Art+Series+Chardonnay" }] },
-          { "name": "Cullen Wines", "description": "Pioneer of biodynamic viticulture in Australia. Their 'Diana Madeline' is iconic.", "wines": [{ "name": "Diana Madeline", "url": "https://www.vivino.com/search/wines?q=Cullen+Diana+Madeline" }] }
+          {
+            "name": "Leeuwin Estate",
+            "description": "Their 'Art Series' Chardonnay is consistently ranked among the world's greatest.",
+            "wines": [
+              {
+                "name": "Art Series Chardonnay",
+                "url": "https://www.vivino.com/search/wines?q=Leeuwin+Art+Series+Chardonnay"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Cullen Wines",
+            "description": "Pioneer of biodynamic viticulture in Australia. Their 'Diana Madeline' is iconic.",
+            "wines": [
+              {
+                "name": "Diana Madeline",
+                "url": "https://www.vivino.com/search/wines?q=Cullen+Diana+Madeline"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Wilyabrup", "description": "The heartland of premium Cabernet Sauvignon, home to the region's most concentrated and structured reds.", "geography": "Gravelly loam over laterite (ironstone). Sheltered from the strongest sea winds.", "grapes": "Cabernet Sauvignon, Merlot." },
-          { "name": "Wallcliffe", "description": "The southernmost sub-region with the strongest maritime influence, ideal for elegant whites.", "geography": "Closest to the Southern Ocean. Cooler, with granite-derived soils.", "grapes": "Chardonnay, Sauvignon Blanc." }
+          {
+            "name": "Wilyabrup",
+            "description": "The heartland of premium Cabernet Sauvignon, home to the region's most concentrated and structured reds.",
+            "geography": "Gravelly loam over laterite (ironstone). Sheltered from the strongest sea winds.",
+            "grapes": "Cabernet Sauvignon, Merlot."
+          },
+          {
+            "name": "Wallcliffe",
+            "description": "The southernmost sub-region with the strongest maritime influence, ideal for elegant whites.",
+            "geography": "Closest to the Southern Ocean. Cooler, with granite-derived soils.",
+            "grapes": "Chardonnay, Sauvignon Blanc."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [151.3, -32.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3,
+          -32.8
+        ]
+      },
       "properties": {
         "id": "hunter-valley",
         "name": "Hunter Valley",
@@ -1787,21 +4036,119 @@ export const wineRegionsData = {
         "geography": "Located 150km north of Sydney in New South Wales. Hot, humid, subtropical climate with the majority of rainfall occurring during the crucial harvest period (January-March). Cloud cover during the growing season actually moderates temperatures, preventing excessive heat stress.",
         "terroir": "Valley floor soils are heavy, red volcanic basalt and alluvial loam. The unique combination of cloud cover reducing UV intensity and volcanic soil creates wines of surprising elegance despite the warm latitude.",
         "grapes": [
-          { "name": "Semillon", "description": "Harvested extremely early (10-11% alc), unoaked, and tightly wound in youth. After 10-20 years, transforms into one of the world's great aged white wines with toast, honey, and lanolin complexity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Shiraz", "description": "A softer, more medium-bodied style than Barossa, characterized by earthy, leathery, sweaty-saddle aromas with plum and regional 'regional' character.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Semillon",
+            "description": "Harvested extremely early (10-11% alc), unoaked, and tightly wound in youth. After 10-20 years, transforms into one of the world's great aged white wines with toast, honey, and lanolin complexity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Shiraz",
+            "description": "A softer, more medium-bodied style than Barossa, characterized by earthy, leathery, sweaty-saddle aromas with plum and regional 'regional' character.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Tyrrell's", "description": "Historic family estate, famous for Vat 1 Semillon.", "wines": [{ "name": "Vat 1 Semillon", "url": "https://www.vivino.com/search/wines?q=Tyrrell+Vat+1+Semillon" }] }
+          {
+            "name": "Tyrrell's",
+            "description": "Historic family estate, famous for Vat 1 Semillon.",
+            "wines": [
+              {
+                "name": "Vat 1 Semillon",
+                "url": "https://www.vivino.com/search/wines?q=Tyrrell+Vat+1+Semillon"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Lower Hunter", "description": "The historic core of the region, centered around Pokolbin, producing the classic aged Semillon and earthy Shiraz.", "geography": "Valley floor with red volcanic basalt soils. Cloud cover provides natural UV protection.", "grapes": "Semillon, Shiraz." },
-          { "name": "Upper Hunter", "description": "Higher altitude, drier, and warmer. More focused on commercial varieties.", "geography": "Sandy, lighter soils with less humidity.", "grapes": "Chardonnay, Semillon." }
+          {
+            "name": "Lower Hunter",
+            "description": "The historic core of the region, centered around Pokolbin, producing the classic aged Semillon and earthy Shiraz.",
+            "geography": "Valley floor with red volcanic basalt soils. Cloud cover provides natural UV protection.",
+            "grapes": "Semillon, Shiraz."
+          },
+          {
+            "name": "Upper Hunter",
+            "description": "Higher altitude, drier, and warmer. More focused on commercial varieties.",
+            "geography": "Sandy, lighter soils with less humidity.",
+            "grapes": "Chardonnay, Semillon."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [140.8, -37.3] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.8,
+          -37.3
+        ]
+      },
       "properties": {
         "id": "coonawarra",
         "name": "Coonawarra",
@@ -1810,20 +4157,113 @@ export const wineRegionsData = {
         "geography": "Located in South Australia's Limestone Coast zone. A surprisingly cool maritime-influenced climate for Australia, moderated by proximity to the Southern Ocean. Temperatures are significantly lower than Barossa, allowing slow, even ripening of Cabernet Sauvignon.",
         "terroir": "The famous terra rossa (red earth) soil is a thin layer (30-60cm) of iron-rich, well-draining red clay sitting atop a deep limestone base. The limestone acts as a natural water reservoir, feeding the vines from below during dry periods while the red clay provides excellent drainage from above.",
         "grapes": [
-          { "name": "Cabernet Sauvignon", "description": "The undisputed star. Produces structured, medium to full-bodied wines with blackcurrant, mint/eucalyptus, and mulberry, supported by firm tannins and natural acidity. Among Australia's most age-worthy.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Shiraz", "description": "A cooler, more peppery and elegant style compared to Barossa, with dark fruit, spice, and earth.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "The undisputed star. Produces structured, medium to full-bodied wines with blackcurrant, mint/eucalyptus, and mulberry, supported by firm tannins and natural acidity. Among Australia's most age-worthy.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Shiraz",
+            "description": "A cooler, more peppery and elegant style compared to Barossa, with dark fruit, spice, and earth.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Wynns Coonawarra Estate", "description": "The defining producer. Their Black Label Cabernet is an Australian icon.", "wines": [{ "name": "Black Label Cabernet", "url": "https://www.vivino.com/search/wines?q=Wynns+Black+Label+Cabernet" }] }
+          {
+            "name": "Wynns Coonawarra Estate",
+            "description": "The defining producer. Their Black Label Cabernet is an Australian icon.",
+            "wines": [
+              {
+                "name": "Black Label Cabernet",
+                "url": "https://www.vivino.com/search/wines?q=Wynns+Black+Label+Cabernet"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Terra Rossa Strip", "description": "The narrow, renowned strip of red soil that produces the region's finest Cabernet Sauvignon.", "geography": "Just 12km long by 2km wide. Red clay over limestone.", "grapes": "Cabernet Sauvignon." }
+          {
+            "name": "Terra Rossa Strip",
+            "description": "The narrow, renowned strip of red soil that produces the region's finest Cabernet Sauvignon.",
+            "geography": "Just 12km long by 2km wide. Red clay over limestone.",
+            "grapes": "Cabernet Sauvignon."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [138.6, -35.2] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6,
+          -35.2
+        ]
+      },
       "properties": {
         "id": "mclaren-vale",
         "name": "McLaren Vale",
@@ -1832,21 +4272,119 @@ export const wineRegionsData = {
         "geography": "Mediterranean climate moderated by Gulf St Vincent to the west and the Mount Lofty Ranges to the east. Afternoon sea breezes ('the Doctor') cool vineyards daily. The region experiences significant mesoclimate variation across its compact area.",
         "terroir": "Extraordinarily diverse: over 40 distinct soil types within a small area, including sand over clay, hard ironstone, rich alluvium, and limestone. This diversity allows an unusually wide range of varieties and styles.",
         "grapes": [
-          { "name": "Shiraz", "description": "Rich, full-bodied, with dark chocolate, black fruit, and earthy notes. Often from ancient bush vines over 80 years old. Softer and more approachable than Barossa.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Grenache", "description": "Old-vine Grenache is experiencing a renaissance, producing ethereal, perfumed reds with raspberry, spice, and silky texture.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Shiraz",
+            "description": "Rich, full-bodied, with dark chocolate, black fruit, and earthy notes. Often from ancient bush vines over 80 years old. Softer and more approachable than Barossa.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Grenache",
+            "description": "Old-vine Grenache is experiencing a renaissance, producing ethereal, perfumed reds with raspberry, spice, and silky texture.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "d'Arenberg", "description": "Iconic for eccentric labels and outstanding old-vine wines.", "wines": [{ "name": "Dead Arm Shiraz", "url": "https://www.vivino.com/search/wines?q=d+Arenberg+Dead+Arm" }] }
+          {
+            "name": "d'Arenberg",
+            "description": "Iconic for eccentric labels and outstanding old-vine wines.",
+            "wines": [
+              {
+                "name": "Dead Arm Shiraz",
+                "url": "https://www.vivino.com/search/wines?q=d+Arenberg+Dead+Arm"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Blewitt Springs", "description": "Famous for deep sand over clay soils and ancient bush vine Grenache.", "geography": "Higher elevation with strong maritime influence. Sandy soils.", "grapes": "Grenache, Shiraz." },
-          { "name": "Seaview", "description": "Among McLaren Vale's coolest sites, producing more elegant, structured wines.", "geography": "South-facing slopes closest to the coast.", "grapes": "Shiraz, Cabernet Sauvignon." }
+          {
+            "name": "Blewitt Springs",
+            "description": "Famous for deep sand over clay soils and ancient bush vine Grenache.",
+            "geography": "Higher elevation with strong maritime influence. Sandy soils.",
+            "grapes": "Grenache, Shiraz."
+          },
+          {
+            "name": "Seaview",
+            "description": "Among McLaren Vale's coolest sites, producing more elegant, structured wines.",
+            "geography": "South-facing slopes closest to the coast.",
+            "grapes": "Shiraz, Cabernet Sauvignon."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [138.7, -34.9] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.7,
+          -34.9
+        ]
+      },
       "properties": {
         "id": "adelaide-hills",
         "name": "Adelaide Hills",
@@ -1855,21 +4393,119 @@ export const wineRegionsData = {
         "geography": "Located in the Mount Lofty Ranges east of Adelaide, with vineyards planted at 400-700m elevation. Significantly cooler than neighboring Barossa and McLaren Vale. High rainfall by Australian standards, with cold winters and cool summers.",
         "terroir": "Soils are predominantly sandy loam over clay subsoils, with patches of ancient ironstone and decomposed quartzite. The altitude provides natural acid retention and slow, even ripening.",
         "grapes": [
-          { "name": "Sauvignon Blanc", "description": "Produces Australia's finest examples: vibrant, herbaceous, with gooseberry and citrus, rivaling Loire and Marlborough styles.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Pinot Noir & Chardonnay", "description": "Essential for premium sparkling wine (traditional method) and increasingly impressive still wines with Burgundian elegance.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Sauvignon Blanc",
+            "description": "Produces Australia's finest examples: vibrant, herbaceous, with gooseberry and citrus, rivaling Loire and Marlborough styles.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinot Noir & Chardonnay",
+            "description": "Essential for premium sparkling wine (traditional method) and increasingly impressive still wines with Burgundian elegance.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Shaw + Smith", "description": "Benchmark producers of cool-climate Sauvignon Blanc and Chardonnay.", "wines": [{ "name": "M3 Chardonnay", "url": "https://www.vivino.com/search/wines?q=Shaw+Smith+M3+Chardonnay" }] }
+          {
+            "name": "Shaw + Smith",
+            "description": "Benchmark producers of cool-climate Sauvignon Blanc and Chardonnay.",
+            "wines": [
+              {
+                "name": "M3 Chardonnay",
+                "url": "https://www.vivino.com/search/wines?q=Shaw+Smith+M3+Chardonnay"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Piccadilly Valley", "description": "The coolest, highest sub-region, ideal for sparkling base wines and elegant Chardonnay.", "geography": "650-700m elevation. Heavy clay soils with high water retention.", "grapes": "Chardonnay, Pinot Noir." },
-          { "name": "Lenswood", "description": "Slightly warmer, producing structured Sauvignon Blanc and Pinot Noir.", "geography": "Northeast-facing slopes with decomposed sandstone.", "grapes": "Sauvignon Blanc, Pinot Noir." }
+          {
+            "name": "Piccadilly Valley",
+            "description": "The coolest, highest sub-region, ideal for sparkling base wines and elegant Chardonnay.",
+            "geography": "650-700m elevation. Heavy clay soils with high water retention.",
+            "grapes": "Chardonnay, Pinot Noir."
+          },
+          {
+            "name": "Lenswood",
+            "description": "Slightly warmer, producing structured Sauvignon Blanc and Pinot Noir.",
+            "geography": "Northeast-facing slopes with decomposed sandstone.",
+            "grapes": "Sauvignon Blanc, Pinot Noir."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [176.8, -39.6] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.8,
+          -39.6
+        ]
+      },
       "properties": {
         "id": "hawkes-bay",
         "name": "Hawke's Bay",
@@ -1878,22 +4514,124 @@ export const wineRegionsData = {
         "geography": "Located on the east coast of the North Island. The warmest and sunniest wine region in New Zealand, with a maritime climate moderated by the Pacific. Protected from westerly rain by mountain ranges, creating a rain shadow.",
         "terroir": "The Gimblett Gravels sub-region is the crown jewel: a former riverbed composed of deep, free-draining alluvial gravels that absorb and radiate heat, creating a uniquely warm mesoclimate perfect for late-ripening red varieties.",
         "grapes": [
-          { "name": "Cabernet Sauvignon & Merlot", "description": "Bordeaux-style blends are the flagship: medium to full-bodied with blackcurrant, plum, and bell pepper, with fine-grained tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Syrah", "description": "Hawke's Bay Syrah is gaining international acclaim, producing peppery, medium-bodied, elegant wines reminiscent of Northern Rhône.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Full-bodied, rich examples with stone fruit, citrus, and well-integrated oak.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Cabernet Sauvignon & Merlot",
+            "description": "Bordeaux-style blends are the flagship: medium to full-bodied with blackcurrant, plum, and bell pepper, with fine-grained tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Syrah",
+            "description": "Hawke's Bay Syrah is gaining international acclaim, producing peppery, medium-bodied, elegant wines reminiscent of Northern Rhône.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Full-bodied, rich examples with stone fruit, citrus, and well-integrated oak.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Craggy Range", "description": "Iconic producer with single-vineyard expressions from Gimblett Gravels.", "wines": [{ "name": "Sophia", "url": "https://www.vivino.com/search/wines?q=Craggy+Range+Sophia" }] }
+          {
+            "name": "Craggy Range",
+            "description": "Iconic producer with single-vineyard expressions from Gimblett Gravels.",
+            "wines": [
+              {
+                "name": "Sophia",
+                "url": "https://www.vivino.com/search/wines?q=Craggy+Range+Sophia"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Gimblett Gravels", "description": "New Zealand's most terroir-specific sub-region, a former riverbed producing the country's finest red wines.", "geography": "Deep, free-draining alluvial gravels that absorb and radiate heat. One of NZ's warmest mesoclimates.", "grapes": "Cabernet Sauvignon, Merlot, Syrah." },
-          { "name": "Bridge Pa Triangle", "description": "A sheltered inland triangle producing rich reds and aromatic whites.", "geography": "Silt and gravel soils between old river terraces.", "grapes": "Merlot, Syrah, Chardonnay." }
+          {
+            "name": "Gimblett Gravels",
+            "description": "New Zealand's most terroir-specific sub-region, a former riverbed producing the country's finest red wines.",
+            "geography": "Deep, free-draining alluvial gravels that absorb and radiate heat. One of NZ's warmest mesoclimates.",
+            "grapes": "Cabernet Sauvignon, Merlot, Syrah."
+          },
+          {
+            "name": "Bridge Pa Triangle",
+            "description": "A sheltered inland triangle producing rich reds and aromatic whites.",
+            "geography": "Silt and gravel soils between old river terraces.",
+            "grapes": "Merlot, Syrah, Chardonnay."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [8, 50] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8,
+          50
+        ]
+      },
       "properties": {
         "id": "rheingau",
         "name": "Rheingau",
@@ -1902,21 +4640,119 @@ export const wineRegionsData = {
         "geography": "Located where the Rhine turns sharply west, creating a unique south-facing amphitheater of slopes. This orientation maximizes sun exposure at this northerly latitude. The Rhine River acts as a heat reservoir, reflecting warmth onto the vines and moderating frost risk.",
         "terroir": "Soils are diverse: slate and quartzite on the upper slopes (producing racy, mineral Rieslings), phyllite and loess in the middle (richer, fuller wines), and deep loess and clay on the lower slopes. The south-facing aspect is the defining quality factor.",
         "grapes": [
-          { "name": "Riesling", "description": "Produces a distinctly fuller, drier, more powerful style than the Mosel. Rheingau Rieslings tend toward ripe stone fruit, quince, and slate minerality with firm acidity and medium body.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Spätburgunder (Pinot Noir)", "description": "The Rheingau's Assmannshausen village is famous for Germany's finest Pinot Noir: delicate, perfumed, and earthy.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling",
+            "description": "Produces a distinctly fuller, drier, more powerful style than the Mosel. Rheingau Rieslings tend toward ripe stone fruit, quince, and slate minerality with firm acidity and medium body.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Spätburgunder (Pinot Noir)",
+            "description": "The Rheingau's Assmannshausen village is famous for Germany's finest Pinot Noir: delicate, perfumed, and earthy.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Schloss Johannisberg", "description": "The world's first documented Riesling vineyard (1720) and birthplace of Spätlese.", "wines": [{ "name": "Gelblack Spätlese", "url": "https://www.vivino.com/search/wines?q=Schloss+Johannisberg+Riesling" }] }
+          {
+            "name": "Schloss Johannisberg",
+            "description": "The world's first documented Riesling vineyard (1720) and birthplace of Spätlese.",
+            "wines": [
+              {
+                "name": "Gelblack Spätlese",
+                "url": "https://www.vivino.com/search/wines?q=Schloss+Johannisberg+Riesling"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Hochheim", "description": "The easternmost commune, situated on the Main river. Produces fuller, richer Rieslings. The English word 'Hock' (for German wine) derives from this town.", "geography": "Warmer mesoclimate on the Main river. Loess and marl soils.", "grapes": "Riesling." },
-          { "name": "Rüdesheim & Assmannshausen", "description": "Rüdesheim's Berg vineyards produce powerful Riesling; neighboring Assmannshausen is Germany's most prestigious Pinot Noir site.", "geography": "Steep, south-facing slate slopes overlooking the Rhine gorge.", "grapes": "Riesling, Spätburgunder." }
+          {
+            "name": "Hochheim",
+            "description": "The easternmost commune, situated on the Main river. Produces fuller, richer Rieslings. The English word 'Hock' (for German wine) derives from this town.",
+            "geography": "Warmer mesoclimate on the Main river. Loess and marl soils.",
+            "grapes": "Riesling."
+          },
+          {
+            "name": "Rüdesheim & Assmannshausen",
+            "description": "Rüdesheim's Berg vineyards produce powerful Riesling; neighboring Assmannshausen is Germany's most prestigious Pinot Noir site.",
+            "geography": "Steep, south-facing slate slopes overlooking the Rhine gorge.",
+            "grapes": "Riesling, Spätburgunder."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [8.2, 49.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2,
+          49.8
+        ]
+      },
       "properties": {
         "id": "rheinhessen",
         "name": "Rheinhessen",
@@ -1925,21 +4761,119 @@ export const wineRegionsData = {
         "geography": "A broad, gently rolling region on the west bank of the Rhine. Protected from cold winds by surrounding hills, it is one of Germany's warmest and driest regions. The best vineyards face east and southeast toward the Rhine.",
         "terroir": "Extremely varied soils. The famous 'Roter Hang' near Nierstein features red iron oxide-rich sandstone and slate that produce uniquely mineral, spicy Rieslings. Elsewhere, loess, limestone, and clay dominate.",
         "grapes": [
-          { "name": "Riesling", "description": "From the best sites (Roter Hang), produces powerful, mineral-driven dry wines with peach, citrus, and distinctive iron/blood-orange notes.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Silvaner", "description": "The traditional variety, producing round, gentle wines with subtle herbal and apple notes. Still important in older plantings.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling",
+            "description": "From the best sites (Roter Hang), produces powerful, mineral-driven dry wines with peach, citrus, and distinctive iron/blood-orange notes.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Silvaner",
+            "description": "The traditional variety, producing round, gentle wines with subtle herbal and apple notes. Still important in older plantings.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Keller", "description": "Now among Germany's most sought-after estates, with Grand Cru Rieslings commanding Burgundian prices.", "wines": [{ "name": "G-Max Riesling", "url": "https://www.vivino.com/search/wines?q=Keller+G+Max+Riesling" }] }
+          {
+            "name": "Keller",
+            "description": "Now among Germany's most sought-after estates, with Grand Cru Rieslings commanding Burgundian prices.",
+            "wines": [
+              {
+                "name": "G-Max Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Keller+G+Max+Riesling"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Nierstein (Roter Hang)", "description": "The steep red-soiled slopes along the Rhine producing Rheinhessen's most prestigious and mineral Rieslings.", "geography": "East-facing slopes with unique red sandstone and iron-rich soils.", "grapes": "Riesling." },
-          { "name": "Wonnegau", "description": "The southern section, increasingly recognized for limestone-based dry Riesling and Burgundian varieties.", "geography": "Gently rolling hills with calcareous soils.", "grapes": "Riesling, Spätburgunder." }
+          {
+            "name": "Nierstein (Roter Hang)",
+            "description": "The steep red-soiled slopes along the Rhine producing Rheinhessen's most prestigious and mineral Rieslings.",
+            "geography": "East-facing slopes with unique red sandstone and iron-rich soils.",
+            "grapes": "Riesling."
+          },
+          {
+            "name": "Wonnegau",
+            "description": "The southern section, increasingly recognized for limestone-based dry Riesling and Burgundian varieties.",
+            "geography": "Gently rolling hills with calcareous soils.",
+            "grapes": "Riesling, Spätburgunder."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [15.4, 48.4] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.4,
+          48.4
+        ]
+      },
       "properties": {
         "id": "wachau",
         "name": "Wachau",
@@ -1948,22 +4882,133 @@ export const wineRegionsData = {
         "geography": "A dramatic, narrow Danube gorge carved through crystalline bedrock in Lower Austria. The river creates a warm corridor sheltered from cold northern winds. Continental climate with warm Pannonian influences from the east.",
         "terroir": "Steep, terraced hillsides composed of ancient primary rock: granite (Loiben) and gneiss (Spitz), along with patches of loess. The stone terraces absorb daytime heat and radiate it at night, critical for ripening at this latitude. Vineyards can exceed 45° slope angles.",
         "grapes": [
-          { "name": "Grüner Veltliner", "description": "Austria's signature white grape. In the Wachau, it produces powerful, dry wines with white pepper, green bean, citrus, and lentil notes, developing remarkable honeyed complexity with age.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Riesling", "description": "The Wachau's finest vineyards (Achleiten, Kellerberg) produce Rieslings that rival the Rheingau and Alsace: powerful, mineral, with apricot, peach, and stony tension.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Grüner Veltliner",
+            "description": "Austria's signature white grape. In the Wachau, it produces powerful, dry wines with white pepper, green bean, citrus, and lentil notes, developing remarkable honeyed complexity with age.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Riesling",
+            "description": "The Wachau's finest vineyards (Achleiten, Kellerberg) produce Rieslings that rival the Rheingau and Alsace: powerful, mineral, with apricot, peach, and stony tension.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Domäne Wachau", "description": "The largest and most important cooperative, producing benchmark wines across all three tiers.", "wines": [{ "name": "Smaragd Grüner Veltliner Achleiten", "url": "https://www.vivino.com/search/wines?q=Domane+Wachau+Smaragd" }] },
-          { "name": "F.X. Pichler", "description": "The cult icon of Austrian wine, famous for age-worthy, monumental Smaragd Rieslings.", "wines": [{ "name": "Unendlich Riesling", "url": "https://www.vivino.com/search/wines?q=FX+Pichler+Unendlich" }] }
+          {
+            "name": "Domäne Wachau",
+            "description": "The largest and most important cooperative, producing benchmark wines across all three tiers.",
+            "wines": [
+              {
+                "name": "Smaragd Grüner Veltliner Achleiten",
+                "url": "https://www.vivino.com/search/wines?q=Domane+Wachau+Smaragd"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          },
+          {
+            "name": "F.X. Pichler",
+            "description": "The cult icon of Austrian wine, famous for age-worthy, monumental Smaragd Rieslings.",
+            "wines": [
+              {
+                "name": "Unendlich Riesling",
+                "url": "https://www.vivino.com/search/wines?q=FX+Pichler+Unendlich"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Loiben", "description": "The warmest section, home to the legendary Loibenberg vineyard. Produces the most powerful Grüner Veltliners.", "geography": "South-facing terraced slopes of primary granite rock.", "grapes": "Grüner Veltliner, Riesling." },
-          { "name": "Spitz", "description": "Cooler western section producing the most elegant, mineral-driven Rieslings.", "geography": "Steeper, narrower gorge with gneiss and mica-schist soils.", "grapes": "Riesling, Grüner Veltliner." }
+          {
+            "name": "Loiben",
+            "description": "The warmest section, home to the legendary Loibenberg vineyard. Produces the most powerful Grüner Veltliners.",
+            "geography": "South-facing terraced slopes of primary granite rock.",
+            "grapes": "Grüner Veltliner, Riesling."
+          },
+          {
+            "name": "Spitz",
+            "description": "Cooler western section producing the most elegant, mineral-driven Rieslings.",
+            "geography": "Steeper, narrower gorge with gneiss and mica-schist soils.",
+            "grapes": "Riesling, Grüner Veltliner."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-8.8, 42.3] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.8,
+          42.3
+        ]
+      },
       "properties": {
         "id": "rias-baixas",
         "name": "Rías Baixas",
@@ -1972,20 +5017,114 @@ export const wineRegionsData = {
         "geography": "Atlantic climate: cool, wet, and heavily influenced by the ocean. High rainfall (over 1,500mm annually) creates constant pressure from mildew and rot. Vines are traditionally trained high on granite pergolas to maximize ventilation and reduce disease.",
         "terroir": "Predominantly granite and sandy soils over granite bedrock. These acidic, free-draining soils maintain naturally high acidity in the wines. The granite also provides a subtle mineral quality often described as 'salty' or 'stony.'",
         "grapes": [
-          { "name": "Albariño", "description": "The signature grape: thick-skinned, aromatic, producing crisp, refreshing wines with peach, apricot, citrus, and a distinctive saline, almond-skin finish. High natural acidity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Albariño",
+            "description": "The signature grape: thick-skinned, aromatic, producing crisp, refreshing wines with peach, apricot, citrus, and a distinctive saline, almond-skin finish. High natural acidity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Pazo de Señoráns", "description": "Benchmark producer of age-worthy Albariño with remarkable complexity.", "wines": [{ "name": "Selección de Añada", "url": "https://www.vivino.com/search/wines?q=Pazo+de+Senorans+Seleccion" }] }
+          {
+            "name": "Pazo de Señoráns",
+            "description": "Benchmark producer of age-worthy Albariño with remarkable complexity.",
+            "wines": [
+              {
+                "name": "Selección de Añada",
+                "url": "https://www.vivino.com/search/wines?q=Pazo+de+Senorans+Seleccion"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Val do Salnés", "description": "The original and coolest sub-zone, closest to the Atlantic. Produces the crispest, most mineral Albariños.", "geography": "Closest to the ocean with the highest rainfall. Granite soils.", "grapes": "Albariño." },
-          { "name": "Condado do Tea", "description": "The warmest, most inland sub-zone, producing fuller-bodied wines with more tropical fruit.", "geography": "Protected from Atlantic influence by hills. Alluvial and granite soils.", "grapes": "Albariño, Treixadura." }
+          {
+            "name": "Val do Salnés",
+            "description": "The original and coolest sub-zone, closest to the Atlantic. Produces the crispest, most mineral Albariños.",
+            "geography": "Closest to the ocean with the highest rainfall. Granite soils.",
+            "grapes": "Albariño."
+          },
+          {
+            "name": "Condado do Tea",
+            "description": "The warmest, most inland sub-zone, producing fuller-bodied wines with more tropical fruit.",
+            "geography": "Protected from Atlantic influence by hills. Alluvial and granite soils.",
+            "grapes": "Albariño, Treixadura."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.2, -34.7] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2,
+          -34.7
+        ]
+      },
       "properties": {
         "id": "colchagua",
         "name": "Colchagua Valley",
@@ -1994,22 +5133,133 @@ export const wineRegionsData = {
         "geography": "A warm, dry Mediterranean climate with the Andes to the east and the Coastal Range to the west. Pacific breezes funnel through gaps in the Coastal Range, providing crucial afternoon cooling. The Tinguiririca River provides irrigation water from Andean snowmelt.",
         "terroir": "Diverse soils from alluvial deposits in the valley floor to decomposed granite and clay on hillsides. The Apalta amphitheater has unique colluvial soils (granite and clay washed down from surrounding mountains) that stress vines and concentrate flavors.",
         "grapes": [
-          { "name": "Carménère", "description": "Chile's signature grape finds its finest expression here. Rich, velvety wines with roasted red pepper, dark plum, chocolate, and coffee notes with supple tannins.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Cabernet Sauvignon & Syrah", "description": "Powerful, sun-drenched reds with blackberry, cassis, and spice. Syrah from cooler coastal sites shows remarkable peppery elegance.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Carménère",
+            "description": "Chile's signature grape finds its finest expression here. Rich, velvety wines with roasted red pepper, dark plum, chocolate, and coffee notes with supple tannins.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Sauvignon & Syrah",
+            "description": "Powerful, sun-drenched reds with blackberry, cassis, and spice. Syrah from cooler coastal sites shows remarkable peppery elegance.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Viña Montes", "description": "Pioneers of hillside planting in Apalta with their iconic Folly vineyard.", "wines": [{ "name": "Montes Alpha M", "url": "https://www.vivino.com/search/wines?q=Montes+Alpha+M" }] },
-          { "name": "Lapostolle", "description": "French-owned estate producing Clos Apalta, a world-class Bordeaux-style blend.", "wines": [{ "name": "Clos Apalta", "url": "https://www.vivino.com/search/wines?q=Clos+Apalta" }] }
+          {
+            "name": "Viña Montes",
+            "description": "Pioneers of hillside planting in Apalta with their iconic Folly vineyard.",
+            "wines": [
+              {
+                "name": "Montes Alpha M",
+                "url": "https://www.vivino.com/search/wines?q=Montes+Alpha+M"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Lapostolle",
+            "description": "French-owned estate producing Clos Apalta, a world-class Bordeaux-style blend.",
+            "wines": [
+              {
+                "name": "Clos Apalta",
+                "url": "https://www.vivino.com/search/wines?q=Clos+Apalta"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Apalta", "description": "A unique, sheltered amphitheater producing Chile's most concentrated, powerful red wines.", "geography": "A natural amphitheater surrounded by mountains, trapping heat. Colluvial granite and clay soils.", "grapes": "Carménère, Cabernet Sauvignon, Merlot." },
-          { "name": "Marchigüe", "description": "Closer to the coast, receiving more maritime influence for slightly cooler expressions.", "geography": "Rolling hills with alluvial soils. Coastal breezes moderate afternoon heat.", "grapes": "Syrah, Sauvignon Blanc." }
+          {
+            "name": "Apalta",
+            "description": "A unique, sheltered amphitheater producing Chile's most concentrated, powerful red wines.",
+            "geography": "A natural amphitheater surrounded by mountains, trapping heat. Colluvial granite and clay soils.",
+            "grapes": "Carménère, Cabernet Sauvignon, Merlot."
+          },
+          {
+            "name": "Marchigüe",
+            "description": "Closer to the coast, receiving more maritime influence for slightly cooler expressions.",
+            "geography": "Rolling hills with alluvial soils. Coastal breezes moderate afternoon heat.",
+            "grapes": "Syrah, Sauvignon Blanc."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [25, 38] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25,
+          38
+        ]
+      },
       "properties": {
         "id": "greece",
         "name": "Greece (Santorini & Naoussa)",
@@ -2018,22 +5268,133 @@ export const wineRegionsData = {
         "geography": "Predominantly Mediterranean climate: hot, dry summers and mild, wet winters. Santorini is a volcanic island in the Aegean Sea with extreme wind exposure, where vines are trained in low basket shapes ('kouloura') to protect from wind. Naoussa, in northern Macedonia, has a cooler continental climate on the slopes of Mount Vermion.",
         "terroir": "Santorini's soils are volcanic pumice and ash, phylloxera-free, with some of the oldest vines in the world (200+ years). Naoussa features limestone and clay on mountain slopes at 200-450m elevation. Both terroirs produce wines of remarkable minerality and structure.",
         "grapes": [
-          { "name": "Assyrtiko", "description": "Santorini's star: bone-dry, searingly high acidity, medium to full-bodied with citrus, stone fruit, saline minerality, and a chalky texture. Retains acidity despite extreme heat.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Xinomavro", "description": "Greece's answer to Nebbiolo: high acidity, high tannins, pale color, with aromas of tomato, olive, dried herbs, red fruit, and gooseberry. Highly age-worthy.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Assyrtiko",
+            "description": "Santorini's star: bone-dry, searingly high acidity, medium to full-bodied with citrus, stone fruit, saline minerality, and a chalky texture. Retains acidity despite extreme heat.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Xinomavro",
+            "description": "Greece's answer to Nebbiolo: high acidity, high tannins, pale color, with aromas of tomato, olive, dried herbs, red fruit, and gooseberry. Highly age-worthy.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Domaine Sigalas", "description": "Benchmark Santorini producer, preserving ancient bush vines.", "wines": [{ "name": "Assyrtiko", "url": "https://www.vivino.com/search/wines?q=Sigalas+Assyrtiko" }] },
-          { "name": "Kir-Yianni", "description": "Leading Naoussa producer, showcasing Xinomavro's aging potential.", "wines": [{ "name": "Ramnista Xinomavro", "url": "https://www.vivino.com/search/wines?q=Kir+Yianni+Ramnista" }] }
+          {
+            "name": "Domaine Sigalas",
+            "description": "Benchmark Santorini producer, preserving ancient bush vines.",
+            "wines": [
+              {
+                "name": "Assyrtiko",
+                "url": "https://www.vivino.com/search/wines?q=Sigalas+Assyrtiko"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Kir-Yianni",
+            "description": "Leading Naoussa producer, showcasing Xinomavro's aging potential.",
+            "wines": [
+              {
+                "name": "Ramnista Xinomavro",
+                "url": "https://www.vivino.com/search/wines?q=Kir+Yianni+Ramnista"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Santorini PDO", "description": "Volcanic island producing Greece's most famous whites from ancient, pre-phylloxera Assyrtiko vines.", "geography": "Volcanic pumice soils, extreme wind, extremely arid summers. Vines trained as low baskets.", "grapes": "Assyrtiko, Athiri, Aidani." },
-          { "name": "Naoussa PDO", "description": "Northern Greece's finest red wine appellation, producing age-worthy, structured Xinomavro.", "geography": "Mountain slopes of Mt. Vermion (200-450m) with limestone and clay. Cool continental climate.", "grapes": "100% Xinomavro." }
+          {
+            "name": "Santorini PDO",
+            "description": "Volcanic island producing Greece's most famous whites from ancient, pre-phylloxera Assyrtiko vines.",
+            "geography": "Volcanic pumice soils, extreme wind, extremely arid summers. Vines trained as low baskets.",
+            "grapes": "Assyrtiko, Athiri, Aidani."
+          },
+          {
+            "name": "Naoussa PDO",
+            "description": "Northern Greece's finest red wine appellation, producing age-worthy, structured Xinomavro.",
+            "geography": "Mountain slopes of Mt. Vermion (200-450m) with limestone and clay. Cool continental climate.",
+            "grapes": "100% Xinomavro."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-76.8, 42.6] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.8,
+          42.6
+        ]
+      },
       "properties": {
         "id": "finger-lakes",
         "name": "Finger Lakes",
@@ -2042,22 +5403,133 @@ export const wineRegionsData = {
         "geography": "Cold continental climate with severe winters (-20°C). The deep glacial lakes (Seneca, Cayuga, Keuka) act as thermal buffers: they absorb summer heat and slowly release it through autumn, extending the growing season and preventing deadly early frosts. Without the lakes, grapes simply could not ripen here.",
         "terroir": "The best vineyards are planted on the steep slopes directly above the lakes, benefiting from superior cold-air drainage and reflected warmth. Soils are predominantly shale and limestone, providing excellent drainage and adding mineral complexity. The slate retains heat during the day.",
         "grapes": [
-          { "name": "Riesling", "description": "The star variety, producing dry to sweet styles with piercing acidity, green apple, lime, and petrol notes. Often compared favorably to German and Alsatian Rieslings.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Cabernet Franc", "description": "The most successful red variety, producing lighter, aromatic reds with raspberry, bell pepper, and herbaceous notes.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling",
+            "description": "The star variety, producing dry to sweet styles with piercing acidity, green apple, lime, and petrol notes. Often compared favorably to German and Alsatian Rieslings.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Franc",
+            "description": "The most successful red variety, producing lighter, aromatic reds with raspberry, bell pepper, and herbaceous notes.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Dr. Konstantin Frank", "description": "The visionary who proved vinifera grapes could survive New York winters.", "wines": [{ "name": "Dry Riesling", "url": "https://www.vivino.com/search/wines?q=Dr+Konstantin+Frank+Riesling" }] },
-          { "name": "Hermann J. Wiemer", "description": "Benchmark producer of world-class Finger Lakes Riesling.", "wines": [{ "name": "Dry Riesling", "url": "https://www.vivino.com/search/wines?q=Hermann+Wiemer+Riesling" }] }
+          {
+            "name": "Dr. Konstantin Frank",
+            "description": "The visionary who proved vinifera grapes could survive New York winters.",
+            "wines": [
+              {
+                "name": "Dry Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Dr+Konstantin+Frank+Riesling"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          },
+          {
+            "name": "Hermann J. Wiemer",
+            "description": "Benchmark producer of world-class Finger Lakes Riesling.",
+            "wines": [
+              {
+                "name": "Dry Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Hermann+Wiemer+Riesling"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Seneca Lake", "description": "The deepest lake (188m), providing the most effective thermal moderation. Produces the region's most powerful, concentrated Rieslings.", "geography": "Steep shale slopes above the deepest Finger Lake.", "grapes": "Riesling, Cabernet Franc." },
-          { "name": "Keuka Lake", "description": "The historic heart of Finger Lakes winemaking, site of the earliest commercial vineyards.", "geography": "Y-shaped lake with multiple slope exposures.", "grapes": "Riesling, Vignoles." }
+          {
+            "name": "Seneca Lake",
+            "description": "The deepest lake (188m), providing the most effective thermal moderation. Produces the region's most powerful, concentrated Rieslings.",
+            "geography": "Steep shale slopes above the deepest Finger Lake.",
+            "grapes": "Riesling, Cabernet Franc."
+          },
+          {
+            "name": "Keuka Lake",
+            "description": "The historic heart of Finger Lakes winemaking, site of the earliest commercial vineyards.",
+            "geography": "Y-shaped lake with multiple slope exposures.",
+            "grapes": "Riesling, Vignoles."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-120.2, 34.7] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2,
+          34.7
+        ]
+      },
       "properties": {
         "id": "santa-barbara",
         "name": "Santa Barbara County",
@@ -2066,23 +5538,130 @@ export const wineRegionsData = {
         "geography": "Cool maritime climate due to the unique east-west oriented valleys that channel ocean influence far inland. The Santa Ynez and Santa Maria Valleys act as corridors for Pacific fog and wind. Temperatures can be 15°C cooler than regions just over the mountains.",
         "terroir": "Soils include marine sedimentary (diatomaceous earth in Sta. Rita Hills), sandy loam, and clay. The diatomaceous earth—ancient compressed marine organisms—provides exceptional drainage and adds a chalky, mineral quality.",
         "grapes": [
-          { "name": "Pinot Noir", "description": "Produces elegant, Burgundy-inspired wines with bright red fruit, earth, and fine tannins. The Sta. Rita Hills AVA is particularly acclaimed.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Crisp, mineral-driven styles from cooler sites, ranging to richer, tropical expressions in warmer pockets.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Syrah", "description": "Increasingly important, producing peppery, cool-climate styles reminiscent of the Northern Rhône.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Noir",
+            "description": "Produces elegant, Burgundy-inspired wines with bright red fruit, earth, and fine tannins. The Sta. Rita Hills AVA is particularly acclaimed.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Crisp, mineral-driven styles from cooler sites, ranging to richer, tropical expressions in warmer pockets.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Syrah",
+            "description": "Increasingly important, producing peppery, cool-climate styles reminiscent of the Northern Rhône.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Au Bon Climat", "description": "Jim Clendenen's iconic estate, pioneering Burgundian winemaking in Santa Barbara.", "wines": [{ "name": "Pinot Noir", "url": "https://www.vivino.com/search/wines?q=Au+Bon+Climat+Pinot+Noir" }] }
+          {
+            "name": "Au Bon Climat",
+            "description": "Jim Clendenen's iconic estate, pioneering Burgundian winemaking in Santa Barbara.",
+            "wines": [
+              {
+                "name": "Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Au+Bon+Climat+Pinot+Noir"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Sta. Rita Hills", "description": "The coolest, most fog-influenced AVA producing Santa Barbara's most acclaimed Pinot Noirs.", "geography": "Western end of the Santa Ynez Valley, fully exposed to Pacific fog. Diatomaceous earth and clay.", "grapes": "Pinot Noir, Chardonnay." },
-          { "name": "Santa Maria Valley", "description": "A broad, cool valley producing excellent Chardonnay and Pinot Noir, home to legendary vineyards like Bien Nacido.", "geography": "East-west valley open to persistent ocean winds. Sandy loam soils.", "grapes": "Chardonnay, Pinot Noir, Syrah." },
-          { "name": "Happy Canyon", "description": "The warmest, most inland AVA, sheltered from ocean influence, excelling with Bordeaux varieties.", "geography": "Eastern end of the Santa Ynez Valley. Sandy soils with gravel.", "grapes": "Cabernet Sauvignon, Sauvignon Blanc." }
+          {
+            "name": "Sta. Rita Hills",
+            "description": "The coolest, most fog-influenced AVA producing Santa Barbara's most acclaimed Pinot Noirs.",
+            "geography": "Western end of the Santa Ynez Valley, fully exposed to Pacific fog. Diatomaceous earth and clay.",
+            "grapes": "Pinot Noir, Chardonnay."
+          },
+          {
+            "name": "Santa Maria Valley",
+            "description": "A broad, cool valley producing excellent Chardonnay and Pinot Noir, home to legendary vineyards like Bien Nacido.",
+            "geography": "East-west valley open to persistent ocean winds. Sandy loam soils.",
+            "grapes": "Chardonnay, Pinot Noir, Syrah."
+          },
+          {
+            "name": "Happy Canyon",
+            "description": "The warmest, most inland AVA, sheltered from ocean influence, excelling with Bordeaux varieties.",
+            "geography": "Eastern end of the Santa Ynez Valley. Sandy soils with gravel.",
+            "grapes": "Cabernet Sauvignon, Sauvignon Blanc."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [11.3, 46.7] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3,
+          46.7
+        ]
+      },
       "properties": {
         "id": "alto-adige",
         "name": "Alto Adige (Südtirol)",
@@ -2091,22 +5670,124 @@ export const wineRegionsData = {
         "geography": "Alpine climate with warm, dry summers and cold winters. The key feature is extreme altitude—vineyards range from 200m on the valley floor to over 1,000m on mountain slopes. The Ora wind blows warm air up from Lake Garda daily, moderating temperatures. High diurnal variation is essential for aroma development.",
         "terroir": "Incredibly varied: porphyry (volcanic rock) in the lower Adige valley, limestone and dolomite on higher slopes, sandy-gravelly alluvium on the valley floor. The steep, terraced mountainside vineyards receive maximum sun exposure while benefiting from cool alpine nights.",
         "grapes": [
-          { "name": "Pinot Grigio", "description": "Unlike the dilute, mass-produced Veneto style, Alto Adige Pinot Grigio is medium to full-bodied with pear, apple, and almond notes, often showing a subtle coppery hue.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Gewürztraminer", "description": "Named after the village of Tramin in Alto Adige. Intensely aromatic with lychee, rose, and Turkish delight. The local versions are among the world's finest.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Lagrein & Schiava", "description": "Indigenous red grapes. Lagrein produces deeply colored, full-bodied wines with dark berry and chocolate; Schiava is light, and cherry-scented for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Grigio",
+            "description": "Unlike the dilute, mass-produced Veneto style, Alto Adige Pinot Grigio is medium to full-bodied with pear, apple, and almond notes, often showing a subtle coppery hue.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Gewürztraminer",
+            "description": "Named after the village of Tramin in Alto Adige. Intensely aromatic with lychee, rose, and Turkish delight. The local versions are among the world's finest.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Lagrein & Schiava",
+            "description": "Indigenous red grapes. Lagrein produces deeply colored, full-bodied wines with dark berry and chocolate; Schiava is light, and cherry-scented for everyday drinking.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Elena Walch", "description": "Pioneer of premium single-vineyard Alto Adige whites.", "wines": [{ "name": "Kastelaz Gewürztraminer", "url": "https://www.vivino.com/search/wines?q=Elena+Walch+Gewurztraminer" }] }
+          {
+            "name": "Elena Walch",
+            "description": "Pioneer of premium single-vineyard Alto Adige whites.",
+            "wines": [
+              {
+                "name": "Kastelaz Gewürztraminer",
+                "url": "https://www.vivino.com/search/wines?q=Elena+Walch+Gewurztraminer"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Termeno/Tramin", "description": "The birthplace of Gewürztraminer, producing the region's most aromatic and concentrated examples.", "geography": "Warm, south-facing slopes with porphyry and clay soils.", "grapes": "Gewürztraminer, Pinot Grigio." },
-          { "name": "Bolzano/Bozen", "description": "The warmest zone, producing the best Lagrein reds and full-bodied whites.", "geography": "Low-altitude valley floor with porphyry and sandy gravel.", "grapes": "Lagrein, Schiava." }
+          {
+            "name": "Termeno/Tramin",
+            "description": "The birthplace of Gewürztraminer, producing the region's most aromatic and concentrated examples.",
+            "geography": "Warm, south-facing slopes with porphyry and clay soils.",
+            "grapes": "Gewürztraminer, Pinot Grigio."
+          },
+          {
+            "name": "Bolzano/Bozen",
+            "description": "The warmest zone, producing the best Lagrein reds and full-bodied whites.",
+            "geography": "Low-altitude valley floor with porphyry and sandy gravel.",
+            "grapes": "Lagrein, Schiava."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [14.8, 41] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.8,
+          41
+        ]
+      },
       "properties": {
         "id": "campania",
         "name": "Campania",
@@ -2115,23 +5796,130 @@ export const wineRegionsData = {
         "geography": "A diverse landscape dominated by Mount Vesuvius (active volcano) and the Apennine Mountains. The climate is Mediterranean on the coast, shifting to continental inland at higher altitudes where the best wines are produced. The volcanic soils of Vesuvius are phylloxera-free.",
         "terroir": "Volcanic tufo (volcanic tuff) around Vesuvius and Avellino provides excellent drainage and mineral complexity. In the highlands of Irpinia (Taurasi, Fiano di Avellino), clay and limestone soils at 400-600m altitude create high acidity and structure in the wines.",
         "grapes": [
-          { "name": "Aglianico", "description": "The 'Barolo of the South'. Extremely late-ripening with massive tannins, high acidity, and dark fruit, tar, leather, and chocolate notes. Requires decades of aging to show its best.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Fiano", "description": "An aromatic white producing complex, age-worthy wines with hazelnut, honey, pear, and exotic spice notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Greco", "description": "High-acid, full-bodied white with almond, citrus, and mineral notes. Greco di Tufo is the finest expression.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Aglianico",
+            "description": "The 'Barolo of the South'. Extremely late-ripening with massive tannins, high acidity, and dark fruit, tar, leather, and chocolate notes. Requires decades of aging to show its best.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Fiano",
+            "description": "An aromatic white producing complex, age-worthy wines with hazelnut, honey, pear, and exotic spice notes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Greco",
+            "description": "High-acid, full-bodied white with almond, citrus, and mineral notes. Greco di Tufo is the finest expression.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Mastroberardino", "description": "Historic family estate that preserved Campania's indigenous varieties through the 20th century.", "wines": [{ "name": "Taurasi Radici", "url": "https://www.vivino.com/search/wines?q=Mastroberardino+Taurasi+Radici" }] }
+          {
+            "name": "Mastroberardino",
+            "description": "Historic family estate that preserved Campania's indigenous varieties through the 20th century.",
+            "wines": [
+              {
+                "name": "Taurasi Radici",
+                "url": "https://www.vivino.com/search/wines?q=Mastroberardino+Taurasi+Radici"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Taurasi DOCG", "description": "The flagship red appellation, producing powerful, age-worthy Aglianico requiring 3 years minimum aging.", "geography": "High-altitude (400-600m) inland hills of Irpinia. Clay and volcanic soils.", "grapes": "Aglianico." },
-          { "name": "Fiano di Avellino DOCG", "description": "Produces Italy's most complex, age-worthy indigenous white wines.", "geography": "High-altitude hills near Avellino with limestone and volcanic soils.", "grapes": "Fiano." },
-          { "name": "Greco di Tufo DOCG", "description": "Named for the volcanic tufo rock, producing structured, mineral whites.", "geography": "Sulfur-rich volcanic tufo soils near Tufo village.", "grapes": "Greco." }
+          {
+            "name": "Taurasi DOCG",
+            "description": "The flagship red appellation, producing powerful, age-worthy Aglianico requiring 3 years minimum aging.",
+            "geography": "High-altitude (400-600m) inland hills of Irpinia. Clay and volcanic soils.",
+            "grapes": "Aglianico."
+          },
+          {
+            "name": "Fiano di Avellino DOCG",
+            "description": "Produces Italy's most complex, age-worthy indigenous white wines.",
+            "geography": "High-altitude hills near Avellino with limestone and volcanic soils.",
+            "grapes": "Fiano."
+          },
+          {
+            "name": "Greco di Tufo DOCG",
+            "description": "Named for the volcanic tufo rock, producing structured, mineral whites.",
+            "geography": "Sulfur-rich volcanic tufo soils near Tufo village.",
+            "grapes": "Greco."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-8.6, 41.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6,
+          41.8
+        ]
+      },
       "properties": {
         "id": "vinho-verde",
         "name": "Vinho Verde",
@@ -2140,21 +5928,119 @@ export const wineRegionsData = {
         "geography": "Located in the cool, wet northwest of Portugal, between the Minho and Douro rivers. Atlantic-influenced maritime climate with high rainfall (1,200-1,500mm). Traditionally, vines were trained high on pergolas and trellises (vinha de enforcado) to combat humidity.",
         "terroir": "Predominantly granite-based soils that provide excellent drainage in this wet climate and contribute to the wines' characteristic mineral, slightly saline quality. River valleys create warmer mesoclimates for better ripening.",
         "grapes": [
-          { "name": "Alvarinho (Albariño)", "description": "The premium grape, especially in the Monção e Melgaço sub-region. Produces aromatic, full-bodied wines with peach, apricot, and citrus. Higher alcohol and complexity than standard Vinho Verde.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Loureiro", "description": "The most planted variety, producing lighter, floral wines with acacia, orange blossom, and citrus notes.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Alvarinho (Albariño)",
+            "description": "The premium grape, especially in the Monção e Melgaço sub-region. Produces aromatic, full-bodied wines with peach, apricot, and citrus. Higher alcohol and complexity than standard Vinho Verde.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Loureiro",
+            "description": "The most planted variety, producing lighter, floral wines with acacia, orange blossom, and citrus notes.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Anselmo Mendes", "description": "Leading producer elevating Alvarinho to world-class status.", "wines": [{ "name": "Contacto Alvarinho", "url": "https://www.vivino.com/search/wines?q=Anselmo+Mendes+Alvarinho" }] }
+          {
+            "name": "Anselmo Mendes",
+            "description": "Leading producer elevating Alvarinho to world-class status.",
+            "wines": [
+              {
+                "name": "Contacto Alvarinho",
+                "url": "https://www.vivino.com/search/wines?q=Anselmo+Mendes+Alvarinho"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Monção e Melgaço", "description": "The northernmost, warmest sub-region on the Spanish border, producing the finest single-varietal Alvarinho.", "geography": "Sheltered river valley with granite soils. Warmer than the rest of the region.", "grapes": "Alvarinho." },
-          { "name": "Lima & Cávado", "description": "The cooler, wetter central zones producing the classic light, fresh, slightly fizzy Vinho Verde blends.", "geography": "Higher rainfall, granite soils, pergola-trained vines.", "grapes": "Loureiro, Arinto, Trajadura." }
+          {
+            "name": "Monção e Melgaço",
+            "description": "The northernmost, warmest sub-region on the Spanish border, producing the finest single-varietal Alvarinho.",
+            "geography": "Sheltered river valley with granite soils. Warmer than the rest of the region.",
+            "grapes": "Alvarinho."
+          },
+          {
+            "name": "Lima & Cávado",
+            "description": "The cooler, wetter central zones producing the classic light, fresh, slightly fizzy Vinho Verde blends.",
+            "geography": "Higher rainfall, granite soils, pergola-trained vines.",
+            "grapes": "Loureiro, Arinto, Trajadura."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-16.9, 32.6] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.9,
+          32.6
+        ]
+      },
       "properties": {
         "id": "madeira",
         "name": "Madeira",
@@ -2163,22 +6049,124 @@ export const wineRegionsData = {
         "geography": "Subtropical volcanic island with steep, terraced mountainsides. The northern coast is wet and cool while the southern coast is warmer and drier. Vineyards climb from sea level to over 700m. The Gulf Stream provides a warm, humid maritime climate year-round.",
         "terroir": "Volcanic basalt soils provide excellent drainage on impossibly steep terrain. Vineyards are tiny, often terraced on 'poios' (narrow stone-walled ledges). The volcanic origin contributes to the wines' distinctive tangy, smoky character.",
         "grapes": [
-          { "name": "Sercial", "description": "Produces the driest style of Madeira: high acidity, citrus, almond, and piercing minerality. Aged for years in heated 'estufas'.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Verdelho", "description": "Medium-dry style with smoky, honeyed character and high acidity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Bual & Malmsey (Malvasia)", "description": "The sweetest styles. Bual is medium-sweet with caramel and coffee. Malmsey is the richest, most luscious, with dark sugar, dried fruit, and chocolate.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Sercial",
+            "description": "Produces the driest style of Madeira: high acidity, citrus, almond, and piercing minerality. Aged for years in heated 'estufas'.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Verdelho",
+            "description": "Medium-dry style with smoky, honeyed character and high acidity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Bual & Malmsey (Malvasia)",
+            "description": "The sweetest styles. Bual is medium-sweet with caramel and coffee. Malmsey is the richest, most luscious, with dark sugar, dried fruit, and chocolate.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Blandy's", "description": "The most famous Madeira house, family-owned since 1811.", "wines": [{ "name": "10 Year Old Malmsey", "url": "https://www.vivino.com/search/wines?q=Blandy+Malmsey+10" }] }
+          {
+            "name": "Blandy's",
+            "description": "The most famous Madeira house, family-owned since 1811.",
+            "wines": [
+              {
+                "name": "10 Year Old Malmsey",
+                "url": "https://www.vivino.com/search/wines?q=Blandy+Malmsey+10"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Câmara de Lobos", "description": "Traditional heartland of Madeira production on the warmer southern coast.", "geography": "South-facing terraced slopes above the fishing village.", "grapes": "Tinta Negra, Malmsey." },
-          { "name": "São Vicente", "description": "Cooler northern coast, producing the finest Sercial and Verdelho.", "geography": "North-facing, cooler, higher rainfall. Steep volcanic terraces.", "grapes": "Sercial, Verdelho." }
+          {
+            "name": "Câmara de Lobos",
+            "description": "Traditional heartland of Madeira production on the warmer southern coast.",
+            "geography": "South-facing terraced slopes above the fishing village.",
+            "grapes": "Tinta Negra, Malmsey."
+          },
+          {
+            "name": "São Vicente",
+            "description": "Cooler northern coast, producing the finest Sercial and Verdelho.",
+            "geography": "North-facing, cooler, higher rainfall. Steep volcanic terraces.",
+            "grapes": "Sercial, Verdelho."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [1.8, 41.4] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8,
+          41.4
+        ]
+      },
       "properties": {
         "id": "penedes-cava",
         "name": "Penedès (Cava)",
@@ -2187,22 +6175,133 @@ export const wineRegionsData = {
         "geography": "Mediterranean climate with warm summers and mild winters. The region is divided into three altitude zones: Baix-Penedès near the coast (warm, ideal for reds), Mig-Penedès in the middle (balanced, main Cava zone), and Alt-Penedès at higher elevations (cooler, producing the freshest base wines).",
         "terroir": "Limestone and clay soils dominate, providing good drainage and contributing to the mineral quality of the sparkling wines. Higher altitude zones have chalky, limestone-rich soils that preserve acidity essential for Cava production.",
         "grapes": [
-          { "name": "Macabeo, Xarel·lo & Parellada", "description": "The classic Cava trio: Macabeo (freshness, floral), Xarel·lo (body, earthy structure, the backbone), and Parellada (elegance, citrus, high altitude). Xarel·lo is increasingly bottled as a still wine.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay & Pinot Noir", "description": "Now permitted in Cava production, adding richness and complexity. Premium Cavas increasingly use these international varieties.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Macabeo, Xarel·lo & Parellada",
+            "description": "The classic Cava trio: Macabeo (freshness, floral), Xarel·lo (body, earthy structure, the backbone), and Parellada (elegance, citrus, high altitude). Xarel·lo is increasingly bottled as a still wine.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay & Pinot Noir",
+            "description": "Now permitted in Cava production, adding richness and complexity. Premium Cavas increasingly use these international varieties.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Codorníu", "description": "One of the original Cava houses, founded in 1551 (oldest recorded family business in Spain).", "wines": [{ "name": "Anna de Codorníu Brut", "url": "https://www.vivino.com/search/wines?q=Codorniu+Anna" }] },
-          { "name": "Torres", "description": "Family-owned icon producing world-class still wines alongside Cava.", "wines": [{ "name": "Mas La Plana Cabernet", "url": "https://www.vivino.com/search/wines?q=Torres+Mas+La+Plana" }] }
+          {
+            "name": "Codorníu",
+            "description": "One of the original Cava houses, founded in 1551 (oldest recorded family business in Spain).",
+            "wines": [
+              {
+                "name": "Anna de Codorníu Brut",
+                "url": "https://www.vivino.com/search/wines?q=Codorniu+Anna"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Torres",
+            "description": "Family-owned icon producing world-class still wines alongside Cava.",
+            "wines": [
+              {
+                "name": "Mas La Plana Cabernet",
+                "url": "https://www.vivino.com/search/wines?q=Torres+Mas+La+Plana"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Alt-Penedès", "description": "The highest, coolest zone producing the most elegant, citrus-driven Cava base wines.", "geography": "500-800m elevation with limestone soils and significant diurnal variation.", "grapes": "Parellada, Macabeo." },
-          { "name": "Mig-Penedès", "description": "The main Cava production zone with ideal balance of warmth and acidity.", "geography": "200-500m elevation. Clay-limestone soils.", "grapes": "Xarel·lo, Macabeo, Parellada." }
+          {
+            "name": "Alt-Penedès",
+            "description": "The highest, coolest zone producing the most elegant, citrus-driven Cava base wines.",
+            "geography": "500-800m elevation with limestone soils and significant diurnal variation.",
+            "grapes": "Parellada, Macabeo."
+          },
+          {
+            "name": "Mig-Penedès",
+            "description": "The main Cava production zone with ideal balance of warmth and acidity.",
+            "geography": "200-500m elevation. Clay-limestone soils.",
+            "grapes": "Xarel·lo, Macabeo, Parellada."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-4.7, 41.4] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7,
+          41.4
+        ]
+      },
       "properties": {
         "id": "rueda",
         "name": "Rueda",
@@ -2211,20 +6310,113 @@ export const wineRegionsData = {
         "geography": "High-altitude continental plateau (600-800m) with extreme temperature variation: scorching summers and freezing winters. Very low rainfall makes drought a constant challenge. The altitude ensures cool nights that preserve acidity.",
         "terroir": "Sandy and gravelly soils over limestone and clay bedrock. The stony, free-draining soils concentrate flavors and the high calcium content contributes to Verdejo's distinctive bitter-almond mineral finish.",
         "grapes": [
-          { "name": "Verdejo", "description": "Spain's finest indigenous white grape. Aromatic, full-bodied, with fennel, grass, stone fruit, and a distinctive bitter-almond finish. Higher body and lower acidity than Sauvignon Blanc.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sauvignon Blanc", "description": "Increasingly planted alongside Verdejo, producing crisp, herbaceous wines that complement the local style.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Verdejo",
+            "description": "Spain's finest indigenous white grape. Aromatic, full-bodied, with fennel, grass, stone fruit, and a distinctive bitter-almond finish. Higher body and lower acidity than Sauvignon Blanc.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Sauvignon Blanc",
+            "description": "Increasingly planted alongside Verdejo, producing crisp, herbaceous wines that complement the local style.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Marqués de Riscal", "description": "The Rioja giant that revolutionized Rueda's white winemaking in the 1970s.", "wines": [{ "name": "Verdejo", "url": "https://www.vivino.com/search/wines?q=Marques+de+Riscal+Verdejo" }] }
+          {
+            "name": "Marqués de Riscal",
+            "description": "The Rioja giant that revolutionized Rueda's white winemaking in the 1970s.",
+            "wines": [
+              {
+                "name": "Verdejo",
+                "url": "https://www.vivino.com/search/wines?q=Marques+de+Riscal+Verdejo"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Rueda Central", "description": "The heart of the DO around the town of Rueda, producing the most concentrated Verdejo from old bush vines.", "geography": "High plateau (700-800m) with sandy soils over limestone.", "grapes": "Verdejo." }
+          {
+            "name": "Rueda Central",
+            "description": "The heart of the DO around the town of Rueda, producing the most concentrated Verdejo from old bush vines.",
+            "geography": "High plateau (700-800m) with sandy soils over limestone.",
+            "grapes": "Verdejo."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [8.2, 49.3] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2,
+          49.3
+        ]
+      },
       "properties": {
         "id": "pfalz",
         "name": "Pfalz",
@@ -2233,21 +6425,119 @@ export const wineRegionsData = {
         "geography": "The warmest and sunniest of Germany's wine regions. The Haardt Mountains to the west block Atlantic rain, creating Germany's driest microclimate. Almond and fig trees grow here—evidence of the near-Mediterranean conditions. Vineyards stretch along the 'Deutsche Weinstraße' (German Wine Route).",
         "terroir": "Diverse soils including sandstone, limestone, basalt (volcanic), loess, and clay. The Mittelhaardt zone features the finest terroirs: limestone and basalt at mid-slope elevations producing powerful, complex Rieslings.",
         "grapes": [
-          { "name": "Riesling", "description": "Produces a richer, more generous style than nearly any other German region. Ripe stone fruit, exotic spice, and power define the Pfalz style. Often fermented bone-dry.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Spätburgunder (Pinot Noir)", "description": "The Pfalz is increasingly challenging Burgundy for Pinot Noir quality, producing concentrated, oak-aged reds with cherry, earth, and spice.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling",
+            "description": "Produces a richer, more generous style than nearly any other German region. Ripe stone fruit, exotic spice, and power define the Pfalz style. Often fermented bone-dry.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Spätburgunder (Pinot Noir)",
+            "description": "The Pfalz is increasingly challenging Burgundy for Pinot Noir quality, producing concentrated, oak-aged reds with cherry, earth, and spice.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Bürklin-Wolf", "description": "One of Germany's greatest estates, biodynamic pioneer with Grand Cru vineyards.", "wines": [{ "name": "Kirchenstück Riesling GG", "url": "https://www.vivino.com/search/wines?q=Burklin+Wolf+Kirchenstuck" }] }
+          {
+            "name": "Bürklin-Wolf",
+            "description": "One of Germany's greatest estates, biodynamic pioneer with Grand Cru vineyards.",
+            "wines": [
+              {
+                "name": "Kirchenstück Riesling GG",
+                "url": "https://www.vivino.com/search/wines?q=Burklin+Wolf+Kirchenstuck"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Mittelhaardt", "description": "The premium northern section, home to the great villages of Forst, Deidesheim, and Ruppertsberg.", "geography": "Mid-slope limestone and basalt soils. Germany's warmest vineyards.", "grapes": "Riesling." },
-          { "name": "Südliche Weinstraße", "description": "The larger southern section, increasingly producing excellent Spätburgunder and value Riesling.", "geography": "Gentle slopes with loess, limestone, and sandstone.", "grapes": "Riesling, Spätburgunder, Grauburgunder." }
+          {
+            "name": "Mittelhaardt",
+            "description": "The premium northern section, home to the great villages of Forst, Deidesheim, and Ruppertsberg.",
+            "geography": "Mid-slope limestone and basalt soils. Germany's warmest vineyards.",
+            "grapes": "Riesling."
+          },
+          {
+            "name": "Südliche Weinstraße",
+            "description": "The larger southern section, increasingly producing excellent Spätburgunder and value Riesling.",
+            "geography": "Gentle slopes with loess, limestone, and sandstone.",
+            "grapes": "Riesling, Spätburgunder, Grauburgunder."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [145.5, -37.7] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.5,
+          -37.7
+        ]
+      },
       "properties": {
         "id": "yarra-valley",
         "name": "Yarra Valley",
@@ -2256,22 +6546,124 @@ export const wineRegionsData = {
         "geography": "Located just east of Melbourne, the Yarra Valley enjoys a cool maritime-influenced climate. The Great Dividing Range provides shelter while elevation varies from 50m to 400m. This altitude variation creates a wide range of mesoclimates within a compact area.",
         "terroir": "Red volcanic basalt (deep, fertile) on the valley floor suits Cabernet and Shiraz, while grey clay and sandy soils on the cooler upper slopes are ideal for Pinot Noir and Chardonnay. The diversity of terroirs is the Yarra's greatest asset.",
         "grapes": [
-          { "name": "Pinot Noir", "description": "The Yarra's finest achievement: elegant, perfumed, with dark cherry, spice, and forest floor notes. Among Australia's most Burgundian expressions.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Ranges from tight, citrus-driven to generous, nutty styles. Cool climate ensures natural acid retention.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Cabernet Sauvignon", "description": "From warmer, lower sites produces structured, elegant Bordeaux-style reds with cassis and mint.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Noir",
+            "description": "The Yarra's finest achievement: elegant, perfumed, with dark cherry, spice, and forest floor notes. Among Australia's most Burgundian expressions.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Ranges from tight, citrus-driven to generous, nutty styles. Cool climate ensures natural acid retention.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "From warmer, lower sites produces structured, elegant Bordeaux-style reds with cassis and mint.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "De Bortoli", "description": "Family estate producing wines across all tiers, from Noble One (botrytis Semillon) to premium Yarra Pinot.", "wines": [{ "name": "Yarra Valley Pinot Noir", "url": "https://www.vivino.com/search/wines?q=De+Bortoli+Yarra+Pinot+Noir" }] }
+          {
+            "name": "De Bortoli",
+            "description": "Family estate producing wines across all tiers, from Noble One (botrytis Semillon) to premium Yarra Pinot.",
+            "wines": [
+              {
+                "name": "Yarra Valley Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=De+Bortoli+Yarra+Pinot+Noir"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Upper Yarra", "description": "Cooler, higher altitude (200-400m) producing the region's most elegant Pinot Noir and Chardonnay.", "geography": "Grey clay and sandy soils. Significantly cooler temperatures.", "grapes": "Pinot Noir, Chardonnay." },
-          { "name": "Lower Yarra", "description": "Warmer valley floor suited to Cabernet, Shiraz, and richer Chardonnay styles.", "geography": "Red volcanic basalt soils. Warmer mesoclimate.", "grapes": "Cabernet Sauvignon, Shiraz." }
+          {
+            "name": "Upper Yarra",
+            "description": "Cooler, higher altitude (200-400m) producing the region's most elegant Pinot Noir and Chardonnay.",
+            "geography": "Grey clay and sandy soils. Significantly cooler temperatures.",
+            "grapes": "Pinot Noir, Chardonnay."
+          },
+          {
+            "name": "Lower Yarra",
+            "description": "Warmer valley floor suited to Cabernet, Shiraz, and richer Chardonnay styles.",
+            "geography": "Red volcanic basalt soils. Warmer mesoclimate.",
+            "grapes": "Cabernet Sauvignon, Shiraz."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [138.6, -33.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6,
+          -33.8
+        ]
+      },
       "properties": {
         "id": "clare-valley",
         "name": "Clare Valley",
@@ -2280,21 +6672,119 @@ export const wineRegionsData = {
         "geography": "A series of narrow valleys and ridges at 400-500m elevation in the Mount Lofty Ranges. Despite being further north than Barossa, the altitude provides significantly cooler temperatures, especially at night. Low humidity and cooling afternoon breezes from the Gulf further moderate the climate.",
         "terroir": "Varied soils including red-brown earth, slate (particularly in the Polish Hill River sub-region), and limestone (in Watervale). Slate soils produce the most mineral, tightly structured Rieslings, while limestone yields richer, more generous styles.",
         "grapes": [
-          { "name": "Riesling", "description": "Clare Valley Riesling is fermented bone-dry with electric lime, lemon, and mineral acidity in youth, developing classic toast and kerosene notes with age. A world benchmark.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Shiraz & Cabernet Sauvignon", "description": "From warmer sites, produces structured, age-worthy reds with dark fruit, eucalyptus, and firm tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling",
+            "description": "Clare Valley Riesling is fermented bone-dry with electric lime, lemon, and mineral acidity in youth, developing classic toast and kerosene notes with age. A world benchmark.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Shiraz & Cabernet Sauvignon",
+            "description": "From warmer sites, produces structured, age-worthy reds with dark fruit, eucalyptus, and firm tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Grosset", "description": "Jeffrey Grosset's iconic estate producing Australia's most acclaimed Rieslings.", "wines": [{ "name": "Polish Hill Riesling", "url": "https://www.vivino.com/search/wines?q=Grosset+Polish+Hill+Riesling" }] }
+          {
+            "name": "Grosset",
+            "description": "Jeffrey Grosset's iconic estate producing Australia's most acclaimed Rieslings.",
+            "wines": [
+              {
+                "name": "Polish Hill Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Grosset+Polish+Hill+Riesling"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Polish Hill River", "description": "The cooler, more austere sub-region producing the most mineral, tightly wound Rieslings.", "geography": "Higher altitude with slate and shale soils.", "grapes": "Riesling." },
-          { "name": "Watervale", "description": "Slightly lower and warmer, producing more generous, lime-juicy Rieslings from limestone soils.", "geography": "Terra rossa over limestone. Warmer daytime temperatures.", "grapes": "Riesling, Shiraz." }
+          {
+            "name": "Polish Hill River",
+            "description": "The cooler, more austere sub-region producing the most mineral, tightly wound Rieslings.",
+            "geography": "Higher altitude with slate and shale soils.",
+            "grapes": "Riesling."
+          },
+          {
+            "name": "Watervale",
+            "description": "Slightly lower and warmer, producing more generous, lime-juicy Rieslings from limestone soils.",
+            "geography": "Terra rossa over limestone. Warmer daytime temperatures.",
+            "grapes": "Riesling, Shiraz."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [175.5, -41.2] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.5,
+          -41.2
+        ]
+      },
       "properties": {
         "id": "martinborough",
         "name": "Martinborough (Wairarapa)",
@@ -2303,20 +6793,113 @@ export const wineRegionsData = {
         "geography": "Dry, cool climate in the rain shadow of the Tararua Ranges. Much drier than the rest of the North Island's wine regions. Low rainfall, high sunshine hours, and persistent winds create ideal conditions for Pinot Noir. Small-scale production with an artisanal focus.",
         "terroir": "Free-draining alluvial gravel terraces over ancient river deposits. The gravels are similar in structure to Burgundy's Côte d'Or, providing excellent drainage, heat retention, and natural vine stress that concentrates flavors.",
         "grapes": [
-          { "name": "Pinot Noir", "description": "Martinborough's Pinot Noirs are among New Zealand's most complex: dark cherry, plum, earth, game, and silky tannins with significant aging potential.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sauvignon Blanc", "description": "More restrained and mineral than Marlborough, with herbaceous, stony, and subtle tropical notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Noir",
+            "description": "Martinborough's Pinot Noirs are among New Zealand's most complex: dark cherry, plum, earth, game, and silky tannins with significant aging potential.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Sauvignon Blanc",
+            "description": "More restrained and mineral than Marlborough, with herbaceous, stony, and subtle tropical notes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Ata Rangi", "description": "Founding estate and New Zealand Pinot Noir icon.", "wines": [{ "name": "Pinot Noir", "url": "https://www.vivino.com/search/wines?q=Ata+Rangi+Pinot+Noir" }] }
+          {
+            "name": "Ata Rangi",
+            "description": "Founding estate and New Zealand Pinot Noir icon.",
+            "wines": [
+              {
+                "name": "Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Ata+Rangi+Pinot+Noir"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Martinborough Terrace", "description": "The original, best-drained gravel terrace producing the region's most acclaimed Pinot Noirs.", "geography": "Ancient alluvial gravel deposits. Free-draining, low vigor.", "grapes": "Pinot Noir." }
+          {
+            "name": "Martinborough Terrace",
+            "description": "The original, best-drained gravel terrace producing the region's most acclaimed Pinot Noirs.",
+            "geography": "Ancient alluvial gravel deposits. Free-draining, low vigor.",
+            "grapes": "Pinot Noir."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [18.7, -33.4] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7,
+          -33.4
+        ]
+      },
       "properties": {
         "id": "swartland",
         "name": "Swartland",
@@ -2325,22 +6908,124 @@ export const wineRegionsData = {
         "geography": "Warm Mediterranean climate with hot, dry summers. Lower rainfall than Stellenbosch means many vineyards are dryland-farmed (unirrigated), naturally restricting yields and concentrating flavors. Cooling afternoon breezes from the Atlantic moderate temperatures.",
         "terroir": "Diverse soils: granite, shale, schist, and clay. The Paardeberg (granite mountain) is the quality epicenter, with decomposed granite soils that produce Swartland's most mineral, expressive Chenin Blancs. Ancient bush vines (50-80+ years old) are treasured.",
         "grapes": [
-          { "name": "Chenin Blanc", "description": "Old bush vine Chenin is Swartland's crown jewel: complex, textured, with baked apple, quince, honey, and waxy notes. Often fermented in old oak for added complexity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Syrah", "description": "Produces peppery, medium to full-bodied reds with dark fruit, olive tapenade, and smoked meat. Increasingly compared to the Northern Rhône.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Grenache & GSM Blends", "description": "Mediterranean varieties thrive in the heat, producing aromatic, spicy blends.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Chenin Blanc",
+            "description": "Old bush vine Chenin is Swartland's crown jewel: complex, textured, with baked apple, quince, honey, and waxy notes. Often fermented in old oak for added complexity.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Syrah",
+            "description": "Produces peppery, medium to full-bodied reds with dark fruit, olive tapenade, and smoked meat. Increasingly compared to the Northern Rhône.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Grenache & GSM Blends",
+            "description": "Mediterranean varieties thrive in the heat, producing aromatic, spicy blends.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Mullineux", "description": "The leading light of the Swartland Revolution, producing terroir-driven wines.", "wines": [{ "name": "Old Vines White", "url": "https://www.vivino.com/search/wines?q=Mullineux+Old+Vines+White" }] }
+          {
+            "name": "Mullineux",
+            "description": "The leading light of the Swartland Revolution, producing terroir-driven wines.",
+            "wines": [
+              {
+                "name": "Old Vines White",
+                "url": "https://www.vivino.com/search/wines?q=Mullineux+Old+Vines+White"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Paardeberg", "description": "The quality epicenter, a granite mountain producing South Africa's most celebrated old-vine Chenin Blanc.", "geography": "Decomposed granite soils at various elevations. Dryland-farmed.", "grapes": "Chenin Blanc, Grenache." },
-          { "name": "Malmesbury", "description": "The broader valley producing excellent Syrah and GSM blends from shale soils.", "geography": "Shale and clay soils in the warmer valley floor.", "grapes": "Syrah, Mourvèdre." }
+          {
+            "name": "Paardeberg",
+            "description": "The quality epicenter, a granite mountain producing South Africa's most celebrated old-vine Chenin Blanc.",
+            "geography": "Decomposed granite soils at various elevations. Dryland-farmed.",
+            "grapes": "Chenin Blanc, Grenache."
+          },
+          {
+            "name": "Malmesbury",
+            "description": "The broader valley producing excellent Syrah and GSM blends from shale soils.",
+            "geography": "Shale and clay soils in the warmer valley floor.",
+            "grapes": "Syrah, Mourvèdre."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-71.4, -33.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4,
+          -33.8
+        ]
+      },
       "properties": {
         "id": "leyda-san-antonio",
         "name": "Leyda / San Antonio Valley",
@@ -2349,21 +7034,118 @@ export const wineRegionsData = {
         "geography": "Cool coastal climate directly influenced by the cold Humboldt Current. Morning fogs roll in from the Pacific, clearing by midday. Afternoon sea breezes further cool the vineyards. The absence of the Coastal Range at this latitude allows unimpeded ocean influence.",
         "terroir": "Decomposed granite over clay subsoils. The thin, well-draining soils restrict vigor and concentrate flavors. Salinity in the soils from ancient marine deposits contributes to the wines' distinctive mineral, saline character.",
         "grapes": [
-          { "name": "Sauvignon Blanc", "description": "Produces Chile's most acclaimed examples: intensely aromatic with grapefruit, lime, green herbs, and a distinctive salty minerality.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Pinot Noir", "description": "Elegant, cool-climate examples with bright cherry, strawberry, and earthy complexity. Growing in reputation.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Crisp, mineral-driven with citrus and subtle oak. Among Chile's most refined examples.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Sauvignon Blanc",
+            "description": "Produces Chile's most acclaimed examples: intensely aromatic with grapefruit, lime, green herbs, and a distinctive salty minerality.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinot Noir",
+            "description": "Elegant, cool-climate examples with bright cherry, strawberry, and earthy complexity. Growing in reputation.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chardonnay",
+            "description": "Crisp, mineral-driven with citrus and subtle oak. Among Chile's most refined examples.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Casa Marin", "description": "The pioneer that first planted vines in the San Antonio Valley coastal zone.", "wines": [{ "name": "Cipreses Sauvignon Blanc", "url": "https://www.vivino.com/search/wines?q=Casa+Marin+Sauvignon+Blanc" }] }
+          {
+            "name": "Casa Marin",
+            "description": "The pioneer that first planted vines in the San Antonio Valley coastal zone.",
+            "wines": [
+              {
+                "name": "Cipreses Sauvignon Blanc",
+                "url": "https://www.vivino.com/search/wines?q=Casa+Marin+Sauvignon+Blanc"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Leyda", "description": "The most acclaimed sub-valley, just 14km from the ocean, producing Chile's most mineral white wines.", "geography": "Rolling coastal hills with decomposed granite soils. Persistent morning fog.", "grapes": "Sauvignon Blanc, Pinot Noir, Chardonnay." }
+          {
+            "name": "Leyda",
+            "description": "The most acclaimed sub-valley, just 14km from the ocean, producing Chile's most mineral white wines.",
+            "geography": "Rolling coastal hills with decomposed granite soils. Persistent morning fog.",
+            "grapes": "Sauvignon Blanc, Pinot Noir, Chardonnay."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [15.5, 48.2] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5,
+          48.2
+        ]
+      },
       "properties": {
         "id": "kamptal-kremstal",
         "name": "Kamptal & Kremstal",
@@ -2372,21 +7154,119 @@ export const wineRegionsData = {
         "geography": "Continental climate with warm Pannonian influence from the east. The Kamp and Krems rivers moderate temperatures. Slightly warmer and less extreme than the Wachau, allowing more consistent ripening and higher yields without sacrificing quality.",
         "terroir": "Mix of primary rock (gneiss, granite) on the riverbanks and deep loess deposits on the plateaus. Loess produces more generous, fruit-forward wines, while primary rock yields tighter, more mineral expressions. The interplay defines each village's character.",
         "grapes": [
-          { "name": "Grüner Veltliner", "description": "From light, peppery everyday wines to powerful, oak-aged reserve bottlings with white pepper, citrus, lentil, and remarkable aging potential.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Riesling", "description": "Produces excellent, mineral-driven wines, slightly less intense than the Wachau but with greater accessibility and value.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Grüner Veltliner",
+            "description": "From light, peppery everyday wines to powerful, oak-aged reserve bottlings with white pepper, citrus, lentil, and remarkable aging potential.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Riesling",
+            "description": "Produces excellent, mineral-driven wines, slightly less intense than the Wachau but with greater accessibility and value.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Bründlmayer", "description": "Kamptal's most famous estate, producing benchmark Grüner Veltliner and sparkling wine.", "wines": [{ "name": "Heiligenstein Riesling", "url": "https://www.vivino.com/search/wines?q=Brundlmayer+Heiligenstein+Riesling" }] }
+          {
+            "name": "Bründlmayer",
+            "description": "Kamptal's most famous estate, producing benchmark Grüner Veltliner and sparkling wine.",
+            "wines": [
+              {
+                "name": "Heiligenstein Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Brundlmayer+Heiligenstein+Riesling"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Langenlois (Kamptal)", "description": "Austria's largest wine commune, home to the famous Heiligenstein vineyard—a warm, south-facing terroir of desert sandstone.", "geography": "Desert sandstone and volcanic soils on the Heiligenstein. Loess on surrounding plateaus.", "grapes": "Grüner Veltliner, Riesling." },
-          { "name": "Krems (Kremstal)", "description": "Centered around the medieval town of Krems, producing elegant wines from a mix of loess and primary rock.", "geography": "Loess terraces and gneiss slopes along the Danube.", "grapes": "Grüner Veltliner, Riesling." }
+          {
+            "name": "Langenlois (Kamptal)",
+            "description": "Austria's largest wine commune, home to the famous Heiligenstein vineyard—a warm, south-facing terroir of desert sandstone.",
+            "geography": "Desert sandstone and volcanic soils on the Heiligenstein. Loess on surrounding plateaus.",
+            "grapes": "Grüner Veltliner, Riesling."
+          },
+          {
+            "name": "Krems (Kremstal)",
+            "description": "Centered around the medieval town of Krems, producing elegant wines from a mix of loess and primary rock.",
+            "geography": "Loess terraces and gneiss slopes along the Danube.",
+            "grapes": "Grüner Veltliner, Riesling."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [1.2, 44.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.2,
+          44.5
+        ]
+      },
       "properties": {
         "id": "south-west-france",
         "name": "South West France",
@@ -2395,22 +7275,125 @@ export const wineRegionsData = {
         "geography": "Inland continental climate with warm summers and cold winters. The rivers Lot, Tarn, and Dordogne provide crucial moderating effects. Higher altitude areas experience significant frost risk. Proximity to the Pyrenees provides cooling mountain influences in the south.",
         "terroir": "Diverse: Cahors features iron-rich clay and limestone (causse) on high plateaus; Madiran has clay-limestone and galets; Bergerac mirrors Bordeaux with gravel and clay. The poor, well-drained soils on hillsides produce the most concentrated wines.",
         "grapes": [
-          { "name": "Malbec (Côt)", "description": "In Cahors (its original home), Malbec produces the 'Black Wine'—deeply colored, tannic, with blackberry, violet, and dark spice.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Tannat", "description": "The brutally tannic grape of Madiran, producing massively structured reds with dark fruit, leather, and spice. Micro-oxygenation was invented here to tame the tannins.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Malbec (Côt)",
+            "description": "In Cahors (its original home), Malbec produces the 'Black Wine'—deeply colored, tannic, with blackberry, violet, and dark spice.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Tannat",
+            "description": "The brutally tannic grape of Madiran, producing massively structured reds with dark fruit, leather, and spice. Micro-oxygenation was invented here to tame the tannins.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Château Montus (Madiran)", "description": "Alain Brumont's iconic estate that proved Tannat could be world-class.", "wines": [{ "name": "Madiran Prestige", "url": "https://www.vivino.com/search/wines?q=Chateau+Montus+Madiran" }] }
+          {
+            "name": "Château Montus (Madiran)",
+            "description": "Alain Brumont's iconic estate that proved Tannat could be world-class.",
+            "wines": [
+              {
+                "name": "Madiran Prestige",
+                "url": "https://www.vivino.com/search/wines?q=Chateau+Montus+Madiran"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Cahors", "description": "The original home of Malbec, producing dense, dark, tannic reds known as 'Black Wine of Cahors.'", "geography": "High limestone plateaus (causses) and river terraces. Iron-rich clay.", "grapes": "Malbec (≥70%)." },
-          { "name": "Madiran", "description": "Produces some of France's most tannic reds from Tannat at the foot of the Pyrenees.", "geography": "Clay and limestone on rolling hills near the Pyrenees.", "grapes": "Tannat (≥60%)." },
-          { "name": "Bergerac & Monbazillac", "description": "An eastward extension of Bordeaux producing excellent value reds and world-class botrytis sweet whites.", "geography": "Mirrors Bordeaux's geology with clay, limestone, and gravel.", "grapes": "Merlot, Cabernet Sauvignon, Sémillon." }
+          {
+            "name": "Cahors",
+            "description": "The original home of Malbec, producing dense, dark, tannic reds known as 'Black Wine of Cahors.'",
+            "geography": "High limestone plateaus (causses) and river terraces. Iron-rich clay.",
+            "grapes": "Malbec (≥70%)."
+          },
+          {
+            "name": "Madiran",
+            "description": "Produces some of France's most tannic reds from Tannat at the foot of the Pyrenees.",
+            "geography": "Clay and limestone on rolling hills near the Pyrenees.",
+            "grapes": "Tannat (≥60%)."
+          },
+          {
+            "name": "Bergerac & Monbazillac",
+            "description": "An eastward extension of Bordeaux producing excellent value reds and world-class botrytis sweet whites.",
+            "geography": "Mirrors Bordeaux's geology with clay, limestone, and gravel.",
+            "grapes": "Merlot, Cabernet Sauvignon, Sémillon."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-120.7, 35.6] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.7,
+          35.6
+        ]
+      },
       "properties": {
         "id": "paso-robles",
         "name": "Paso Robles",
@@ -2419,22 +7402,124 @@ export const wineRegionsData = {
         "geography": "Located halfway between Los Angeles and San Francisco on the Central Coast. Extreme diurnal temperature swings—up to 25°C between day and night—are the defining characteristic. The Templeton Gap channels cool Pacific air through the Santa Lucia Range, creating cooler western zones versus the hotter, drier east.",
         "terroir": "The west side features calcareous (limestone-rich) soils with significant marine influence; the east side has hotter, drier conditions with sandy and clay soils. This east-west divide creates dramatically different wine styles within the same appellation.",
         "grapes": [
-          { "name": "Cabernet Sauvignon", "description": "Bold, ripe, and full-bodied with blackberry, chocolate, and sweet oak. Paso's warmth produces generous, fruit-forward Cabernets at a fraction of Napa prices.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Zinfandel", "description": "Historic plantings produce jammy, high-alcohol, spicy reds. Some of California's oldest Zinfandel vines are found here.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Rhône Varieties (Grenache, Syrah, Mourvèdre)", "description": "Paso Robles is the epicenter of California's Rhône movement, producing peppery Syrah, perfumed Grenache, and complex GSM blends.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Cabernet Sauvignon",
+            "description": "Bold, ripe, and full-bodied with blackberry, chocolate, and sweet oak. Paso's warmth produces generous, fruit-forward Cabernets at a fraction of Napa prices.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Zinfandel",
+            "description": "Historic plantings produce jammy, high-alcohol, spicy reds. Some of California's oldest Zinfandel vines are found here.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Rhône Varieties (Grenache, Syrah, Mourvèdre)",
+            "description": "Paso Robles is the epicenter of California's Rhône movement, producing peppery Syrah, perfumed Grenache, and complex GSM blends.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Tablas Creek", "description": "Co-founded by the Perrin family (Châteauneuf-du-Pape), importing genuine Rhône clones.", "wines": [{ "name": "Esprit de Tablas", "url": "https://www.vivino.com/search/wines?q=Tablas+Creek+Esprit" }] }
+          {
+            "name": "Tablas Creek",
+            "description": "Co-founded by the Perrin family (Châteauneuf-du-Pape), importing genuine Rhône clones.",
+            "wines": [
+              {
+                "name": "Esprit de Tablas",
+                "url": "https://www.vivino.com/search/wines?q=Tablas+Creek+Esprit"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Adelaida District", "description": "The coolest, most mountainous western sub-AVA with limestone soils and marine influence.", "geography": "Steep, elevated terrain with calcareous soils. Cool Pacific breezes through the Templeton Gap.", "grapes": "Syrah, Grenache, Mourvèdre." },
-          { "name": "Paso Robles Estrella District", "description": "The warmer, drier eastern side producing bold, ripe Cabernet and Zinfandel.", "geography": "Flat to rolling terrain with sandy-clay soils. Hot days and cold nights.", "grapes": "Cabernet Sauvignon, Zinfandel." }
+          {
+            "name": "Adelaida District",
+            "description": "The coolest, most mountainous western sub-AVA with limestone soils and marine influence.",
+            "geography": "Steep, elevated terrain with calcareous soils. Cool Pacific breezes through the Templeton Gap.",
+            "grapes": "Syrah, Grenache, Mourvèdre."
+          },
+          {
+            "name": "Paso Robles Estrella District",
+            "description": "The warmer, drier eastern side producing bold, ripe Cabernet and Zinfandel.",
+            "geography": "Flat to rolling terrain with sandy-clay soils. Hot days and cold nights.",
+            "grapes": "Cabernet Sauvignon, Zinfandel."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-123.3, 39.1] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3,
+          39.1
+        ]
+      },
       "properties": {
         "id": "mendocino",
         "name": "Mendocino County",
@@ -2443,22 +7528,124 @@ export const wineRegionsData = {
         "geography": "Extremely diverse climate. Anderson Valley near the coast is one of California's coldest wine regions, ideal for sparkling wine and Pinot Noir. Inland valleys (Redwood Valley, Ukiah) are warm and sheltered, suited to Zinfandel and Cabernet. The Pacific fog is the dominant climate factor.",
         "terroir": "Coastal zones have thin, acidic, well-draining soils on steep hillsides. Inland valleys feature deeper alluvial soils with more warmth. Anderson Valley's marine-influenced soils produce wines of remarkable finesse and acidity.",
         "grapes": [
-          { "name": "Pinot Noir", "description": "Anderson Valley produces elegant, cool-climate Pinot Noir with bright red fruit, mushroom, and spice—among California's most refined.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sparkling Wine", "description": "The cold Anderson Valley attracted Champagne houses (Roederer, Scharffenberger) to establish sparkling wine operations. Among the finest in the New World.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Zinfandel", "description": "From warm inland valleys, old-vine Zinfandel produces powerful, brambly, spicy reds.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Noir",
+            "description": "Anderson Valley produces elegant, cool-climate Pinot Noir with bright red fruit, mushroom, and spice—among California's most refined.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Sparkling Wine",
+            "description": "The cold Anderson Valley attracted Champagne houses (Roederer, Scharffenberger) to establish sparkling wine operations. Among the finest in the New World.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Zinfandel",
+            "description": "From warm inland valleys, old-vine Zinfandel produces powerful, brambly, spicy reds.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Roederer Estate", "description": "The California outpost of Champagne Louis Roederer, producing outstanding sparkling wine.", "wines": [{ "name": "L'Ermitage Brut", "url": "https://www.vivino.com/search/wines?q=Roederer+Estate+L+Ermitage" }] }
+          {
+            "name": "Roederer Estate",
+            "description": "The California outpost of Champagne Louis Roederer, producing outstanding sparkling wine.",
+            "wines": [
+              {
+                "name": "L'Ermitage Brut",
+                "url": "https://www.vivino.com/search/wines?q=Roederer+Estate+L+Ermitage"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Anderson Valley", "description": "A narrow, fog-filled valley producing California's finest sparkling wine and exceptional cool-climate Pinot Noir.", "geography": "Open to Pacific fog and wind. Thin, acidic soils on steep slopes.", "grapes": "Pinot Noir, Chardonnay, sparkling." },
-          { "name": "Redwood Valley", "description": "A warm, inland valley producing rich, full-bodied reds from organic vineyards.", "geography": "Sheltered from coastal influence. Deep alluvial soils.", "grapes": "Zinfandel, Cabernet Sauvignon, Petite Sirah." }
+          {
+            "name": "Anderson Valley",
+            "description": "A narrow, fog-filled valley producing California's finest sparkling wine and exceptional cool-climate Pinot Noir.",
+            "geography": "Open to Pacific fog and wind. Thin, acidic soils on steep slopes.",
+            "grapes": "Pinot Noir, Chardonnay, sparkling."
+          },
+          {
+            "name": "Redwood Valley",
+            "description": "A warm, inland valley producing rich, full-bodied reds from organic vineyards.",
+            "geography": "Sheltered from coastal influence. Deep alluvial soils.",
+            "grapes": "Zinfandel, Cabernet Sauvignon, Petite Sirah."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [13.5, 46] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5,
+          46
+        ]
+      },
       "properties": {
         "id": "friuli",
         "name": "Friuli-Venezia Giulia",
@@ -2467,24 +7654,144 @@ export const wineRegionsData = {
         "geography": "Cool continental climate moderated by the Adriatic Sea and sheltered by the Alps. The Julian Alps block cold northern winds. Two main zones: the hillside 'Colli' areas (Collio and Colli Orientali) and the flat Grave del Friuli plains.",
         "terroir": "The Collio hills feature 'ponca'—compressed layers of marl and sandstone from ancient seabeds, providing excellent drainage and intense mineral character. The Grave plains have gravelly, alluvial soils that produce lighter, fresher wines.",
         "grapes": [
-          { "name": "Pinot Grigio", "description": "Friuli's Pinot Grigio is Italy's finest: fuller-bodied, textured, with pear, almond, and mineral notes—completely different from the bland industrial versions.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Friulano (Tocai)", "description": "The signature local grape, producing round, almondy, medium-bodied whites with herbs and white flowers.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Ribolla Gialla", "description": "An ancient variety now famous for 'orange wine' (extended maceration). Conventional versions are crisp and citrusy; skin-contact versions are deep gold with dried fruit, tea, and tannic grip.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Pinot Grigio",
+            "description": "Friuli's Pinot Grigio is Italy's finest: fuller-bodied, textured, with pear, almond, and mineral notes—completely different from the bland industrial versions.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Friulano (Tocai)",
+            "description": "The signature local grape, producing round, almondy, medium-bodied whites with herbs and white flowers.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Ribolla Gialla",
+            "description": "An ancient variety now famous for 'orange wine' (extended maceration). Conventional versions are crisp and citrusy; skin-contact versions are deep gold with dried fruit, tea, and tannic grip.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Gravner", "description": "The godfather of orange wine, aging Ribolla Gialla in buried Georgian clay amphorae.", "wines": [{ "name": "Ribolla Anfora", "url": "https://www.vivino.com/search/wines?q=Gravner+Ribolla" }] },
-          { "name": "Jermann", "description": "Benchmark estate for pristine, aromatic Friulian whites.", "wines": [{ "name": "Vintage Tunina", "url": "https://www.vivino.com/search/wines?q=Jermann+Vintage+Tunina" }] }
+          {
+            "name": "Gravner",
+            "description": "The godfather of orange wine, aging Ribolla Gialla in buried Georgian clay amphorae.",
+            "wines": [
+              {
+                "name": "Ribolla Anfora",
+                "url": "https://www.vivino.com/search/wines?q=Gravner+Ribolla"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Jermann",
+            "description": "Benchmark estate for pristine, aromatic Friulian whites.",
+            "wines": [
+              {
+                "name": "Vintage Tunina",
+                "url": "https://www.vivino.com/search/wines?q=Jermann+Vintage+Tunina"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Collio", "description": "The most prestigious hillside zone on the Slovenian border, producing Italy's most complex, mineral whites.", "geography": "Steep ponca (marl and sandstone) hills. Cool, sheltered microclimate.", "grapes": "Pinot Grigio, Friulano, Sauvignon Blanc." },
-          { "name": "Colli Orientali del Friuli", "description": "Eastern hills producing excellent whites and the unique sweet Picolit and red Schioppettino.", "geography": "Ponca soils with slightly warmer exposure than Collio.", "grapes": "Friulano, Ribolla Gialla, Picolit." },
-          { "name": "Grave del Friuli", "description": "The largest zone on the alluvial plains, producing fresh, value-driven whites and reds.", "geography": "Flat, gravelly alluvial soils from ancient rivers.", "grapes": "Pinot Grigio, Merlot, Refosco." }
+          {
+            "name": "Collio",
+            "description": "The most prestigious hillside zone on the Slovenian border, producing Italy's most complex, mineral whites.",
+            "geography": "Steep ponca (marl and sandstone) hills. Cool, sheltered microclimate.",
+            "grapes": "Pinot Grigio, Friulano, Sauvignon Blanc."
+          },
+          {
+            "name": "Colli Orientali del Friuli",
+            "description": "Eastern hills producing excellent whites and the unique sweet Picolit and red Schioppettino.",
+            "geography": "Ponca soils with slightly warmer exposure than Collio.",
+            "grapes": "Friulano, Ribolla Gialla, Picolit."
+          },
+          {
+            "name": "Grave del Friuli",
+            "description": "The largest zone on the alluvial plains, producing fresh, value-driven whites and reds.",
+            "geography": "Flat, gravelly alluvial soils from ancient rivers.",
+            "grapes": "Pinot Grigio, Merlot, Refosco."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [12.7, 43] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.7,
+          43
+        ]
+      },
       "properties": {
         "id": "umbria",
         "name": "Umbria",
@@ -2493,21 +7800,119 @@ export const wineRegionsData = {
         "geography": "Hilly, landlocked region with a continental climate moderated by Lake Trasimeno. Cooler and wetter than Tuscany, with higher altitudes and more dramatic terrain. The town of Orvieto sits atop a volcanic plateau.",
         "terroir": "Volcanic tuff around Orvieto provides excellent drainage. Montefalco has clay and limestone hills that stress vines and concentrate Sagrantino's already massive tannins. The varied altitude creates diverse microclimates.",
         "grapes": [
-          { "name": "Sagrantino", "description": "Endemic to Montefalco, producing one of the world's most tannic red wines: inky, powerful, with blackberry, leather, tar, and dark chocolate. Requires significant aging.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Grechetto & Trebbiano (Orvieto)", "description": "Orvieto Classico is a blend of these grapes, producing fresh, almond-scented whites. The 'Amabile' (off-dry) and late-harvest versions are historically important.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Sagrantino",
+            "description": "Endemic to Montefalco, producing one of the world's most tannic red wines: inky, powerful, with blackberry, leather, tar, and dark chocolate. Requires significant aging.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Grechetto & Trebbiano (Orvieto)",
+            "description": "Orvieto Classico is a blend of these grapes, producing fresh, almond-scented whites. The 'Amabile' (off-dry) and late-harvest versions are historically important.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Arnaldo Caprai", "description": "The estate that single-handedly elevated Sagrantino di Montefalco to world-class status.", "wines": [{ "name": "Sagrantino 25 Anni", "url": "https://www.vivino.com/search/wines?q=Arnaldo+Caprai+Sagrantino" }] }
+          {
+            "name": "Arnaldo Caprai",
+            "description": "The estate that single-handedly elevated Sagrantino di Montefalco to world-class status.",
+            "wines": [
+              {
+                "name": "Sagrantino 25 Anni",
+                "url": "https://www.vivino.com/search/wines?q=Arnaldo+Caprai+Sagrantino"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Montefalco DOCG", "description": "A tiny zone producing Italy's most tannic red from the endemic Sagrantino grape.", "geography": "Clay and limestone hills at 300-400m altitude.", "grapes": "Sagrantino." },
-          { "name": "Orvieto Classico", "description": "Ancient appellation at the heart of Umbria, producing fresh, everyday whites from a volcanic plateau.", "geography": "Volcanic tuff soils atop a dramatic mesa.", "grapes": "Grechetto, Trebbiano, Procanico." }
+          {
+            "name": "Montefalco DOCG",
+            "description": "A tiny zone producing Italy's most tannic red from the endemic Sagrantino grape.",
+            "geography": "Clay and limestone hills at 300-400m altitude.",
+            "grapes": "Sagrantino."
+          },
+          {
+            "name": "Orvieto Classico",
+            "description": "Ancient appellation at the heart of Umbria, producing fresh, everyday whites from a volcanic plateau.",
+            "geography": "Volcanic tuff soils atop a dramatic mesa.",
+            "grapes": "Grechetto, Trebbiano, Procanico."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [9.1, 39.2] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1,
+          39.2
+        ]
+      },
       "properties": {
         "id": "sardinia",
         "name": "Sardinia (Sardegna)",
@@ -2516,22 +7921,124 @@ export const wineRegionsData = {
         "geography": "Mediterranean island climate with hot, dry summers and mild winters. The dominant 'Mistral' (Maestrale) wind blows from the northwest, cooling the island and preventing humidity-related disease. The interior is mountainous and rugged, with vineyards at various altitudes.",
         "terroir": "Dramatically varied: ancient granite in the north (Gallura, ideal for Vermentino), limestone and volcanic soils in the center, and sandy/clay soils in the south (Sulcis, home to old-vine Carignano/Carignan). Many vines are own-rooted, ungrafted, and over 100 years old.",
         "grapes": [
-          { "name": "Cannonau (Grenache)", "description": "Sardinia claims Cannonau originated here before spreading to Spain. Produces warm, earthy, herb-scented reds with dried cherry, Mediterranean scrub, and rustic charm.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Vermentino", "description": "At its finest in Gallura DOCG (northeast Sardinia). Produces aromatic, saline whites with citrus, herbs, almond, and a distinctive sea-breeze minerality.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Carignano (Carignan)", "description": "Old, ungrafted bush vines in the sandy soils of Sulcis produce deeply concentrated, age-worthy reds with dark fruit and licorice.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Cannonau (Grenache)",
+            "description": "Sardinia claims Cannonau originated here before spreading to Spain. Produces warm, earthy, herb-scented reds with dried cherry, Mediterranean scrub, and rustic charm.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Vermentino",
+            "description": "At its finest in Gallura DOCG (northeast Sardinia). Produces aromatic, saline whites with citrus, herbs, almond, and a distinctive sea-breeze minerality.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Carignano (Carignan)",
+            "description": "Old, ungrafted bush vines in the sandy soils of Sulcis produce deeply concentrated, age-worthy reds with dark fruit and licorice.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Argiolas", "description": "Sardinia's most acclaimed estate, producing Turriga from old-vine Cannonau.", "wines": [{ "name": "Turriga", "url": "https://www.vivino.com/search/wines?q=Argiolas+Turriga" }] }
+          {
+            "name": "Argiolas",
+            "description": "Sardinia's most acclaimed estate, producing Turriga from old-vine Cannonau.",
+            "wines": [
+              {
+                "name": "Turriga",
+                "url": "https://www.vivino.com/search/wines?q=Argiolas+Turriga"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Gallura DOCG", "description": "Northeast Sardinia, the only DOCG, producing Italy's finest Vermentino from granite soils.", "geography": "Granite hills swept by the Mistral. Windswept, arid terrain.", "grapes": "Vermentino." },
-          { "name": "Sulcis (Carignano del Sulcis)", "description": "Southwest Sardinia, home to ancient, ungrafted Carignano bush vines on sandy soils.", "geography": "Sandy coastal soils that repel phylloxera. Hot, dry Mediterranean climate.", "grapes": "Carignano." }
+          {
+            "name": "Gallura DOCG",
+            "description": "Northeast Sardinia, the only DOCG, producing Italy's finest Vermentino from granite soils.",
+            "geography": "Granite hills swept by the Mistral. Windswept, arid terrain.",
+            "grapes": "Vermentino."
+          },
+          {
+            "name": "Sulcis (Carignano del Sulcis)",
+            "description": "Southwest Sardinia, home to ancient, ungrafted Carignano bush vines on sandy soils.",
+            "geography": "Sandy coastal soils that repel phylloxera. Hot, dry Mediterranean climate.",
+            "grapes": "Carignano."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-5.7, 41.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7,
+          41.5
+        ]
+      },
       "properties": {
         "id": "toro",
         "name": "Toro",
@@ -2540,19 +8047,108 @@ export const wineRegionsData = {
         "geography": "Located on Spain's high central plateau (Meseta) at 600-800m altitude. Extreme continental climate: burning hot summers (40°C+) and freezing winters (-10°C). Very low rainfall (<400mm), making it essentially semi-arid. The Duero River provides the only reliable water source.",
         "terroir": "Sandy soils over bedrock of limestone and clay. The deep sand protected many vines from phylloxera, so Toro has a significant stock of ungrafted, pre-phylloxera vines over 100 years old. These ancient vines produce tiny yields of extraordinarily concentrated fruit.",
         "grapes": [
-          { "name": "Tinta de Toro (Tempranillo)", "description": "A uniquely thick-skinned Tempranillo clone adapted to extreme heat and drought. Produces massively concentrated, nearly opaque wines with blackberry, fig, dark chocolate, and formidable tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Tinta de Toro (Tempranillo)",
+            "description": "A uniquely thick-skinned Tempranillo clone adapted to extreme heat and drought. Produces massively concentrated, nearly opaque wines with blackberry, fig, dark chocolate, and formidable tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Numanthia", "description": "Renowned for powerfully concentrated wines from pre-phylloxera Tinta de Toro vines.", "wines": [{ "name": "Numanthia", "url": "https://www.vivino.com/search/wines?q=Numanthia+Toro" }] }
+          {
+            "name": "Numanthia",
+            "description": "Renowned for powerfully concentrated wines from pre-phylloxera Tinta de Toro vines.",
+            "wines": [
+              {
+                "name": "Numanthia",
+                "url": "https://www.vivino.com/search/wines?q=Numanthia+Toro"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Toro Central (Old Vines)", "description": "The core zone with the highest concentration of ungrafted, centenarian bush vines.", "geography": "Sandy soils over limestone. Very old, low-yielding vines.", "grapes": "Tinta de Toro." }
+          {
+            "name": "Toro Central (Old Vines)",
+            "description": "The core zone with the highest concentration of ungrafted, centenarian bush vines.",
+            "geography": "Sandy soils over limestone. Very old, low-yielding vines.",
+            "grapes": "Tinta de Toro."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 92,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-6.6, 42.6] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.6,
+          42.6
+        ]
+      },
       "properties": {
         "id": "bierzo",
         "name": "Bierzo",
@@ -2561,20 +8157,113 @@ export const wineRegionsData = {
         "geography": "A natural amphitheater surrounded by mountains, creating a unique microclimate that is warmer and drier than surrounding Galicia but cooler than the central Meseta. Atlantic and Mediterranean influences mix. Altitude ranges from 450m to over 800m.",
         "terroir": "Steep, slate and quartzite hillsides (similar to the Mosel or Priorat) with patches of clay and alluvial soils. The mineral-rich slate reflects heat and drains water rapidly, stressing the vines and producing wines of remarkable minerality and elegance.",
         "grapes": [
-          { "name": "Mencía", "description": "A hauntingly aromatic, medium-bodied red with violet, dark cherry, smoky mineral, and graphite notes. Often compared to Pinot Noir for its elegance and transparency, with the structure of a Rhône Syrah.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Godello", "description": "A fine white grape producing textured, mineral whites with stone fruit, citrus, and almond notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Mencía",
+            "description": "A hauntingly aromatic, medium-bodied red with violet, dark cherry, smoky mineral, and graphite notes. Often compared to Pinot Noir for its elegance and transparency, with the structure of a Rhône Syrah.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Godello",
+            "description": "A fine white grape producing textured, mineral whites with stone fruit, citrus, and almond notes.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Descendientes de J. Palacios", "description": "Álvaro Palacios and nephew Ricardo Pérez, elevating Mencía to world-class status.", "wines": [{ "name": "Pétalos del Bierzo", "url": "https://www.vivino.com/search/wines?q=Petalos+del+Bierzo" }] }
+          {
+            "name": "Descendientes de J. Palacios",
+            "description": "Álvaro Palacios and nephew Ricardo Pérez, elevating Mencía to world-class status.",
+            "wines": [
+              {
+                "name": "Pétalos del Bierzo",
+                "url": "https://www.vivino.com/search/wines?q=Petalos+del+Bierzo"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Corullón", "description": "The rugged mountain village producing Bierzo's most acclaimed single-vineyard Mencías from ancient slate terraces.", "geography": "Steep slate and quartzite slopes at 600-800m. Old bush vines.", "grapes": "Mencía." }
+          {
+            "name": "Corullón",
+            "description": "The rugged mountain village producing Bierzo's most acclaimed single-vineyard Mencías from ancient slate terraces.",
+            "geography": "Steep slate and quartzite slopes at 600-800m. Old bush vines.",
+            "grapes": "Mencía."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 88,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [16.8, 47.8] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8,
+          47.8
+        ]
+      },
       "properties": {
         "id": "burgenland",
         "name": "Burgenland",
@@ -2583,23 +8272,138 @@ export const wineRegionsData = {
         "geography": "Warm Pannonian continental climate with hot summers and cold winters. Lake Neusiedl acts as a massive temperature moderator and humidity generator. Autumn mists and fogs from the lake create ideal conditions for noble rot (botrytis). The Leithaberg hills provide cooler, elevated vineyard sites.",
         "terroir": "Flat to gently rolling terrain around the lake with sandy, gravelly, and clay soils. The Leithaberg hills feature limestone and schist at higher elevations, producing Austria's most structured, mineral reds. The lake's humidity is essential for the world-class botrytized sweet wines.",
         "grapes": [
-          { "name": "Blaufränkisch", "description": "Austria's most important red grape: medium to full-bodied with sour cherry, blackberry, pepper, and a distinctive savory, spicy character. Age-worthy from the best sites.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Zweigelt", "description": "Austria's most-planted red grape (a cross of Blaufränkisch and St. Laurent), producing juicy, cherry-fruited, medium-bodied reds for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sweet Wine Grapes (Welschriesling, Chardonnay)", "description": "The humid lakeside conditions produce some of Europe's greatest botrytized sweet wines, golden and luscious with apricot, honey, and citrus.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Blaufränkisch",
+            "description": "Austria's most important red grape: medium to full-bodied with sour cherry, blackberry, pepper, and a distinctive savory, spicy character. Age-worthy from the best sites.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Zweigelt",
+            "description": "Austria's most-planted red grape (a cross of Blaufränkisch and St. Laurent), producing juicy, cherry-fruited, medium-bodied reds for everyday drinking.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Sweet Wine Grapes (Welschriesling, Chardonnay)",
+            "description": "The humid lakeside conditions produce some of Europe's greatest botrytized sweet wines, golden and luscious with apricot, honey, and citrus.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Kracher", "description": "The undisputed king of Austrian sweet wine, producing ethereal TBAs.", "wines": [{ "name": "Trockenbeerenauslese No. 7", "url": "https://www.vivino.com/search/wines?q=Kracher+Trockenbeerenauslese" }] },
-          { "name": "Moric", "description": "Roland Velich's project producing Austria's most profound, terroir-driven Blaufränkisch.", "wines": [{ "name": "Blaufränkisch Reserve", "url": "https://www.vivino.com/search/wines?q=Moric+Blaufrankisch" }] }
+          {
+            "name": "Kracher",
+            "description": "The undisputed king of Austrian sweet wine, producing ethereal TBAs.",
+            "wines": [
+              {
+                "name": "Trockenbeerenauslese No. 7",
+                "url": "https://www.vivino.com/search/wines?q=Kracher+Trockenbeerenauslese"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          },
+          {
+            "name": "Moric",
+            "description": "Roland Velich's project producing Austria's most profound, terroir-driven Blaufränkisch.",
+            "wines": [
+              {
+                "name": "Blaufränkisch Reserve",
+                "url": "https://www.vivino.com/search/wines?q=Moric+Blaufrankisch"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Neusiedlersee", "description": "The eastern lakeside, flat and warm, famous for sweet botrytized wines and red blends.", "geography": "Flat, sandy-gravelly soils around Lake Neusiedl. Humid autumn fogs.", "grapes": "Welschriesling, Zweigelt, sweet wine." },
-          { "name": "Leithaberg / Mittelburgenland", "description": "The hilly western zone producing Austria's most structured, age-worthy Blaufränkisch.", "geography": "Limestone and schist hills at higher elevation. Cooler, drier.", "grapes": "Blaufränkisch." }
+          {
+            "name": "Neusiedlersee",
+            "description": "The eastern lakeside, flat and warm, famous for sweet botrytized wines and red blends.",
+            "geography": "Flat, sandy-gravelly soils around Lake Neusiedl. Humid autumn fogs.",
+            "grapes": "Welschriesling, Zweigelt, sweet wine."
+          },
+          {
+            "name": "Leithaberg / Mittelburgenland",
+            "description": "The hilly western zone producing Austria's most structured, age-worthy Blaufränkisch.",
+            "geography": "Limestone and schist hills at higher elevation. Cooler, drier.",
+            "grapes": "Blaufränkisch."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 91,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [44.8, 41.7] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.8,
+          41.7
+        ]
+      },
       "properties": {
         "id": "georgia",
         "name": "Republic of Georgia",
@@ -2608,22 +8412,124 @@ export const wineRegionsData = {
         "geography": "Located at the crossroads of Europe and Asia, between the Greater and Lesser Caucasus mountains. The eastern region (Kakheti) has a continental climate, while western Georgia is humid and subtropical. The Caucasus Mountains protect vineyards from cold northern air masses.",
         "terroir": "Kakheti features rich alluvial soils in the Alazani Valley between two mountain ranges. The qvevri vessels, buried underground, maintain a constant temperature during fermentation and aging. The diversity of soils and over 500 grape varieties creates wine styles found nowhere else.",
         "grapes": [
-          { "name": "Saperavi", "description": "One of few 'teinturier' grapes (red flesh as well as skin). Produces deeply colored, tannic, age-worthy reds with blackberry, plum, and dark chocolate. Often fermented in qvevri.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Rkatsiteli", "description": "Georgia's most planted white grape. Conventionally produces crisp, appley whites. In qvevri with extended skin contact, it becomes deep amber 'orange wine' with dried fruit, tea, walnut, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Mtsvane", "description": "A delicately aromatic white often blended with Rkatsiteli, adding floral elegance and freshness.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Saperavi",
+            "description": "One of few 'teinturier' grapes (red flesh as well as skin). Produces deeply colored, tannic, age-worthy reds with blackberry, plum, and dark chocolate. Often fermented in qvevri.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Rkatsiteli",
+            "description": "Georgia's most planted white grape. Conventionally produces crisp, appley whites. In qvevri with extended skin contact, it becomes deep amber 'orange wine' with dried fruit, tea, walnut, and tannic grip.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Mtsvane",
+            "description": "A delicately aromatic white often blended with Rkatsiteli, adding floral elegance and freshness.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Pheasant's Tears", "description": "Founded by American painter John Wurdeman, producing benchmark qvevri wines.", "wines": [{ "name": "Saperavi", "url": "https://www.vivino.com/search/wines?q=Pheasant+Tears+Saperavi" }] }
+          {
+            "name": "Pheasant's Tears",
+            "description": "Founded by American painter John Wurdeman, producing benchmark qvevri wines.",
+            "wines": [
+              {
+                "name": "Saperavi",
+                "url": "https://www.vivino.com/search/wines?q=Pheasant+Tears+Saperavi"
+              }
+            ],
+            "acceptsVisitors": false,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Kakheti", "description": "The ancient heartland of Georgian wine, producing 70% of the country's output. Home to the most traditional qvevri winemaking.", "geography": "Alazani Valley between the Caucasus and Tsiv-Gombori ranges. Rich alluvial soils.", "grapes": "Saperavi, Rkatsiteli, Mtsvane." },
-          { "name": "Kartli", "description": "Central Georgia around the capital Tbilisi, producing lighter, fresher wines.", "geography": "Higher altitude, cooler. Mix of clay and limestone.", "grapes": "Chinuri, Goruli Mtsvane." }
+          {
+            "name": "Kakheti",
+            "description": "The ancient heartland of Georgian wine, producing 70% of the country's output. Home to the most traditional qvevri winemaking.",
+            "geography": "Alazani Valley between the Caucasus and Tsiv-Gombori ranges. Rich alluvial soils.",
+            "grapes": "Saperavi, Rkatsiteli, Mtsvane."
+          },
+          {
+            "name": "Kartli",
+            "description": "Central Georgia around the capital Tbilisi, producing lighter, fresher wines.",
+            "geography": "Higher altitude, cooler. Mix of clay and limestone.",
+            "grapes": "Chinuri, Goruli Mtsvane."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 91,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 92,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [13.8, 46.1] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8,
+          46.1
+        ]
+      },
       "properties": {
         "id": "slovenia",
         "name": "Slovenia",
@@ -2632,21 +8538,119 @@ export const wineRegionsData = {
         "geography": "Three distinct wine regions: Primorska (west, Mediterranean/Italian influence), Podravje (northeast, continental/Austrian influence), and Posavje (southeast, Croatian influence). The Adriatic moderates the west while the Pannonian plain warms the east. Overall cool to moderate climate.",
         "terroir": "Primorska features the same 'ponca' (flysch) marl-sandstone soils as Italian Collio. The northeast has volcanic and clay soils suited to aromatic whites. The diversity of terroir in such a small country is remarkable.",
         "grapes": [
-          { "name": "Rebula (Ribolla Gialla)", "description": "The signature white of Brda/Goriška Brda, producing both crisp conventional whites and deep orange wines with amber color, dried fruit, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Welschriesling & Furmint", "description": "In the northeast (Štajerska), producing aromatic, crisp whites reflecting the Austrian/Hungarian influence.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Rebula (Ribolla Gialla)",
+            "description": "The signature white of Brda/Goriška Brda, producing both crisp conventional whites and deep orange wines with amber color, dried fruit, and tannic grip.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Welschriesling & Furmint",
+            "description": "In the northeast (Štajerska), producing aromatic, crisp whites reflecting the Austrian/Hungarian influence.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Movia", "description": "A pioneering natural wine estate producing unfiltered, biodynamic wines since 1820.", "wines": [{ "name": "Lunar Chardonnay", "url": "https://www.vivino.com/search/wines?q=Movia+Lunar" }] }
+          {
+            "name": "Movia",
+            "description": "A pioneering natural wine estate producing unfiltered, biodynamic wines since 1820.",
+            "wines": [
+              {
+                "name": "Lunar Chardonnay",
+                "url": "https://www.vivino.com/search/wines?q=Movia+Lunar"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Goriška Brda (Brda)", "description": "The Slovenian extension of Italy's Collio, producing Italy-rivaling whites and acclaimed orange wines.", "geography": "Ponca (flysch) marl-sandstone hills. Mediterranean-influenced climate.", "grapes": "Rebula, Malvazija, Chardonnay." },
-          { "name": "Štajerska (Styria)", "description": "Northeastern Slovenia, producing aromatic, crisp whites with Austrian influence.", "geography": "Continental climate with volcanic and clay soils.", "grapes": "Welschriesling, Sauvignon Blanc, Furmint." }
+          {
+            "name": "Goriška Brda (Brda)",
+            "description": "The Slovenian extension of Italy's Collio, producing Italy-rivaling whites and acclaimed orange wines.",
+            "geography": "Ponca (flysch) marl-sandstone hills. Mediterranean-influenced climate.",
+            "grapes": "Rebula, Malvazija, Chardonnay."
+          },
+          {
+            "name": "Štajerska (Styria)",
+            "description": "Northeastern Slovenia, producing aromatic, crisp whites with Austrian influence.",
+            "geography": "Continental climate with volcanic and clay soils.",
+            "grapes": "Welschriesling, Sauvignon Blanc, Furmint."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 91,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 93,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 90,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 89,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-119.5, 49.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5,
+          49.5
+        ]
+      },
       "properties": {
         "id": "canada",
         "name": "Canada (Okanagan & Niagara)",
@@ -2655,22 +8659,124 @@ export const wineRegionsData = {
         "geography": "The Okanagan is a dramatic, semi-arid, rain-shadow valley at 49°N latitude with a large lake moderating temperatures. Niagara benefits from the thermal influence of Lake Ontario and the Niagara Escarpment. Both regions have extreme continental climates with severe winter freeze risk.",
         "terroir": "Okanagan soils are glacial till, sandy loam, and gravel over ancient lake beds—extremely varied along the 200km valley. Niagara features clay and limestone over the Niagara Escarpment, with the Beamsville Bench as the premium sub-zone.",
         "grapes": [
-          { "name": "Riesling & Vidal (Icewine)", "description": "Canada's most famous contribution to world wine. Grapes freeze naturally on the vine in December/January, concentrating sugars to extraordinary levels. The result is a viscous, golden nectar of honey, apricot, mango, and electric acidity.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Pinot Noir", "description": "Okanagan Pinot Noir (from cooler southern sites) is gaining acclaim: elegant, cherry-fruited, with earthy complexity.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Merlot & Syrah", "description": "The warm central Okanagan produces surprisingly ripe, full-bodied reds rivaling Washington State.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Riesling & Vidal (Icewine)",
+            "description": "Canada's most famous contribution to world wine. Grapes freeze naturally on the vine in December/January, concentrating sugars to extraordinary levels. The result is a viscous, golden nectar of honey, apricot, mango, and electric acidity.",
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Pinot Noir",
+            "description": "Okanagan Pinot Noir (from cooler southern sites) is gaining acclaim: elegant, cherry-fruited, with earthy complexity.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Merlot & Syrah",
+            "description": "The warm central Okanagan produces surprisingly ripe, full-bodied reds rivaling Washington State.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Inniskillin", "description": "The pioneer that put Canadian Icewine on the world map, winning the Grand Prix d'Honneur at Vinexpo 1991.", "wines": [{ "name": "Vidal Icewine", "url": "https://www.vivino.com/search/wines?q=Inniskillin+Icewine" }] }
+          {
+            "name": "Inniskillin",
+            "description": "The pioneer that put Canadian Icewine on the world map, winning the Grand Prix d'Honneur at Vinexpo 1991.",
+            "wines": [
+              {
+                "name": "Vidal Icewine",
+                "url": "https://www.vivino.com/search/wines?q=Inniskillin+Icewine"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true
+          }
         ],
         "subRegions": [
-          { "name": "Okanagan Valley (BC)", "description": "British Columbia's premier region with dramatic north-south climate variation along a glacial lake.", "geography": "Semi-arid rain shadow valley with glacial soils. Lake Okanagan moderates temperature.", "grapes": "Pinot Noir, Merlot, Riesling, Syrah." },
-          { "name": "Niagara Peninsula (Ontario)", "description": "Canada's largest wine region and Icewine capital, benefiting from Lake Ontario's thermal influence.", "geography": "Clay and limestone over the Niagara Escarpment. Lake-moderated cold climate.", "grapes": "Riesling, Vidal (Icewine), Chardonnay, Pinot Noir." }
+          {
+            "name": "Okanagan Valley (BC)",
+            "description": "British Columbia's premier region with dramatic north-south climate variation along a glacial lake.",
+            "geography": "Semi-arid rain shadow valley with glacial soils. Lake Okanagan moderates temperature.",
+            "grapes": "Pinot Noir, Merlot, Riesling, Syrah."
+          },
+          {
+            "name": "Niagara Peninsula (Ontario)",
+            "description": "Canada's largest wine region and Icewine capital, benefiting from Lake Ontario's thermal influence.",
+            "geography": "Clay and limestone over the Niagara Escarpment. Lake-moderated cold climate.",
+            "grapes": "Riesling, Vidal (Icewine), Chardonnay, Pinot Noir."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 89,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 93,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 90,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 89,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 90,
+            "readiness": "Drink"
+          }
         ]
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-99, 30.5] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99,
+          30.5
+        ]
+      },
       "properties": {
         "id": "texas",
         "name": "Texas",
@@ -2679,15 +8785,107 @@ export const wineRegionsData = {
         "geography": "The Texas High Plains features a semi-arid continental climate at high altitude with intense sunshine, very low rainfall, and massive diurnal temperature variation (often 20°C+). The Hill Country (near Austin/San Antonio) has a more humid, warmer climate influenced by the Gulf of Mexico.",
         "terroir": "High Plains soils are deep, sandy loam over caliche (calcium carbonate hardpan). The alkaline, well-draining soils and extreme UV produce thick-skinned, concentrated grapes. Hill Country has a mix of limestone, granite, and clay.",
         "grapes": [
-          { "name": "Tempranillo", "description": "Thrives in the Iberian-like conditions of the High Plains. Produces concentrated, structured reds with dark cherry, leather, and spice.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Mourvèdre & Viognier", "description": "Mediterranean/Rhône varieties increasingly showing exceptional promise in the Texas heat.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          {
+            "name": "Tempranillo",
+            "description": "Thrives in the Iberian-like conditions of the High Plains. Produces concentrated, structured reds with dark cherry, leather, and spice.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Mourvèdre & Viognier",
+            "description": "Mediterranean/Rhône varieties increasingly showing exceptional promise in the Texas heat.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
         ],
         "estates": [
-          { "name": "Becker Vineyards", "description": "One of the Hill Country's most acclaimed estates.", "wines": [{ "name": "Reserve Tempranillo", "url": "https://www.vivino.com/search/wines?q=Becker+Vineyards+Tempranillo" }] }
+          {
+            "name": "Becker Vineyards",
+            "description": "One of the Hill Country's most acclaimed estates.",
+            "wines": [
+              {
+                "name": "Reserve Tempranillo",
+                "url": "https://www.vivino.com/search/wines?q=Becker+Vineyards+Tempranillo"
+              }
+            ],
+            "acceptsVisitors": true,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false
+          }
         ],
         "subRegions": [
-          { "name": "Texas High Plains", "description": "The quality engine, at 1,000m altitude near Lubbock, supplying most premium Texas grapes.", "geography": "High-altitude semi-arid plateau. Sandy loam over caliche. Extreme diurnal shift.", "grapes": "Tempranillo, Cabernet Sauvignon, Mourvèdre." },
-          { "name": "Texas Hill Country", "description": "America's second-most-visited wine region (after Napa), centered between Austin and Fredericksburg.", "geography": "Rolling limestone and granite hills. Warmer, more humid Gulf influence.", "grapes": "Tempranillo, Viognier, Sangiovese." }
+          {
+            "name": "Texas High Plains",
+            "description": "The quality engine, at 1,000m altitude near Lubbock, supplying most premium Texas grapes.",
+            "geography": "High-altitude semi-arid plateau. Sandy loam over caliche. Extreme diurnal shift.",
+            "grapes": "Tempranillo, Cabernet Sauvignon, Mourvèdre."
+          },
+          {
+            "name": "Texas Hill Country",
+            "description": "America's second-most-visited wine region (after Napa), centered between Austin and Fredericksburg.",
+            "geography": "Rolling limestone and granite hills. Warmer, more humid Gulf influence.",
+            "grapes": "Tempranillo, Viognier, Sangiovese."
+          }
+        ],
+        "climate": {
+          "rainfall": "650 mm",
+          "gdd": "1,500 °C Days"
+        },
+        "soil": [
+          "Mixed Clay",
+          "Limestone",
+          "Sand"
+        ],
+        "vintages": [
+          {
+            "year": 2023,
+            "score": 93,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2022,
+            "score": 88,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2021,
+            "score": 90,
+            "readiness": "Hold"
+          },
+          {
+            "year": 2020,
+            "score": 88,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2019,
+            "score": 89,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2018,
+            "score": 92,
+            "readiness": "Drink/Hold"
+          },
+          {
+            "year": 2017,
+            "score": 91,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2016,
+            "score": 88,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2015,
+            "score": 92,
+            "readiness": "Drink"
+          },
+          {
+            "year": 2014,
+            "score": 93,
+            "readiness": "Drink"
+          }
         ]
       }
     }
