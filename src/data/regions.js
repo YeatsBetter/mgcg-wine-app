@@ -109,7 +109,7 @@ export const wineRegionsData = {
           {
             "name": "Chardonnay",
             "description": "A non-aromatic variety that acts as a blank canvas for terroir and winemaking techniques. Ranges from steely, high-acid, green-apple Chablis to rich, buttery, hazelnut-scented Meursault.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -391,7 +391,7 @@ export const wineRegionsData = {
           {
             "name": "Viura (Macabeo)",
             "description": "The principal white grape, historically heavily oaked and oxidized, but modern versions are crisp, fresh, and stainless-steel fermented.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -515,7 +515,7 @@ export const wineRegionsData = {
           {
             "name": "Riesling",
             "description": "The absolute king of the Mosel. Its natural resistance to frost and ability to hang on the vine for extended periods yield wines with searingly high, crystalline acidity, extremely low alcohol (often 7-9%), and unbelievable tension, residual sugar balance, and longevity.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -582,7 +582,7 @@ export const wineRegionsData = {
           {
             "name": "Chardonnay",
             "description": "A major component for Marlborough's massive sparkling wine industry, often exhibiting crisp citrus and stone fruit profiles with high natural acidity.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -711,7 +711,7 @@ export const wineRegionsData = {
           {
             "name": "Chardonnay",
             "description": "Provides high acidity, floral notes, and citrus elegance. Critical for the aging potential of the wine. Dominant in the Côte des Blancs.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           },
           {
             "name": "Meunier",
@@ -849,7 +849,7 @@ export const wineRegionsData = {
           {
             "name": "Torrontés",
             "description": "Argentina's signature white grape. Highly aromatic, exuding heady perfumes of jasmine, rose petal, and peach, yet fermenting completely bone-dry on the palate with refreshing acidity.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -1104,7 +1104,7 @@ export const wineRegionsData = {
           {
             "name": "Riesling",
             "description": "While the valley floor is too hot, the neighboring high-altitude Eden Valley produces profound, bone-dry Rieslings with lime juice acidity and rapid aging into toasty/kerosene complexity.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -1287,7 +1287,7 @@ export const wineRegionsData = {
           {
             "name": "Riesling",
             "description": "The most planted 'noble' grape in Alsace. Ranges from dry to sweet, featuring high acidity, medium/full body, and intense aromas of citrus, stone fruit, and an iconic petrol/kerosene note with age.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           },
           {
             "name": "Gewurztraminer",
@@ -1360,7 +1360,7 @@ export const wineRegionsData = {
           {
             "name": "Chenin Blanc",
             "description": "The 'chameleon' grape; produces dry, sweet, and sparkling wines with high acidity and flavors of apple, honey, and wet wool.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           },
           {
             "name": "Cabernet Franc",
@@ -1476,7 +1476,7 @@ export const wineRegionsData = {
           {
             "name": "Furmint",
             "description": "High acidity and thick skin. Susceptible to botrytis. Produces dry whites and the backbone of Aszú with apple and apricot notes.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -1513,7 +1513,7 @@ export const wineRegionsData = {
           {
             "name": "Palomino",
             "description": "The workhorse grape of Sherry, neutral in aroma, allowing the biological (flor) or oxidative aging to define the wine.",
-            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
           }
         ],
         "estates": [
@@ -1729,7 +1729,7 @@ export const wineRegionsData = {
         "grapes": [
           { "name": "Cabernet Sauvignon & Bordeaux Blends", "description": "Margaret River's Cabernets are Australia's most elegant: firm tannins, blackcurrant, bay leaf, and cedar, with a distinctive eucalyptus note. Often blended with Merlot.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Chardonnay", "description": "Produces world-class, full-bodied Chardonnay rivaling white Burgundy, with citrus, stone fruit, cashew, and integrated oak.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Semillon-Sauvignon Blanc (SSB)", "description": "A classic regional blend inspired by white Bordeaux. Semillon provides weight and texture, while Sauvignon Blanc adds herbaceous lift.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Semillon-Sauvignon Blanc (SSB)", "description": "A classic regional blend inspired by white Bordeaux. Semillon provides weight and texture, while Sauvignon Blanc adds herbaceous lift.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Leeuwin Estate", "description": "Their 'Art Series' Chardonnay is consistently ranked among the world's greatest.", "wines": [{ "name": "Art Series Chardonnay", "url": "https://www.vivino.com/search/wines?q=Leeuwin+Art+Series+Chardonnay" }] },
@@ -1867,7 +1867,7 @@ export const wineRegionsData = {
         "geography": "Located where the Rhine turns sharply west, creating a unique south-facing amphitheater of slopes. This orientation maximizes sun exposure at this northerly latitude. The Rhine River acts as a heat reservoir, reflecting warmth onto the vines and moderating frost risk.",
         "terroir": "Soils are diverse: slate and quartzite on the upper slopes (producing racy, mineral Rieslings), phyllite and loess in the middle (richer, fuller wines), and deep loess and clay on the lower slopes. The south-facing aspect is the defining quality factor.",
         "grapes": [
-          { "name": "Riesling", "description": "Produces a distinctly fuller, drier, more powerful style than the Mosel. Rheingau Rieslings tend toward ripe stone fruit, quince, and slate minerality with firm acidity and medium body.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "Produces a distinctly fuller, drier, more powerful style than the Mosel. Rheingau Rieslings tend toward ripe stone fruit, quince, and slate minerality with firm acidity and medium body.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Spätburgunder (Pinot Noir)", "description": "The Rheingau's Assmannshausen village is famous for Germany's finest Pinot Noir: delicate, perfumed, and earthy.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -1890,7 +1890,7 @@ export const wineRegionsData = {
         "geography": "A broad, gently rolling region on the west bank of the Rhine. Protected from cold winds by surrounding hills, it is one of Germany's warmest and driest regions. The best vineyards face east and southeast toward the Rhine.",
         "terroir": "Extremely varied soils. The famous 'Roter Hang' near Nierstein features red iron oxide-rich sandstone and slate that produce uniquely mineral, spicy Rieslings. Elsewhere, loess, limestone, and clay dominate.",
         "grapes": [
-          { "name": "Riesling", "description": "From the best sites (Roter Hang), produces powerful, mineral-driven dry wines with peach, citrus, and distinctive iron/blood-orange notes.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "From the best sites (Roter Hang), produces powerful, mineral-driven dry wines with peach, citrus, and distinctive iron/blood-orange notes.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Silvaner", "description": "The traditional variety, producing round, gentle wines with subtle herbal and apple notes. Still important in older plantings.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -1914,7 +1914,7 @@ export const wineRegionsData = {
         "terroir": "Steep, terraced hillsides composed of ancient primary rock: granite (Loiben) and gneiss (Spitz), along with patches of loess. The stone terraces absorb daytime heat and radiate it at night, critical for ripening at this latitude. Vineyards can exceed 45° slope angles.",
         "grapes": [
           { "name": "Grüner Veltliner", "description": "Austria's signature white grape. In the Wachau, it produces powerful, dry wines with white pepper, green bean, citrus, and lentil notes, developing remarkable honeyed complexity with age.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Riesling", "description": "The Wachau's finest vineyards (Achleiten, Kellerberg) produce Rieslings that rival the Rheingau and Alsace: powerful, mineral, with apricot, peach, and stony tension.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Riesling", "description": "The Wachau's finest vineyards (Achleiten, Kellerberg) produce Rieslings that rival the Rheingau and Alsace: powerful, mineral, with apricot, peach, and stony tension.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Domäne Wachau", "description": "The largest and most important cooperative, producing benchmark wines across all three tiers.", "wines": [{ "name": "Smaragd Grüner Veltliner Achleiten", "url": "https://www.vivino.com/search/wines?q=Domane+Wachau+Smaragd" }] },
@@ -2007,7 +2007,7 @@ export const wineRegionsData = {
         "geography": "Cold continental climate with severe winters (-20°C). The deep glacial lakes (Seneca, Cayuga, Keuka) act as thermal buffers: they absorb summer heat and slowly release it through autumn, extending the growing season and preventing deadly early frosts. Without the lakes, grapes simply could not ripen here.",
         "terroir": "The best vineyards are planted on the steep slopes directly above the lakes, benefiting from superior cold-air drainage and reflected warmth. Soils are predominantly shale and limestone, providing excellent drainage and adding mineral complexity. The slate retains heat during the day.",
         "grapes": [
-          { "name": "Riesling", "description": "The star variety, producing dry to sweet styles with piercing acidity, green apple, lime, and petrol notes. Often compared favorably to German and Alsatian Rieslings.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "The star variety, producing dry to sweet styles with piercing acidity, green apple, lime, and petrol notes. Often compared favorably to German and Alsatian Rieslings.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Cabernet Franc", "description": "The most successful red variety, producing lighter, aromatic reds with raspberry, bell pepper, and herbaceous notes.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -2057,7 +2057,7 @@ export const wineRegionsData = {
         "terroir": "Incredibly varied: porphyry (volcanic rock) in the lower Adige valley, limestone and dolomite on higher slopes, sandy-gravelly alluvium on the valley floor. The steep, terraced mountainside vineyards receive maximum sun exposure while benefiting from cool alpine nights.",
         "grapes": [
           { "name": "Pinot Grigio", "description": "Unlike the dilute, mass-produced Veneto style, Alto Adige Pinot Grigio is medium to full-bodied with pear, apple, and almond notes, often showing a subtle coppery hue.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Gewürztraminer", "description": "Named after the village of Tramin in Alto Adige. Intensely aromatic with lychee, rose, and Turkish delight. The local versions are among the world's finest.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Gewürztraminer", "description": "Named after the village of Tramin in Alto Adige. Intensely aromatic with lychee, rose, and Turkish delight. The local versions are among the world's finest.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Lagrein & Schiava", "description": "Indigenous red grapes. Lagrein produces deeply colored, full-bodied wines with dark berry and chocolate; Schiava is light, and cherry-scented for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -2082,7 +2082,7 @@ export const wineRegionsData = {
         "grapes": [
           { "name": "Aglianico", "description": "The 'Barolo of the South'. Extremely late-ripening with massive tannins, high acidity, and dark fruit, tar, leather, and chocolate notes. Requires decades of aging to show its best.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Fiano", "description": "An aromatic white producing complex, age-worthy wines with hazelnut, honey, pear, and exotic spice notes.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Greco", "description": "High-acid, full-bodied white with almond, citrus, and mineral notes. Greco di Tufo is the finest expression.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Greco", "description": "High-acid, full-bodied white with almond, citrus, and mineral notes. Greco di Tufo is the finest expression.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Mastroberardino", "description": "Historic family estate that preserved Campania's indigenous varieties through the 20th century.", "wines": [{ "name": "Taurasi Radici", "url": "https://www.vivino.com/search/wines?q=Mastroberardino+Taurasi+Radici" }] }
@@ -2106,7 +2106,7 @@ export const wineRegionsData = {
         "terroir": "Predominantly granite-based soils that provide excellent drainage in this wet climate and contribute to the wines' characteristic mineral, slightly saline quality. River valleys create warmer mesoclimates for better ripening.",
         "grapes": [
           { "name": "Alvarinho (Albariño)", "description": "The premium grape, especially in the Monção e Melgaço sub-region. Produces aromatic, full-bodied wines with peach, apricot, and citrus. Higher alcohol and complexity than standard Vinho Verde.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Loureiro", "description": "The most planted variety, producing lighter, floral wines with acacia, orange blossom, and citrus notes.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Loureiro", "description": "The most planted variety, producing lighter, floral wines with acacia, orange blossom, and citrus notes.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Anselmo Mendes", "description": "Leading producer elevating Alvarinho to world-class status.", "wines": [{ "name": "Contacto Alvarinho", "url": "https://www.vivino.com/search/wines?q=Anselmo+Mendes+Alvarinho" }] }
@@ -2128,7 +2128,7 @@ export const wineRegionsData = {
         "geography": "Subtropical volcanic island with steep, terraced mountainsides. The northern coast is wet and cool while the southern coast is warmer and drier. Vineyards climb from sea level to over 700m. The Gulf Stream provides a warm, humid maritime climate year-round.",
         "terroir": "Volcanic basalt soils provide excellent drainage on impossibly steep terrain. Vineyards are tiny, often terraced on 'poios' (narrow stone-walled ledges). The volcanic origin contributes to the wines' distinctive tangy, smoky character.",
         "grapes": [
-          { "name": "Sercial", "description": "Produces the driest style of Madeira: high acidity, citrus, almond, and piercing minerality. Aged for years in heated 'estufas'.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Sercial", "description": "Produces the driest style of Madeira: high acidity, citrus, almond, and piercing minerality. Aged for years in heated 'estufas'.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Verdelho", "description": "Medium-dry style with smoky, honeyed character and high acidity.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Bual & Malmsey (Malvasia)", "description": "The sweetest styles. Bual is medium-sweet with caramel and coffee. Malmsey is the richest, most luscious, with dark sugar, dried fruit, and chocolate.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
@@ -2153,7 +2153,7 @@ export const wineRegionsData = {
         "terroir": "Limestone and clay soils dominate, providing good drainage and contributing to the mineral quality of the sparkling wines. Higher altitude zones have chalky, limestone-rich soils that preserve acidity essential for Cava production.",
         "grapes": [
           { "name": "Macabeo, Xarel·lo & Parellada", "description": "The classic Cava trio: Macabeo (freshness, floral), Xarel·lo (body, earthy structure, the backbone), and Parellada (elegance, citrus, high altitude). Xarel·lo is increasingly bottled as a still wine.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay & Pinot Noir", "description": "Now permitted in Cava production, adding richness and complexity. Premium Cavas increasingly use these international varieties.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Chardonnay & Pinot Noir", "description": "Now permitted in Cava production, adding richness and complexity. Premium Cavas increasingly use these international varieties.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Codorníu", "description": "One of the original Cava houses, founded in 1551 (oldest recorded family business in Spain).", "wines": [{ "name": "Anna de Codorníu Brut", "url": "https://www.vivino.com/search/wines?q=Codorniu+Anna" }] },
@@ -2177,7 +2177,7 @@ export const wineRegionsData = {
         "terroir": "Sandy and gravelly soils over limestone and clay bedrock. The stony, free-draining soils concentrate flavors and the high calcium content contributes to Verdejo's distinctive bitter-almond mineral finish.",
         "grapes": [
           { "name": "Verdejo", "description": "Spain's finest indigenous white grape. Aromatic, full-bodied, with fennel, grass, stone fruit, and a distinctive bitter-almond finish. Higher body and lower acidity than Sauvignon Blanc.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sauvignon Blanc", "description": "Increasingly planted alongside Verdejo, producing crisp, herbaceous wines that complement the local style.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Sauvignon Blanc", "description": "Increasingly planted alongside Verdejo, producing crisp, herbaceous wines that complement the local style.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Marqués de Riscal", "description": "The Rioja giant that revolutionized Rueda's white winemaking in the 1970s.", "wines": [{ "name": "Verdejo", "url": "https://www.vivino.com/search/wines?q=Marques+de+Riscal+Verdejo" }] }
@@ -2198,7 +2198,7 @@ export const wineRegionsData = {
         "geography": "The warmest and sunniest of Germany's wine regions. The Haardt Mountains to the west block Atlantic rain, creating Germany's driest microclimate. Almond and fig trees grow here—evidence of the near-Mediterranean conditions. Vineyards stretch along the 'Deutsche Weinstraße' (German Wine Route).",
         "terroir": "Diverse soils including sandstone, limestone, basalt (volcanic), loess, and clay. The Mittelhaardt zone features the finest terroirs: limestone and basalt at mid-slope elevations producing powerful, complex Rieslings.",
         "grapes": [
-          { "name": "Riesling", "description": "Produces a richer, more generous style than nearly any other German region. Ripe stone fruit, exotic spice, and power define the Pfalz style. Often fermented bone-dry.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "Produces a richer, more generous style than nearly any other German region. Ripe stone fruit, exotic spice, and power define the Pfalz style. Often fermented bone-dry.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Spätburgunder (Pinot Noir)", "description": "The Pfalz is increasingly challenging Burgundy for Pinot Noir quality, producing concentrated, oak-aged reds with cherry, earth, and spice.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -2245,7 +2245,7 @@ export const wineRegionsData = {
         "geography": "A series of narrow valleys and ridges at 400-500m elevation in the Mount Lofty Ranges. Despite being further north than Barossa, the altitude provides significantly cooler temperatures, especially at night. Low humidity and cooling afternoon breezes from the Gulf further moderate the climate.",
         "terroir": "Varied soils including red-brown earth, slate (particularly in the Polish Hill River sub-region), and limestone (in Watervale). Slate soils produce the most mineral, tightly structured Rieslings, while limestone yields richer, more generous styles.",
         "grapes": [
-          { "name": "Riesling", "description": "Clare Valley Riesling is fermented bone-dry with electric lime, lemon, and mineral acidity in youth, developing classic toast and kerosene notes with age. A world benchmark.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling", "description": "Clare Valley Riesling is fermented bone-dry with electric lime, lemon, and mineral acidity in youth, developing classic toast and kerosene notes with age. A world benchmark.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Shiraz & Cabernet Sauvignon", "description": "From warmer sites, produces structured, age-worthy reds with dark fruit, eucalyptus, and firm tannins.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -2316,7 +2316,7 @@ export const wineRegionsData = {
         "grapes": [
           { "name": "Sauvignon Blanc", "description": "Produces Chile's most acclaimed examples: intensely aromatic with grapefruit, lime, green herbs, and a distinctive salty minerality.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Pinot Noir", "description": "Elegant, cool-climate examples with bright cherry, strawberry, and earthy complexity. Growing in reputation.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Chardonnay", "description": "Crisp, mineral-driven with citrus and subtle oak. Among Chile's most refined examples.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Chardonnay", "description": "Crisp, mineral-driven with citrus and subtle oak. Among Chile's most refined examples.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Casa Marin", "description": "The pioneer that first planted vines in the San Antonio Valley coastal zone.", "wines": [{ "name": "Cipreses Sauvignon Blanc", "url": "https://www.vivino.com/search/wines?q=Casa+Marin+Sauvignon+Blanc" }] }
@@ -2338,7 +2338,7 @@ export const wineRegionsData = {
         "terroir": "Mix of primary rock (gneiss, granite) on the riverbanks and deep loess deposits on the plateaus. Loess produces more generous, fruit-forward wines, while primary rock yields tighter, more mineral expressions. The interplay defines each village's character.",
         "grapes": [
           { "name": "Grüner Veltliner", "description": "From light, peppery everyday wines to powerful, oak-aged reserve bottlings with white pepper, citrus, lentil, and remarkable aging potential.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Riesling", "description": "Produces excellent, mineral-driven wines, slightly less intense than the Wachau but with greater accessibility and value.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Riesling", "description": "Produces excellent, mineral-driven wines, slightly less intense than the Wachau but with greater accessibility and value.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Bründlmayer", "description": "Kamptal's most famous estate, producing benchmark Grüner Veltliner and sparkling wine.", "wines": [{ "name": "Heiligenstein Riesling", "url": "https://www.vivino.com/search/wines?q=Brundlmayer+Heiligenstein+Riesling" }] }
@@ -2433,7 +2433,7 @@ export const wineRegionsData = {
         "terroir": "The Collio hills feature 'ponca'—compressed layers of marl and sandstone from ancient seabeds, providing excellent drainage and intense mineral character. The Grave plains have gravelly, alluvial soils that produce lighter, fresher wines.",
         "grapes": [
           { "name": "Pinot Grigio", "description": "Friuli's Pinot Grigio is Italy's finest: fuller-bodied, textured, with pear, almond, and mineral notes—completely different from the bland industrial versions.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Friulano (Tocai)", "description": "The signature local grape, producing round, almondy, medium-bodied whites with herbs and white flowers.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Friulano (Tocai)", "description": "The signature local grape, producing round, almondy, medium-bodied whites with herbs and white flowers.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Ribolla Gialla", "description": "An ancient variety now famous for 'orange wine' (extended maceration). Conventional versions are crisp and citrusy; skin-contact versions are deep gold with dried fruit, tea, and tannic grip.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
@@ -2550,7 +2550,7 @@ export const wineRegionsData = {
         "grapes": [
           { "name": "Blaufränkisch", "description": "Austria's most important red grape: medium to full-bodied with sour cherry, blackberry, pepper, and a distinctive savory, spicy character. Age-worthy from the best sites.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Zweigelt", "description": "Austria's most-planted red grape (a cross of Blaufränkisch and St. Laurent), producing juicy, cherry-fruited, medium-bodied reds for everyday drinking.", "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Sweet Wine Grapes (Welschriesling, Chardonnay)", "description": "The humid lakeside conditions produce some of Europe's greatest botrytized sweet wines, golden and luscious with apricot, honey, and citrus.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Sweet Wine Grapes (Welschriesling, Chardonnay)", "description": "The humid lakeside conditions produce some of Europe's greatest botrytized sweet wines, golden and luscious with apricot, honey, and citrus.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Kracher", "description": "The undisputed king of Austrian sweet wine, producing ethereal TBAs.", "wines": [{ "name": "Trockenbeerenauslese No. 7", "url": "https://www.vivino.com/search/wines?q=Kracher+Trockenbeerenauslese" }] },
@@ -2575,7 +2575,7 @@ export const wineRegionsData = {
         "grapes": [
           { "name": "Saperavi", "description": "One of few 'teinturier' grapes (red flesh as well as skin). Produces deeply colored, tannic, age-worthy reds with blackberry, plum, and dark chocolate. Often fermented in qvevri.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Rkatsiteli", "description": "Georgia's most planted white grape. Conventionally produces crisp, appley whites. In qvevri with extended skin contact, it becomes deep amber 'orange wine' with dried fruit, tea, walnut, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Mtsvane", "description": "A delicately aromatic white often blended with Rkatsiteli, adding floral elegance and freshness.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Mtsvane", "description": "A delicately aromatic white often blended with Rkatsiteli, adding floral elegance and freshness.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Pheasant's Tears", "description": "Founded by American painter John Wurdeman, producing benchmark qvevri wines.", "wines": [{ "name": "Saperavi", "url": "https://www.vivino.com/search/wines?q=Pheasant+Tears+Saperavi" }] }
@@ -2598,7 +2598,7 @@ export const wineRegionsData = {
         "terroir": "Primorska features the same 'ponca' (flysch) marl-sandstone soils as Italian Collio. The northeast has volcanic and clay soils suited to aromatic whites. The diversity of terroir in such a small country is remarkable.",
         "grapes": [
           { "name": "Rebula (Ribolla Gialla)", "description": "The signature white of Brda/Goriška Brda, producing both crisp conventional whites and deep orange wines with amber color, dried fruit, and tannic grip.", "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          { "name": "Welschriesling & Furmint", "description": "In the northeast (Štajerska), producing aromatic, crisp whites reflecting the Austrian/Hungarian influence.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+          { "name": "Welschriesling & Furmint", "description": "In the northeast (Štajerska), producing aromatic, crisp whites reflecting the Austrian/Hungarian influence.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
         "estates": [
           { "name": "Movia", "description": "A pioneering natural wine estate producing unfiltered, biodynamic wines since 1820.", "wines": [{ "name": "Lunar Chardonnay", "url": "https://www.vivino.com/search/wines?q=Movia+Lunar" }] }
@@ -2620,7 +2620,7 @@ export const wineRegionsData = {
         "geography": "The Okanagan is a dramatic, semi-arid, rain-shadow valley at 49°N latitude with a large lake moderating temperatures. Niagara benefits from the thermal influence of Lake Ontario and the Niagara Escarpment. Both regions have extreme continental climates with severe winter freeze risk.",
         "terroir": "Okanagan soils are glacial till, sandy loam, and gravel over ancient lake beds—extremely varied along the 200km valley. Niagara features clay and limestone over the Niagara Escarpment, with the Beamsville Bench as the premium sub-zone.",
         "grapes": [
-          { "name": "Riesling & Vidal (Icewine)", "description": "Canada's most famous contribution to world wine. Grapes freeze naturally on the vine in December/January, concentrating sugars to extraordinary levels. The result is a viscous, golden nectar of honey, apricot, mango, and electric acidity.", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          { "name": "Riesling & Vidal (Icewine)", "description": "Canada's most famous contribution to world wine. Grapes freeze naturally on the vine in December/January, concentrating sugars to extraordinary levels. The result is a viscous, golden nectar of honey, apricot, mango, and electric acidity.", "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Pinot Noir", "description": "Okanagan Pinot Noir (from cooler southern sites) is gaining acclaim: elegant, cherry-fruited, with earthy complexity.", "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
           { "name": "Merlot & Syrah", "description": "The warm central Okanagan produces surprisingly ripe, full-bodied reds rivaling Washington State.", "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
         ],
