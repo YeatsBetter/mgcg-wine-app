@@ -1337,6 +1337,201 @@ export const wineRegionsDataZh = {
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6,
+          47.4
+        ]
+      },
+      "properties": {
+        "history": "卢瓦尔河谷被誉为'法国的花园'，几个世纪以来一直是法国贵族和葡萄栽培的中心。WSET 3级强调了其子产区的多样性，从受大西洋影响的慕斯卡德到内陆的桑塞尔。该地区在卢瓦尔河（法国最长的河流）沿线的贸易中具有重要的历史意义。",
+        "geography": "从大西洋横跨1000多公里到法国中部。气候从南特的海洋性气候到中央葡萄园的陆性气候。河流及其支流提供了缓解霜冻和湿度的微气候。",
+        "terroir": "多样性极高：南特的火山岩和变质岩，安茹-索米尔的图福石灰岩（赤霞珠和品丽珠的理想选择），以及中央葡萄园的坎默里奇粘土或燧石（长相思的理想选择）。",
+        "grapes": [
+          {
+            "name": "Sauvignon Blanc",
+            "description": "清脆、高酸度，带有青果和草本风味（青草、接骨木花）。桑塞尔和普伊-富美是全球标杆。",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chenin Blanc",
+            "description": "'变色龙'葡萄；生产干型、甜型和起泡酒，具有高酸度，带有苹果、蜂蜜和湿羊毛的风味。",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Franc",
+            "description": "在希侬和布尔格伊表现卓越，生产具有覆盆子、紫罗兰和石墨气息的红色香气。",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Didier Dagueneau",
+            "description": "桑塞尔和普伊-富美的传奇生产商，以燧石质的'Silex'闻名。",
+            "wines": [
+              {
+                "name": "Silex Blanc",
+                "url": "https://www.vivino.com/search/wines?q=Didier+Dagueneau+Silex"
+              }
+            ]
+          }
+        ],
+        "id": "loire-valley",
+        "name": "Loire Valley (卢瓦尔河谷)",
+        "country": "法国"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7,
+          46.1
+        ]
+      },
+      "properties": {
+        "history": "在历史上属于勃艮第的一部分，但在风格和管理上截然不同。以佳美（Gamay）葡萄及其独特的'二氧化碳浸渍法'技术而闻名。10个薄若莱特级村庄（Crus）代表了最高品质，足以与勃艮第村庄级媲美。",
+        "geography": "位于马孔以南。连绵起伏的山丘和索恩河谷。北部多山适合特级村庄，南部较为平坦适合普通薄若莱。",
+        "terroir": "北部以花岗岩和片岩土壤为主（佳美葡萄的理想之地，能展现结构和矿物特征）。南部多为石灰岩和粘土，产出的酒更柔顺。",
+        "grapes": [
+          {
+            "name": "Gamay",
+            "description": "唯一的红葡萄品种，产出酒体轻盈、高酸、低单宁的红酒，带有活泼的红果香（草莓、樱桃）以及发酵带来的泡泡糖风味。",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Marcel Lapierre",
+            "description": "摩根（Morgon）自然酒风格的先驱。",
+            "wines": [
+              {
+                "name": "Morgon",
+                "url": "https://www.vivino.com/search/wines?q=Marcel+Lapierre+Morgon"
+              }
+            ]
+          }
+        ],
+        "id": "beaujolais",
+        "name": "Beaujolais (薄若莱)",
+        "country": "法国"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8,
+          41.2
+        ]
+      },
+      "properties": {
+        "history": "A rugged region in Catalonia that saw a massive resurgence in the 1980s led by the 'Clos' pioneers. One of only two Spanish regions (with Rioja) to hold the top DOCa/DOQ status.",
+        "geography": "Inland from Tarragona. Highly mountainous with many small, steep terraces, necessitating costly hand-harvesting.",
+        "terroir": "The famous 'Llicorella' soil: reddish-black slate with mica. It is heat-reflecting and moisture-retaining, forcing vines to dig deep for water, resulting in low-yield, concentrated grapes.",
+        "grapes": [
+          {
+            "name": "Garnacha & Cariñena",
+            "description": "Old-vines produce powerful, high-alcohol reds with intense dark fruit, licorice, and distinct mineral/slate characteristics.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Álvaro Palacios",
+            "description": "Renowned for L'Ermita, one of Spain's most iconic wines.",
+            "wines": [
+              {
+                "name": "L'Ermita",
+                "url": "https://www.vivino.com/search/wines?q=Alvaro+Palacios+L+Ermita"
+              }
+            ]
+          }
+        ],
+        "id": "priorat",
+        "name": "Priorat (Pending Translation)",
+        "country": "Spain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.4,
+          48.1
+        ]
+      },
+      "properties": {
+        "history": "Produces the legendary 'Vinum Regum, Rex Vinorum' (Wine of Kings, King of Wines). Tokaj was the world's first vineyard classification system (1730). Famous for Aszú, one of the world's great sweet wines.",
+        "geography": "Northeast Hungary near the border of Slovakia and Ukraine. Rivers Tisza and Bodrog create high humidity and autumnal mists, perfect for Botrytis.",
+        "terroir": "Volcanic soils dominate the hillsides, providing excellent drainage and heat retention. Loess-based soils on lower slopes.",
+        "grapes": [
+          {
+            "name": "Furmint",
+            "description": "High acidity and thick skin. Susceptible to botrytis. Produces dry whites and the backbone of Aszú with apple and apricot notes.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Royal Tokaji",
+            "description": "Renowned for its commitment to the historic single vineyards of Tokaj.",
+            "wines": [
+              {
+                "name": "Aszú 5 Puttonyos",
+                "url": "https://www.vivino.com/search/wines?q=Royal+Tokaji+Aszu"
+              }
+            ]
+          }
+        ],
+        "id": "tokaj",
+        "name": "Tokaj (Pending Translation)",
+        "country": "Hungary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1,
+          36.7
+        ]
+      },
+      "properties": {
+        "history": "The home of Sherry, a unique fortified wine. Centered on the 'Sherry Triangle' (Jerez de la Frontera, Sanlúcar de Barrameda, El Puerto de Santa María). WSET highlights the Solera aging system.",
+        "geography": "Southwestern Andalusia. Hot and dry Mediterranean climate, moderated by the 'Poniente' (cool, damp Atlantic wind) and 'Levante' (hot, dry interior wind).",
+        "terroir": "The unique 'Albariza' soil: white, chalky clay with high calcium carbonate content. It reflects sunlight and acts as a reservoir for water during the dry summers by forming a crust.",
+        "grapes": [
+          {
+            "name": "Palomino",
+            "description": "The workhorse grape of Sherry, neutral in aroma, allowing the biological (flor) or oxidative aging to define the wine.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "González Byass",
+            "description": "Famous for the Tio Pepe Fino.",
+            "wines": [
+              {
+                "name": "Tio Pepe Fino",
+                "url": "https://www.vivino.com/search/wines?q=Tio+Pepe+Sherry"
+              }
+            ]
+          }
+        ],
+        "id": "jerez",
+        "name": "Jerez (Sherry) (Pending Translation)",
+        "country": "Spain"
+      }
     }
   ]
 };

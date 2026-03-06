@@ -1337,6 +1337,201 @@ export const wineRegionsData = {
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6,
+          47.4
+        ]
+      },
+      "properties": {
+        "history": "Known as the Garden of France, the Loire Valley has been a center of French nobility and viticulture for centuries. WSET Level 3 highlights the diversity of its sub-regions, from the Atlantic-influenced Muscadet to the inland Sancerre. The region is historically significant for its role in the trade along the Loire River, the longest river in France.",
+        "geography": "Spans over 1,000km from the Atlantic to central France. Climate ranges from maritime in Nantes (Muscadet) to continental in the Central Vineyards (Sancerre). The river and its tributaries provide microclimates that mitigate frost and humidity, essential for rot-prone varieties.",
+        "terroir": "Tremendously varied: volcanic and metamorphic soils in Nantes, Tuffeau limestone in Anjou-Saumur (ideal for Chenin Blanc and Cabernet Franc), and Kimmeridgian marl or flint (silex) in the Central Vineyards (ideal for Sauvignon Blanc).",
+        "grapes": [
+          {
+            "name": "Sauvignon Blanc",
+            "description": "Crisp, high acidity, green fruit and herbaceous notes (grass, elderflower). Sancerre and Pouilly-Fumé are global benchmarks.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Chenin Blanc",
+            "description": "The 'chameleon' grape; produces dry, sweet, and sparkling wines with high acidity and flavors of apple, honey, and wet wool.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          },
+          {
+            "name": "Cabernet Franc",
+            "description": "Thrives in Chinon and Bourgueil, producing aromatic reds with raspberry, violet, and graphite notes.",
+            "image": "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Didier Dagueneau",
+            "description": "The legendary producer of Sancerre and Pouilly-Fumé, known for the flinty 'Silex'.",
+            "wines": [
+              {
+                "name": "Silex Blanc",
+                "url": "https://www.vivino.com/search/wines?q=Didier+Dagueneau+Silex"
+              }
+            ]
+          }
+        ],
+        "id": "loire-valley",
+        "name": "Loire Valley",
+        "country": "France"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7,
+          46.1
+        ]
+      },
+      "properties": {
+        "history": "Historically part of the Burgundy region but distinct in style and administration. Famous for Gamay and particularly the 'carbonic maceration' technique. The 10 Crus of Beaujolais represent the pinnacle of quality, often rivaling Village-level Burgundy.",
+        "geography": "Located south of Mâcon. Rolling hills with the Saône river valley. The north is hilly and suited for the Crus, while the south is flatter with richer soils for generic Beaujolais.",
+        "terroir": "The North features granite and schist soils (ideal for Gamay to express structure and mineral character). The South has mostly limestone and clay, producing lighter, softer wines.",
+        "grapes": [
+          {
+            "name": "Gamay",
+            "description": "The sole red grape, producing light-bodied wines with high acidity, low tannins, and vibrant red fruit (strawberry, cherry) and bubblegum notes from carbonic maceration.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Marcel Lapierre",
+            "description": "Pioneer of natural winestyles in Morgon.",
+            "wines": [
+              {
+                "name": "Morgon",
+                "url": "https://www.vivino.com/search/wines?q=Marcel+Lapierre+Morgon"
+              }
+            ]
+          }
+        ],
+        "id": "beaujolais",
+        "name": "Beaujolais",
+        "country": "France"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8,
+          41.2
+        ]
+      },
+      "properties": {
+        "history": "A rugged region in Catalonia that saw a massive resurgence in the 1980s led by the 'Clos' pioneers. One of only two Spanish regions (with Rioja) to hold the top DOCa/DOQ status.",
+        "geography": "Inland from Tarragona. Highly mountainous with many small, steep terraces, necessitating costly hand-harvesting.",
+        "terroir": "The famous 'Llicorella' soil: reddish-black slate with mica. It is heat-reflecting and moisture-retaining, forcing vines to dig deep for water, resulting in low-yield, concentrated grapes.",
+        "grapes": [
+          {
+            "name": "Garnacha & Cariñena",
+            "description": "Old-vines produce powerful, high-alcohol reds with intense dark fruit, licorice, and distinct mineral/slate characteristics.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Álvaro Palacios",
+            "description": "Renowned for L'Ermita, one of Spain's most iconic wines.",
+            "wines": [
+              {
+                "name": "L'Ermita",
+                "url": "https://www.vivino.com/search/wines?q=Alvaro+Palacios+L+Ermita"
+              }
+            ]
+          }
+        ],
+        "id": "priorat",
+        "name": "Priorat",
+        "country": "Spain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.4,
+          48.1
+        ]
+      },
+      "properties": {
+        "history": "Produces the legendary 'Vinum Regum, Rex Vinorum' (Wine of Kings, King of Wines). Tokaj was the world's first vineyard classification system (1730). Famous for Aszú, one of the world's great sweet wines.",
+        "geography": "Northeast Hungary near the border of Slovakia and Ukraine. Rivers Tisza and Bodrog create high humidity and autumnal mists, perfect for Botrytis.",
+        "terroir": "Volcanic soils dominate the hillsides, providing excellent drainage and heat retention. Loess-based soils on lower slopes.",
+        "grapes": [
+          {
+            "name": "Furmint",
+            "description": "High acidity and thick skin. Susceptible to botrytis. Produces dry whites and the backbone of Aszú with apple and apricot notes.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Royal Tokaji",
+            "description": "Renowned for its commitment to the historic single vineyards of Tokaj.",
+            "wines": [
+              {
+                "name": "Aszú 5 Puttonyos",
+                "url": "https://www.vivino.com/search/wines?q=Royal+Tokaji+Aszu"
+              }
+            ]
+          }
+        ],
+        "id": "tokaj",
+        "name": "Tokaj",
+        "country": "Hungary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1,
+          36.7
+        ]
+      },
+      "properties": {
+        "history": "The home of Sherry, a unique fortified wine. Centered on the 'Sherry Triangle' (Jerez de la Frontera, Sanlúcar de Barrameda, El Puerto de Santa María). WSET highlights the Solera aging system.",
+        "geography": "Southwestern Andalusia. Hot and dry Mediterranean climate, moderated by the 'Poniente' (cool, damp Atlantic wind) and 'Levante' (hot, dry interior wind).",
+        "terroir": "The unique 'Albariza' soil: white, chalky clay with high calcium carbonate content. It reflects sunlight and acts as a reservoir for water during the dry summers by forming a crust.",
+        "grapes": [
+          {
+            "name": "Palomino",
+            "description": "The workhorse grape of Sherry, neutral in aroma, allowing the biological (flor) or oxidative aging to define the wine.",
+            "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "González Byass",
+            "description": "Famous for the Tio Pepe Fino.",
+            "wines": [
+              {
+                "name": "Tio Pepe Fino",
+                "url": "https://www.vivino.com/search/wines?q=Tio+Pepe+Sherry"
+              }
+            ]
+          }
+        ],
+        "id": "jerez",
+        "name": "Jerez (Sherry)",
+        "country": "Spain"
+      }
     }
   ]
 };
