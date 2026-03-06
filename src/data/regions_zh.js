@@ -1532,6 +1532,117 @@ export const wineRegionsDataZh = {
         "name": "Jerez (Sherry) (Pending Translation)",
         "country": "Spain"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.2,
+          -45
+        ]
+      },
+      "properties": {
+        "history": "正在补充中文详细数据...",
+        "geography": "Surrounded by mountains in the South Island. Extremely continental climate with high diurnal temperature variation. Frost is a severe and persistent risk throughout the year.",
+        "terroir": "Soils are mostly schist and heavy silt loams. Low rainfall requires irrigation. Intense UV light due to clean air and ozone holes leads to thick skins and high phenolic maturity.",
+        "grapes": [
+          {
+            "name": "Pinot Noir",
+            "description": "Produces intense, high-alcohol, full-bodied reds with flavors of black cherry, plum, and firm tannins.",
+            "image": "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Felton Road",
+            "description": "Iconic producer known for biodynamic viticulture and block-specific Pinot Noirs.",
+            "wines": [
+              {
+                "name": "Block 3 Pinot Noir",
+                "url": "https://www.vivino.com/search/wines?q=Felton+Road+Pinot+Noir"
+              }
+            ]
+          }
+        ],
+        "id": "central-otago",
+        "name": "Central Otago (数据扩充)",
+        "country": "New Zealand"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4,
+          -33.3
+        ]
+      },
+      "properties": {
+        "history": "正在补充中文详细数据...",
+        "geography": "Located between the Coastal Range and the Pacific Ocean. Cool maritime climate influenced by the Humboldt Current, providing morning fogs and afternoons sea breezes.",
+        "terroir": "Gently undulating landscape. Soils are predominantly sandy clay. Frost is a significant hazard during spring in the valley floor.",
+        "grapes": [
+          {
+            "name": "Sauvignon Blanc & Chardonnay",
+            "description": "Produces crisp whites with citrus and tropical notes. Chardonnay often shows high acidity and subtle oak integration.",
+            "image": "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Casa Lapostolle",
+            "description": "Renowned for their high-end cool climate selections.",
+            "wines": [
+              {
+                "name": "Cuvee Alexandre Chardonnay",
+                "url": "https://www.vivino.com/search/wines?q=Lapostolle+Casablanca+Chardonnay"
+              }
+            ]
+          }
+        ],
+        "id": "casablanca-valley",
+        "name": "Casablanca Valley (数据扩充)",
+        "country": "Chile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5,
+          46.5
+        ]
+      },
+      "properties": {
+        "history": "正在补充中文详细数据...",
+        "geography": "Vast region bordering Oregon. Arid continental climate. Long daylight hours due to high latitude (46-47°N) allow for rapid sugar accumulation while cool nights preserve acidity.",
+        "terroir": "Soils are mostly sandy and free-draining (vulnerable to phylloxera, but sand often deters it). Winter freeze (below -20°C) is a major risk, sometimes killing vines to the roots.",
+        "grapes": [
+          {
+            "name": "Merlot & Cabernet Sauvignon",
+            "description": "Merlot is highly successful here, showing plummy fruit and structured tannins. Syrah is also gaining prominence.",
+            "image": "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          }
+        ],
+        "estates": [
+          {
+            "name": "Chateau Ste. Michelle",
+            "description": "The founding winery of Washington State.",
+            "wines": [
+              {
+                "name": "Eroica Riesling",
+                "url": "https://www.vivino.com/search/wines?q=Chateau+Ste+Michelle+Eroica"
+              }
+            ]
+          }
+        ],
+        "id": "columbia-valley",
+        "name": "Columbia Valley (数据扩充)",
+        "country": "USA (Washington)"
+      }
     }
   ]
 };
