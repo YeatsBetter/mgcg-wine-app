@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
+import React, { useEffect, useState } from 'react';
+import { MapContainer, TileLayer, GeoJSON, Polyline, Tooltip, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { Wine } from 'lucide-react';
+import { Wine, Waves } from 'lucide-react';
+import { oceanCurrents } from './data/oceanCurrents';
 
 // Create a custom glass icon HTML
 const wineGlassIconHtml = `
@@ -36,7 +37,6 @@ function MapEvents({ onEmptyClick }) {
     const map = useMap();
     useEffect(() => {
         const handleClick = (e) => {
-            // We check if we clicked on the marker container instead of 'path'
             const isClickOnMarker = e.originalEvent.target.closest('.custom-wine-marker');
             if (!isClickOnMarker) {
                 onEmptyClick();
@@ -48,7 +48,39 @@ function MapEvents({ onEmptyClick }) {
     return null;
 }
 
-export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick }) {
+// Arrow decorator for polylines
+function ArrowDecorator({ path, color }) {
+    const map = useMap();
+    useEffect(() => {
+        if (!path || path.length < 2) return;
+        const arrows = [];
+        // Place arrows every few segments
+        const step = Math.max(1, Math.floor(path.length / 3));
+        for (let i = step; i < path.length; i += step) {
+            const prev = path[i - 1];
+            const curr = path[i];
+            const angle = Math.atan2(curr[0] - prev[0], curr[1] - prev[1]) * (180 / Math.PI);
+            const icon = L.divIcon({
+                html: `<div style="color:${color};font-size:16px;transform:rotate(${-angle + 90}deg);opacity:0.8;text-shadow:0 0 3px rgba(0,0,0,0.3);">➤</div>`,
+                className: 'arrow-decorator',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+            });
+            const marker = L.marker(curr, { icon, interactive: false }).addTo(map);
+            arrows.push(marker);
+        }
+        return () => arrows.forEach(m => map.removeLayer(m));
+    }, [map, path, color]);
+    return null;
+}
+
+const currentColors = {
+    warm: '#e05555',
+    cold: '#4488cc',
+    wind: '#66aa66'
+};
+
+export default function WineMap({ regions, onRegionHover, onRegionClick, onEmptyClick, showCurrents }) {
     const center = [35.0, 10.0];
     const zoom = 2.5;
 
@@ -57,7 +89,6 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
     };
 
     const onEachFeature = (feature, layer) => {
-        // Add custom tooltip
         layer.bindTooltip(`<div class="wine-map-tooltip">${feature.properties.name}</div>`, {
             sticky: true,
             direction: 'top',
@@ -69,17 +100,14 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
             mouseover: (e) => {
                 const trgt = e.target;
                 trgt.setIcon(hoverIcon);
-                // Pass event back to App so hover information triggers
                 if (onRegionHover) onRegionHover(feature.properties);
             },
             mouseout: (e) => {
                 const trgt = e.target;
                 trgt.setIcon(defaultIcon);
-                // Clear hover so App fallback drops to null (or keeps selectedRegion)
                 if (onRegionHover) onRegionHover(null);
             },
             click: (e) => {
-                // Prevent bubbling which causes App.jsx background clicks to fire and clear Selection
                 if (e.originalEvent && e.originalEvent.stopPropagation) {
                     e.originalEvent.stopPropagation();
                 }
@@ -87,7 +115,6 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
             }
         });
     };
-
 
     return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
@@ -103,12 +130,45 @@ export default function WineMap({ regions, onRegionHover, onRegionClick, onEmpty
             >
                 {onEmptyClick && <MapEvents onEmptyClick={onEmptyClick} />}
 
-                {/* Bright/Clean Base Map */}
                 <TileLayer
                     attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
                     url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
                     noWrap={true}
                 />
+
+                {/* Ocean Currents & Wind Overlays */}
+                {showCurrents && oceanCurrents.map((c, i) => {
+                    const color = currentColors[c.type];
+                    const dashArray = c.type === 'wind' ? '8, 8' : undefined;
+                    return (
+                        <React.Fragment key={i}>
+                            <Polyline
+                                positions={c.path}
+                                pathOptions={{
+                                    color: color,
+                                    weight: c.type === 'wind' ? 2.5 : 3.5,
+                                    opacity: 0.7,
+                                    dashArray: dashArray,
+                                    lineCap: 'round',
+                                    lineJoin: 'round'
+                                }}
+                            >
+                                <Tooltip sticky>
+                                    <div style={{ maxWidth: '240px' }}>
+                                        <strong style={{ color: color }}>
+                                            {c.type === 'warm' ? '🔴' : c.type === 'cold' ? '🔵' : '🌬️'} {c.name}
+                                        </strong>
+                                        <span style={{ display: 'block', fontSize: '0.75rem', color: '#666', textTransform: 'uppercase', marginTop: 2 }}>
+                                            {c.type === 'wind' ? 'Wind Pattern' : c.type === 'warm' ? 'Warm Current' : 'Cold Current'}
+                                        </span>
+                                        <p style={{ margin: '6px 0 0', fontSize: '0.8rem', lineHeight: 1.4 }}>{c.desc}</p>
+                                    </div>
+                                </Tooltip>
+                            </Polyline>
+                            <ArrowDecorator path={c.path} color={color} />
+                        </React.Fragment>
+                    );
+                })}
 
                 {regions && regions.features && (
                     <GeoJSON

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -118,6 +118,7 @@ function App() {
   const [isPairingLoading, setIsPairingLoading] = useState(false);
   const [pairingError, setPairingError] = useState(null);
   const [showPrinciples, setShowPrinciples] = useState(false);
+  const [showCurrents, setShowCurrents] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -282,6 +283,26 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
             onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
           >
             <Wine size={18} /> Aroma Guide
+          </button>
+
+          <button
+            onClick={() => setShowCurrents(!showCurrents)}
+            style={{
+              background: showCurrents ? 'rgba(68, 136, 204, 0.2)' : 'rgba(255, 255, 255, 0.5)',
+              border: showCurrents ? '1px solid #4488cc' : '1px solid var(--glass-border)',
+              color: showCurrents ? '#4488cc' : 'var(--text-primary)',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              transition: 'all 0.2s'
+            }}
+          >
+            <Waves size={18} /> Currents & Winds
           </button>
         </div>
 
@@ -462,6 +483,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
         onRegionClick={setSelectedRegion}
         onRegionHover={setHoveredRegion}
         onEmptyClick={() => { setSelectedRegion(null); setHoveredRegion(null); }}
+        showCurrents={showCurrents}
       />
 
       {isSATOpen && (
