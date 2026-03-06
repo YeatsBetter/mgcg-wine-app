@@ -337,30 +337,44 @@ h6 {
     flex-shrink: 0;
   }
 
-  /* ---- Bottom Button Stack ---- */
-  .btn-wset-guide {
-    bottom: 132px !important;
+  /* ---- Bottom Button Stack (5 buttons, 44px each, 8px gap = 52px steps) ---- */
+  .btn-pairing {
+    bottom: 16px !important;
     left: 12px !important;
     width: 44px !important;
     height: 44px !important;
   }
 
   .btn-currents {
-    bottom: 76px !important;
+    bottom: 68px !important;
     left: 12px !important;
     width: 44px !important;
     height: 44px !important;
   }
 
-  .btn-pairing {
-    bottom: 20px !important;
+  .btn-wset-guide {
+    bottom: 120px !important;
+    left: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-filter {
+    bottom: 172px !important;
+    left: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .btn-label-scanner {
+    bottom: 224px !important;
     left: 12px !important;
     width: 44px !important;
     height: 44px !important;
   }
 
   .btn-notepad {
-    bottom: 20px !important;
+    bottom: 16px !important;
     right: 12px !important;
     width: 44px !important;
     height: 44px !important;
@@ -369,9 +383,23 @@ h6 {
   .btn-wset-guide svg,
   .btn-currents svg,
   .btn-pairing svg,
-  .btn-notepad svg {
+  .btn-notepad svg,
+  .btn-filter svg,
+  .btn-label-scanner svg {
     width: 20px !important;
     height: 20px !important;
+  }
+
+  /* ---- Grape Filter & Label Scanner popups → bottom sheets ---- */
+  .grape-filter-popup,
+  .label-scanner-popup {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 280px !important;
+    width: auto !important;
+    max-height: 55vh !important;
+    border-radius: 16px !important;
+    padding: 16px !important;
   }
 
   /* ---- SAT Modal ---- */
