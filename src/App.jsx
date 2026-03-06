@@ -132,6 +132,7 @@ function App() {
   const [pairingError, setPairingError] = useState(null);
   const [showPrinciples, setShowPrinciples] = useState(false);
   const [showCurrents, setShowCurrents] = useState(false);
+  const [isGrapeFilterOpen, setIsGrapeFilterOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -310,38 +311,7 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
           Explore the depths of history, terroir, and geography through an interactive viticultural lens.
         </p>
 
-        {/* Advanced Filters */}
-        <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--glass-border)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-            <Filter size={16} color="var(--accent-gold)" />
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Filter by Grape</span>
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-            {['All', 'Cabernet Sauvignon', 'Pinot Noir', 'Chardonnay', 'Syrah', 'Riesling', 'Sauvignon Blanc', 'Sangiovese', 'Tempranillo', 'Merlot'].map(grape => (
-              <button
-                key={grape}
-                onClick={() => {
-                  setFilterGrape(grape);
-                  setSelectedRegion(null); // Clear selection when filter changes
-                }}
-                style={{
-                  background: filterGrape === grape ? 'var(--accent-ruby)' : 'rgba(255,255,255,0.4)',
-                  color: filterGrape === grape ? '#fff' : 'var(--text-secondary)',
-                  border: filterGrape === grape ? '1px solid var(--accent-ruby)' : '1px solid var(--glass-border)',
-                  borderRadius: '16px',
-                  padding: '6px 12px',
-                  fontSize: '0.75rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  fontWeight: filterGrape === grape ? 600 : 500,
-                  boxShadow: filterGrape === grape ? '0 2px 8px rgba(121,31,56,0.3)' : 'none'
-                }}
-              >
-                {grape}
-              </button>
-            ))}
-          </div>
-        </div>
+
       </div>
 
       {/* Top Right Floating User Profile */}
@@ -758,6 +728,62 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       >
         <BookOpen size={24} />
       </button>
+
+      {/* Filter by Grape */}
+      <button
+        className="btn-filter"
+        onClick={() => setIsGrapeFilterOpen(!isGrapeFilterOpen)}
+        style={{
+          position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
+          background: isGrapeFilterOpen || filterGrape !== 'All' ? 'var(--accent-ruby)' : 'var(--glass-bg)',
+          color: isGrapeFilterOpen || filterGrape !== 'All' ? '#fff' : 'var(--accent-ruby)',
+          border: '1px solid var(--accent-ruby)', cursor: 'pointer', zIndex: 1001,
+          boxShadow: isGrapeFilterOpen || filterGrape !== 'All' ? '0 6px 16px rgba(121, 31, 56, 0.4)' : '0 4px 12px rgba(0,0,0,0.1)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+          backdropFilter: 'blur(12px)'
+        }}
+        title="Filter by Grape"
+        onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; if (!isGrapeFilterOpen && filterGrape === 'All') { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; } }}
+        onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; if (!isGrapeFilterOpen && filterGrape === 'All') { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = 'var(--accent-ruby)'; } }}
+      >
+        <Filter size={24} />
+      </button>
+
+      {isGrapeFilterOpen && (
+        <div className="glass-panel grape-filter-popup" style={{ position: 'fixed', bottom: '168px', left: '96px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '16px', animation: 'fadeIn 0.2s ease' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <h3 style={{ color: 'var(--accent-gold)', fontSize: '1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Filter size={18} /> Filter by Grape
+            </h3>
+            <button onClick={() => setIsGrapeFilterOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}><X size={18} /></button>
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {['All', 'Cabernet Sauvignon', 'Pinot Noir', 'Chardonnay', 'Syrah', 'Riesling', 'Sauvignon Blanc', 'Sangiovese', 'Tempranillo', 'Merlot'].map(grape => (
+              <button
+                key={grape}
+                onClick={() => {
+                  setFilterGrape(grape);
+                  setSelectedRegion(null); // Clear selection when filter changes
+                }}
+                style={{
+                  background: filterGrape === grape ? 'var(--accent-ruby)' : 'rgba(255,255,255,0.4)',
+                  color: filterGrape === grape ? '#fff' : 'var(--text-secondary)',
+                  border: filterGrape === grape ? '1px solid var(--accent-ruby)' : '1px solid var(--glass-border)',
+                  borderRadius: '16px',
+                  padding: '6px 12px',
+                  fontSize: '0.75rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  fontWeight: filterGrape === grape ? 600 : 500,
+                  boxShadow: filterGrape === grape ? '0 2px 8px rgba(121,31,56,0.3)' : 'none'
+                }}
+              >
+                {grape}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Currents & Winds */}
       <button
