@@ -172,49 +172,19 @@ function App() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Wine size={28} color="var(--accent-ruby)" />
-              <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>Vino Atlas 3.0</h1>
+              <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)', margin: 0 }}>Vino Atlas</h1>
             </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>A Monet Global Consulting Group product</span>
-          </div>
-
-          <div>
-            {user ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                {user.photoURL ? (
-                  <img src={user.photoURL} alt="User" style={{ width: 32, height: 32, borderRadius: '50%', border: '2px solid var(--accent-ruby)' }} />
-                ) : (
-                  <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <User size={18} color="var(--accent-ruby)" />
-                  </div>
-                )}
-                <button
-                  onClick={handleLogout}
-                  style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.85rem' }}
-                >
-                  <LogOut size={16} /> Logout
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={handleLogin}
-                style={{
-                  background: 'var(--accent-ruby)',
-                  border: 'none',
-                  color: '#fff',
-                  padding: '8px 16px',
-                  borderRadius: '20px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontWeight: 600,
-                  fontSize: '0.9rem',
-                  boxShadow: '0 4px 12px var(--accent-ruby-glow)'
-                }}
-              >
-                <LogIn size={16} /> Login
-              </button>
-            )}
+            <span style={{
+              fontSize: '0.65rem',
+              color: 'var(--accent-gold)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              marginTop: '6px',
+              fontWeight: 700,
+              whiteSpace: 'nowrap'
+            }}>
+              A MONET GLOBAL CONSULTING GROUP PRODUCT
+            </span>
           </div>
         </div>
 
@@ -264,10 +234,46 @@ function App() {
           </button>
         </div>
 
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
-          {user ? `Welcome back, ${user.displayName?.split(' ')[0] || 'Explorer'}.` : 'Discover the definitive guide to global wine regions.'}
-          {' '}Hover to preview, click to dive into history, terroir, Geography, and direct Vivino links.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '16px', lineHeight: 1.6, fontStyle: 'italic' }}>
+          Welcome to the definitive digital cartography of the world's most prestigious wine regions.
+          Explore the depths of history, terroir, and geography through an interactive viticultural lens.
         </p>
+      </div>
+
+      {/* Top Right Floating User Profile */}
+      <div style={{ position: 'absolute', top: '24px', right: '24px', zIndex: 1000 }}>
+        {user ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'var(--glass-bg)', padding: '6px 16px 6px 6px', borderRadius: '30px', border: '1px solid var(--glass-border)', backdropFilter: 'blur(12px)', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+            <img
+              src={user.photoURL || 'https://via.placeholder.com/40'}
+              alt="User"
+              style={{ width: 40, height: 40, borderRadius: '50%', border: '2px solid var(--accent-ruby)', objectFit: 'cover' }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-primary)' }}>{user.displayName?.split(' ')[0]}</span>
+              <button
+                onClick={handleLogout}
+                style={{ background: 'transparent', border: 'none', color: 'var(--accent-ruby)', cursor: 'pointer', fontSize: '0.7rem', fontWeight: 700, padding: 0, textAlign: 'left', textTransform: 'uppercase' }}
+              >
+                Sign Out
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button
+            onClick={handleLogin}
+            style={{
+              width: '48px', height: '48px', borderRadius: '50%', background: 'var(--glass-bg)', border: '1px solid var(--accent-ruby)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', backdropFilter: 'blur(12px)',
+              boxShadow: '0 4px 12px var(--accent-ruby-glow)', color: 'var(--accent-ruby)', transition: 'all 0.3s ease'
+            }}
+            title="Sign In"
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-ruby)'; e.currentTarget.style.color = '#fff'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'var(--glass-bg)'; e.currentTarget.style.color = 'var(--accent-ruby)'; }}
+          >
+            <LogIn size={20} />
+          </button>
+        )}
       </div>
 
       {/* Right Side Detail Panel */}
