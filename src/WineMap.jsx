@@ -154,9 +154,10 @@ const scannedIcon = L.divIcon({
     iconAnchor: [18, 18]
 });
 
+const center = [35.0, 10.0];
+const zoom = 2.5;
+
 export default function WineMap({ regions, producers, selectedRegion, onRegionHover, onRegionClick, onEmptyClick, showCurrents, userFootprints = {}, scannedRegionName = '' }) {
-    const center = [35.0, 10.0];
-    const zoom = 2.5;
 
     const getIcon = (featureId, featureName, isHover) => {
         // Check if this region matches the AI-scanned region
