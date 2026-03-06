@@ -252,11 +252,19 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
       setPairingResults(parsed);
     } catch (err) {
       console.error('AI Pairing Error:', err);
-      let errorMsg = err.message || 'Unable to generate pairing. Please try again.';
-      if (errorMsg.includes('429') || errorMsg.includes('quota') || errorMsg.includes('exceeded')) {
-        errorMsg = "Whoa! So many pairing requests right now. The AI Sommelier is catching its breath (API Rate Limit). Please wait 1 minute and try again! 🍷";
+      const rawError = (err.message || '').toLowerCase();
+
+      let friendlyError = "The AI Sommelier is currently resting. Please try again in a moment. 🍷";
+
+      if (rawError.includes('429') || rawError.includes('quota') || rawError.includes('exceeded')) {
+        friendlyError = "Whoa! The AI Sommelier is overwhelmed (API Rate Limit). Please wait 1 minute and try again! 🍷";
+      } else if (rawError.includes('500') || rawError.includes('503') || rawError.includes('high demand') || rawError.includes('overloaded')) {
+        friendlyError = "The cellar is packed! Google's AI servers are currently experiencing high demand. Grab a glass and try again in a few seconds! 🍇";
+      } else if (rawError.includes('network') || rawError.includes('fetch')) {
+        friendlyError = "Network error. Please check your connection and try again.";
       }
-      setPairingError(errorMsg);
+
+      setPairingError(friendlyError);
     } finally {
       setIsPairingLoading(false);
     }
