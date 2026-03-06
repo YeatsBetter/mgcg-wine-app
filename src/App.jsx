@@ -3,12 +3,100 @@ import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import { wineRegionsDataZh } from './data/regions_zh';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+
+
+const satData = {
+  en: {
+    title: "WSET Level 3 Systematic Approach to Tasting (SAT)",
+    appearance: {
+      title: "Appearance",
+      items: [
+        "Clarity: clear - hazy",
+        "Intensity: pale - medium - deep",
+        "Color (White): lemon-green - lemon - gold - amber - brown",
+        "Color (Rosé): pink - salmon - orange",
+        "Color (Red): purple - ruby - garnet - tawny - brown",
+        "Other: legs/tears, deposit, petillance"
+      ]
+    },
+    nose: {
+      title: "Nose",
+      items: [
+        "Condition: clean - unclean",
+        "Intensity: light - medium(-) - medium - medium(+) - pronounced",
+        "Aroma characteristics: Primary, Secondary, Tertiary",
+        "Development: youthful - developing - fully developed - past its best"
+      ]
+    },
+    palate: {
+      title: "Palate",
+      items: [
+        "Sweetness: dry - off-dry - medium-dry - medium-sweet - sweet - luscious",
+        "Acidity: low - medium(-) - medium - medium(+) - high",
+        "Tannin: low - medium(-) - medium - medium(+) - high",
+        "Alcohol: low - medium - high",
+        "Body: light - medium(-) - medium - medium(+) - full",
+        "Flavor intensity: light - medium(-) - medium - medium(+) - pronounced",
+        "Finish: short - medium(-) - medium - medium(+) - long"
+      ]
+    },
+    conclusion: {
+      title: "Conclusion",
+      items: [
+        "Quality: faulty - poor - acceptable - good - very good - outstanding",
+        "Readiness for drinking: too young - can drink now, but has potential for aging - drink now: not suitable for aging or further aging - too old"
+      ]
+    }
+  },
+  zh: {
+    title: "WSET 3级 系统品鉴方法 (SAT)",
+    appearance: {
+      title: "外观 (Appearance)",
+      items: [
+        "澄清度: 清澈 - 浑浊",
+        "强度: 浅 - 中等 - 深",
+        "颜色 (白): 绿黄色 - 柠檬黄 - 金黄色 - 琥珀色 - 棕色",
+        "颜色 (桃红): 粉色 - 橘粉色 - 橘色",
+        "颜色 (红): 紫红色 - 宝石红 - 石榴红 - 茶色 - 棕色",
+        "其他: 酒腿/挂杯, 沉淀物, 微起泡"
+      ]
+    },
+    nose: {
+      title: "香气 (Nose)",
+      items: [
+        "状态: 纯净 - 不纯净",
+        "浓郁度: 轻 - 中(-) - 中等 - 中(+) - 浓郁",
+        "香气特征: 一类香气, 二类香气, 三类香气",
+        "发展阶段: 年轻 - 发展中 - 完全成熟 - 衰退"
+      ]
+    },
+    palate: {
+      title: "口感 (Palate)",
+      items: [
+        "甜度: 干 - 近乎干 - 半干 - 半甜 - 甜 - 极甜",
+        "酸度: 低 - 中(-) - 中等 - 中(+) - 高",
+        "单宁: 低 - 中(-) - 中等 - 中(+) - 高",
+        "酒精: 低 - 中 - 高",
+        "酒体: 轻 - 中(-) - 中等 - 中(+) - 饱满",
+        "风味浓郁度: 轻 - 中(-) - 中等 - 中(+) - 浓郁",
+        "余味: 短 - 中(-) - 中等 - 中(+) - 长"
+      ]
+    },
+    conclusion: {
+      title: "结论 (Conclusion)",
+      items: [
+        "质量评估: 有缺陷 - 差 - 可接受 - 良好 - 很好 - 优异",
+        "适饮期 / 陈年潜力: 太年轻 - 适宜现在饮用，但有陈年潜力 - 适宜现在饮用：不适合陈年或继续陈年 - 太老"
+      ]
+    }
+  }
+};
 
 function App() {
   const [language, setLanguage] = useState('zh');
@@ -24,6 +112,7 @@ function App() {
   // Fallback to hovered if no region is selected
   const activeRegion = currentSelected || currentHovered;
 
+  const [isSATOpen, setIsSATOpen] = useState(false);
   const [noteText, setNoteText] = useState("");
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
   const [isSavingNote, setIsSavingNote] = useState(false);
@@ -173,7 +262,31 @@ function App() {
           </div>
         </div>
 
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
+                  {/* SAT Button Placeholder */}
+          <button
+            onClick={() => setIsSATOpen(true)}
+            style={{
+              marginTop: '16px',
+              background: 'rgba(255, 255, 255, 0.5)',
+              border: '1px solid var(--accent-gold)',
+              color: 'var(--text-primary)',
+              padding: '8px 16px',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-gold)'; e.currentTarget.style.color = '#fff'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
+          >
+            <ClipboardList size={18} /> {language === 'zh' ? 'WSET 品鉴指南 (SAT)' : 'WSET SAT Guide'}
+          </button>
+
+<p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
           {user ? (language === 'zh' ? `欢迎回来, ${user.displayName?.split(' ')[0] || '探险家'}。` : `Welcome back, ${user.displayName?.split(' ')[0] || 'Explorer'}.`) : (language === 'zh' ? '探索全球顶级葡萄酒产区的终极指南。' : 'Discover the definitive guide to global wine regions.')} {language === 'zh' ? '悬停预览，点击深入了解历史、风土、地理，以及直接跳转 Vivino 选购。' : 'Hover to preview, click to dive into history, terroir, Geography, and direct Vivino links.'}
         </p>
       </div>
@@ -370,6 +483,64 @@ function App() {
           onEmptyClick={() => setSelectedRegion(null)}
         />
       </div>
+
+            {/* SAT Modal */}
+      {isSATOpen && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 9999, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)',
+          display: 'flex', justifyContent: 'center', alignItems: 'center'
+        }}>
+          <div className="glass-panel" style={{
+            width: '90%', maxWidth: '800px', maxHeight: '85vh', overflowY: 'auto', padding: '32px',
+            animation: 'fadeIn 0.3s ease', position: 'relative'
+          }}>
+            <button
+              onClick={() => setIsSATOpen(false)}
+              style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
+            >
+              <X size={24} />
+            </button>
+            <h2 style={{ fontSize: '1.8rem', color: 'var(--accent-ruby)', marginBottom: '24px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+              <ClipboardList size={28} /> {satData[language].title}
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Appearance */}
+              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].appearance.title}</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                  {satData[language].appearance.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                </ul>
+              </div>
+
+              {/* Nose */}
+              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].nose.title}</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                  {satData[language].nose.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                </ul>
+              </div>
+
+              {/* Palate */}
+              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].palate.title}</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                  {satData[language].palate.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                </ul>
+              </div>
+
+              {/* Conclusion */}
+              <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].conclusion.title}</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                  {satData[language].conclusion.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Floating Notepad UI for Logged-In Users */}
       {user && (
