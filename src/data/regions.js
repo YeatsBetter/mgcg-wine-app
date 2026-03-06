@@ -12,12 +12,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Dominates the Left Bank. High acid, high tannin. Notes of blackcurrant, cedar, tobacco, and graphite. Needs decades to soften."
                     },
                     {
                         name: "Merlot",
-                        image: "https://images.unsplash.com/photo-1606554162444-c6c7ac0c1d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Dominates the Right Bank (Pomerol, St. Émilion). Medium acid, medium tannin. Lush plum, chocolate, and velvety texture."
                     }
                 ],
@@ -38,12 +38,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Pinot Noir",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "The Holy Grail of red grapes. Low-medium tannin, high acidity. Strawberry and pure cherry turning into forest floor (sous-bois) and game with age."
                     },
                     {
                         name: "Chardonnay",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Originates here. Offers steely, high-acid lemon in Chablis to complex, buttery hazelnut in Montrachet."
                     }
                 ],
@@ -63,12 +63,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Sangiovese",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Italy's most planted grape. High acidity, high tannin. Sour cherry, dried herbs, sun-baked clay, and balsamic notes."
                     },
                     {
                         name: "Super Tuscan Blends",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Cabernet, Merlot, and Syrah grown on the coastal Maremma areas yielding opulent, modern, heavily oaked wines."
                     }
                 ],
@@ -89,12 +89,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Huge body, high tannin, high alcohol. Ripe black cherry, cassis, vanilla, and mocha due to heavy new oak."
                     },
                     {
                         name: "Chardonnay",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Full-bodied, malolactic-heavy (buttery), with prominent toasted oak and ripe tropical fruit."
                     }
                 ],
@@ -115,12 +115,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Nebbiolo",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Paradoxically light orange-brick color but extremely brutal acid and tannins in youth. Notes of tar, dried roses, cherry, and truffle."
                     },
                     {
                         name: "Barbera",
-                        image: "https://images.unsplash.com/photo-1606554162444-c6c7ac0c1d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "The everyday wine of Piedmont. High acid, low tannin. Juicy dark cherry and plum."
                     }
                 ],
@@ -141,7 +141,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Tempranillo",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Medium+ acid, medium+ tannin. Baked strawberry and plum. Has a huge affinity for American oak, soaking up dill, coconut, and vanilla notes."
                     }
                 ],
@@ -161,12 +161,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Syrah (North)",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "High tannin/acid. Intense blackberry, cracked black pepper, smoked meat, and olive."
                     },
                     {
                         name: "GSM Blend (South)",
-                        image: "https://images.unsplash.com/photo-1606554162444-c6c7ac0c1d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Grenache, Syrah, Mourvèdre. High alcohol, low acid. Baked red fruit jam, sweet spice, and garrigue (wild scrubland herbs)."
                     }
                 ],
@@ -186,7 +186,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Riesling",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "High acidity balanced by residual sugar. Notes of green apple, lime blossom, white peach, and distinctive 'petrol' (TDN) with bottle age. Very low alcohol."
                     }
                 ],
@@ -206,7 +206,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Sauvignon Blanc",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Intensely, violently aromatic. Piercing notes of passionfruit, gooseberry, jalapeño, and fresh-cut grass."
                     }
                 ],
@@ -226,12 +226,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Pinotage",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "South Africa's signature cross (Pinot Noir x Cinsault). High tannin. Smoky, rooibos tea, blackberry, and sometimes roasted meat."
                     },
                     {
                         name: "Chenin Blanc",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Known locally as Steen. High acid. Notes of bruised apple, wet wool, honey, and chamomile."
                     }
                 ],
@@ -251,7 +251,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Pinot Noir / Meunier / Chardonnay",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Harvested early for maximum searing acidity. Autolytic notes (brioche, toast, biscuit) from dead yeast (lees) aging define the profile, alongside bruised apple and lemon."
                     }
                 ],
@@ -272,12 +272,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Corvina (Amarone)",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Base of Valpolicella. Dried on mats for months (Appassimento) to yield massive 15%+ alcohol, dark chocolate, and raisin flavors."
                     },
                     {
                         name: "Glera",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Base of Prosecco. Made via tank (Charmat) method for light, frothy, fruity, and floral bubbles."
                     }
                 ],
@@ -297,7 +297,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Malbec",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Deep opaque purple, full-bodied. Blackberry, plum, cocoa, and violet florals. Velvet, soft tannins compared to Cabernet."
                     }
                 ],
@@ -317,7 +317,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Touriga Nacional & Franca",
-                        image: "https://images.unsplash.com/photo-1606554162444-c6c7ac0c1d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Used for unctuous, fortified Port (sweet, high alcohol, black fruit, chocolate) and concentrated dark dry table wines."
                     }
                 ],
@@ -337,7 +337,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Pinot Noir",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Straddles Old World earthiness and New World fruit. Cranberry, bright cherry, damp earth, and tea leaf with high acidity."
                     }
                 ],
@@ -358,12 +358,12 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Cabernet Sauvignon",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Distinctively minty and eucalyptus-tinged, with a core of bright, elegant black fruit."
                     },
                     {
                         name: "Carménère",
-                        image: "https://images.unsplash.com/photo-1606554162444-c6c7ac0c1d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1534310442539-f46374d3fc15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Chile's signature. Mistaken for Merlot for 100 years. Exhibits intense green bell pepper (pyrazines), cocoa, and red berry."
                     }
                 ],
@@ -384,7 +384,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Shiraz",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Opulent, massive body, high alcohol. Explosions of blackberry jam, dark chocolate, and eucalyptus."
                     }
                 ],
@@ -405,7 +405,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Nerello Mascalese",
-                        image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1596380862374-ad7fa9407822?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Often compared to Pinot Noir. High acid, fine tannin, pale color. Wild red cherry, rose petal, and volcanic smoke."
                     }
                 ],
@@ -425,7 +425,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Tinto Fino (Tempranillo)",
-                        image: "https://images.unsplash.com/photo-1595968132912-3580d44bebd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1571663716920-9fd87840c9ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Unlike Rioja, these are monolithic, inky, massive, black-fruit-driven, and highly concentrated wines typically aged in French oak."
                     }
                 ],
@@ -446,7 +446,7 @@ export const wineRegionsData = {
                 grapes: [
                     {
                         name: "Gewürztraminer",
-                        image: "https://images.unsplash.com/photo-1598424844331-fc813dbab600?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        image: "https://images.unsplash.com/photo-1472352327492-9765783b74e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         description: "Insanely aromatic. Explosions of lychee, rose petal, ginger, and Turkish delight. Full-bodied, oily texture, moderate acid."
                     }
                 ],
