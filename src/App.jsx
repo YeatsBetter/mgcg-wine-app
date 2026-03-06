@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
-import { wineRegionsDataZh } from './data/regions_zh';
 import './App.css';
 import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList } from 'lucide-react';
 
@@ -99,12 +98,12 @@ const satData = {
 };
 
 function App() {
-  const [language, setLanguage] = useState('zh');
+  
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [user, setUser] = useState(null);
 
-  const activeData = language === 'zh' ? wineRegionsDataZh : wineRegionsData;
+  const activeData = wineRegionsData;
 
   const currentHovered = hoveredRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === hoveredRegion.name.split(' ')[0])?.properties : null;
   const currentSelected = selectedRegion ? activeData.features.find(f => f.properties.name.split(' ')[0] === selectedRegion.name.split(' ')[0])?.properties : null;
@@ -193,32 +192,9 @@ function App() {
               <Wine size={28} color="var(--accent-ruby)" />
               <h1 style={{ fontSize: '1.8rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>Vino Atlas 3.0</h1>
             </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>{language === 'zh' ? 'Monet Global Consulting Group 产品' : 'A Monet Global Consulting Group product'}</span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '4px', fontWeight: 600 }}>'A Monet Global Consulting Group product'</span>
 
-            {/* Language Toggle */}
-            <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.2)', borderRadius: '20px', padding: '4px', marginTop: '12px', width: 'fit-content', border: '1px solid rgba(0,0,0,0.05)' }}>
-              <button
-                onClick={() => setLanguage('en')}
-                style={{
-                  background: language === 'en' ? 'var(--accent-ruby)' : 'transparent',
-                  color: language === 'en' ? '#fff' : 'var(--text-secondary)',
-                  border: 'none', borderRadius: '16px', padding: '4px 12px', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', transition: 'all 0.3s'
-                }}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => setLanguage('zh')}
-                style={{
-                  background: language === 'zh' ? 'var(--accent-ruby)' : 'transparent',
-                  color: language === 'zh' ? '#fff' : 'var(--text-secondary)',
-                  border: 'none', borderRadius: '16px', padding: '4px 12px', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', transition: 'all 0.3s'
-                }}
-              >
-                中文
-              </button>
             </div>
-          </div>
 
           {/* Auth Section */}
           <div>
@@ -235,7 +211,7 @@ function App() {
                   onClick={handleLogout}
                   style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.85rem' }}
                 >
-                  <LogOut size={16} /> {language === 'zh' ? '注销' : 'Logout'}
+                  <LogOut size={16} /> 'Logout'
                 </button>
               </div>
             ) : (
@@ -283,7 +259,7 @@ function App() {
             onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-gold)'; e.currentTarget.style.color = '#fff'; }}
             onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
           >
-            <ClipboardList size={18} /> {language === 'zh' ? 'WSET 品鉴指南 (SAT)' : 'WSET SAT Guide'}
+            <ClipboardList size={18} /> 'WSET SAT Guide'
           </button>
 
 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '12px' }}>
@@ -339,7 +315,7 @@ function App() {
 
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Globe size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '地理与气候' : 'Geography & Climate'}
+                  <Globe size={18} color="var(--accent-ruby)" /> 'Geography & Climate'
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.geography}</p>
               </div>
@@ -347,7 +323,7 @@ function App() {
               {activeRegion.terroir && (
                 <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '12px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Sprout size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '风土与土壤' : 'Terroir & Soil'}
+                    <Sprout size={18} color="var(--accent-ruby)" /> 'Terroir & Soil'
                   </h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{activeRegion.terroir}</p>
                 </div>
@@ -384,7 +360,7 @@ function App() {
               {activeRegion.subRegions && activeRegion.subRegions.length > 0 && (
                 <div style={{ padding: '16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <MapPin size={18} color="var(--accent-ruby)" /> {language === 'zh' ? '核心子产区' : 'Key Sub-Regions'}
+                    <MapPin size={18} color="var(--accent-ruby)" /> 'Key Sub-Regions'
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {activeRegion.subRegions.map((sub, idx) => (
@@ -501,39 +477,39 @@ function App() {
               <X size={24} />
             </button>
             <h2 style={{ fontSize: '1.8rem', color: 'var(--accent-ruby)', marginBottom: '24px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-              <ClipboardList size={28} /> {satData[language].title}
+              <ClipboardList size={28} /> {satData.en.title}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
               
               {/* Appearance */}
               <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].appearance.title}</h3>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData.en.appearance.title}</h3>
                 <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                  {satData[language].appearance.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  {satData.en.appearance.items.map((item, idx) => <li key={idx}>{item}</li>)}
                 </ul>
               </div>
 
               {/* Nose */}
               <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].nose.title}</h3>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData.en.nose.title}</h3>
                 <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                  {satData[language].nose.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  {satData.en.nose.items.map((item, idx) => <li key={idx}>{item}</li>)}
                 </ul>
               </div>
 
               {/* Palate */}
               <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].palate.title}</h3>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData.en.palate.title}</h3>
                 <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                  {satData[language].palate.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  {satData.en.palate.items.map((item, idx) => <li key={idx}>{item}</li>)}
                 </ul>
               </div>
 
               {/* Conclusion */}
               <div style={{ background: 'rgba(255,255,255,0.6)', padding: '20px', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData[language].conclusion.title}</h3>
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '12px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>{satData.en.conclusion.title}</h3>
                 <ul style={{ margin: 0, paddingLeft: '20px', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                  {satData[language].conclusion.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  {satData.en.conclusion.items.map((item, idx) => <li key={idx}>{item}</li>)}
                 </ul>
               </div>
 
@@ -549,7 +525,7 @@ function App() {
             <div className="glass-panel" style={{ width: '380px', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px', animation: 'fadeIn 0.3s ease' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-ruby)', margin: 0, fontSize: '1.1rem' }}>
-                  <BookOpen size={18} /> {language === 'zh' ? '我的品鉴笔记' : 'My Tasting Notes'}
+                  <BookOpen size={18} /> 'My Tasting Notes'
                 </h3>
                 <button onClick={() => setIsNotepadOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', padding: '4px' }}>
                   <X size={18} />
