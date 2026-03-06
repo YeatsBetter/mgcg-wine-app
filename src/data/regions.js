@@ -17,6 +17,11 @@ export const wineRegionsData = {
         "history": "Following the WSET Level 3 curriculum, Bordeaux's reputation is built upon centuries of trade facilitated by the Gironde Estuary, Rivers Garonne and Dordogne. It gained global prominence when Eleanor of Aquitaine married Henry Plantagenet (later King Henry II of England) in 1152, starting a monopoly on the English wine market. The 1855 Classification established a hierarchy of estates on the Left Bank that still influences global prices today. In the modern era, the emphasis has shifted towards precision viticulture and terroir expression, overcoming historic issues with bulk production.",
         "geography": "Located in southwestern France on the 45th parallel, Bordeaux enjoys a moderate maritime climate. The Gulf Stream transports warm water from the Caribbean, warming the region and extending its growing season, which is essential for late-ripening varieties like Cabernet Sauvignon. The Landes forest to the west protects vineyards from the worst Atlantic storms. However, high rainfall throughout the year can disrupt flowering, cause rot, and dilute flavors during harvest. Frost is also a periodic hazard.",
         "terroir": "Terroir in Bordeaux is strictly divided by the rivers. The Left Bank (Médoc, Graves) is dominated by gravelly soils deposited by river action; these soils drain rapidly and reflect heat, crucial for ripening Cabernet Sauvignon. The Right Bank (Saint-Émilion, Pomerol) features clay-limestone and sandier soils which are cooler, perfectly suited for Merlot and Cabernet Franc. Underlying limestone beds provide excellent drainage across the region.",
+        "climate": { "rainfall": "950 mm", "gdd": "1,450 °C Days" },
+        "soil": ["Gravel (Left Bank)", "Clay (Right Bank)", "Limestone Bedrock"],
+        "vintages": [
+          { "year": 2023, "score": 93, "readiness": "Hold" }, { "year": 2022, "score": 97, "readiness": "Hold" }, { "year": 2021, "score": 90, "readiness": "Drink/Hold" }, { "year": 2020, "score": 98, "readiness": "Hold" }, { "year": 2019, "score": 97, "readiness": "Drink/Hold" }, { "year": 2018, "score": 96, "readiness": "Drink/Hold" }, { "year": 2017, "score": 92, "readiness": "Drink" }, { "year": 2016, "score": 98, "readiness": "Hold" }, { "year": 2015, "score": 97, "readiness": "Drink/Hold" }, { "year": 2014, "score": 93, "readiness": "Drink" }
+        ],
         "grapes": [
           {
             "name": "Cabernet Sauvignon",
@@ -38,6 +43,10 @@ export const wineRegionsData = {
           {
             "name": "Château Lafite Rothschild",
             "description": "First Growth. Known for elegance, perfumed aromatics, and extreme longevity.",
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false,
             "wines": [
               {
                 "name": "Château Lafite Rothschild",
@@ -48,6 +57,10 @@ export const wineRegionsData = {
           {
             "name": "Château Petrus",
             "description": "The most famous wine from Pomerol. A near-pure expression of Merlot on blue clay.",
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false,
             "wines": [
               {
                 "name": "Petrus",
@@ -100,6 +113,11 @@ export const wineRegionsData = {
         "history": "Burgundy (Bourgogne) represents the global standard for terroir-driven Pinot Noir and Chardonnay. Its history is deeply intertwined with the Cistercian and Benedictine monks who meticulously mapped the soil variations (climats) over centuries in the Middle Ages. The French Revolution dismantled Church and aristocratic holdings, and the Napoleonic inheritance laws resulted in extreme fragmentation of vineyard ownership. Today, a single Grand Cru vineyard like Clos de Vougeot is divided among dozens of individual producers.",
         "geography": "Burgundy stretches across eastern France with a moderate continental climate. The region experiences cold winters and warm summers. Weather hazards are severe: spring frosts can wipe out buds (Chablis is notoriously susceptible), and localized summer hailstorms can destroy crops. Rain during harvest is also a persistent threat, requiring careful canopy management and vintage variation acceptance.",
         "terroir": "The soils are predominantly limestone and marl (calcareous clay) dating back to the Jurassic period. The exact ratio determines the grape planting: Chardonnay performs best on limestone-dominant soils (e.g., Côte de Beaune, Chablis), while Pinot Noir demands more marl (e.g., Côte de Nuits). The best vineyards (Grand Cru and Premier Cru) are located mid-slope (mi-coteau) where drainage is optimal and frost risk is minimized.",
+        "climate": { "rainfall": "700 mm", "gdd": "1,350 °C Days" },
+        "soil": ["Jurassic Limestone", "Marl (Calcareous Clay)"],
+        "vintages": [
+          { "year": 2023, "score": 94, "readiness": "Hold" }, { "year": 2022, "score": 96, "readiness": "Hold" }, { "year": 2021, "score": 89, "readiness": "Drink/Hold" }, { "year": 2020, "score": 95, "readiness": "Hold" }, { "year": 2019, "score": 98, "readiness": "Hold" }, { "year": 2018, "score": 94, "readiness": "Drink/Hold" }, { "year": 2017, "score": 92, "readiness": "Drink" }, { "year": 2016, "score": 93, "readiness": "Drink/Hold" }, { "year": 2015, "score": 98, "readiness": "Hold" }, { "year": 2014, "score": 90, "readiness": "Drink" }
+        ],
         "grapes": [
           {
             "name": "Pinot Noir",
@@ -116,6 +134,10 @@ export const wineRegionsData = {
           {
             "name": "Domaine de la Romanée-Conti (DRC)",
             "description": "The most prestigious and expensive wine estate in the world.",
+            "acceptsVisitors": false,
+            "requiresReservation": false,
+            "tastingFee": false,
+            "hasAccommodation": false,
             "wines": [
               {
                 "name": "Romanée-Conti Grand Cru",
@@ -162,6 +184,11 @@ export const wineRegionsData = {
         "history": "Tuscany's identity is inextricably linked to the Sangiovese grape and the sweeping hills of the Renaissance heartland. The Chianti region dates back to a 1716 edict by the Grand Duke of Tuscany. In the 1970s, frustration with archaic, restrictive DOC laws forcing producers to blend white grapes into Chianti led to the 'Super Tuscan' rebellion, where winemakers illegally blended Sangiovese with Bordeaux varieties or used 100% Cabernet, changing Italian wine laws forever.",
         "geography": "Tuscany is characterized by a warm Mediterranean climate along the coast, shifting to a more moderate continental climate in the inland hills. Altitude is the most critical quality factor. High-altitude vineyards (up to 500m) experience high diurnal temperature ranges (warm days, cool nights), which is vital to retain Sangiovese's naturally high acidity and extend its ripening window.",
         "terroir": "The region features a patchwork of soils. The best inland zones (Chianti Classico, Montalcino) are characterized by 'Galestro' (a crumbly, rocky clay-marl) and 'Alberese' (hard limestone). These poor soils limit vigor and concentrate flavors. Towards the coastal Maremma (Bolgheri), soils are flat and sandy-clay, better suited to Bordeaux varieties.",
+        "climate": { "rainfall": "800 mm", "gdd": "1,600 °C Days" },
+        "soil": ["Galestro (Marl)", "Alberese (Limestone)", "Sand/Clay (Coast)"],
+        "vintages": [
+          { "year": 2023, "score": 91, "readiness": "Hold" }, { "year": 2022, "score": 95, "readiness": "Hold" }, { "year": 2021, "score": 96, "readiness": "Hold" }, { "year": 2020, "score": 93, "readiness": "Drink/Hold" }, { "year": 2019, "score": 97, "readiness": "Hold" }, { "year": 2018, "score": 92, "readiness": "Drink/Hold" }, { "year": 2017, "score": 90, "readiness": "Drink" }, { "year": 2016, "score": 98, "readiness": "Hold" }, { "year": 2015, "score": 97, "readiness": "Drink/Hold" }, { "year": 2014, "score": 89, "readiness": "Drink" }
+        ],
         "grapes": [
           {
             "name": "Sangiovese",
@@ -178,6 +205,10 @@ export const wineRegionsData = {
           {
             "name": "Tenuta San Guido",
             "description": "Birthplace of the Super Tuscan. Flagship wine 'Sassicaia'.",
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": false,
             "wines": [
               {
                 "name": "Sassicaia",
@@ -188,6 +219,10 @@ export const wineRegionsData = {
           {
             "name": "Biondi-Santi",
             "description": "Inventor of Brunello di Montalcino. Traditional and long-lived.",
+            "acceptsVisitors": true,
+            "requiresReservation": true,
+            "tastingFee": true,
+            "hasAccommodation": true,
             "wines": [
               {
                 "name": "Brunello di Montalcino Riserva",

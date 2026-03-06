@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -386,6 +386,24 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
               <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-gold)', marginBottom: '12px', fontSize: '1.1rem' }}>
                 <Info size={18} /> Geography & Climate
               </h3>
+              {activeRegion.climate && (
+                <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
+                  <div style={{ flex: 1, background: 'rgba(255,255,255,0.4)', padding: '12px', borderRadius: '8px', border: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <Droplets size={24} color="#3d8bcc" />
+                    <div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 600 }}>Annual Rainfall</div>
+                      <div style={{ fontSize: '1.1rem', color: 'var(--text-primary)', fontWeight: 700 }}>{activeRegion.climate.rainfall}</div>
+                    </div>
+                  </div>
+                  <div style={{ flex: 1, background: 'rgba(255,255,255,0.4)', padding: '12px', borderRadius: '8px', border: '1px solid var(--glass-border)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <ThermometerSun size={24} color="#e84057" />
+                    <div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 600 }}>Heat Degree Days</div>
+                      <div style={{ fontSize: '1.1rem', color: 'var(--text-primary)', fontWeight: 700 }}>{activeRegion.climate.gdd}</div>
+                    </div>
+                  </div>
+                </div>
+              )}
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1rem' }}>
                 {activeRegion.geography}
               </p>
@@ -395,10 +413,43 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
               <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-gold)', marginBottom: '12px', fontSize: '1.1rem' }}>
                 <Sprout size={18} /> Terroir & Soil
               </h3>
+              {activeRegion.soil && (
+                <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+                  {activeRegion.soil.map((s, idx) => (
+                    <div key={idx} style={{ background: 'var(--glass-bg)', border: '1px solid var(--accent-gold)', color: 'var(--accent-gold)', padding: '4px 12px', borderRadius: '16px', fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <Layers size={14} /> {s}
+                    </div>
+                  ))}
+                </div>
+              )}
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1rem' }}>
                 {activeRegion.terroir}
               </p>
             </section>
+
+            {activeRegion.vintages && activeRegion.vintages.length > 0 && (
+              <section>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-gold)', marginBottom: '12px', fontSize: '1.1rem' }}>
+                  <CalendarDays size={18} /> Vintage Chart (Last 10 Years)
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
+                  {activeRegion.vintages.map((v, idx) => {
+                    let bgColor = 'rgba(255,255,255,0.4)';
+                    let color = 'var(--text-primary)';
+                    if (v.score >= 95) { bgColor = 'rgba(212, 175, 55, 0.2)'; color = 'var(--accent-gold)'; }
+                    else if (v.score >= 90) { bgColor = 'rgba(121, 31, 56, 0.15)'; color = 'var(--accent-ruby)'; }
+
+                    return (
+                      <div key={idx} style={{ background: bgColor, border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '8px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '2px' }}>{v.year}</div>
+                        <div style={{ fontSize: '1rem', fontWeight: 800, color: color }}>{v.score}</div>
+                        <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', marginTop: '4px', color: 'var(--text-secondary)', fontWeight: 600 }}>{v.readiness}</div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </section>
+            )}
 
             {activeRegion.subRegions && activeRegion.subRegions.length > 0 && (
               <section>
@@ -444,6 +495,15 @@ Respond ONLY in this exact JSON format, no markdown, no code fences:
                   <div key={idx} style={{ padding: '12px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '12px', flex: '1 1 200px' }}>
                     <h4 style={{ fontWeight: 600, marginBottom: '4px' }}>{estate.name}</h4>
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '12px' }}>{estate.description}</p>
+
+                    {/* Visitor Tags */}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '12px' }}>
+                      {estate.acceptsVisitors && <span style={{ background: 'rgba(74, 171, 106, 0.1)', color: '#4aab6a', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', border: '1px solid rgba(74, 171, 106, 0.3)', display: 'flex', alignItems: 'center', gap: '4px' }}><CalendarCheck size={10} /> Visitors Welcome</span>}
+                      {estate.requiresReservation && <span style={{ background: 'rgba(232, 64, 87, 0.1)', color: '#e84057', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', border: '1px solid rgba(232, 64, 87, 0.3)', display: 'flex', alignItems: 'center', gap: '4px' }}><Clock size={10} /> Rsrv. Required</span>}
+                      {estate.tastingFee && <span style={{ background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', border: '1px solid rgba(212, 175, 55, 0.3)', display: 'flex', alignItems: 'center', gap: '4px' }}><Ticket size={10} /> Tasting Fee</span>}
+                      {estate.hasAccommodation && <span style={{ background: 'rgba(61, 139, 204, 0.1)', color: '#3d8bcc', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', border: '1px solid rgba(61, 139, 204, 0.3)', display: 'flex', alignItems: 'center', gap: '4px' }}><Home size={10} /> Accommodation</span>}
+                    </div>
+
                     {estate.wines && estate.wines.map((wine, wIdx) => (
                       <a key={wIdx} href={wine.url} target="_blank" rel="noopener noreferrer" className="vivino-link" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: 'var(--accent-ruby)', textDecoration: 'none', fontWeight: 600 }}>
                         <ExternalLink size={12} /> Find on Vivino: {wine.name}
