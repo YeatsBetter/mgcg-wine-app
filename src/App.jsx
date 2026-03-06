@@ -341,6 +341,24 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
     reader.readAsDataURL(file);
   };
 
+  // Exclusive panel toggle — opening one closes all others
+  const togglePanel = (panel) => {
+    const states = { pairing: isPairingOpen, currents: showCurrents, sat: isSATOpen, grape: isGrapeFilterOpen, scanner: isLabelScanOpen };
+    const wasOpen = states[panel];
+    setIsPairingOpen(false);
+    setShowCurrents(false);
+    setIsSATOpen(false);
+    setIsGrapeFilterOpen(false);
+    setIsLabelScanOpen(false);
+    if (!wasOpen) {
+      if (panel === 'pairing') setIsPairingOpen(true);
+      if (panel === 'currents') setShowCurrents(true);
+      if (panel === 'sat') setIsSATOpen(true);
+      if (panel === 'grape') setIsGrapeFilterOpen(true);
+      if (panel === 'scanner') setIsLabelScanOpen(true);
+    }
+  };
+
   return (
     <div className="app-container">
       {/* Top Left Floating Header */}
@@ -784,7 +802,7 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
       {/* Bottom-Left Circular Buttons Stack */}
       <button
         className="btn-wset-guide"
-        onClick={() => setIsSATOpen(true)}
+        onClick={() => togglePanel('sat')}
         style={{
           position: 'fixed', bottom: '168px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
           background: isSATOpen ? 'var(--accent-ruby)' : 'var(--glass-bg)', color: isSATOpen ? '#fff' : 'var(--accent-ruby)',
@@ -803,7 +821,7 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
       {/* AI Wine Label Scanner */}
       <button
         className="btn-label-scanner"
-        onClick={() => { setIsLabelScanOpen(!isLabelScanOpen); }}
+        onClick={() => togglePanel('scanner')}
         style={{
           position: 'fixed', bottom: '312px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
           background: isLabelScanOpen || scannedRegionName ? '#7c3aed' : 'var(--glass-bg)',
@@ -963,7 +981,7 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
       {/* Filter by Grape */}
       <button
         className="btn-filter"
-        onClick={() => setIsGrapeFilterOpen(!isGrapeFilterOpen)}
+        onClick={() => togglePanel('grape')}
         style={{
           position: 'fixed', bottom: '240px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
           background: isGrapeFilterOpen || filterGrape !== 'All' ? 'var(--accent-ruby)' : 'var(--glass-bg)',
@@ -1019,7 +1037,7 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
       {/* Currents & Winds */}
       <button
         className="btn-currents"
-        onClick={() => setShowCurrents(!showCurrents)}
+        onClick={() => togglePanel('currents')}
         style={{
           position: 'fixed', bottom: '96px', left: '24px', width: '56px', height: '56px', borderRadius: '50%',
           background: showCurrents ? '#3d8bcc' : 'var(--glass-bg)', color: showCurrents ? '#fff' : '#3d8bcc',
@@ -1038,7 +1056,7 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
       {/* Bottom-Left AI Food & Wine Pairing */}
       <button
         className="btn-pairing"
-        onClick={() => setIsPairingOpen(!isPairingOpen)}
+        onClick={() => togglePanel('pairing')}
         style={{ position: 'fixed', bottom: '24px', left: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-gold)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px rgba(180, 150, 80, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease' }}
         title="AI Food & Wine Pairing"
         onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
