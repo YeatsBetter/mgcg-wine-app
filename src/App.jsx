@@ -3,7 +3,7 @@ import WineMap from './WineMap';
 import { wineRegionsData } from './data/regions';
 import { wineProducersData } from './data/producers';
 import './App.css';
-import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart, Camera, ScanLine, AlertCircle } from 'lucide-react';
+import { Wine, MapPin, Clock, Info, Globe, Sprout, Grape, ExternalLink, LogIn, LogOut, User, BookOpen, Save, X, ClipboardList, Utensils, Sparkles, ChevronDown, ChevronUp, Send, Waves, Filter, Droplets, ThermometerSun, Layers, CalendarDays, Ticket, Home, CalendarCheck, Heart, Camera, ScanLine, AlertCircle, Edit3 } from 'lucide-react';
 
 // Firebase imports
 import { auth, googleProvider, db, geminiModel } from './firebase';
@@ -344,19 +344,21 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
 
   // Exclusive panel toggle — opening one closes all others
   const togglePanel = (panel) => {
-    const states = { pairing: isPairingOpen, currents: showCurrents, sat: isSATOpen, grape: isGrapeFilterOpen, scanner: isLabelScanOpen };
+    const states = { pairing: isPairingOpen, currents: showCurrents, sat: isSATOpen, grape: isGrapeFilterOpen, scanner: isLabelScanOpen, notepad: isNotepadOpen };
     const wasOpen = states[panel];
     setIsPairingOpen(false);
     setShowCurrents(false);
     setIsSATOpen(false);
     setIsGrapeFilterOpen(false);
     setIsLabelScanOpen(false);
+    setIsNotepadOpen(false);
     if (!wasOpen) {
       if (panel === 'pairing') setIsPairingOpen(true);
       if (panel === 'currents') setShowCurrents(true);
       if (panel === 'sat') setIsSATOpen(true);
       if (panel === 'grape') setIsGrapeFilterOpen(true);
       if (panel === 'scanner') setIsLabelScanOpen(true);
+      if (panel === 'notepad') setIsNotepadOpen(true);
     }
   };
 
@@ -1146,40 +1148,44 @@ Respond ONLY with a valid JSON object, no markdown, no explanation.`;
         >
           <Utensils size={22} />
         </button>
+
+        {user && (
+          <button
+            className={`nav-btn ${isNotepadOpen ? 'active' : ''}`}
+            onClick={() => togglePanel('notepad')}
+            style={{
+              width: '48px', height: '48px', borderRadius: '50%',
+              background: isNotepadOpen ? 'var(--accent-ruby)' : 'transparent',
+              color: isNotepadOpen ? '#fff' : 'var(--text-secondary)',
+              border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s ease',
+            }}
+            title="My Tasting Notes"
+          >
+            <Edit3 size={22} />
+          </button>
+        )}
       </div>
 
       {/* Floating Notepad UI */}
-      {user && (
-        <>
+      {user && isNotepadOpen && (
+        <div className="glass-panel notepad-popup" style={{ position: 'fixed', bottom: '90px', right: '24px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <h3 style={{ color: 'var(--accent-ruby)', fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Edit3 size={18} /> My Tasting Notes
+          </h3>
+          <textarea
+            value={noteText}
+            onChange={(e) => setNoteText(e.target.value)}
+            placeholder="Write your wine notes here..."
+            style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '12px', outline: 'none', resize: 'none', fontSize: '0.9rem' }}
+          />
           <button
-            className="btn-notepad"
-            onClick={() => setIsNotepadOpen(!isNotepadOpen)}
-            style={{ position: 'fixed', bottom: '24px', right: '24px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--accent-ruby)', color: '#fff', border: 'none', cursor: 'pointer', zIndex: 1001, boxShadow: '0 6px 16px var(--accent-ruby-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            onClick={handleSaveNote}
+            disabled={isSavingNote}
+            style={{ background: 'var(--accent-ruby)', color: '#fff', border: 'none', borderRadius: '8px', padding: '10px', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', opacity: isSavingNote ? 0.7 : 1 }}
           >
-            {isNotepadOpen ? <X size={24} /> : <BookOpen size={24} />}
+            <Save size={16} /> {isSavingNote ? 'Saving...' : 'Save'}
           </button>
-
-          {isNotepadOpen && (
-            <div className="glass-panel notepad-popup" style={{ position: 'fixed', bottom: '90px', right: '24px', width: '320px', padding: '20px', zIndex: 1001, borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <h3 style={{ color: 'var(--accent-ruby)', fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <BookOpen size={18} /> My Tasting Notes
-              </h3>
-              <textarea
-                value={noteText}
-                onChange={(e) => setNoteText(e.target.value)}
-                placeholder="Write your wine notes here..."
-                style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--glass-border)', borderRadius: '8px', padding: '12px', outline: 'none', resize: 'none', fontSize: '0.9rem' }}
-              />
-              <button
-                onClick={handleSaveNote}
-                disabled={isSavingNote}
-                style={{ background: 'var(--accent-ruby)', color: '#fff', border: 'none', borderRadius: '8px', padding: '10px', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', opacity: isSavingNote ? 0.7 : 1 }}
-              >
-                <Save size={16} /> {isSavingNote ? 'Saving...' : 'Save'}
-              </button>
-            </div>
-          )}
-        </>
+        </div>
       )}
     </div>
   );
